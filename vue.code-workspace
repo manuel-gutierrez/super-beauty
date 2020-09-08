@@ -1,9 +1,7 @@
 {
-  "folders": [
-    {
-      "path": "."
-    }
-  ],
+  "folders": [{
+    "path": "."
+  }],
   "settings": {
     "eslint.enable": true,
     "window.zoomLevel": 1,
@@ -22,7 +20,7 @@
     "editor.renderWhitespace": "all",
     "files.exclude": {
       "**/node_modules": true,
-      ".gitignore": true,
+      ".gitignore": false,
       ".eslintignore": true,
       ".eslintrc.js": false,
       ".babelrc": true,
@@ -32,8 +30,7 @@
       "build": true,
       "config": true
     },
-    "eslint.validate": [
-      {
+    "eslint.validate": [{
         "autoFix": true,
         "language": "javascript"
       },
