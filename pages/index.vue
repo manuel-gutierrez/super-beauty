@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p>This is the enviroment: {{ enviroment }}</p>
+    <div class="container">
+      <p>This is the envirment{{ enviroment }}</p>
+    </div>
   </div>
 </template>
 <script>
@@ -28,7 +30,6 @@ export default {
   },
   computed: {
     enviroment() {
-      // `this` points to the vm instance
       return process.env.TEST_VARIABLE;
     },
   },
