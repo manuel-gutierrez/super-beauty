@@ -1,3 +1,4 @@
+// Bootstrap overrides Mixins and Variables.
 @import './mixins.scss';
 @import './fonts.scss';
 @import './variables.scss';
@@ -9,10 +10,4 @@
 
 
 // General style overrides and custom classes
-body {
-  margin: 0;
-}
-
-.my-widget {
-  color: var(--secondary);
-}
+@import './typography';
