@@ -19,7 +19,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "files.exclude": {
-      "**/node_modules": true,
+      "**/node_modules": false,
       ".gitignore": false,
       ".eslintignore": true,
       ".eslintrc.js": false,
