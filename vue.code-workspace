@@ -1,7 +1,12 @@
 {
-  "folders": [{
-    "path": "."
-  }],
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../../Downloads/champagne_limousines"
+    }
+  ],
   "settings": {
     "eslint.enable": true,
     "window.zoomLevel": 1,
@@ -30,7 +35,8 @@
       "build": true,
       "config": true
     },
-    "eslint.validate": [{
+    "eslint.validate": [
+      {
         "autoFix": true,
         "language": "javascript"
       },

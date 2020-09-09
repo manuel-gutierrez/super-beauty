@@ -1,1 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&:300,400,400i,500,600,700");
+
+@font-face {
+  font-family: "champagne";
+  src: local("champagne"),
+    url(/assets/fonts/champagne_limousines/champagne.ttf) format("truetype");
+}
+
+
+html {
+  font-family: "champagne";
+}
