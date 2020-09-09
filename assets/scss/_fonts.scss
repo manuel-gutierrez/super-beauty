@@ -1,12 +1,9 @@
+// Bebas Neue
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&:300,400,400i,500,600,700");
-
-@font-face {
-  font-family: "champagne";
-  src: local("champagne"),
-    url(/assets/fonts/champagne_limousines/champagne.ttf) format("truetype");
-}
-
-
-html {
-  font-family: "champagne";
-}
+// Champgne and Limousine Font
+@include font-face-ttf(Champagne, "assets/fonts/champagne_limousines/champagne", normal, normal);
+@include font-face-ttf(Champagne, "assets/fonts/champagne_limousines/champagne_bold", normal, italic);
+@include font-face-ttf(Champagne, "assets/fonts/champagne_limousines/champagne_bold", bold, normal);
+@include font-face-ttf(Champagne, "assets/fonts/champagne_limousines/champagne_bold_italic", bold, italic);
+//Handelson
+@include font-face-otf(Handelson, "assets/fonts/handelson/Handelson-One", normal, normal);

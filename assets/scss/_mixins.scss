@@ -1,0 +1,17 @@
+@mixin font-face-ttf($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url("~"+$path+".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-face-otf($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url("~"+$path+".otf") format("opentype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
