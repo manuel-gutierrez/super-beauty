@@ -1,52 +1,68 @@
 footer {
   padding: $padding-base 0;
-  background: linear-gradient(264deg, #BB29BB, #5C06A8);
-  color: $white;
 
-  nav,
-  .copyright {
-    display: inline-block;
-  }
 
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
 
-    li {
-      display: inline-block;
 
-      a {
-        color: inherit !important;
-        padding: $padding-base;
 
-        text-transform: uppercase;
+  & .footer-section-links {
 
-        text-decoration: none;
-        position: relative;
-        display: block;
+    background: linear-gradient(264deg, #BB29BB, #5C06A8);
+    color: $white;
 
-        &:hover {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        align-self: start;
+
+        a {
+          color: inherit !important;
+          padding: $padding-base;
+
+          text-transform: uppercase;
+
           text-decoration: none;
-        }
-      }
+          position: relative;
+          display: block;
 
-      &:first-child a {
-        margin-left: -15px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:first-child a {
+          margin-left: -15px;
+        }
       }
     }
   }
 
-  .copyright {
-    padding: 15px 0;
-    margin: 0;
+  & .footer-section-brands {
+    img {
+      width: 100px
+    }
+  }
 
-    .md-icon {
-      font-size: 18px !important;
-      color: inherit !important;
-      width: auto !important;
-      min-width: auto !important;
+  & .footer-section-copy {
+    background: $black;
+    color: $white;
+    font-size: $font-size-small;
+    text-align: center;
 
+    .copyright {
+      padding: 15px 0;
+      margin: 0;
+
+      .md-icon {
+        font-size: 18px !important;
+        color: inherit !important;
+        width: auto !important;
+        min-width: auto !important;
+
+      }
     }
   }
 }
