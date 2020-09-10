@@ -1,6 +1,7 @@
 {
   "name": "super-beauty",
   "version": "1.0.0",
+  "Description": "Super Beauty",
   "private": true,
   "scripts": {
     "dev": "nuxt",

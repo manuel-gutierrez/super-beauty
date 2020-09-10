@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>Los más vendidos</h2>
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Los más vendidos</h2>
+        </div>
+        <div class="bg-secondary col">COl 2</div>
+        <div class="my-widget col">COl 3</div>
       </div>
-      <div class="bg-secondary col">COl 2</div>
-      <div class="my-widget col">COl 3</div>
     </div>
   </div>
 </template>
