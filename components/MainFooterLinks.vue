@@ -1,6 +1,6 @@
 <template>
-  <div class="container footer-section-links">
-    <div class="row pl-4 wd-100">
+  <div class="container-fluid footer-section-links">
+    <div class="row pl-4">
       <div class="col-lg">
         <h5>Conócenos</h5>
       </div>

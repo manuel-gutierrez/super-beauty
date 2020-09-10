@@ -1,10 +1,10 @@
 <template>
-  <div class="container footer-section-copy">
-    <div class="row">
-      <div class="row">
-        <p>© {{ year }} SUPERBEAUTY Todoos los derechos reservados.</p>
-      </div>
-      <div class="row"><p>| Creado con en Colombia</p></div>
+  <div class="container-fluid footer-section-copy">
+    <div class="row text-center">
+      <p>
+        © {{ year }} SUPERBEAUTY Todoos los derechos reservados. | Creado con en
+        Colombia
+      </p>
     </div>
   </div>
 </template>
