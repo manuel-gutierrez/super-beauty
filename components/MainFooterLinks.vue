@@ -1,34 +1,41 @@
 <template>
   <div class="container-fluid footer-section-links">
-    <div class="container d-flex justify-content-around py-2 px-4">
-      <div v-for="{ title, items, type } in sections" :key="type" class="">
+    <div class="container d-flex justify-content-between flex-wrap py-2 px-4">
+      <div
+        v-for="{ title, items, type } in sections"
+        :key="type"
+        class="section"
+      >
         <div v-if="type === 'links'">
-          <h3>{{ title }}</h3>
-          <div v-for="{ text, url } in items" :key="text" class="flex-column">
-            <ul>
-              <li>
-                <a :href="url">{{ text }}</a>
-              </li>
-            </ul>
-          </div>
+          <h4>{{ title }}</h4>
+          <ul>
+            <li v-for="{ text, url } in items" :key="text" class="py-1">
+              <a :href="url">{{ text }}</a>
+            </li>
+          </ul>
         </div>
+
         <div v-else-if="type === 'paragraphs'">
-          <h3>{{ title }}</h3>
+          <h4>{{ title }}</h4>
           <div v-for="{ text } in items" :key="text">
             <p>{{ text }}</p>
           </div>
         </div>
         <div v-else-if="type === 'icons'">
-          <h3>{{ title }}</h3>
+          <h4>{{ title }}</h4>
           <div
             v-for="{ name, url } in items"
             :key="name"
             class="d-inline-flex pr-2"
           >
-            <a :href="url"><font-awesome-icon :icon="['fab', name]" /></a>
+            <a
+              class="footer-icons d-flex align-items-center justify-content-center"
+              :href="url"
+              ><font-awesome-icon :icon="['fab', name]"
+            /></a>
           </div>
         </div>
-
+        <div class="w-100"></div>
         <!-- <div v-else>Not A/B/C</div>  // not show-->
       </div>
     </div>

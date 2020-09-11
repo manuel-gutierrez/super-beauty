@@ -77,23 +77,35 @@ export const state = () => ({
     },
     links: [
       {
-        title: 'Text-1',
+        title: 'Conócenos',
         items: [
-          { text: 'link-1', url: 'https://google.com' },
-          { text: 'link-2', url: 'a-page' },
+          { text: 'Nuestra Historia', url: 'nuestra-historia' },
+          { text: 'Comunidad', url: 'comunidad' },
         ],
         type: 'links',
       },
       {
-        title: 'Text-2',
-        items: [{ text: 'hello world' }, { text: 'hello world 2' }],
+        title: 'Servicio al cliente',
+        items: [
+          { text: '9:00 am a 6:00 pm' },
+          { text: 'Horario: Lunes a Viernes' },
+          { text: 'hola@superbeauty.com.co' },
+        ],
         type: 'paragraphs',
       },
       {
-        title: 'Text-3',
+        title: 'Links de Interés',
+        items: [
+          { text: 'Nuestras Políticas', url: 'nuestras-politicas' },
+          { text: 'Preguntas Frecuentes', url: 'preguntas-frecuentes' },
+        ],
+        type: 'links',
+      },
+      {
+        title: 'Siguenos en:',
         items: [
           { name: 'instagram', url: 'https://google.com' },
-          { name: 'facebook', url: 'https://google.com' },
+          { name: 'facebook-f', url: 'https://google.com' },
           { name: 'youtube', url: 'https://google.com' },
         ],
         type: 'icons',
