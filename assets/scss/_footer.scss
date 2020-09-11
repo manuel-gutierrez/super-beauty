@@ -1,52 +1,85 @@
 footer {
-  padding: $padding-base 0;
-  background: linear-gradient(264deg, #BB29BB, #5C06A8);
-  color: $white;
+  .section {
+    margin-right: 2rem;
+    @include media-breakpoint-down(sm){
+      margin-right: 4rem;
+    }
+  }
+  & .footer-section-links {
 
-  nav,
-  .copyright {
-    display: inline-block;
+    background: linear-gradient(264deg, #BB29BB, #5C06A8);
+    color: $white;
+    font-weight:bold;
+    line-height: 0.5rem;
+
+    ul {
+      padding-left:0;
+      list-style: none;
+
+      li {
+
+        a {
+
+          font-weight:bold;
+          line-height: inherit !important;
+          color: inherit !important;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    h3,h4,h5{
+      text-decoration: underline;
+    }
+
+
+    .footer-icons {
+      font-size: $font-size-icons*0.7;
+      border-color: transparent;
+      background-color: $icon-background-color;
+      width:$font-size-icons*1;
+      height:$font-size-icons*1;
+      border-radius: 50%;
+    }
+
   }
 
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  & .footer-section-brands {
+    img {
+      max-width: 100%;
+    }
+  }
 
-    li {
-      display: inline-block;
+  & .footer-section-copy {
+    background: $black;
+    color: $white;
+    font-size: $font-size-small;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 0.5px;
 
-      a {
-        color: inherit !important;
-        padding: $padding-base;
 
-        text-transform: uppercase;
+    .copyright {
+      line-height: 1rem;
+      letter-spacing: 0.15rem;
+      p {
+        margin-bottom: 5px;
+      }
 
-        text-decoration: none;
-        position: relative;
-        display: block;
-
-        &:hover {
-          text-decoration: none;
+      .rwd-lined-inline {
+        display: inline;
+      }
+      @include media-breakpoint-down(sm){
+        .rwd-lined-inline {
+          display: block;
         }
       }
 
-      &:first-child a {
-        margin-left: -15px;
-      }
     }
+
   }
-
-  .copyright {
-    padding: 15px 0;
-    margin: 0;
-
-    .md-icon {
-      font-size: 18px !important;
-      color: inherit !important;
-      width: auto !important;
-      min-width: auto !important;
-
-    }
-  }
+   &:last-child div {
+          margin-bottom: 10px;
+        }
 }

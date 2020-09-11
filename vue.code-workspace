@@ -1,6 +1,5 @@
 {
-  "folders": [
-    {
+  "folders": [{
       "path": "."
     },
     {
@@ -16,7 +15,7 @@
     "prettier.eslintIntegration": true,
     "prettier.disableLanguages": [],
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true, // only if you want auto      //fomattting on saving the file
+    "editor.formatOnSave": false, // only if you want auto      //fomattting on saving the file
     "[javascript]": {
       "editor.formatOnSave": false
     },
@@ -40,8 +39,7 @@
     },
     "eslint.alwaysShowStatus": true,
     "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-      {
+    "eslint.validate": [{
         "autoFix": true,
         "language": "javascript"
       },

@@ -69,7 +69,25 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     'bootstrap-vue/nuxt',
+    [
+      'nuxt-fontawesome',
+      {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas'],
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab'],
+          },
+        ],
+      },
+    ],
   ],
+  bootstrapVue: {
+    icons: true, // Install the IconsPlugin (in addition to BootStrapVue plugin
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
