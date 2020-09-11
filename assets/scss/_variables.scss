@@ -10,7 +10,7 @@ $font-family-alt: "Bebas Neue";
 
 // Typography
 
-// sizes
+// Sizes
 $font-size-h1: 3.3125rem;
 $font-size-h2: 2.25rem !default;
 $font-size-h3: 1.5625rem;
@@ -23,3 +23,8 @@ $font-size-small: 12px !default;
 
 // Letter Spacing
 $font-letter-spacing-headings: 3px;
+
+
+//== Components
+$padding-base: 15px !default;
+$margin-base: 15px !default;

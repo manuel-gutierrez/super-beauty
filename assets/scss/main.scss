@@ -8,6 +8,7 @@
 @import '~bootstrap-vue/src/index.scss';
 
 
-
 // General style overrides and custom classes
-@import './typography';
+@import './typography.scss';
+@import './misc.scss';
+@import './footer.scss'
