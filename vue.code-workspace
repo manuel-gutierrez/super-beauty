@@ -19,7 +19,7 @@
     "[javascript]": {
       "editor.formatOnSave": false
     },
-    // "editor.detectIndentation": true,
+    "editor.detectIndentation": true,
     "editor.tabSize": 2,
     "editor.formatOnPaste": false,
     "editor.formatOnType": true,

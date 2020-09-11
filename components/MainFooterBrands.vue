@@ -20,7 +20,7 @@
 export default {
   data() {
     return {
-      images: this.$store.state.footer.data.images,
+      images: this.$store.state.footer.data.brands.images,
     };
   },
 };
