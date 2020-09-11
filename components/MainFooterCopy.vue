@@ -1,14 +1,18 @@
 <template>
   <div class="container-fluid footer-section-copy">
-    <div class="row justify-content-center text-center copyright pt-2">
-      <p>
-        ©{{ year }} {{ copyBusiness }}
-        <span class="rwd-lined-inline"
-          >| {{ copyDev }}
-          <b-icon icon="heart-fill" variant="heart"></b-icon>
-          {{ copyDevAux }}</span
-        >
-      </p>
+    <div
+      class="d-flex align-items-center justify-content-center text-center copyright pt-2"
+    >
+      <div class="container py2">
+        <p>
+          ©{{ year }} {{ copyBusiness }}
+          <span class="rwd-lined-inline"
+            >| {{ copyDev }}
+            <b-icon icon="heart-fill" variant="heart"></b-icon>
+            {{ copyDevAux }}</span
+          >
+        </p>
+      </div>
     </div>
   </div>
 </template>

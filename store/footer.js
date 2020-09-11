@@ -39,7 +39,7 @@ export const state = () => ({
       {
         url: '/footer/Rectángulo 53@2x.png',
         alt: 'Davivienda',
-        width: '71px',
+        width: '80px',
         height: '12px',
       },
       {
