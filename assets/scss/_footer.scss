@@ -4,6 +4,9 @@ footer {
     @include media-breakpoint-down(sm){
       margin-right: 4rem;
     }
+    &:last-child div {
+      margin-bottom: 10px;
+    }
   }
   & .footer-section-links {
 
@@ -43,6 +46,8 @@ footer {
       border-radius: 50%;
     }
 
+
+
   }
 
   & .footer-section-brands {
@@ -79,7 +84,5 @@ footer {
     }
 
   }
-   &:last-child div {
-          margin-bottom: 10px;
-        }
+
 }
