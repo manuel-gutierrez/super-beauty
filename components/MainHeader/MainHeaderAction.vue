@@ -1,14 +1,15 @@
 <template>
   <div role="banner" class="container-fluid header-section-actions">
     <div class="container d-flex align-items-center justifiy-content-center">
-      <Search />
-      <div class="flex-grow-1">
-        <Logo class="text-center" />
+      <div><Search /></div>
+      <div class="d-flex flex-grow-1">
+        <Logo />
       </div>
-
-      <Profile />
-      <Wishlist />
-      <Cart />
+      <div class="d-flex align-items-center justifiy-content-center">
+        <Profile />
+        <Wishlist />
+        <Cart />
+      </div>
     </div>
   </div>
 </template>

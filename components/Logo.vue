@@ -1,7 +1,7 @@
 <template>
   <b-img
-    class="logo"
-    v-bind="desktopProps"
+    class="logo m-auto"
+    v-bind="defaultConfig"
     alt="Super Beauty Logo"
     src="/logo/logo_super_beauty.png"
     srcset="/logo/logo_super_beauty@2x.png 2x"
@@ -12,11 +12,7 @@
 export default {
   data() {
     return {
-      desktopProps: {
-        width: 176,
-        height: 58,
-      },
-      mobileProps: {
+      defaultConfig: {
         width: 176,
         height: 58,
       },

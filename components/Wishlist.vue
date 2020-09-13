@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-icon-heart class="header-icon"></b-icon-heart>
+    <b-icon-heart class="header-icon m-auto"></b-icon-heart>
   </div>
 </template>
 

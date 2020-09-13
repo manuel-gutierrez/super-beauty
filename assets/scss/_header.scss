@@ -33,13 +33,17 @@ header {
   }
   & .header-section-actions {
     min-height: 63px;
+
     // Logo
     .logo {
+      width: 176;
+      height: 58px;
       @include media-breakpoint-down(sm){
         width: 100px;
         height: 33px;
       }
     }
+
 
     // Icons
     .header-icon{
