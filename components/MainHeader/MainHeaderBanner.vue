@@ -1,17 +1,20 @@
 <template>
-  <div class="container-fluid footer-section-copy">
-    <div
-      class="d-flex align-items-center justify-content-center text-center copyright pt-2"
-    >
-      <div class="container py2">
-        <p>
-          ©{{ year }} {{ copyBusiness }}
-          <span class="rwd-lined-inline"
-            >| {{ copyDev }}
-            <b-icon icon="heart-fill" variant="heart"></b-icon>
-            {{ copyDevAux }}</span
+  <div class="container-fluid header-section-banner">
+    <div class="container d-flex align-items-center justifiy-content-center">
+      <div class="flex-grow-1 text-center text-md-left">
+        {{ section_1.text }}
+      </div>
+      <div class="d-none d-md-block">
+        <ul>
+          <li
+            v-for="{ text, url } in section_2.items"
+            :key="text"
+            class="d-inline pl-2"
           >
-        </p>
+            <a :href="url">{{ text }}</a>
+            <span class="pipe-separator">|</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -21,10 +24,8 @@
 export default {
   data() {
     return {
-      year: new Date().getFullYear(),
-      copyBusiness: this.$store.state.footer.data.copy.business,
-      copyDev: this.$store.state.footer.data.copy.dev,
-      copyDevAux: this.$store.state.footer.data.copy.dev_aux,
+      section_1: this.$store.state.header.data.section_1,
+      section_2: this.$store.state.header.data.section_2,
     };
   },
 };

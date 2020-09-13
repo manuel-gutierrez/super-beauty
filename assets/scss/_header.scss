@@ -1,0 +1,35 @@
+header {
+  & .header-section-banner {
+    background: $primary;
+    color: $white;
+    font-size: $font-size-small;
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+
+      li {
+        a {
+          font-weight: bold;
+          line-height: inherit !important;
+          color: inherit !important;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        &:last-child .pipe-separator {
+          display: none
+        }
+
+        ;
+
+
+      }
+    }
+
+  }
+
+}

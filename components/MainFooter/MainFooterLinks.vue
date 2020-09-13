@@ -35,8 +35,6 @@
             /></a>
           </div>
         </div>
-
-        <!-- <div v-else>Not A/B/C</div>  // not show-->
       </div>
     </div>
   </div>

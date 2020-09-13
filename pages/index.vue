@@ -5,7 +5,7 @@
         <div class="col">
           <h2>Los más vendidos</h2>
         </div>
-        <div class="bg-secondary col">COl 2</div>
+        <div class="bg-primary col">COl 2</div>
         <div class="my-widget col">COl 3</div>
       </div>
     </div>
@@ -16,8 +16,4 @@
 export default {};
 </script>
 
-<style>
-.purple {
-  background-color: var(--purple);
-}
-</style>
+<style></style>
