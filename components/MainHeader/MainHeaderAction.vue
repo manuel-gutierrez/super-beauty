@@ -6,9 +6,9 @@
         <Logo />
       </div>
       <div class="d-flex align-items-center justifiy-content-center">
-        <Profile />
-        <Wishlist />
-        <Cart />
+        <Profile class="margin-left-override" />
+        <Wishlist class="margin-left-override" />
+        <Cart class="margin-left-override" />
       </div>
     </div>
   </div>

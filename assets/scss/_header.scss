@@ -34,10 +34,11 @@ header {
   & .header-section-actions {
     min-height: 63px;
 
+
     // Logo
     .logo {
-      width: 176;
-      height: 58px;
+
+      // Modify Size on smaller screens
       @include media-breakpoint-down(sm){
         width: 100px;
         height: 33px;
@@ -51,6 +52,9 @@ header {
       @include media-breakpoint-down(sm){
         font-size: $font-size-icons*0.673;
       }
+    }
+    .margin-left-override {
+      margin-left:7px;
     }
 
     .profile-icon{

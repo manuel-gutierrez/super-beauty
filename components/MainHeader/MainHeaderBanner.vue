@@ -24,8 +24,8 @@
 export default {
   data() {
     return {
-      section_1: this.$store.state.header.data.section_1,
-      section_2: this.$store.state.header.data.section_2,
+      section_1: this.$store.state.header.data.banner.section_1,
+      section_2: this.$store.state.header.data.banner.section_2,
     };
   },
 };

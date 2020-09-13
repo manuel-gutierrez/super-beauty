@@ -3,8 +3,8 @@
     class="logo m-auto"
     v-bind="defaultConfig"
     alt="Super Beauty Logo"
-    src="/logo/logo_super_beauty.png"
-    srcset="/logo/logo_super_beauty@2x.png 2x"
+    :src="src"
+    :srcset="src2x"
   ></b-img>
 </template>
 
@@ -13,9 +13,11 @@ export default {
   data() {
     return {
       defaultConfig: {
-        width: 176,
-        height: 58,
+        width: this.$store.state.header.data.actions.logo.width,
+        height: this.$store.state.header.data.actions.logo.height,
       },
+      src: this.$store.state.header.data.actions.logo.path.normal,
+      src2x: this.$store.state.header.data.actions.logo.path['2x'],
     };
   },
 };
