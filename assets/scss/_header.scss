@@ -33,10 +33,30 @@ header {
   }
   & .header-section-actions {
     min-height: 63px;
-    .search-icon{
+    // Logo
+    .logo {
+      @include media-breakpoint-down(sm){
+        width: 100px;
+        height: 33px;
+      }
+    }
+
+    // Icons
+    .header-icon{
       font-size: $font-size-icons;
       @include media-breakpoint-down(sm){
         font-size: $font-size-icons*0.673;
+      }
+    }
+
+    .profile-icon{
+      background:linear-gradient(264deg, #BB29BB, #5C06A8);
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      @include media-breakpoint-down(sm){
+        height: 16px;
+        width: 16px;
       }
     }
   }

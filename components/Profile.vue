@@ -1,4 +1,6 @@
-<template><div>Profile</div></template>
+<template>
+  <svg-icon class="profile-icon" icon="profile-icon" />
+</template>
 
 <script>
 export default {};

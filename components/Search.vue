@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-icon-search class="search-icon"></b-icon-search>
+    <b-icon-search class="header-icon"></b-icon-search>
   </div>
 </template>
 

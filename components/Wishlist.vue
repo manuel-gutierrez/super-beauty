@@ -1,4 +1,8 @@
-<template><div>Wishlist</div></template>
+<template>
+  <div>
+    <b-icon-heart class="header-icon"></b-icon-heart>
+  </div>
+</template>
 
 <script>
 export default {};

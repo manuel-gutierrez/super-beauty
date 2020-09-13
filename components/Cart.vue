@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <svg-icon icon="handbag-icon" />
 </template>
 
 <script>

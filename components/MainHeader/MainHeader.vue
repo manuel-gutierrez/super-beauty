@@ -1,5 +1,6 @@
 <template>
   <header>
+    <svg-sprite />
     <MainHeaderBanner />
     <MainHeaderAction />
     <MainHeaderMenu />
