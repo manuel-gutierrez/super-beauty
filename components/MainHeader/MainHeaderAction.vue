@@ -1,6 +1,6 @@
 <template>
   <div role="banner" class="container-fluid header-section-actions">
-    <div class="container d-flex align-items-center justifiy-content-around">
+    <div class="container d-flex align-items-center justifiy-content-center">
       <Search />
       <Logo />
       <Profile />

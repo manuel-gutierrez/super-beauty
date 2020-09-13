@@ -1,8 +1,9 @@
-<template><div>Search</div></template>
-
 <template>
-  <font-awesome-icon :icon="['fab', name]" />
+  <div>
+    <b-icon-search class="search-icon"></b-icon-search>
+  </div>
 </template>
+
 <script>
 export default {};
 </script>

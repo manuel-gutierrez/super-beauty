@@ -33,5 +33,11 @@ header {
   }
   & .header-section-actions {
     min-height: 63px;
+    .search-icon{
+      font-size: $font-size-icons;
+      @include media-breakpoint-down(sm){
+        font-size: $font-size-icons*0.673;
+      }
+    }
   }
 }
