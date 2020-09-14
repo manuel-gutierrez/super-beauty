@@ -1,11 +1,16 @@
 <template>
-  <div class="d-inline-flex">
+  <div v-if="isLoggedIn" class="d-inline-flex">
     <svg-icon class="profile-icon" icon="profile-icon" />
   </div>
 </template>
 
 <script>
-export default {};
+import { mapState } from 'vuex';
+export default {
+  computed: {
+    ...mapState('login', ['isLoggedIn', 'token']),
+  },
+};
 </script>
 
 <style></style>

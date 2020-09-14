@@ -1,19 +1,31 @@
 <template>
   <div class="">
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Los más vendidos</h2>
+      <div>
+        <div class="py-2">
+          <button @click="logIn">Toggle Login</button>
         </div>
-        <div class="bg-primary col">COl 2</div>
-        <div class="my-widget col">COl 3</div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapMutations, mapGetters } from 'vuex';
+export default {
+  computed: {
+    ...mapGetters('login', {
+      isloggedIn: 'getCurrentLoginStatus',
+      sessionToken: 'getSessionToken',
+    }),
+  },
+  methods: {
+    ...mapMutations('login', ['toggleLoginStatus']),
+    logIn() {
+      this.toggleLoginStatus();
+    },
+  },
+};
 </script>
 
 <style></style>
