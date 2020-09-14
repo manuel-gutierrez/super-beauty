@@ -17,19 +17,32 @@ $font-family-alt: "Bebas Neue";
 
 // Sizes
 $font-size-base: 1rem;
+// Headings
 $font-size-h1: 3.3125rem;
 $font-size-h2: 1.87rem !default;
 $font-size-h3: 1.6875rem;
 $font-size-h4: 1rem !default;
 $font-size-h5: 0.6875rem !default;
 $font-size-h6: 0.5625rem !default;
-$font-paragraph: 15px !default;
-$font-size-navbar: 16px !default;
-$font-size-footer: 0.875rem !default;
-$font-size-small: 10px !default;
-$font-size-icons-sm: 1rem !default;
-$font-size-icons: 1.375rem !default; // 22px
+
+// Paragraph
+$font-paragraph: 0.875rem !default; // 14 px
+$font-paragraph-md:0.75rem  !default; // 12 px
+$font-size-sm: 0.625rem!default; // 10px
+
+// Navbar
+$font-size-navbar: $font-size-base!default;
+
+//Footer
+$font-size-footer: $font-paragraph !default;
+
+
+//Icons
+
+
 $font-size-icons-lg: 2rem !default; // 32px
+$font-size-icons: 1.375rem !default; // 22px
+$font-size-icons-sm: 1rem !default; //16px
 
 // Letter Spacing
 $font-letter-spacing-headings: 3px;

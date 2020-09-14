@@ -2,7 +2,10 @@ header {
   & .header-section-banner {
     background: $primary;
     color: $white;
-    font-size: $font-size-small;
+    font-size: $font-paragraph;
+    @include media-breakpoint-down(sm){
+      font-size: $font-paragraph-md;
+    }
 
     ul {
       padding-left: 0;
@@ -11,7 +14,7 @@ header {
 
       li {
         a {
-          font-weight: bold;
+
           line-height: inherit !important;
           color: inherit !important;
 
@@ -33,6 +36,8 @@ header {
   }
   & .header-section-actions {
     min-height: 80px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     // Logo
     .logo {
@@ -50,6 +55,12 @@ header {
       @include media-breakpoint-down(sm){
         font-size: $font-size-icons-sm;
       }
+      & .search-icon{
+        font-size: $font-size-icons;
+        @include media-breakpoint-down(sm){
+         font-size: $font-size-icons-sm;
+      }
+    }
     }
 
     // WishList Profile and Cart
