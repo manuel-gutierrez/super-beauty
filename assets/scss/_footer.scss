@@ -12,8 +12,7 @@ footer {
 
     background: linear-gradient(264deg, #BB29BB, #5C06A8);
     color: $white;
-    font-weight:bold;
-    line-height: 0.5rem;
+    line-height: 1rem;
 
     ul {
       padding-left:0;
@@ -22,8 +21,6 @@ footer {
       li {
 
         a {
-
-          font-weight:bold;
           line-height: inherit !important;
           color: inherit !important;
           &:hover {
