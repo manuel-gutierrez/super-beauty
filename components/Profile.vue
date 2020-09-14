@@ -1,5 +1,7 @@
 <template>
-  <svg-icon class="profile-icon" icon="profile-icon" />
+  <div class="d-inline-flex">
+    <svg-icon class="profile-icon" icon="profile-icon" />
+  </div>
 </template>
 
 <script>

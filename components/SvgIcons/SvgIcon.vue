@@ -25,7 +25,7 @@ export default {
 <style>
 svg.icon {
   fill: currentColor;
-  height: 4em;
+  height: auto;
   margin-bottom: 0.125em;
   vertical-align: middle;
   width: 1em;

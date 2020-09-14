@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <b-icon-heart class="header-icon m-auto"></b-icon-heart>
+  <div class="d-inline-flex">
+    <b-icon-heart></b-icon-heart>
+    <div class="counter mt-1"><div class="counter-number">10</div></div>
   </div>
 </template>
 
