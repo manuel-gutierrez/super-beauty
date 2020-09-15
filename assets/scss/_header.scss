@@ -151,7 +151,7 @@ header {
     text-transform: uppercase;
     .navbar-expand .navbar-nav .nav-link {
       padding:0;
-      font-size:$font-paragraph ; // 14px
+      font-size:$font-size-navbar  ; // 14px
       font-weight: bold;
       letter-spacing: $font-letter-spacing-nav;
     }

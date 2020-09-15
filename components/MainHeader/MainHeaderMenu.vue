@@ -1,5 +1,5 @@
 <template>
-  <div class="container header-section-desktop-nav p-0">
+  <div class="container header-section-desktop-nav">
     <b-navbar class="p-0">
       <b-navbar-nav
         class="navbar-desktop-wrapper w-100 justify-content-between"
