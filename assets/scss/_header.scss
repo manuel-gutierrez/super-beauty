@@ -41,6 +41,18 @@ header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 
+    .search-wrapper {
+
+      @include media-breakpoint-down(sm){
+        border-left: 1px solid $black;
+        padding-left:8px;
+        height:19px;
+      }
+    }
+
+
+
+
     // Logo
     .logo {
       // Modify Size on smaller screens
@@ -60,7 +72,8 @@ header {
       & .search-icon{
         font-size: $font-size-icons;
         @include media-breakpoint-down(sm){
-         font-size: $font-size-icons-sm;
+          font-size: 1.26rem;
+          padding-bottom: 2px;
       }
     }
     }
