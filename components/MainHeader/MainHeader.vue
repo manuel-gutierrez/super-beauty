@@ -3,7 +3,7 @@
     <svg-sprite />
     <MainHeaderBanner />
     <MainHeaderAction />
-    <MainHeaderMenu />
+    <MainHeaderMenu class="d-none d-md-block" />
   </header>
 </template>
 <script>

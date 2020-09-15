@@ -38,7 +38,6 @@ header {
 
   }
   & .header-section-actions {
-    min-height: 80px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
 
@@ -80,6 +79,11 @@ header {
 
     .profile-wrapper{
       border-right: 1px solid $black;
+      margin-right: 24px;
+      @include media-breakpoint-down(sm){
+        border-right: none;
+        margin-right: 4px;
+      }
       padding-bottom: 4px;
 
       .profile-icon{
@@ -93,6 +97,7 @@ header {
         @include media-breakpoint-down(sm){
           height: $font-size-icons-sm;
           width: $font-size-icons-sm;
+          margin-right: 2px;
         }
       }
       .profile-data{
@@ -154,6 +159,9 @@ header {
       font-size:$font-size-navbar  ; // 14px
       font-weight: bold;
       letter-spacing: $font-letter-spacing-nav;
+      @include media-breakpoint-up(lg){
+        font-size: $font-size-navbar-lg;
+      }
     }
 
   }

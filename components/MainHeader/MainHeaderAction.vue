@@ -10,7 +10,7 @@
       <div
         class="d-flex justify-content-center align-items-center header-icons"
       >
-        <Profile class="mr-4" />
+        <Profile />
         <Wishlist class="mr-1" />
         <Cart class="mr-1" />
       </div>
