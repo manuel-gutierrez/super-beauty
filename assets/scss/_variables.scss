@@ -29,7 +29,7 @@ $font-size-base: 1rem;
 // Headings
 $font-size-h1: 3.3125rem;
 $font-size-h2: 1.87rem !default;
-$font-size-h3: 1.6875rem;
+$font-size-h3: 1.6875rem !default;
 $font-size-h4: 1rem !default;
 $font-size-h5: 0.6875rem !default;
 $font-size-h6: 0.5625rem !default;
@@ -42,6 +42,7 @@ $font-paragraph-sm: 0.625rem!default; // 10px
 // Navbar
 $font-size-navbar: $font-paragraph-sm !default;
 $font-size-navbar-lg: $font-paragraph !default;
+$font-size-mobile-menu: 1.57rem !default;
 
 //Footer
 $font-size-footer: $font-paragraph !default;

@@ -40,9 +40,10 @@ header {
   & .header-section-actions {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-
+    .mobile-hamburger {
+      font-size: $font-size-mobile-menu;
+    }
     .search-wrapper {
-
       @include media-breakpoint-down(sm){
         border-left: 1px solid $black;
         padding-left:8px;

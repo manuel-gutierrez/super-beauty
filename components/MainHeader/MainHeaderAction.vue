@@ -3,7 +3,10 @@
     <div
       class="container header-icons d-flex align-items-center justify-content-center"
     >
-      <MainHeaderMobile />
+      <font-awesome-icon
+        :icon="['fas', 'bars']"
+        class="d-sm-none mr-1 mobile-hamburger"
+      />
       <div><Search /></div>
       <div class="d-flex header-icons flex-grow-1">
         <Logo />
