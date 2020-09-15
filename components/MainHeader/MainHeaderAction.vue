@@ -3,6 +3,7 @@
     <div
       class="container header-icons d-flex align-items-center justify-content-center"
     >
+      <MainHeaderMobile />
       <div><Search /></div>
       <div class="d-flex header-icons flex-grow-1">
         <Logo />
