@@ -4,7 +4,6 @@
     <div class="counter mt-1">
       <div class="counter-number">{{ counter }}</div>
     </div>
-    <div @click="addToCart">add to cart</div>
   </div>
 </template>
 
