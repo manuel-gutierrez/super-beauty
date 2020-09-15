@@ -1,5 +1,5 @@
 <template>
-  <div>Hola</div>
+  <div class="d-none"></div>
 </template>
 
 <script>
