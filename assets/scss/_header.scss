@@ -1,4 +1,7 @@
 header {
+  a{
+    color: $black;
+  }
   & .header-section-banner {
     background: $primary;
     color: $white;
@@ -63,6 +66,53 @@ header {
     }
     }
 
+
+    .cart-icon{
+      height: 32px;
+      width: 32px;
+      @include media-breakpoint-down(sm){
+        height: 16px;
+        width: 16px;
+      }
+    }
+
+    // Profile
+
+    .profile-wrapper{
+      border-right: 1px solid $black;
+      padding-bottom: 4px;
+
+      .profile-icon{
+        background:linear-gradient(264deg, #BB29BB, #5C06A8);
+        border-radius: 50%;
+        height: $font-size-icons-lg;
+        width: $font-size-icons-lg;
+        margin-top: 4px;
+        margin-right: 17px;
+
+        @include media-breakpoint-down(sm){
+          height: $font-size-icons-sm;
+          width: $font-size-icons-sm;
+        }
+      }
+      .profile-data{
+        margin-right: 5px;
+        margin-top: 2px;
+        font-size: $font-paragraph + 0.0625rem; // 15px
+        font-family: $font-family-alt;
+        letter-spacing: $font-letter-spacing-headings;
+        line-height: $font-size-base;
+        text-transform: uppercase;
+        & a {
+          font-family: $font-family-base;
+          font-weight: bold;
+          text-decoration:underline;
+          justify-content: right ;
+          font-size: $font-paragraph-sm;
+        }
+      }
+    }
+
     // WishList Profile and Cart
 
     .counter{
@@ -95,23 +145,6 @@ header {
       }
     }
 
-    .profile-icon{
-      background:linear-gradient(264deg, #BB29BB, #5C06A8);
-      border-radius: 50%;
-      height: $font-size-icons-lg;
-      width: $font-size-icons-lg;
-      @include media-breakpoint-down(sm){
-        height: $font-size-icons-sm;
-        width: $font-size-icons-sm;
-      }
-    }
-    .cart-icon{
-      height: 32px;
-      width: 32px;
-      @include media-breakpoint-down(sm){
-        height: 16px;
-        width: 16px;
-      }
-    }
+
   }
 }

@@ -1,14 +1,27 @@
 <template>
-  <div v-if="isLoggedIn" class="d-inline-flex">
+  <div class="d-inline-flex profile-wrapper">
     <svg-icon class="profile-icon" icon="profile-icon" />
+    <div v-if="isLoggedIn" class="profile-data pt-1 d-none d-md-block">
+      <span class="d-block">Hola {{ profile.user.name }}</span>
+      <span class="d-block text-right">
+        <a href="#" @click="toggleLogin">salir</a>
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   computed: {
-    ...mapState('login', ['isLoggedIn', 'token']),
+    ...mapGetters('login', { isLoggedIn: 'getCurrentLoginStatus' }),
+    ...mapGetters('header', { profile: 'getProfileData' }),
+  },
+  methods: {
+    ...mapMutations('login', ['toggleLoginStatus']),
+    toggleLogin() {
+      this.toggleLoginStatus();
+    },
   },
 };
 </script>

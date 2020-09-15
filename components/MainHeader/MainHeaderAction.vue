@@ -10,9 +10,9 @@
       <div
         class="d-flex justify-content-center align-items-center header-icons"
       >
-        <Profile class="mr-1 pb-2" />
-        <Wishlist class="mr-1 pb-1" />
-        <Cart class="mr-1 pb-1" />
+        <Profile class="mr-4" />
+        <Wishlist class="mr-1" />
+        <Cart class="mr-1" />
       </div>
     </div>
   </div>

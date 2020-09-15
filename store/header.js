@@ -24,6 +24,23 @@ export const state = () => ({
         height: 58,
       },
     },
+    profile: {
+      user: {
+        name: 'Andrea',
+      },
+    },
   },
 });
 export const mutations = {};
+
+export const getters = {
+  getActionsData(state) {
+    return state.data.actions;
+  },
+  getBannerData(state) {
+    return state.data.banner;
+  },
+  getProfileData(state) {
+    return state.data.profile;
+  },
+};
