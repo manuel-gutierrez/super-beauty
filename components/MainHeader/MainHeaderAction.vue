@@ -15,8 +15,8 @@
         class="d-flex justify-content-center align-items-center header-icons"
       >
         <Profile />
-        <Wishlist class="mr-1" />
-        <Cart class="mr-1" />
+        <Wishlist />
+        <Cart />
       </div>
     </div>
   </div>

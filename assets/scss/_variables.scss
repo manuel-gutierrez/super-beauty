@@ -14,6 +14,8 @@ $icon-background-color: #FFFF;
 // Fonts
 $font-family-base: "Champagne";
 $font-family-alt: "Bebas Neue";
+$font-family-banners: "Handelson";
+$font-family-banners-alt: "Montserrat";
 
 // Typography
 // colours
@@ -54,6 +56,17 @@ $font-size-icons-lg: 2rem !default; // 32px
 $font-size-icons: 1.25rem !default; // 22px
 $font-size-icons-sm: 1rem !default; //16px
 
+
+// Banner
+$font-size-banner-title-lg: 3.75rem !default; // 60
+$font-size-banner-title-sm: 1.4375rem !default; // 23px
+$font-size-banner-number-lg: 4.5625rem !default; //73
+$font-size-banner-number-sm: 2.875rem !default; // 46
+
+//Buttons
+$font-size-banner-button: 0.875rem !default; // 14 px
+
+
 // Letter Spacing
 $font-letter-spacing-headings: 3px;
 $font-letter-spacing-nav: 1.4px;
@@ -61,5 +74,5 @@ $font-letter-spacing-nav: 1.4px;
 
 
 //== Components
-$padding-base: 15px !default;
-$margin-base: 15px !default;
+$padding-base: 5px !default;
+$margin-base: 5px !default;
