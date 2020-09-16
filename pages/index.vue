@@ -14,7 +14,11 @@
       />
     </div>
     <div class="row">
-      <!-- <BannerImage :banner-props="banners.promo_3.data" class="col" /> -->
+      <BannerImage
+        :data="banners.promo_3.data"
+        :type="banners.promo_3.type"
+        class="col"
+      />
     </div>
     <div>
       <button @click="logIn">Toggle Login</button>

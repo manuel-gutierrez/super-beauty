@@ -1,10 +1,7 @@
 <template>
   <div class="caption">
     <h2>{{ captionData.title }}</h2>
-    <p
-      v-if="captionData.discount"
-      class="caption-number d-flex align-items-center"
-    >
+    <p v-if="captionData.discount" class="caption-number">
       {{ captionData.discount }}
     </p>
     <p v-if="captionData.description">
@@ -12,12 +9,13 @@
     </p>
 
     <b-button
-      v-if="captionData.button.text"
+      v-if="captionData.button"
       :href="captionData.button.url"
       class="text-center"
     >
       {{ captionData.button.text }}
     </b-button>
+    <slot />
   </div>
 </template>
 

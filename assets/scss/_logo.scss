@@ -1,0 +1,11 @@
+    // Logo
+  .logo {
+      // Modify Size on smaller screens
+      @include media-breakpoint-down(sm){
+        width: 100px;
+        height: 33px;
+      }
+    }
+  .logo-white {
+    filter: brightness(0) invert(1);
+  }

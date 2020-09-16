@@ -1,6 +1,26 @@
 export const state = () => ({
   banners: {
-    carousel: {},
+    carousel: {
+      type: 'promo',
+      data: {
+        caption: {
+          title: 'Brow Powder Duo',
+          discount: '-50%',
+          description: '',
+          button: {
+            text: 'Ver más',
+            url: '/productos',
+          },
+        },
+        image: {
+          src: '/images/banner/banner_image_main.png',
+        },
+        button: {
+          text: 'Ver más',
+          url: '/products',
+        },
+      },
+    },
     promo_1: {
       type: 'promo',
       data: {
@@ -47,13 +67,9 @@ export const state = () => ({
       type: 'promo-large',
       data: {
         caption: {
-          title: 'Brow Powder Duo',
-          discount: '-50%',
-          description: '',
-          button: {
-            text: 'Ver más',
-            url: '/productos',
-          },
+          title: 'AHORRA HASTA UN 50% - 30% - 15%',
+          description:
+            'Envios gratis a nivel nacional, por compras superiores a $80.000',
         },
         image: {
           src: '/images/banner/banner_image_promo_large.png',
