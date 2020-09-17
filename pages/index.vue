@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <BannerCarrousel class="row">
-      <BannerImage :data="banners.promo_1.data" :type="banners.promo_1.type" />
+      <BannerImage :data="banners.promo_3.data" :type="banners.promo_3.type" />
       <BannerImage :data="banners.promo_3.data" :type="banners.promo_3.type" />
       <BannerImage :data="banners.promo_3.data" :type="banners.promo_3.type" />
     </BannerCarrousel>

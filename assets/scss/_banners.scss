@@ -133,6 +133,9 @@
   .custom-arrow-prev {
     @extend .custom-arrow;
     left: 5vw;
+    @include media-breakpoint-down(sm) {
+      left: 1vw;
+    }
   }
   .custom-arrow-next {
     @extend .custom-arrow;
