@@ -1,26 +1,42 @@
 <template>
-  <div class="carousel-wrapper">
-    <VueSlickCarousel v-bind="slickOptions">
-      <div class="bg-primary div-wrapper">This is one</div>
-      <div class="bg-secondary div-wrapper">This is two</div>
-    </VueSlickCarousel>
-  </div>
+  <VueSlickCarousel class="carousel">
+    <slot />
+    <template #prevArrow="">
+      <div class="custom-arrow-prev">
+        <b-icon icon="chevron-left"></b-icon>
+      </div>
+    </template>
+    <template #nextArrow="">
+      <div class="custom-arrow-next">
+        <b-icon icon="chevron-right"></b-icon>
+      </div>
+    </template>
+  </VueSlickCarousel>
 </template>
-
 <script>
 export default {
   data() {
     return {
       slickOptions: {
+        slidesToShow: 4,
+        infinite: true,
+        accessibility: true,
+        adaptiveHeight: false,
+        arrows: true,
         dots: true,
-        dotsClass: 'slick-dots custom-dot-class',
-        edgeFriction: 0.35,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        draggable: true,
+        edgeFriction: 0.3,
+        swipe: true,
       },
     };
+  },
+  methods: {
+    showNext() {
+      this.$refs.carousel.next();
+    },
+    showPrev() {
+      this.$refs.carousel.prev();
+    },
   },
 };
 </script>
@@ -28,12 +44,10 @@ export default {
 <style>
 .carousel-wrapper {
   padding: 40px;
-  width: 100%;
 }
-.div-wrapper div {
+.img-wrapper img {
   margin: auto;
-  width: 200px;
+  width: 100%;
   height: 100px;
-  background-image: linear-gradient(gray 100%, transparent 0);
 }
 </style>

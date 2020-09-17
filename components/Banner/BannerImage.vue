@@ -1,23 +1,25 @@
 <template>
   <div class="banner flex-grow-1">
-    <nuxt-link v-if="data.url" :to="data.url" class="link">
-      <div :style="getBackgroundImage(data.image.src)" :class="type">
-        <div v-if="type == 'promo-large'" class="row">
-          <div class="col-12 col-md-4 d-flex justify-content-center pt-3">
-            <Logo variant="white"> </Logo>
+    <client-only placeholder="Loading...">
+      <nuxt-link v-if="data.url" :to="data.url">
+        <div :style="getBackgroundImage(data.image.src)" :class="type">
+          <div v-if="type == 'promo-large'" class="row">
+            <div class="col-12 col-md-4 d-flex justify-content-center pt-3">
+              <Logo variant="white"> </Logo>
+            </div>
+            <div class="col-12 col-md-8">
+              <BannerCaption
+                :caption-data="data.caption"
+                class="text-sm-center text-center"
+              >
+              </BannerCaption>
+            </div>
           </div>
-          <div class="col-12 col-md-8">
-            <BannerCaption
-              :caption-data="data.caption"
-              class="text-sm-center text-center"
-            >
-            </BannerCaption>
-          </div>
+          <BannerCaption v-else :caption-data="data.caption" class="">
+          </BannerCaption>
         </div>
-        <BannerCaption v-else :caption-data="data.caption" class="">
-        </BannerCaption>
-      </div>
-    </nuxt-link>
+      </nuxt-link>
+    </client-only>
   </div>
 </template>
 
