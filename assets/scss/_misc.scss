@@ -11,3 +11,7 @@ body {
   height: auto;
   min-height: 100%;
 }
+// For the nuxt link
+.link:hover {
+   text-decoration: none !important;
+ }

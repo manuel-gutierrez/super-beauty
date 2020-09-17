@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <div class="row">HEADER</div>
+    <div class="row">
+      <BannerCarrousel />
+    </div>
     <div class="row">
       <BannerImage
         :data="banners.promo_1.data"
