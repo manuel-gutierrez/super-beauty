@@ -15,6 +15,11 @@
               </BannerCaption>
             </div>
           </div>
+          <div v-else-if="type == 'hero'" class="row">
+            <div class="col-12">
+              <BannerCaption :caption-data="data.caption"> </BannerCaption>
+            </div>
+          </div>
           <BannerCaption v-else :caption-data="data.caption" class="">
           </BannerCaption>
         </div>

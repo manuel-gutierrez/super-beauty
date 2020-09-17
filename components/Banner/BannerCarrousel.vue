@@ -1,9 +1,12 @@
 <template>
-  <VueSlickCarousel class="carousel">
+  <VueSlickCarousel class="carousel" :dots="true">
     <slot />
-    <template #prevArrow="">
+    <template #prevArrow="arrowOption">
       <div class="custom-arrow-prev">
-        <b-icon icon="chevron-left"></b-icon>
+        <b-icon
+          v-if="arrowOption.currentSlide != '0'"
+          icon="chevron-left"
+        ></b-icon>
       </div>
     </template>
     <template #nextArrow="">
@@ -22,10 +25,10 @@ export default {
         infinite: true,
         accessibility: true,
         adaptiveHeight: false,
-        arrows: true,
-        dots: true,
         draggable: true,
         edgeFriction: 0.3,
+        dots: true,
+        dotsClass: 'slick-dots custom-dot-class',
         swipe: true,
       },
     };
@@ -41,13 +44,4 @@ export default {
 };
 </script>
 
-<style>
-.carousel-wrapper {
-  padding: 40px;
-}
-.img-wrapper img {
-  margin: auto;
-  width: 100%;
-  height: 100px;
-}
-</style>
+<style></style>

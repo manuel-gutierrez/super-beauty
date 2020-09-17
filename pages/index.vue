@@ -1,11 +1,20 @@
 <template>
   <div class="container-fluid">
     <BannerCarrousel class="row">
-      <BannerImage :data="banners.promo_3.data" :type="banners.promo_3.type" />
-      <BannerImage :data="banners.promo_3.data" :type="banners.promo_3.type" />
-      <BannerImage :data="banners.promo_3.data" :type="banners.promo_3.type" />
+      <BannerImage
+        :data="banners.carousel.data"
+        :type="banners.carousel.type"
+      />
+      <BannerImage
+        :data="banners.carousel.data"
+        :type="banners.carousel.type"
+      />
+      <BannerImage
+        :data="banners.carousel.data"
+        :type="banners.carousel.type"
+      />
     </BannerCarrousel>
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <BannerImage
           :data="banners.promo_1.data"
@@ -29,7 +38,7 @@
       <div>
         <button @click="logIn">Toggle Login</button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

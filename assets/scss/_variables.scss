@@ -53,6 +53,7 @@ $font-size-footer-sm: $font-paragraph-sm !default;
 
 //Icons
 $font-size-icons-lg: 2rem !default; // 32px
+$font-size-icons-md: 1.50rem !default; // 3px
 $font-size-icons: 1.25rem !default; // 22px
 $font-size-icons-sm: 1rem !default; //16px
 
@@ -62,15 +63,19 @@ $font-size-banner-title-lg: 3.75rem !default; // 60
 $font-size-banner-title-sm: 1.4375rem !default; // 23px
 $font-size-banner-number-lg: 4.5625rem !default; //73
 $font-size-banner-number-sm: 2.875rem !default; // 46
+$font-size-hero-title-lg: 3.125rem !default; // 50
+$font-size-hero-title-sm: 0.875rem !default; // 14
 $font-size-banner-title-lg-alt: 2.375rem !default; // 38
 $font-size-banner-title-sm-alt: 0.875rem !default; // 14
 //Buttons
 $font-size-banner-button: 0.875rem !default; // 14 px
+$font-letter-spacing-buttons: 1.4px;
 
 
 // Letter Spacing
 $font-letter-spacing-headings: 3px;
 $font-letter-spacing-nav: 1.4px;
+
 
 
 

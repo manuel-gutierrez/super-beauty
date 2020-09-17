@@ -1,7 +1,7 @@
 export const state = () => ({
   banners: {
     carousel: {
-      type: 'promo',
+      type: 'hero',
       data: {
         url: '/productos',
         caption: {
