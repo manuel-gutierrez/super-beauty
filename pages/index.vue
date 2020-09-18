@@ -1,27 +1,43 @@
 <template>
-  <div class="container">
-    <div class="row">HEADER</div>
-    <div class="row">
+  <div class="container-fluid">
+    <BannerCarrousel class="row">
       <BannerImage
-        :data="banners.promo_1.data"
-        :type="banners.promo_1.type"
-        class="col"
+        :data="banners.carousel.data"
+        :type="banners.carousel.type"
       />
       <BannerImage
-        :data="banners.promo_2.data"
-        :type="banners.promo_2.type"
-        class="col"
+        :data="banners.carousel.data"
+        :type="banners.carousel.type"
       />
-    </div>
-    <div class="row">
       <BannerImage
-        :data="banners.promo_3.data"
-        :type="banners.promo_3.type"
-        class="col"
+        :data="banners.carousel.data"
+        :type="banners.carousel.type"
       />
-    </div>
-    <div>
-      <button @click="logIn">Toggle Login</button>
+    </BannerCarrousel>
+    <div class="container">
+      <div class="row">
+        <BannerImage
+          :data="banners.promo_1.data"
+          :type="banners.promo_1.type"
+          class="col"
+        />
+
+        <BannerImage
+          :data="banners.promo_2.data"
+          :type="banners.promo_2.type"
+          class="col"
+        />
+      </div>
+      <div class="row">
+        <BannerImage
+          :data="banners.promo_3.data"
+          :type="banners.promo_3.type"
+          class="col"
+        />
+      </div>
+      <div>
+        <button @click="logIn">Toggle Login</button>
+      </div>
     </div>
   </div>
 </template>

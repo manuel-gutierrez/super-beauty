@@ -1,9 +1,7 @@
 {
-  "folders": [{
-      "path": "."
-    },
+  "folders": [
     {
-      "path": "../../../Downloads/champagne_limousines"
+      "path": "."
     }
   ],
   "settings": {

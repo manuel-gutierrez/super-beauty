@@ -1,11 +1,12 @@
 export const state = () => ({
   banners: {
     carousel: {
-      type: 'promo',
+      type: 'hero',
       data: {
+        url: '/productos',
         caption: {
-          title: 'Brow Powder Duo',
-          discount: '-50%',
+          title: 'Inspirate',
+          discount: '',
           description: '',
           button: {
             text: 'Ver más',
@@ -24,6 +25,7 @@ export const state = () => ({
     promo_1: {
       type: 'promo',
       data: {
+        url: '/productos',
         caption: {
           title: 'Brow Powder Duo',
           discount: '-50%',
@@ -45,6 +47,7 @@ export const state = () => ({
     promo_2: {
       type: 'promo',
       data: {
+        url: '/productos',
         caption: {
           title: 'Brow Powder Duo',
           discount: '-50%',
@@ -66,6 +69,7 @@ export const state = () => ({
     promo_3: {
       type: 'promo-large',
       data: {
+        url: '/productos',
         caption: {
           title: 'AHORRA HASTA UN 50% - 30% - 15%',
           description:

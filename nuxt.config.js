@@ -40,12 +40,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/scss/main.scss'],
+  css: [
+    { src: 'vue-slick-carousel/dist/vue-slick-carousel.css', lang: 'css' },
+    { src: '@/assets/scss/main.scss', lang: 'sass' },
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: './plugins/vue-slick-carousel.js' }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -86,7 +89,7 @@ export default {
     ],
   ],
   bootstrapVue: {
-    icons: true, // Install the IconsPlugin (in addition to BootStrapVue plugin
+    icons: true,
   },
   /*
    ** Axios module configuration
