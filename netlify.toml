@@ -1,5 +1,16 @@
 [build]
   publish = "dist"
   command = "yarn generate"
+# Deploy Preview context: all deploys generated from a pull/merge request will
+# inherit these settings.
+[context.deploy-preview]
+  publish = "dist"
+
+# Branch Deploy context: all deploys that are not from a pull/merge request or
+# from the Production branch will inherit these settings.
+[context.branch-deploy]
+  command = "command = yarn generate"
+[context.branch-deploy.environment]
+  NODE_ENV = "development"
 [build.environment]
   NODE_VERSION = "14"
