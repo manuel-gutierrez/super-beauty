@@ -1,0 +1,112 @@
+.banner {
+  margin-top: $margin-base;
+  margin-bottom: $margin-base;
+
+ .btn {
+  border: 2px solid $white;
+  border-radius: 2px;
+  background:transparent;
+  width: 231px;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $font-size-banner-button;
+  font-weight:bold;
+  padding:2px;
+  @include media-breakpoint-down(sm) {
+    width: 136px;
+    height:23px;
+    line-height: normal;
+  }
+ }
+
+}
+
+
+
+.promo {
+  border-radius: 0.3rem;
+  background-repeat: no-repeat;
+  color: $white;
+  height: 259px;
+  padding-left:25px;
+  @include media-breakpoint-down(sm) {
+    height: 147px;
+  }
+  .caption{
+    padding-top: 8%;
+    @include media-breakpoint-down(sm) {
+      padding-top: 10%;
+    }
+    h2{
+      font-family: $font-family-banners;
+      text-transform: capitalize;
+      font-size: $font-size-banner-title-lg;
+      margin: 0;
+      margin-bottom:-2rem;
+      letter-spacing: $font-letter-spacing-headings;
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-banner-title-sm;
+        margin-bottom:-20px;
+      }
+    }
+    .caption-number{
+      font-size: $font-size-banner-number-lg;
+      height: $font-size-banner-number-lg;
+      font-family: $font-family-banners-alt;
+      line-height: normal;
+      font-weight:900;
+      letter-spacing: $font-letter-spacing-headings;
+
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-banner-number-sm;
+        height: $font-size-banner-number-sm;
+        margin-bottom: 5px;
+      }
+    }
+}
+
+}
+.promo-large {
+  .logo {
+    width: 156px;
+    height: 85px;
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-banner-title-sm-alt;
+      width: 127px;
+      height: 58px;
+    }
+  }
+  .caption {
+
+    color:$white;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+    font-weight: bold;
+    letter-spacing: unset;
+
+    & h2{
+      @extend .caption;
+      font-size: $font-size-banner-title-lg-alt;
+      margin-bottom:-10px;
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-banner-title-sm-alt;
+        margin-top:0px;
+        margin-bottom:0px;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-banner-title-sm-alt;
+    }
+  }
+
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 112px;
+  line-height: normal;
+  @include media-breakpoint-down(sm) {
+    height: 172px;
+  }
+}

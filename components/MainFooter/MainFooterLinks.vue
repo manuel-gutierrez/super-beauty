@@ -35,25 +35,17 @@
             /></a>
           </div>
         </div>
-
-        <!-- <div v-else>Not A/B/C</div>  // not show-->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 export default {
   data() {
     return {
       sections: this.$store.state.footer.data.links,
     };
-  },
-  computed: {
-    faGithub() {
-      return faGithub;
-    },
   },
 };
 </script>

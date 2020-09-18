@@ -1,23 +1,48 @@
 <template>
-  <div class="">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Los más vendidos</h2>
-        </div>
-        <div class="bg-secondary col">COl 2</div>
-        <div class="my-widget col">COl 3</div>
-      </div>
+  <div class="container">
+    <div class="row">HEADER</div>
+    <div class="row">
+      <BannerImage
+        :data="banners.promo_1.data"
+        :type="banners.promo_1.type"
+        class="col"
+      />
+      <BannerImage
+        :data="banners.promo_2.data"
+        :type="banners.promo_2.type"
+        class="col"
+      />
+    </div>
+    <div class="row">
+      <BannerImage
+        :data="banners.promo_3.data"
+        :type="banners.promo_3.type"
+        class="col"
+      />
+    </div>
+    <div>
+      <button @click="logIn">Toggle Login</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapMutations, mapGetters } from 'vuex';
+export default {
+  computed: {
+    ...mapGetters('login', {
+      isloggedIn: 'getCurrentLoginStatus',
+      sessionToken: 'getSessionToken',
+    }),
+    ...mapGetters('home', { banners: 'getBanners' }),
+  },
+  methods: {
+    ...mapMutations('login', ['toggleLoginStatus']),
+    logIn() {
+      this.toggleLoginStatus();
+    },
+  },
+};
 </script>
 
-<style>
-.purple {
-  background-color: var(--purple);
-}
-</style>
+<style></style>
