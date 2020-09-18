@@ -1,0 +1,21 @@
+// Bootstrap overrides Mixins and Variables.
+@import './mixins.scss';
+@import './fonts.scss';
+@import './variables.scss';
+
+
+// Bootsrap
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+
+// General style overrides and custom classes
+@import './typography.scss';
+@import './misc.scss';
+@import './header.scss';
+@import './footer.scss';
+
+// Components
+@import './logo.scss';
+@import './banners.scss';
+

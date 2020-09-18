@@ -13,7 +13,10 @@
     "prettier.eslintIntegration": true,
     "prettier.disableLanguages": [],
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true, // only if you want auto      //fomattting on saving the file
+    "editor.formatOnSave": false, // only if you want auto      //fomattting on saving the file
+    "[javascript]": {
+      "editor.formatOnSave": false
+    },
     "editor.detectIndentation": true,
     "editor.tabSize": 2,
     "editor.formatOnPaste": false,
@@ -21,8 +24,8 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "files.exclude": {
-      "**/node_modules": true,
-      ".gitignore": true,
+      "**/node_modules": false,
+      ".gitignore": false,
       ".eslintignore": true,
       ".eslintrc.js": false,
       ".babelrc": true,
@@ -32,8 +35,9 @@
       "build": true,
       "config": true
     },
-    "eslint.validate": [
-      {
+    "eslint.alwaysShowStatus": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.validate": [{
         "autoFix": true,
         "language": "javascript"
       },
@@ -81,6 +85,9 @@
       "role",
       "aria-.+",
       "$unknown$"
-    ]
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
   }
 }

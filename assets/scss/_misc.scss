@@ -1,0 +1,17 @@
+body {
+  background-color:$white;
+  letter-spacing: unset;
+  font-size: 1rem;
+  color: $black;
+  line-height: 1.5em;
+}
+
+.wrapper {
+
+  height: auto;
+  min-height: 100%;
+}
+// For the nuxt link
+a:hover {
+   text-decoration: none !important;
+ }
