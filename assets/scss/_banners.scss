@@ -122,8 +122,18 @@
   .caption {
     color: $white;
     display:block;
-    margin-left: 77%;
+
     margin-top:12%;
+    @include media-breakpoint-down(xlg) {
+      margin-left: 77%;
+    }
+    @include media-breakpoint-down(lg) {
+      margin-left: 67%;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top:22%;
+      margin-left: 57%;
+    }
     @include media-breakpoint-down(sm) {
       margin-left: 103px;
       margin-top:76px;
