@@ -19,20 +19,20 @@
         <BannerImage
           :data="banners.promo_1.data"
           :type="banners.promo_1.type"
-          class="col"
+          class="col-12 col-sm-12 col-md-6"
         />
 
         <BannerImage
           :data="banners.promo_2.data"
           :type="banners.promo_2.type"
-          class="col"
+          class="col-12 col-sm-12 col-md-6"
         />
       </div>
       <div class="row">
         <BannerImage
           :data="banners.promo_3.data"
           :type="banners.promo_3.type"
-          class="col"
+          class="col-12"
         />
       </div>
       <div>

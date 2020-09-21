@@ -31,19 +31,20 @@
   min-height: 259px;
   padding-left:25px;
   @include media-breakpoint-down(md) {
-    min-height: 200px;
+    min-height: 215px;
   }
-  @include media-breakpoint-down(sm) {
-    min-height: 171px;
+  @media (max-width: 414px) {
+      min-height: 160px;
   }
-  @include media-breakpoint-down(xs) {
-    min-height: 160px;
-  }
+
 
   .caption{
     padding-top: 8%;
     @include media-breakpoint-down(sm) {
-      padding-top: 10%;
+      padding-top: 14%;
+    }
+    @media (max-width: 414px) {
+      padding-top: 14%;
     }
     h2{
       font-family: $font-family-banners;
