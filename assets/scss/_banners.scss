@@ -25,13 +25,21 @@
 
 .promo {
   border-radius: 0.3rem;
+  background-size: cover;
   background-repeat: no-repeat;
   color: $white;
-  height: 259px;
+  min-height: 259px;
   padding-left:25px;
-  @include media-breakpoint-down(sm) {
-    height: 147px;
+  @include media-breakpoint-down(md) {
+    min-height: 200px;
   }
+  @include media-breakpoint-down(sm) {
+    min-height: 171px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 160px;
+  }
+
   .caption{
     padding-top: 8%;
     @include media-breakpoint-down(sm) {
@@ -44,9 +52,18 @@
       margin: 0;
       margin-bottom:-2rem;
       letter-spacing: $font-letter-spacing-headings;
+
+      @include media-breakpoint-down(md) {
+        font-size: $font-size-banner-title-sm*1.5;
+        margin-bottom:-20px;
+      }
       @include media-breakpoint-down(sm) {
         font-size: $font-size-banner-title-sm;
         margin-bottom:-20px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-banner-title-sm;
+        margin-bottom:2px;
       }
     }
     .caption-number{
@@ -62,11 +79,26 @@
         height: $font-size-banner-number-sm;
         margin-bottom: 5px;
       }
+      @include media-breakpoint-down(xs) {
+        margin-top: -20px;
+      }
     }
 }
 
 }
 .promo-large {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: $primary;
+  min-height: 112px;
+  line-height: normal;
+  @include media-breakpoint-down(sm) {
+    min-height: 172px;
+  }
+  @include media-breakpoint-down(xs) {
+    min-height: 152px;
+  }
   .logo {
     width: 156px;
     height: 85px;
@@ -84,7 +116,7 @@
     font-weight: bold;
     letter-spacing: unset;
 
-    & h2{
+    h2{
       @extend .caption;
       font-size: $font-size-banner-title-lg-alt;
       margin-bottom:-10px;
@@ -94,26 +126,27 @@
         margin-bottom:0px;
       }
     }
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-banner-title-sm-alt*1.5;
+      margin-bottom:-5px;
+    }
 
     @include media-breakpoint-down(sm) {
       font-size: $font-size-banner-title-sm-alt;
     }
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-banner-title-sm-alt*1.1;
+    }
   }
 
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 112px;
-  line-height: normal;
-  @include media-breakpoint-down(sm) {
-    height: 172px;
-  }
+
 }
 .hero {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
+  background-color: $primary;
   height: 464px;
   line-height: normal;
   @include media-breakpoint-down(sm) {
@@ -135,8 +168,13 @@
       margin-left: 57%;
     }
     @include media-breakpoint-down(sm) {
-      margin-left: 103px;
+      margin-left: 47%;
       margin-top:76px;
+      margin-bottom:-20px;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-left: 30%;
+      margin-top:77px;
       margin-bottom:-20px;
     }
 
@@ -145,6 +183,11 @@
       font-size: $font-size-banner-title-lg;
       @include media-breakpoint-down(sm) {
         font-size: $font-size-hero-title-lg;
+        margin-top:0px;
+        margin-bottom:-5px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-hero-title-lg*0.7;
         margin-top:0px;
         margin-bottom:-5px;
       }
