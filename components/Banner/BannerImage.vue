@@ -1,5 +1,5 @@
 <template>
-  <div class="banner flex-grow-1">
+  <div class="banner">
     <client-only placeholder="Loading...">
       <nuxt-link v-if="data.url" :to="data.url">
         <div :style="getBackgroundImage(data.image.src)" :class="type">
