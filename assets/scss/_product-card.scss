@@ -14,12 +14,14 @@
   }
 
   .product-card-header__label{
-    width: 27px;
-    height: 15px;
+    width: 35px;
+    height: 14px;
     color: $white;
     margin:0;
     padding: 2px;
+    text-align: center;
     font-size: $font-paragraph-sm;
+    font-weight:bold;
     letter-spacing: $font-letter-spacing-labels;
 
   }
