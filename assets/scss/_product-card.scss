@@ -1,0 +1,15 @@
+.product-card {
+
+  .product-card-header{
+    border: solid 1px rebeccapurple;
+  }
+  .product-wishlist-icon{
+    padding-top: 0;
+  }
+  .product-wishlist-icon--selected{
+    @extend .product-wishlist-icon;
+    color:$primary;
+  }
+
+
+}

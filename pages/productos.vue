@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-4">This is a product data : {{ findProduct('2') }}</div>
+      <div class="product-card col-4">
+        <ProductCardHeader :label-type="product.label.type"></ProductCardHeader>
+      </div>
     </div>
   </div>
 </template>
@@ -15,6 +17,9 @@ export default {
       sessionToken: 'getSessionToken',
     }),
     ...mapGetters('products', ['getProductById']),
+    product() {
+      return this.getProductById('2');
+    },
   },
   methods: {
     findProduct(id) {

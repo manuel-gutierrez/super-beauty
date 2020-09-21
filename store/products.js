@@ -3,9 +3,11 @@ export const state = () => ({
     {
       id: '1',
       sale: true,
-      saleText: 'oferta',
       new: true,
-      newText: 'Nuevo',
+      label: {
+        type: 'new',
+        text: 'oferta',
+      },
       productImage: 'https://google.com',
       productTitle: 'NARS',
       productDescription: 'Orgasm Eyeshadow Palette',
@@ -18,9 +20,11 @@ export const state = () => ({
     {
       id: '2',
       sale: true,
-      saleText: 'oferta',
       new: true,
-      newText: 'Nuevo',
+      label: {
+        type: 'new',
+        text: 'oferta',
+      },
       productImage: 'https://google.com',
       productTitle: 'NARS',
       productDescription: 'Orgasm Eyeshadow Palette',
@@ -33,9 +37,11 @@ export const state = () => ({
     {
       id: '3',
       sale: true,
-      saleText: 'oferta',
       new: true,
-      newText: 'Nuevo',
+      label: {
+        type: 'new',
+        text: 'oferta',
+      },
       productImage: 'https://google.com',
       productTitle: 'NARS',
       productDescription: 'Orgasm Eyeshadow Palette',
@@ -48,9 +54,11 @@ export const state = () => ({
     {
       id: '4',
       sale: true,
-      saleText: 'oferta',
       new: true,
-      newText: 'Nuevo',
+      label: {
+        type: 'new',
+        text: 'oferta',
+      },
       productImage: 'https://google.com',
       productTitle: 'NARS',
       productDescription: 'Orgasm Eyeshadow Palette',
