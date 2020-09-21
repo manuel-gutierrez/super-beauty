@@ -1,9 +1,9 @@
 <template>
   <div v-if="!inWishlist" class="product-wishlist-icon">
-    <b-icon-heart @click="addToWishList"></b-icon-heart>
+    <b-icon-heart @click="togglefromWishList"></b-icon-heart>
   </div>
   <div v-else class="product-wishlist-icon--selected">
-    <b-icon-heart-fill @click="addToWishList"></b-icon-heart-fill>
+    <b-icon-heart-fill @click="togglefromWishList"></b-icon-heart-fill>
   </div>
 </template>
 
@@ -13,16 +13,31 @@ export default {
   props: {
     inWishlist: {
       type: Boolean,
-      default: true,
+      default: false,
     },
   },
   computed: {
     ...mapGetters('wishlist', { counter: 'getWishListCounter' }),
   },
   methods: {
-    ...mapMutations('wishlist', ['incrementWishlistCounter']),
+    ...mapMutations('wishlist', [
+      'incrementWishlistCounter',
+      'decrementWishlistCounter',
+    ]),
     addToWishList() {
       this.incrementWishlistCounter();
+    },
+    removefromWishList() {
+      this.decrementWishlistCounter();
+    },
+    togglefromWishList() {
+      if (!this.inWishlist) {
+        this.incrementWishlistCounter();
+        this.inWishlist = !this.inWishlist;
+      } else {
+        this.decrementWishlistCounter();
+        this.inWishlist = !this.inWishlist;
+      }
     },
   },
 };
