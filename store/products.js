@@ -22,8 +22,8 @@ export const state = () => ({
       sale: true,
       new: true,
       label: {
-        type: 'new',
-        text: 'oferta',
+        type: 'promo',
+        text: '-15%',
       },
       productImage: 'https://google.com',
       productTitle: 'NARS',
@@ -56,8 +56,8 @@ export const state = () => ({
       sale: true,
       new: true,
       label: {
-        type: 'new',
-        text: 'oferta',
+        type: 'promo',
+        text: '-15%',
       },
       productImage: 'https://google.com',
       productTitle: 'NARS',

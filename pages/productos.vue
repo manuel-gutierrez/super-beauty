@@ -2,7 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="product-card col-4">
-        <ProductCardHeader :label-type="product.label.type"></ProductCardHeader>
+        <ProductCardHeader
+          :label-type="product.label.type"
+          :label-text="product.label.text"
+        ></ProductCardHeader>
       </div>
     </div>
   </div>

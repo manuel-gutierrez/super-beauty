@@ -4,13 +4,12 @@ $theme-colors: ('primary': #9117b4,
   'danger': #ff4136,
   'heart': #FF8E94,
 );
-
-
-
-
 $primary: #9117b4;
 $secondary: #bb29bb;
 $icon-background-color: #FFFF;
+
+$background-gradient-primary : transparent linear-gradient(269deg, #BB29BB 0%, #5C06A8 100%) 0% 0% no-repeat padding-box;
+$background-gradient-secondary : transparent linear-gradient(90deg, #F27D39 1%, #FF4555 100%) 0% 0% no-repeat padding-box;
 
 
 
@@ -83,6 +82,7 @@ $font-letter-spacing-buttons: 1.4px;
 // Letter Spacing
 $font-letter-spacing-headings: 3px;
 $font-letter-spacing-nav: 1.4px;
+$font-letter-spacing-labels: 1px;
 
 
 

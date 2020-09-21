@@ -2,6 +2,8 @@
 
   .product-card-header{
     border: solid 1px rebeccapurple;
+    min-height: 11px;
+    line-height: normal;
   }
   .product-wishlist-icon{
     padding-top: 0;
@@ -9,6 +11,25 @@
   .product-wishlist-icon--selected{
     @extend .product-wishlist-icon;
     color:$primary;
+  }
+
+  .product-card-header__label{
+    width: 27px;
+    height: 15px;
+    color: $white;
+    margin:0;
+    padding: 2px;
+    font-size: $font-paragraph-sm;
+    letter-spacing: $font-letter-spacing-labels;
+
+  }
+  .product-card-header__label--new{
+    @extend .product-card-header__label;
+    background: $background-gradient-primary;
+  }
+  .product-card-header__label--promo{
+    @extend .product-card-header__label;
+    background: $background-gradient-secondary;
   }
 
 
