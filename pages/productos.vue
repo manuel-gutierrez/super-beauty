@@ -21,7 +21,7 @@ export default {
     }),
     ...mapGetters('products', ['getProductById']),
     product() {
-      return this.getProductById('2');
+      return this.getProductById('1');
     },
   },
   methods: {

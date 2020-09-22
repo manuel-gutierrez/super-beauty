@@ -6,7 +6,7 @@ export const state = () => ({
       new: true,
       label: {
         type: 'new',
-        text: 'oferta',
+        text: 'new',
       },
       productImage: 'https://google.com',
       productTitle: 'NARS',
