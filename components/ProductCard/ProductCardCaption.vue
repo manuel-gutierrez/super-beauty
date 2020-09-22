@@ -5,17 +5,17 @@
         {{ title }}
       </h2>
       <p
-        v-if="description"
+        v-if="reference"
         :class="'mb-0 product-card-caption__description--' + type"
       >
-        {{ description }}
+        {{ reference }}
       </p>
       <money-format
         v-if="price"
         :value="price"
         :class="'product-card-caption__price--' + type"
-        :locale="es"
-        :currency-code="COP"
+        :locale="'es-co'"
+        :currency-code="'COP'"
         :subunits-value="false"
         :hide-subunits="true"
       >
@@ -24,8 +24,8 @@
         v-if="discountedPrice"
         :value="discountedPrice"
         :class="'product-card-caption__discounted-price--' + type"
-        :locale="es"
-        :currency-code="COP"
+        :locale="'es-co'"
+        :currency-code="'COP'"
         :subunits-value="false"
         :hide-subunits="true"
       >
@@ -45,7 +45,7 @@ export default {
       type: String,
       default: null,
     },
-    description: {
+    reference: {
       type: String,
       default: null,
     },
@@ -57,9 +57,6 @@ export default {
       type: Number,
       default: null,
     },
-  },
-  data() {
-    return {};
   },
 };
 </script>

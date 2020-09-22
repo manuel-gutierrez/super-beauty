@@ -1,5 +1,5 @@
 .product-card {
-
+  min-width: 124px;
   .product-card-header{
 
     min-height: 11px;
@@ -36,15 +36,15 @@
   }
   .product-card-image{
     background:no-repeat center center / 140px 140px;
-    min-height: 141px;
-    border: solid red 1px;
+    min-height: 115px;
+
     @include media-breakpoint-down(sm) {
       background:no-repeat center center / 124px 124px;
     }
   }
   .product-card-caption{
     text-transform: uppercase;
-    border: solid blue 1px;
+
     font-weight: bold;
   }
   .product-card-caption__title--info{

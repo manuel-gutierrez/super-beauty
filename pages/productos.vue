@@ -1,34 +1,13 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="product-card col-4 col-md-2">
-        <ProductCardHeader
-          :label-type="product.label.type"
-          :label-text="product.label.text"
-        ></ProductCardHeader>
-        <ProductCardImage
-          :url="product.productImage"
-          :tilte="product.productTitle"
-        >
-        </ProductCardImage>
-        <ProductCardCaption
-          :title="product.productTitle"
-          :description="product.productDescription"
-          type="info"
-        >
-        </ProductCardCaption>
-        <ProductCardCaption
-          :title="product.priceTitle"
-          :price="product.price"
-          type="price"
-        >
-        </ProductCardCaption>
-        <ProductCardCaption
-          :title="product.priceTitleSecondary"
-          :price="product.priceSecondary"
-          type="price-secondary"
-        >
-        </ProductCardCaption>
+    <div class="row-fluid">
+      <div class="d-flex justify-content-around flex-wrap">
+        <ProductCard
+          v-for="productItem in products"
+          :key="productItem"
+          :product="productItem"
+          class="mx-1 my-1"
+        />
       </div>
     </div>
   </div>
@@ -42,16 +21,12 @@ export default {
       isloggedIn: 'getCurrentLoginStatus',
       sessionToken: 'getSessionToken',
     }),
-    ...mapGetters('products', ['getProductById']),
-    product() {
-      return this.getProductById('1');
+    ...mapGetters('products', ['getProducts']),
+    products() {
+      return this.getProducts;
     },
   },
-  methods: {
-    findProduct(id) {
-      return this.getProductById(id);
-    },
-  },
+  methods: {},
 };
 </script>
 
