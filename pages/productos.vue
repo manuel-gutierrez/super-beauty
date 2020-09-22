@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="product-card col-4">
+      <div class="product-card col-4 col-md-2">
         <ProductCardHeader
           :label-type="product.label.type"
           :label-text="product.label.text"
         ></ProductCardHeader>
+        <ProductCardImage :url="product.productImage"> </ProductCardImage>
       </div>
     </div>
   </div>

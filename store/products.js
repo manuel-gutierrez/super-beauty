@@ -5,10 +5,10 @@ export const state = () => ({
       sale: true,
       new: true,
       label: {
-        type: 'new',
-        text: 'new',
+        type: 'promo',
+        text: '-15%',
       },
-      productImage: 'https://google.com',
+      productImage: '/images/product_card/product@2x.png',
       productTitle: 'NARS',
       productDescription: 'Orgasm Eyeshadow Palette',
       priceTitle: 'Precio al por mayor',
