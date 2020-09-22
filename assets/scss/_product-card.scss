@@ -37,10 +37,45 @@
   .product-card-image{
     background:no-repeat center center / 140px 140px;
     min-height: 141px;
-    border: solid 1px rebeccapurple;
+    border: solid red 1px;
     @include media-breakpoint-down(sm) {
       background:no-repeat center center / 124px 124px;
     }
+  }
+  .product-card-caption{
+    text-transform: uppercase;
+    border: solid blue 1px;
+    font-weight: bold;
+  }
+  .product-card-caption__title--info{
+    font-size:$font-size-product-card-title;
+    letter-spacing: $font-letter-spacing-product-card-title;
+
+    margin: 0;
+  }
+  .product-card-caption__description--info{
+    font-size:$font-size-product-card-description;
+    letter-spacing: $font-letter-spacing-product-card-description;
+    margin-top: -10px;
+  }
+  .product-card-caption__title--price{
+    font-size:$font-size-product-card-price-title;
+    color: $primary;
+    letter-spacing: $font-letter-spacing-product-card-price-title;
+    margin:0;
+  }
+  .product-card-caption__price--price{
+    margin-top: -5px;
+  }
+  .product-card-caption__title--price-secondary{
+    font-size:$font-size-product-card-price-secondary-title;
+    color: $primary;
+    letter-spacing: $font-letter-spacing-product-card-price-title;
+    margin:0;
+  }
+  .product-card-caption__price--price-secondary{
+    font-size:$font-size-product-card-price-secondary-ammount;
+    margin-top: -5px;
   }
 
 }

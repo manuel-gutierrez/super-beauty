@@ -4,6 +4,7 @@ export const state = () => ({
       id: '1',
       sale: true,
       new: true,
+      isInWishlist: true,
       label: {
         type: 'promo',
         text: '-15%',
@@ -12,7 +13,7 @@ export const state = () => ({
       productTitle: 'NARS',
       productDescription: 'Orgasm Eyeshadow Palette',
       priceTitle: 'Precio al por mayor',
-      Price: 150000,
+      price: 150000,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       rating: 4.5,

@@ -1,5 +1,10 @@
 <template>
-  <div class="row product-card-image p-0" :style="getBackgroundImage(url)">
+  <div
+    class="row product-card-image p-0"
+    :style="getBackgroundImage(url)"
+    role="img"
+    :aria-label="title"
+  >
     <slot />
   </div>
 </template>
@@ -8,6 +13,10 @@
 export default {
   props: {
     url: {
+      type: String,
+      default: null,
+    },
+    title: {
       type: String,
       default: null,
     },

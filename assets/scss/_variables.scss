@@ -1,4 +1,5 @@
-// Theme colors
+//---- Colours-------//
+//== Theme
 $theme-colors: ('primary': #9117b4,
   'secondary': #bb29bb,
   'danger': #ff4136,
@@ -8,34 +9,25 @@ $primary: #9117b4;
 $secondary: #bb29bb;
 $icon-background-color: #FFFF;
 
+//== Backgrounds
 $background-gradient-primary : transparent linear-gradient(269deg, #BB29BB 0%, #5C06A8 100%) 0% 0% no-repeat padding-box;
 $background-gradient-secondary : transparent linear-gradient(90deg, #F27D39 1%, #FF4555 100%) 0% 0% no-repeat padding-box;
 
+//== Typography
+$font-color-primary: $primary;
+$font-color-secondary: $secondary;
+$navbar-light-color : #000;
 
 
-
-// Fonts
+//---- Font Families-------//
 $font-family-base: "Champagne";
 $font-family-alt: "Bebas Neue";
 $font-family-banners: "Handelson";
 $font-family-banners-alt: "Montserrat";
 
-// Typography
-// colours
-
-
-$font-color-primary: $primary;
-$font-color-secondary: $secondary;
-
-$navbar-light-color : #000;
-
-
-
-
-
-// Sizes
+//---- Font Sizes-------//
 $font-size-base: 1rem;
-// Headings
+//==Headings
 $font-size-h1: 3.3125rem;
 $font-size-h2: 1.87rem !default;
 $font-size-h3: 1.6875rem !default;
@@ -43,50 +35,58 @@ $font-size-h4: 1rem !default;
 $font-size-h5: 0.6875rem !default;
 $font-size-h6: 0.5625rem !default;
 
-// Paragraph
+//==Paragraph
 $font-paragraph: 0.875rem !default; // 14 px
 $font-paragraph-md:0.75rem  !default; // 12 px
 $font-paragraph-sm: 0.625rem!default; // 10px
 
-// Navbar
+//==Navbar
 $font-size-navbar: $font-paragraph-sm !default;
 $font-size-navbar-lg: $font-paragraph !default;
 $font-size-mobile-menu: 1.57rem !default;
 
-//Footer
+//==Footer
 $font-size-footer: $font-paragraph !default;
 $font-size-footer-sm: $font-paragraph-sm !default;
 
 
-//Icons
+//==Icons
 $font-size-icons-lg: 2rem !default; // 32px
 $font-size-icons-md: 1.50rem !default; // 3px
 $font-size-icons: 1.25rem !default; // 22px
 $font-size-icons-sm: 1rem !default; //16px
 
 
-// Banner
-$font-size-banner-title-lg: 3.75rem !default; // 60
+//==Banner
+$font-size-banner-title-lg: 3.75rem !default; // 60px
 $font-size-banner-title-sm: 1.4375rem !default; // 23px
-$font-size-banner-number-lg: 4.5625rem !default; //73
-$font-size-banner-number-sm: 2.875rem !default; // 46
-$font-size-hero-title-lg: 3.125rem !default; // 50
-$font-size-hero-title-sm: 0.875rem !default; // 14
-$font-size-banner-title-lg-alt: 2.375rem !default; // 38
-$font-size-banner-title-sm-alt: 0.875rem !default; // 14
-//Buttons
-$font-size-banner-button: 0.875rem !default; // 14 px
-$font-letter-spacing-buttons: 1.4px;
+$font-size-banner-number-lg: 4.5625rem !default; //73px
+$font-size-banner-number-sm: 2.875rem !default; // 46px
+$font-size-hero-title-lg: 3.125rem !default; // 50px
+$font-size-hero-title-sm: 0.875rem !default; // 14px
+$font-size-banner-title-lg-alt: 2.375rem !default; // 38px
+$font-size-banner-title-sm-alt: 0.875rem !default; // 14px
+//==Buttons
+$font-size-banner-button: 0.875rem !default; // 14px
+
+//==Product Card
+$font-size-product-card-title: 0.6875rem !default; // 11px
+$font-size-product-card-price-title: 0.625rem !default; // 10px
+$font-size-product-card-price-secondary-title: 0.5rem !default; // 8px
+$font-size-product-card-price-secondary-ammount: 0.625rem !default; // 10px
+$font-size-product-card-description: 0.5rem !default; // 8px
 
 
-// Letter Spacing
+
+//---- Font Spacing-------//
 $font-letter-spacing-headings: 3px;
+$font-letter-spacing-buttons: 1.4px;
 $font-letter-spacing-nav: 1.4px;
 $font-letter-spacing-labels: 1px;
+$font-letter-spacing-product-card-title: 2.64px;
+$font-letter-spacing-product-card-price-title:  0.31px;;
+$font-letter-spacing-product-card-description:  0.27px;;
 
-
-
-
-//== Components
+//---- Paddings & Margins-------//
 $padding-base: 5px !default;
 $margin-base: 5px !default;
