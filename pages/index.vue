@@ -114,7 +114,18 @@
           class="col-12"
         />
       </div>
+      <div class="row my-4">
+        <BannerImage
+          :data="banners.promo_4.data"
+          :type="banners.promo_4.type"
+          class="col-12"
+        />
+      </div>
+      <div class="section-spacer"></div>
       <!--  //  End Section 4 -->
+      <!-- Scroll to top -->
+      <ScrollToTop />
+      <!-- // End Scroll to top -->
     </div>
   </div>
 </template>

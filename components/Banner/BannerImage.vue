@@ -9,6 +9,7 @@
             </div>
             <div class="col-12 col-md-8">
               <BannerCaption
+                v-if="data.caption"
                 :caption-data="data.caption"
                 class="text-sm-center text-center"
               >

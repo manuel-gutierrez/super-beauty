@@ -84,6 +84,22 @@ export const state = () => ({
         },
       },
     },
+    promo_4: {
+      type: 'promo-big',
+      data: {
+        url: '/productos',
+        image: {
+          src: '/images/banner/banner_image_big@2x.png',
+        },
+        caption: {
+          title: 'POR DEFINIR',
+        },
+        button: {
+          text: 'Ver más',
+          url: '/products',
+        },
+      },
+    },
   },
   headers: {
     firstSection: 'LOS MÁS VENDIDOS',

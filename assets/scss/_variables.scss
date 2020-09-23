@@ -61,12 +61,14 @@ $font-size-icons-sm: 1rem !default; //16px
 //==Banner
 $font-size-banner-title-lg: 3.75rem !default; // 60px
 $font-size-banner-title-sm: 1.4375rem !default; // 23px
+$font-size-banner-title-lg-alt: 2.375rem !default; // 38px
+$font-size-banner-title-sm-alt: 0.875rem !default; // 14px
+
 $font-size-banner-number-lg: 4.5625rem !default; //73px
 $font-size-banner-number-sm: 2.875rem !default; // 46px
 $font-size-hero-title-lg: 3.125rem !default; // 50px
 $font-size-hero-title-sm: 0.875rem !default; // 14px
-$font-size-banner-title-lg-alt: 2.375rem !default; // 38px
-$font-size-banner-title-sm-alt: 0.875rem !default; // 14px
+
 //==Buttons
 $font-size-banner-button: 0.875rem !default; // 14px
 
@@ -80,6 +82,7 @@ $font-size-product-card-description: 0.5rem !default; // 8px
 
 
 //---- Font Spacing-------//
+$font-letter-spacing-10: 10px;
 $font-letter-spacing-headings: 3px;
 $font-letter-spacing-buttons: 1.4px;
 $font-letter-spacing-nav: 1.4px;
