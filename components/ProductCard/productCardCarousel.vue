@@ -1,0 +1,79 @@
+<template>
+  <VueSlickCarousel class="carousel" v-bind="settings">
+    <slot />
+    <template #prevArrow="arrowOption">
+      <div class="custom-arrow-prev--products">
+        <b-icon
+          v-if="arrowOption.currentSlide != '0'"
+          icon="chevron-left"
+        ></b-icon>
+      </div>
+    </template>
+    <template #nextArrow="">
+      <div class="custom-arrow-next--products">
+        <b-icon icon="chevron-right"></b-icon>
+      </div>
+    </template>
+  </VueSlickCarousel>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      settings: {
+        centerPadding: '10px',
+        focusOnSelect: true,
+        infinite: false,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        speed: 500,
+        cssEase: 'ease',
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 6,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              touchMove: true,
+              touchThreshold: 5,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              touchMove: true,
+              touchThreshold: 5,
+            },
+          },
+        ],
+      },
+    };
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
+  methods: {
+    showNext() {
+      this.$refs.carousel.next();
+    },
+    showPrev() {
+      this.$refs.carousel.prev();
+    },
+  },
+};
+</script>
+
+<style></style>

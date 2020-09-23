@@ -1,0 +1,14 @@
+.product-rating{
+  color:$primary;
+
+  padding-left: 25%;
+  padding-right: 25%;
+  svg.icon{
+    height:$font-size-icons-sm;
+    width: $font-size-icons-sm ;
+
+  }
+}
+.product-rating--card{
+  margin-top:-10px;
+}

@@ -48,7 +48,10 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: './plugins/vue-slick-carousel.js' }],
+  plugins: [
+    { src: './plugins/vue-slick-carousel.js' },
+    { src: './plugins/vue-money-format.js' },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
