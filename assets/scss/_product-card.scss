@@ -1,12 +1,21 @@
 .product-card {
   min-width: 124px;
-  .product-card-header{
+  a{
+    color: unset;
+  }
 
+  .product-card-header{
     min-height: 11px;
     line-height: normal;
+
   }
   .product-wishlist-icon{
     padding-top: 0;
+    z-index:100;
+    .b-icon.bi {
+      vertical-align: 0;
+    }
+
   }
   .product-wishlist-icon--selected{
     @extend .product-wishlist-icon;
@@ -16,8 +25,9 @@
   .product-card-header__label{
     width: 35px;
     height: 14px;
+    line-height: normal;
     color: $white;
-    margin:0;
+    margin:'0px';
     padding: 2px;
     text-align: center;
     font-size: $font-paragraph-sm;
@@ -40,6 +50,7 @@
 
     @include media-breakpoint-down(sm) {
       background:no-repeat center center / 124px 124px;
+      min-height: 90px;
     }
   }
   .product-card-caption{
@@ -77,5 +88,4 @@
     font-size:$font-size-product-card-price-secondary-ammount;
     margin-top: -5px;
   }
-
 }

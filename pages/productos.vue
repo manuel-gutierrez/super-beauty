@@ -1,13 +1,15 @@
 <template>
   <div class="container">
     <div class="row-fluid">
-      <div class="d-flex justify-content-around flex-wrap">
-        <ProductCard
-          v-for="productItem in products"
-          :key="productItem"
-          :product="productItem"
-          class="mx-1 my-1"
-        />
+      <div class="">
+        <ProductCardCarousel>
+          <ProductCard
+            v-for="productItem in products"
+            :key="productItem.id"
+            :product="productItem"
+            class="px-3"
+          />
+        </ProductCardCarousel>
       </div>
     </div>
   </div>

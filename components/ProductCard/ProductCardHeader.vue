@@ -1,11 +1,9 @@
 <template>
-  <div class="row product-card-header">
-    <div class="col-6 pl-1">
+  <div class="row-fluid d-flex">
+    <div class="col-6 px-0">
       <p :class="'product-card-header__label--' + labelType">{{ labelText }}</p>
     </div>
-    <div
-      class="col-6 pr-1 d-flex justify-content-end align-self-center flex-grow-1"
-    >
+    <div class="col-6 px-0 d-flex justify-content-end flex-grow-1">
       <WishlistProduct></WishlistProduct>
     </div>
   </div>
