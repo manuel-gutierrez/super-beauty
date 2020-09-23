@@ -30,6 +30,7 @@ $font-size-base: 1rem;
 //==Headings
 $font-size-h1: 3.3125rem;
 $font-size-h2: 1.87rem !default;
+$font-size-h2-sm: 1.25rem !default;
 $font-size-h3: 1.6875rem !default;
 $font-size-h4: 1rem !default;
 $font-size-h5: 0.6875rem !default;
@@ -90,3 +91,9 @@ $font-letter-spacing-product-card-description:  0.27px;;
 //---- Paddings & Margins-------//
 $padding-base: 5px !default;
 $margin-base: 5px !default;
+
+//==Spacers
+$vertical-section-spacer-lg: 70px !default;
+$vertical-section-spacer-md: $vertical-section-spacer-lg *0.7 !default;
+$vertical-section-spacer-sm: $vertical-section-spacer-lg *0.5 !default;
+$vertical-section-spacer-xs: $vertical-section-spacer-lg *0.25 !default;
