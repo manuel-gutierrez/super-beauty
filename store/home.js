@@ -85,6 +85,11 @@ export const state = () => ({
       },
     },
   },
+  headers: {
+    firstSection: 'LOS MÁS VENDIDOS',
+    secondSection: 'Recomendados Superbeauty',
+    thirdSection: 'OFERTAS',
+  },
 });
 export const mutations = {};
 export const actions = {
@@ -94,5 +99,8 @@ export const actions = {
 export const getters = {
   getBanners(state) {
     return state.banners;
+  },
+  getHeaders(state) {
+    return state.headers;
   },
 };
