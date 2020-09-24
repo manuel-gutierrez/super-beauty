@@ -5,6 +5,11 @@ export const mutations = {
   incrementWishlistCounter(state) {
     state.counter++;
   },
+  decrementWishlistCounter(state) {
+    if (state.counter !== 0) {
+      state.counter--;
+    }
+  },
   emptyWishlist(state) {
     state.counter = 0;
   },

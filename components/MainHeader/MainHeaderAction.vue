@@ -15,7 +15,7 @@
         class="d-flex justify-content-center align-items-center header-icons"
       >
         <Profile />
-        <a href="/favoritos"><Wishlist /></a>
+        <a href="/favoritos"><WishlistCart /></a>
         <a href="/checkout"> <Cart /></a>
       </div>
     </div>

@@ -94,7 +94,7 @@ header {
       padding-bottom: 4px;
 
       .profile-icon{
-        background:linear-gradient(264deg, #BB29BB, #5C06A8);
+        background:$background-gradient-primary;
         border-radius: 50%;
         height: $font-size-icons-lg;
         width: $font-size-icons-lg;
@@ -129,7 +129,7 @@ header {
 
     .counter{
       margin-left:-5px;
-      background:linear-gradient(264deg, #BB29BB, #5C06A8);
+      background:$background-gradient-primary;
       width: 15px;
       height: 15px;
       border-radius: 50%;
