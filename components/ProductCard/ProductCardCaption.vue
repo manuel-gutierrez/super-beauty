@@ -4,17 +4,26 @@
       <h2 :class="'product-card-caption__title--' + type">
         {{ title }}
       </h2>
-      <p
-        v-if="reference"
-        :class="'mb-0 product-card-caption__description--' + type"
-      >
+      <p v-if="reference" :class="'product-card-caption__description--' + type">
         {{ reference }}
       </p>
-      <div class="row">
+      <div
+        class="row product-card-caption__amount d-flex justify-content-center align-items-center"
+      >
         <money-format
-          v-if="price"
+          v-if="price && !discountedPrice"
           :value="price"
-          :class="'product-card-caption__price--' + type"
+          :class="'product-card-caption__amount--' + type"
+          :locale="'es-co'"
+          :currency-code="'COP'"
+          :subunits-value="false"
+          :hide-subunits="true"
+        >
+        </money-format>
+        <money-format
+          v-else-if="price && discountedPrice"
+          :value="price"
+          :class="'product-card-caption__amount--' + type + '--discount'"
           :locale="'es-co'"
           :currency-code="'COP'"
           :subunits-value="false"
@@ -24,7 +33,7 @@
         <money-format
           v-if="discountedPrice"
           :value="discountedPrice"
-          :class="'product-card-caption__discounted-price--' + type"
+          :class="'product-card-caption__amount-discounted--' + type"
           :locale="'es-co'"
           :currency-code="'COP'"
           :subunits-value="false"
