@@ -10,26 +10,28 @@
       >
         {{ reference }}
       </p>
-      <money-format
-        v-if="price"
-        :value="price"
-        :class="'product-card-caption__price--' + type"
-        :locale="'es-co'"
-        :currency-code="'COP'"
-        :subunits-value="false"
-        :hide-subunits="true"
-      >
-      </money-format>
-      <money-format
-        v-if="discountedPrice"
-        :value="discountedPrice"
-        :class="'product-card-caption__discounted-price--' + type"
-        :locale="'es-co'"
-        :currency-code="'COP'"
-        :subunits-value="false"
-        :hide-subunits="true"
-      >
-      </money-format>
+      <div class="row">
+        <money-format
+          v-if="price"
+          :value="price"
+          :class="'product-card-caption__price--' + type"
+          :locale="'es-co'"
+          :currency-code="'COP'"
+          :subunits-value="false"
+          :hide-subunits="true"
+        >
+        </money-format>
+        <money-format
+          v-if="discountedPrice"
+          :value="discountedPrice"
+          :class="'product-card-caption__discounted-price--' + type"
+          :locale="'es-co'"
+          :currency-code="'COP'"
+          :subunits-value="false"
+          :hide-subunits="true"
+        >
+        </money-format>
+      </div>
     </div>
   </div>
 </template>
