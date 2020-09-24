@@ -44,6 +44,9 @@ h2,
 .h2 {
   font-size: $font-size-h2;
   line-height: 1.5em;
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-h2-sm;
+  }
 }
 
 h3,

@@ -55,6 +55,15 @@ export default {
               touchThreshold: 5,
             },
           },
+          {
+            breakpoint: 280,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              touchMove: true,
+              touchThreshold: 5,
+            },
+          },
         ],
       },
     };

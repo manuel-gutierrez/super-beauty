@@ -1,0 +1,14 @@
+button {
+background-color: $primary;
+color:$white;
+text-transform: uppercase;
+letter-spacing:$font-letter-spacing-buttons ;
+border:unset;
+border-radius: 2px;
+text-align: center;
+min-width: 229px;
+
+@include media-breakpoint-up(sm) {
+  margin-top: ($spacer * .25);
+}
+}

@@ -3,11 +3,13 @@ export const state = () => ({
     {
       id: '1',
       sale: true,
-      new: true,
+      new: false,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
-        type: 'promo',
-        text: '-15%',
+        type: 'new',
+        text: 'New',
       },
       productImage: '/images/product_card/product@2x.png',
       productTitle: 'NARS',
@@ -26,7 +28,9 @@ export const state = () => ({
     {
       id: '2',
       sale: true,
-      new: true,
+      new: false,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -47,11 +51,13 @@ export const state = () => ({
     {
       id: '3',
       sale: true,
-      new: true,
+      new: false,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
-        type: 'promo',
-        text: '-15%',
+        type: 'new',
+        text: 'New',
       },
       productImage: '/images/product_card/product@2x.png',
       productTitle: 'NARS',
@@ -68,7 +74,9 @@ export const state = () => ({
     {
       id: '4',
       sale: true,
-      new: true,
+      new: false,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -89,11 +97,13 @@ export const state = () => ({
     {
       id: '5',
       sale: true,
-      new: true,
+      new: false,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
-        type: 'promo',
-        text: '-15%',
+        type: 'new',
+        text: 'New',
       },
       productImage: '/images/product_card/product@2x.png',
       productTitle: 'NARS',
@@ -110,7 +120,9 @@ export const state = () => ({
     {
       id: '6',
       sale: true,
-      new: true,
+      new: false,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -130,12 +142,14 @@ export const state = () => ({
     },
     {
       id: '7',
-      sale: true,
+      sale: false,
       new: true,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
-        type: 'promo',
-        text: '-15%',
+        type: 'new',
+        text: 'New',
       },
       productImage: '/images/product_card/product@2x.png',
       productTitle: 'NARS',
@@ -151,8 +165,10 @@ export const state = () => ({
     },
     {
       id: '8',
-      sale: true,
+      sale: false,
       new: true,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -172,8 +188,10 @@ export const state = () => ({
     },
     {
       id: '9',
-      sale: true,
+      sale: false,
       new: true,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'new',
@@ -193,8 +211,10 @@ export const state = () => ({
     },
     {
       id: '10',
-      sale: true,
+      sale: false,
       new: true,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -214,8 +234,10 @@ export const state = () => ({
     },
     {
       id: '11',
-      sale: true,
+      sale: false,
       new: true,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -235,8 +257,10 @@ export const state = () => ({
     },
     {
       id: '12',
-      sale: true,
+      sale: false,
       new: true,
+      topSale: true,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -256,8 +280,10 @@ export const state = () => ({
     },
     {
       id: '13',
-      sale: true,
-      new: true,
+      sale: false,
+      new: false,
+      topSale: false,
+      recomended: true,
       isInWishlist: true,
       label: {
         type: 'promo',
@@ -286,5 +312,26 @@ export const getters = {
   },
   getProductById: (state) => (id) => {
     return state.products.find((product) => product.id === id);
+  },
+  getRecomendedProducts(state) {
+    if (state.products) {
+      return state.products.filter((product) => {
+        return product.recomended === true;
+      });
+    }
+  },
+  getProductsInSale(state) {
+    if (state.products) {
+      return state.products.filter((product) => {
+        return product.sale === true;
+      });
+    }
+  },
+  getTopSaleProducts(state) {
+    if (state.products) {
+      return state.products.filter((product) => {
+        return product.topSale === true;
+      });
+    }
   },
 };

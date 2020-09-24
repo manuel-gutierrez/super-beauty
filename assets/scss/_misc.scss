@@ -1,3 +1,4 @@
+html{overflow-x: auto;}
 body {
   background-color:$white;
   letter-spacing: unset;
@@ -7,7 +8,6 @@ body {
 }
 
 .wrapper {
-
   height: auto;
   min-height: 100%;
 }
@@ -15,3 +15,16 @@ body {
 a:hover {
    text-decoration: none !important;
  }
+
+.section-spacer{
+  margin-top: $vertical-section-spacer-lg;
+  @include media-breakpoint-down(md) {
+    margin-top: $vertical-section-spacer-md;
+  }
+  @include media-breakpoint-down(sm) {
+    margin-top: $vertical-section-spacer-sm;
+  }
+  @include media-breakpoint-down(xs) {
+    margin-top: $vertical-section-spacer-xs;
+  }
+}
