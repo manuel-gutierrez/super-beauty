@@ -1,20 +1,22 @@
 <template>
-  <VueSlickCarousel class="carousel" v-bind="settings">
-    <slot />
-    <template #prevArrow="arrowOption">
-      <div class="custom-arrow-prev--products">
-        <b-icon
-          v-if="arrowOption.currentSlide != '0'"
-          icon="chevron-left"
-        ></b-icon>
-      </div>
-    </template>
-    <template #nextArrow="">
-      <div class="custom-arrow-next--products">
-        <b-icon icon="chevron-right"></b-icon>
-      </div>
-    </template>
-  </VueSlickCarousel>
+  <client-only placeholder="Cargando..">
+    <VueSlickCarousel class="carousel" v-bind="settings">
+      <slot />
+      <template #prevArrow="arrowOption">
+        <div class="custom-arrow-prev--products">
+          <b-icon
+            v-if="arrowOption.currentSlide != '0'"
+            icon="chevron-left"
+          ></b-icon>
+        </div>
+      </template>
+      <template #nextArrow="">
+        <div class="custom-arrow-next--products">
+          <b-icon icon="chevron-right"></b-icon>
+        </div>
+      </template>
+    </VueSlickCarousel>
+  </client-only>
 </template>
 <script>
 export default {

@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <client-only placeholder="Loading...">
+    <client-only placeholder="Cargando..">
       <nuxt-link v-if="data.url" :to="data.url">
         <div :style="getBackgroundImage(data.image.src)" :class="type">
           <div v-if="type == 'promo-large'" class="row">
