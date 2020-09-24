@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row-fluid">
-      <div class="">
+      <div>
         <ProductCardCarousel>
           <ProductCard
             v-for="productItem in products"

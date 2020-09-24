@@ -84,6 +84,27 @@ export const state = () => ({
         },
       },
     },
+    promo_4: {
+      type: 'promo-big',
+      data: {
+        url: '/productos',
+        image: {
+          src: '/images/banner/banner_image_big@2x.png',
+        },
+        caption: {
+          title: 'POR DEFINIR',
+        },
+        button: {
+          text: 'Ver más',
+          url: '/products',
+        },
+      },
+    },
+  },
+  headers: {
+    firstSection: 'LOS MÁS VENDIDOS',
+    secondSection: 'Recomendados Superbeauty',
+    thirdSection: 'OFERTAS',
   },
 });
 export const mutations = {};
@@ -94,5 +115,8 @@ export const actions = {
 export const getters = {
   getBanners(state) {
     return state.banners;
+  },
+  getHeaders(state) {
+    return state.headers;
   },
 };

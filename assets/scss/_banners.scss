@@ -87,6 +87,59 @@
 }
 
 }
+.promo-big {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 397px;
+  color: $black;
+  @include media-breakpoint-down(md) {
+    min-height: 215px;
+  }
+  @media (max-width: 414px) {
+      min-height: 110px;
+  }
+  .caption{
+    padding-top: 10%;
+    padding-right:10%;
+    @include media-breakpoint-down(md) {
+      padding-right:5%;
+    }
+    @media (max-width: 414px) {
+      padding-top: 5%;
+      padding-right:2%;
+    }
+    h2{
+      font-family: $font-family-alt;
+      text-transform: capitalize;
+      font-size: $font-size-banner-title-lg;
+      letter-spacing: $font-letter-spacing-10;
+      display: flex;
+      justify-content: flex-end;
+      align-self: center;
+
+
+      @include media-breakpoint-down(md) {
+        letter-spacing: $font-letter-spacing-headings;
+        font-size: $font-size-banner-title-lg-alt;
+        margin-bottom:-20px;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-banner-title-lg-alt;
+        margin-bottom:-20px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-banner-title-lg-alt;
+        margin-bottom:2px;
+      }
+      @media (max-width: 414px) {
+        font-size: $font-size-banner-title-sm;
+      }
+    }
+
+}
+
+}
 .promo-large {
   background-size: cover;
   background-repeat: no-repeat;
