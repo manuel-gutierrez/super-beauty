@@ -1,0 +1,21 @@
+.scroll-to-top{
+  height:43px;
+  width: 43px;
+  line-height: normal;
+  background:$primary;
+  color:$white;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  left:100%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  @include media-breakpoint-down(sm){
+    height:26px;
+    width: 26px;
+  };
+  .scroll-to-top__icon{
+    align-self: center;
+  }
+}

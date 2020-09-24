@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-to-top" @click="scrollToTop">
-    <b-icon icon="chevron-up"></b-icon>
+    <b-icon class="scroll-to-top__icon" icon="chevron-up"></b-icon>
   </div>
 </template>
 
