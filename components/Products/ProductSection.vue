@@ -1,5 +1,11 @@
 <template>
-  <div class="container">
+  <div>
+    <!-- Section 1 -->
+    <div class="row">
+      <h2 class="d-flex justify-content-center w-100 my-3 home-section__header">
+        {{ subcategory.name }}
+      </h2>
+    </div>
     <div class="row-fluid">
       <div>
         <ProductCardCarousel>
@@ -12,23 +18,22 @@
         </ProductCardCarousel>
       </div>
     </div>
+    <slot />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 export default {
-  computed: {
-    ...mapGetters('login', {
-      isloggedIn: 'getCurrentLoginStatus',
-      sessionToken: 'getSessionToken',
-    }),
-    ...mapGetters('products', ['getProducts']),
-    products() {
-      return this.getProducts;
+  props: {
+    products: {
+      type: Array,
+      default: null,
+    },
+    subcategory: {
+      type: Object,
+      default: null,
     },
   },
-  methods: {},
 };
 </script>
 
