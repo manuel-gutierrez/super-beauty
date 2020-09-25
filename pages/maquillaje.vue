@@ -19,7 +19,7 @@
           <BannerImage
             :data="banners.header.data"
             :type="banners.header.type"
-            class="col-12"
+            class="col-12 px-0"
           />
         </div>
         <div class="row d-none d-sm-none d-md-flex product-page__sort-section">
@@ -34,10 +34,8 @@
           <div
             class="product-page__dropdown ml-auto d-inline-flex justify-content-end"
           >
-            <span class="product-page__sort__label">{{
+            <span class="product-page__sort__label align-self-center">{{
               sortSection.sortLabel
-
-              
             }}</span>
             <b-dropdown
               id="sort-dropdown"

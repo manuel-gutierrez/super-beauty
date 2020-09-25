@@ -20,13 +20,11 @@
 
     }
 
-
-
-
-
     .product-page__dropdown {
-
-
+      .product-page__sort__label {
+        color: $secondary;
+  
+      }
 
       button {
         font-size: $font-paragraph;
