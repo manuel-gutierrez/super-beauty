@@ -8,7 +8,7 @@ export const state = () => ({
           title: 'Maquillaje',
         },
         image: {
-          src: '/images/banner/banner_image_promo_large.png',
+          src: '/images/pages/product/product_banner@2x.png',
         },
       },
     },

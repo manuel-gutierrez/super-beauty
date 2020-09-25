@@ -1,0 +1,22 @@
+.product-page__sidebar {
+  margin-top: 13%;
+
+  h3 {
+    color: $primary;
+    font-size: $font-size-sidebar-heading-lg;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+}
+
+.product-page__sidebar__section {
+  border-top: 1px solid #707070;
+}
+
+.product-page__sidebar__category-variation {
+  font-size: $font-size-sidebar-list-lg;
+  margin-bottom: 8px;
+}

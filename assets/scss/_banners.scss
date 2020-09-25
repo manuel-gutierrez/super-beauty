@@ -295,13 +295,21 @@
 }
 
 .page-header {
-
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
   background-color: $white;
+  background-position: center left;
   min-height: 109px;
   line-height: normal;
+  padding-left: 8%;
+  margin-top: 51px;
+  margin-bottom: 76px;
+
+  @include media-breakpoint-down(sm) {
+    background-position: center center;
+    margin-bottom: 69px;
+
+  }
 
   .caption {
     color: $white;
@@ -310,6 +318,7 @@
     font-weight: normal;
     letter-spacing: unset;
     height: auto;
+    padding-top: 3px;
 
 
     h2 {
@@ -318,9 +327,8 @@
       display: flex;
       align-content: center;
 
-
       @include media-breakpoint-down(sm) {
-        font-size: $font-size-banner-title-md;
+        font-size: $font-size-page-title-sm;
 
       }
     }

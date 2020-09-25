@@ -2,30 +2,19 @@
   <div class="container product-page">
     <div class="row">
       <!-- Filter Side Bar -->
-      <div class="product-page__sidebar col-2 d-none d-sm-none d-md-flex">
+      <div class="product-page__sidebar col-3 d-none d-sm-none d-md-flex">
         <div class="row">
           <div class="col-12">
-            <div
-              v-for="subCategory in category.SubCategories"
-              :key="subCategory.name"
-              class="product-page__sidebar__filter-section"
-            >
-              <h3>{{ subCategory.name }}</h3>
-              <ul
-                v-for="variation in subCategory.subCategoriesVariation"
-                :key="variation.id"
-                class="product-page__sidebar__subcategory-variation"
-              >
-                <li>{{ variation.name }}</li>
-              </ul>
-            </div>
+            <ProductSidebar
+              :sub-categories="category.SubCategories"
+            ></ProductSidebar>
           </div>
         </div>
       </div>
       <!-- // End Side Bar -->
       <!-- Sort Section Desktop -->
 
-      <div class="col-sm-10">
+      <div class="col-sm-9">
         <div class="row my-0">
           <BannerImage
             :data="banners.header.data"
@@ -34,29 +23,30 @@
           />
         </div>
         <div class="row d-none d-sm-none d-md-flex product-page__sort-section">
-          <div class="col-2 product-page__counter">
-            <div class="col-12 product-page__counter__number">
+          <div class="product-page__counter justify-content-start">
+            <div class="product-page__counter__number">
               {{ countProducts() }}
             </div>
-            <div class="col-12 product-page__counter__text">
+            <div class="product-page__counter__text">
               {{ sortSection.productCounterLabel }}
             </div>
           </div>
-          <div class="col-10 product-page__sort">
+          <div
+            class="product-page__dropdown ml-auto d-inline-flex justify-content-end"
+          >
             <span class="product-page__sort__label">{{
               sortSection.sortLabel
+
+              
             }}</span>
             <b-dropdown
               id="sort-dropdown"
               :text="sortSection.buttonText"
-              class="m-md-2 product-page__sort__dropdown"
+              class="product-page__sort__dropdown-button btn-group-sm"
             >
               <b-dropdown-item>First Action</b-dropdown-item>
               <b-dropdown-item>Second Action</b-dropdown-item>
               <b-dropdown-item>Third Action</b-dropdown-item>
-              <b-dropdown-divider></b-dropdown-divider>
-              <b-dropdown-item active>Active action</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
             </b-dropdown>
           </div>
         </div>
