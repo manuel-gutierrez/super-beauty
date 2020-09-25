@@ -8,7 +8,7 @@
     </div>
     <div class="row-fluid">
       <div>
-        <ProductCardCarousel>
+        <ProductCardCarousel :items-to-display="4">
           <ProductCard
             v-for="productItem in products"
             :key="productItem.id"

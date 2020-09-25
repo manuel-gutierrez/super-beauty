@@ -24,7 +24,15 @@
       </div>
       <!-- // End Side Bar -->
       <!-- Sort Section Desktop -->
+
       <div class="col-sm-10">
+        <div class="row my-0">
+          <BannerImage
+            :data="banners.header.data"
+            :type="banners.header.type"
+            class="col-12"
+          />
+        </div>
         <div class="row d-none d-sm-none d-md-flex product-page__sort-section">
           <div class="col-2 product-page__counter">
             <div class="col-12 product-page__counter__number">

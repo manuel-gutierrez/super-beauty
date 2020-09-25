@@ -20,13 +20,19 @@
 </template>
 <script>
 export default {
+  props: {
+    itemsToDisplay: {
+      type: Number,
+      default: 6,
+    },
+  },
   data() {
     return {
       settings: {
         centerPadding: '10px',
         focusOnSelect: true,
         infinite: false,
-        slidesToShow: 6,
+        slidesToShow: this.itemsToDisplay,
         slidesToScroll: 2,
         speed: 500,
         cssEase: 'ease',

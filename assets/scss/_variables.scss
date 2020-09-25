@@ -39,9 +39,9 @@ $font-size-h6: 0.5625rem !default;
 
 //==Paragraph
 $font-paragraph: 0.875rem !default; // 14 px
-$font-paragraph-md:0.75rem  !default; // 12 px
-$font-paragraph-sm: 0.625rem!default; // 10px
-$font-paragraph-xs: 0.5rem!default; // 8px
+$font-paragraph-md:0.75rem !default; // 12 px
+$font-paragraph-sm: 0.625rem !default; // 10px
+$font-paragraph-xs: 0.5rem !default; // 8px
 
 //==Navbar
 $font-size-navbar: $font-paragraph-sm !default;
@@ -62,6 +62,7 @@ $font-size-icons-sm: 1rem !default; //16px
 
 //==Banner
 $font-size-banner-title-lg: 3.75rem !default; // 60px
+$font-size-banner-title-md: 1.875rem !default; // 23px
 $font-size-banner-title-sm: 1.4375rem !default; // 23px
 $font-size-banner-title-lg-alt: 2.375rem !default; // 38px
 $font-size-banner-title-sm-alt: 0.875rem !default; // 14px
@@ -91,8 +92,10 @@ $font-letter-spacing-buttons: 1.4px;
 $font-letter-spacing-nav: 1.4px;
 $font-letter-spacing-labels: 1px;
 $font-letter-spacing-product-card-title: 2.64px;
-$font-letter-spacing-product-card-price-title:  0.31px;;
-$font-letter-spacing-product-card-description:  0.27px;;
+$font-letter-spacing-product-card-price-title: 0.31px;
+;
+$font-letter-spacing-product-card-description: 0.27px;
+;
 
 //---- Paddings & Margins-------//
 $padding-base: 5px !default;

@@ -1,24 +1,14 @@
 export const state = () => ({
   banners: {
-    promo_1: {
-      type: 'promo',
+    header: {
+      type: 'page-header',
       data: {
         url: '/productos',
         caption: {
-          title: 'Brow Powder Duo',
-          discount: '-50%',
-          description: '',
-          button: {
-            text: 'Ver más',
-            url: '/productos',
-          },
+          title: 'Maquillaje',
         },
         image: {
-          src: '/images/banner/banner_image_promo.png',
-        },
-        button: {
-          text: 'Ver más',
-          url: '/products',
+          src: '/images/banner/banner_image_promo_large.png',
         },
       },
     },
