@@ -32,20 +32,19 @@
             </div>
           </div>
           <div
-            class="product-page__dropdown ml-auto d-inline-flex justify-content-end"
+            class="product-page__select ml-auto d-inline-flex justify-content-end"
           >
             <span class="product-page__sort__label align-self-center">{{
               sortSection.sortLabel
             }}</span>
-            <b-dropdown
-              id="sort-dropdown"
-              :text="sortSection.buttonText"
-              class="product-page__sort__dropdown-button btn-group-sm"
-            >
-              <b-dropdown-item>First Action</b-dropdown-item>
-              <b-dropdown-item>Second Action</b-dropdown-item>
-              <b-dropdown-item>Third Action</b-dropdown-item>
-            </b-dropdown>
+            <div>
+              <b-form-select
+                v-model="selected"
+                :options="sortSection.sortOptions"
+                class="product-page__select"
+                @change="doSort(selected)"
+              ></b-form-select>
+            </div>
           </div>
         </div>
         <!-- // End Sort Section  -->
@@ -69,7 +68,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapMutations, mapGetters } from 'vuex';
 export default {
   computed: {
     ...mapGetters('login', {
@@ -92,13 +91,26 @@ export default {
     category() {
       return this.categoryData(1);
     },
+    selected: {
+      set(selected) {
+        this.doSort(selected);
+      },
+      get() {
+        return this.sortSection.selected;
+      },
+    },
   },
+
   methods: {
     countProducts() {
       return this.products.length;
     },
     filterProductsBySubcategory(id) {
       return this.products.filter((product) => product.subCategoryId === id);
+    },
+    ...mapMutations('pages/makeup', ['setSortingValue']),
+    doSort(value) {
+      this.setSortingValue(value);
     },
   },
 };

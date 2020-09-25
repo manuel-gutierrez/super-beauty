@@ -1,7 +1,9 @@
 .product-page {
   .product-page__sort-section {
-    margin-bottom: -5%;
+    position: relative;
+    top: 4%;
     width: 100%;
+
 
     .product-page__counter {
       font-size: $font-paragraph-sm;
@@ -20,13 +22,12 @@
 
     }
 
-    .product-page__dropdown {
-      .product-page__sort__label {
+    .product-page__select {
+      .product-page__select__label {
         color: $secondary;
-  
       }
 
-      button {
+      .custom-select {
         font-size: $font-paragraph;
         font-weight: bold;
         letter-spacing: $font-letter-spacing-buttons;
@@ -36,7 +37,8 @@
         margin-top: 0;
         color: $black;
         border: none;
-        min-width: 100px !important;
+        min-width: 100px;
+        width: 125px !important;
         padding: 0px;
         padding-left: 10px;
       }

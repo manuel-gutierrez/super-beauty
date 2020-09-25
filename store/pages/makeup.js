@@ -14,12 +14,21 @@ export const state = () => ({
     },
   },
   sort: {
-    buttonText: 'Calificación',
+    selected: 'rate',
+    sortOptions: [
+      { value: null, text: 'Selecciona un opcion' },
+      { value: 'rate', text: 'Calificación' },
+      { value: 'price', text: 'Precio' },
+    ],
     sortLabel: 'Ordenar por:',
     productCounterLabel: 'Productos',
   },
 });
-export const mutations = {};
+export const mutations = {
+  setSortingValue(state, payload) {
+    state.sort.selected = payload;
+  },
+};
 export const actions = {
   // For future use.
 };
