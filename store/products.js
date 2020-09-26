@@ -21,7 +21,7 @@ export const state = () => ({
       categoryId: 1,
 
       subCategoryId: 1,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -54,8 +54,8 @@ export const state = () => ({
         '/images/product_card/product@2x.png',
       ],
       categoryId: 1,
-      subCategoryId: 1,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryId: 2,
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -88,9 +88,8 @@ export const state = () => ({
         '/images/product_card/product@2x.png',
       ],
       categoryId: 1,
-
       subCategoryId: 1,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 2,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -124,8 +123,8 @@ export const state = () => ({
       ],
       categoryId: 1,
 
-      subCategoryId: 1,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryId: 3,
+      subCategoryVariationId: 2,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -159,8 +158,8 @@ export const state = () => ({
       ],
       categoryId: 1,
 
-      subCategoryId: 1,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryId: 3,
+      subCategoryVariationId: 3,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -195,7 +194,7 @@ export const state = () => ({
       categoryId: 1,
 
       subCategoryId: 1,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -207,7 +206,7 @@ export const state = () => ({
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
-      rating: 4.3,
+      rating: 2.3,
     },
     {
       id: '7',
@@ -229,7 +228,7 @@ export const state = () => ({
       ],
       categoryId: 1,
       subCategoryId: 2,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -241,7 +240,7 @@ export const state = () => ({
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
-      rating: 4.3,
+      rating: 3.3,
     },
     {
       id: '8',
@@ -263,7 +262,7 @@ export const state = () => ({
       ],
       categoryId: 1,
       subCategoryId: 2,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -297,7 +296,7 @@ export const state = () => ({
       ],
       categoryId: 1,
       subCategoryId: 2,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -331,7 +330,7 @@ export const state = () => ({
       ],
       categoryId: 1,
       subCategoryId: 2,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -365,7 +364,7 @@ export const state = () => ({
       ],
       categoryId: 1,
       subCategoryId: 2,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -399,7 +398,7 @@ export const state = () => ({
       ],
       categoryId: 1,
       subCategoryId: 2,
-      subCategoryIdVariation: 'Fundation',
+      subCategoryVariationId: 1,
       productTitle: 'NARS',
       productReference: 'Orgasm Eyeshadow Palette',
       productDescription:
@@ -449,6 +448,16 @@ export const getters = {
   getProductsByCategory: (state) => (categoryId) => {
     return state.products.filter(
       (product) => product.categoryId === categoryId
+    );
+  },
+  getProductsBySubcategoryVariant: (state) => (
+    _CategoryId,
+    _subCategoryVariationId
+  ) => {
+    return state.products.filter(
+      (product) =>
+        product.Categoryid === _CategoryId &&
+        product.subCategoryVariationId === _subCategoryVariationId
     );
   },
 };

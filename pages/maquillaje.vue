@@ -7,13 +7,14 @@
           <div class="col-12">
             <ProductSidebar
               :sub-categories="category.SubCategories"
+              @filter-by-variation="filterByVariant"
             ></ProductSidebar>
           </div>
         </div>
       </div>
       <!-- // End Side Bar -->
-      <!-- Sort Section Desktop -->
 
+      <!-- Banner Section Desktop -->
       <div class="col-sm-9">
         <div class="row my-0">
           <BannerImage
@@ -22,6 +23,8 @@
             class="col-12 px-0"
           />
         </div>
+        <!-- // End Banner  Section  -->
+        <!-- Sort Section Desktop -->
         <div class="row d-none d-sm-none d-md-flex product-page__sort-section">
           <div class="product-page__counter justify-content-start">
             <div class="product-page__counter__number">
@@ -42,12 +45,11 @@
                 v-model="selected"
                 :options="sortSection.sortOptions"
                 class="product-page__select"
-                @change="doSort(selected)"
               ></b-form-select>
             </div>
           </div>
         </div>
-        <!-- // End Sort Section  -->
+        <!-- End  Sort Section Desktop -->
         <div
           v-for="subCategory in category.SubCategories"
           :key="subCategory.name"
@@ -70,6 +72,14 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex';
 export default {
+  fetch() {
+    this.products = this.productsInCategory(1);
+  },
+  data() {
+    return {
+      products: null,
+    };
+  },
   computed: {
     ...mapGetters('login', {
       isloggedIn: 'getCurrentLoginStatus',
@@ -78,16 +88,15 @@ export default {
     ...mapGetters('pages/makeup', {
       banners: 'getBanners',
       sortSection: 'getSortSection',
+      pageProducts: 'getPageProducts',
     }),
     ...mapGetters('products', {
       productsInCategory: 'getProductsByCategory',
+      productsInVariant: 'getProductsBySubcategoryVariant',
     }),
     ...mapGetters('categories', {
       categoryData: 'getCategory',
     }),
-    products() {
-      return this.productsInCategory(1);
-    },
     category() {
       return this.categoryData(1);
     },
@@ -108,9 +117,12 @@ export default {
     filterProductsBySubcategory(id) {
       return this.products.filter((product) => product.subCategoryId === id);
     },
-    ...mapMutations('pages/makeup', ['setSortingValue']),
+    ...mapMutations('pages/makeup', ['setSortingValue', 'pushProducts']),
     doSort(value) {
       this.setSortingValue(value);
+    },
+    filterByVariant(id) {
+      this.products = this.productsInVariant(1, id);
     },
   },
 };
