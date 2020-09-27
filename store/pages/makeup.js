@@ -23,7 +23,6 @@ export const state = () => ({
     sortLabel: 'Ordenar por:',
     productCounterLabel: 'Productos',
   },
-  products: [],
 });
 export const mutations = {
   setSortingValue(state, payload) {
@@ -43,8 +42,5 @@ export const getters = {
   },
   getBanners(state) {
     return state.banners;
-  },
-  getPageProducts(state) {
-    return state.products;
   },
 };
