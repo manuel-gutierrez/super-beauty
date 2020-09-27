@@ -11,7 +11,7 @@
         :key="variation.id"
         class="product-page__sidebar__category-variation"
       >
-        <li @click="$emit('filter-by-variation', variation.id)">
+        <li @click="$emit('filter-by-variation', subCategory.id, variation.id)">
           {{ variation.name }}
         </li>
       </ul>

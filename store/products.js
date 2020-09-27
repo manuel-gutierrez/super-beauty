@@ -19,7 +19,6 @@ export const state = () => ({
         '/images/product_card/product@2x.png',
       ],
       categoryId: 1,
-
       subCategoryId: 1,
       subCategoryVariationId: 1,
       productTitle: 'NARS',
@@ -157,7 +156,6 @@ export const state = () => ({
         '/images/product_card/product@2x.png',
       ],
       categoryId: 1,
-
       subCategoryId: 3,
       subCategoryVariationId: 3,
       productTitle: 'NARS',
@@ -451,13 +449,22 @@ export const getters = {
     );
   },
   getProductsBySubcategoryVariant: (state) => (
-    _CategoryId,
-    _subCategoryVariationId
+    categoryId,
+    subCategoryId,
+    variationId
   ) => {
     return state.products.filter(
       (product) =>
-        product.Categoryid === _CategoryId &&
-        product.subCategoryVariationId === _subCategoryVariationId
+        product.categoryId === categoryId &&
+        product.subCategoryId === subCategoryId &&
+        product.subCategoryVariationId === variationId
+    );
+  },
+
+  getProductsByRatingRange: (state) => (raitingCeil, raitingFloor) => {
+    return state.products.filter(
+      (product) =>
+        product.rating <= raitingCeil && product.rating >= raitingFloor
     );
   },
 };

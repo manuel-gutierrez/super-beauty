@@ -7,7 +7,7 @@
           <div class="col-12">
             <ProductSidebar
               :sub-categories="category.SubCategories"
-              @filter-by-variation="filterByVariant"
+              @filter-by-variation="filterByVariant(categoryId, ...arguments)"
             ></ProductSidebar>
           </div>
         </div>
@@ -25,6 +25,7 @@
         </div>
         <!-- // End Banner  Section  -->
         <!-- Sort Section Desktop -->
+
         <div class="row d-none d-sm-none d-md-flex product-page__sort-section">
           <div class="product-page__counter justify-content-start">
             <div class="product-page__counter__number">
@@ -73,11 +74,12 @@
 import { mapMutations, mapGetters } from 'vuex';
 export default {
   fetch() {
-    this.products = this.productsInCategory(1);
+    this.products = this.productsInCategory(this.categoryId);
   },
   data() {
     return {
       products: null,
+      categoryId: 1,
     };
   },
   computed: {
@@ -109,7 +111,6 @@ export default {
       },
     },
   },
-
   methods: {
     countProducts() {
       return this.products.length;
@@ -121,8 +122,12 @@ export default {
     doSort(value) {
       this.setSortingValue(value);
     },
-    filterByVariant(id) {
-      this.products = this.productsInVariant(1, id);
+    filterByVariant(categoryId, subCategoryId, variantId) {
+      this.products = this.productsInVariant(
+        categoryId,
+        subCategoryId,
+        variantId
+      );
     },
   },
 };
