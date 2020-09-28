@@ -7,6 +7,7 @@
           <div class="col-12">
             <ProductSidebar
               :sub-categories="category.SubCategories"
+              :filters="filters"
               @filter-by-variation="filterByVariant(categoryId, ...arguments)"
             ></ProductSidebar>
           </div>
@@ -90,7 +91,7 @@ export default {
     ...mapGetters('pages/makeup', {
       banners: 'getBanners',
       sortSection: 'getSortSection',
-      pageProducts: 'getPageProducts',
+      filters: 'getFilters',
     }),
     ...mapGetters('products', {
       productsInCategory: 'getProductsByCategory',

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Sub categories Section  -->
     <div
       v-for="subCategory in subCategories"
       :key="subCategory.name"
@@ -16,12 +17,38 @@
         </li>
       </ul>
     </div>
+    <!-- Filters Section -->
+    <div
+      v-for="filterItem in filters"
+      :key="filterItem.active"
+      class="product-page__sidebar__section"
+    >
+      <h3>{{ filterItem.label }}</h3>
+      <SidebarFilterCheckbox
+        :options="filterItem.options"
+        @update-filter="updateFilter"
+      >
+      </SidebarFilterCheckbox>
+    </div>
     <slot />
   </div>
 </template>
 <script>
 export default {
-  props: { subCategories: { type: Array, default: null } },
+  props: {
+    subCategories: { type: Array, default: null },
+    filters: { type: Object, default: null },
+  },
+  data() {
+    return {
+      filter: [],
+    };
+  },
+  methods: {
+    updateFilter(data) {
+      this.filter = data;
+    },
+  },
 };
 </script>
 
