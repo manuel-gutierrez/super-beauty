@@ -27,7 +27,7 @@ export const state = () => ({
         'Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.',
       productSizes: ['1.2g', '1.4g'],
       priceTitle: 'Precio al por mayor',
-      price: 30000,
+      price: 100,
       discountedPrice: 150000,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
@@ -466,5 +466,20 @@ export const getters = {
       (product) =>
         product.rating <= raitingCeil && product.rating >= raitingFloor
     );
+  },
+
+  findLowestAndHighestPrices: (state) => (productsArray) => {
+    const minValue = (products, fn) =>
+      Math.min(
+        ...products.map(typeof fn === 'function' ? fn : (val) => val[fn])
+      );
+    const maxValue = (products, fn) =>
+      Math.max(
+        ...products.map(typeof fn === 'function' ? fn : (val) => val[fn])
+      );
+    return {
+      min: minValue(productsArray, 'price'),
+      max: maxValue(productsArray, 'price'),
+    };
   },
 };

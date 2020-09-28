@@ -24,13 +24,18 @@
       class="product-page__sidebar__section"
     >
       <h3>{{ filterItem.label }}</h3>
-      <SidebarFilterCheckbox
+      <ProductSidebarFilterCheckbox
+        v-if="filterItem.type === 'list' || filterItem.type === 'rating-list'"
         :label="filterItem.label"
         :type="filterItem.type"
         :options="filterItem.options"
         @update-filter="updateFilter"
-      >
-      </SidebarFilterCheckbox>
+      />
+      <ProductSidebarRangeSelector
+        v-else-if="filterItem.type === 'range'"
+        :floor="0"
+        :ceil="priceRange.max"
+      ></ProductSidebarRangeSelector>
     </div>
     <slot />
   </div>
@@ -40,6 +45,7 @@ export default {
   props: {
     subCategories: { type: Array, default: null },
     filters: { type: Object, default: null },
+    priceRange: { type: Object, default: null },
   },
   data() {
     return {

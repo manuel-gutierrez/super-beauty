@@ -8,6 +8,7 @@
             <ProductSidebar
               :sub-categories="category.SubCategories"
               :filters="filters"
+              :price-range="productsPriceRange"
               @filter-by-variation="filterByVariant(categoryId, ...arguments)"
             ></ProductSidebar>
           </div>
@@ -96,7 +97,9 @@ export default {
     ...mapGetters('products', {
       productsInCategory: 'getProductsByCategory',
       productsInVariant: 'getProductsBySubcategoryVariant',
+      priceRanges: 'findLowestAndHighestPrices',
     }),
+
     ...mapGetters('categories', {
       categoryData: 'getCategory',
     }),
@@ -110,6 +113,9 @@ export default {
       get() {
         return this.sortSection.selected;
       },
+    },
+    productsPriceRange() {
+      return this.priceRanges(this.products);
     },
   },
   methods: {
