@@ -32,7 +32,7 @@
 
   /* width */
   &::-webkit-scrollbar {
-    width: 15px;
+    width: 8px;
 
   }
 
@@ -47,7 +47,7 @@
   /* Handle */
   &::-webkit-scrollbar-thumb {
     background: $white;
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid #e2e2e2 1px;
 
 
@@ -58,15 +58,34 @@
     background: #f8f8f8;
   }
 
-  .form-check {
-    padding-left: 0px
+  .form-check,
+  .custom-checkbox {
+    padding-left: 0px;
+    width: 100%;
   }
 
-  .form-check-input {
-    margin-left: 75%;
+
+
+
+  .custom-control-label {
+    width: 80%;
+
+    .product-rating {
+      position: relative;
+      left: -16%;
+    }
+
+    &::before,
+    &::after {
+      left: 100%;
+    }
+
   }
 
-
+  .custom-control-input {
+    position: absolute;
+    left: 70%;
+  }
 
 
 }

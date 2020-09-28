@@ -25,6 +25,8 @@
     >
       <h3>{{ filterItem.label }}</h3>
       <SidebarFilterCheckbox
+        :label="filterItem.label"
+        :type="filterItem.type"
         :options="filterItem.options"
         @update-filter="updateFilter"
       >
@@ -46,7 +48,7 @@ export default {
   },
   methods: {
     updateFilter(data) {
-      this.filter = data;
+      this.filter.push(data);
     },
   },
 };

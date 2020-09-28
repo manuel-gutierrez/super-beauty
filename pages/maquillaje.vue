@@ -3,7 +3,7 @@
     <div class="row">
       <!-- Filter Side Bar -->
       <div class="product-page__sidebar col-3 d-none d-sm-none d-md-flex">
-        <div class="row">
+        <div class="row w-100">
           <div class="col-12">
             <ProductSidebar
               :sub-categories="category.SubCategories"

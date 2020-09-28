@@ -26,6 +26,7 @@ export const state = () => ({
   filters: {
     brands: {
       label: 'Marcas',
+      type: 'list',
       active: true,
       options: [
         { text: 'Orange', value: '1' },
@@ -52,27 +53,20 @@ export const state = () => ({
     },
     price: {
       label: 'Precio',
+      type: 'range',
       active: true,
-      options: [
-        { text: 'Orange', value: '1' },
-        { text: 'Apple', value: '2' },
-        { text: 'Pineapple', value: '3' },
-        { text: 'Grape', value: '4' },
-      ],
+      options: [{ floor: 0 }, { ceil: 120000 }],
     },
     rating: {
       label: 'Calificación',
       active: true,
-      options: [
-        { text: 'Orange', value: '1' },
-        { text: 'Apple', value: '2' },
-        { text: 'Pineapple', value: '3' },
-        { text: 'Grape', value: '4' },
-      ],
+      type: 'rating-list',
+      options: [],
     },
     others: {
       label: 'Otros',
       active: true,
+      type: 'list',
       options: [
         { text: 'Orange', value: '1' },
         { text: 'Apple', value: '2' },
