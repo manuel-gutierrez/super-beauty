@@ -138,7 +138,7 @@ export default {
       isloggedIn: 'getCurrentLoginStatus',
       sessionToken: 'getSessionToken',
     }),
-    ...mapGetters('home', {
+    ...mapGetters('pages/home', {
       banners: 'getBanners',
       headers: 'getHeaders',
     }),

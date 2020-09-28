@@ -7,11 +7,14 @@ $theme-colors: ('primary': #9117b4,
 );
 $primary: #9117b4;
 $secondary: #bb29bb;
+$discount: #FF4854;
 $icon-background-color: #FFFF;
 
 //== Backgrounds
 $background-gradient-primary : transparent linear-gradient(269deg, #BB29BB 0%, #5C06A8 100%) 0% 0% no-repeat padding-box;
 $background-gradient-secondary : transparent linear-gradient(90deg, #F27D39 1%, #FF4555 100%) 0% 0% no-repeat padding-box;
+$background-gradient-scroll-bar-vertical : transparent linear-gradient(180deg, #8D15B4 0%, #BB29BB 100%) 0% 0% no-repeat padding-box;
+
 
 //== Typography
 $font-color-primary: $primary;
@@ -23,7 +26,7 @@ $navbar-light-color : #000;
 $font-family-base: "Champagne";
 $font-family-alt: "Bebas Neue";
 $font-family-banners: "Handelson";
-$font-family-banners-alt: "Montserrat";
+$font-family-montserrat: "Montserrat";
 
 //---- Font Sizes-------//
 $font-size-base: 1rem;
@@ -38,8 +41,9 @@ $font-size-h6: 0.5625rem !default;
 
 //==Paragraph
 $font-paragraph: 0.875rem !default; // 14 px
-$font-paragraph-md:0.75rem  !default; // 12 px
-$font-paragraph-sm: 0.625rem!default; // 10px
+$font-paragraph-md:0.75rem !default; // 12 px
+$font-paragraph-sm: 0.625rem !default; // 10px
+$font-paragraph-xs: 0.5rem !default; // 8px
 
 //==Navbar
 $font-size-navbar: $font-paragraph-sm !default;
@@ -60,6 +64,7 @@ $font-size-icons-sm: 1rem !default; //16px
 
 //==Banner
 $font-size-banner-title-lg: 3.75rem !default; // 60px
+$font-size-banner-title-md: 1.875rem !default; // 23px
 $font-size-banner-title-sm: 1.4375rem !default; // 23px
 $font-size-banner-title-lg-alt: 2.375rem !default; // 38px
 $font-size-banner-title-sm-alt: 0.875rem !default; // 14px
@@ -69,6 +74,8 @@ $font-size-banner-number-sm: 2.875rem !default; // 46px
 $font-size-hero-title-lg: 3.125rem !default; // 50px
 $font-size-hero-title-sm: 0.875rem !default; // 14px
 
+$font-size-page-title-sm: 1.875rem !default; // 30px
+
 //==Buttons
 $font-size-banner-button: 0.875rem !default; // 14px
 
@@ -76,8 +83,14 @@ $font-size-banner-button: 0.875rem !default; // 14px
 $font-size-product-card-title: 0.6875rem !default; // 11px
 $font-size-product-card-price-title: 0.625rem !default; // 10px
 $font-size-product-card-price-secondary-title: 0.5rem !default; // 8px
+$font-size-product-card-price-discount-ammount: 0.75rem !default; // 12px
 $font-size-product-card-price-secondary-ammount: 0.625rem !default; // 10px
 $font-size-product-card-description: 0.5rem !default; // 8px
+
+//==ProductSideBar
+$font-size-sidebar-heading-lg: 1.25rem !default; // 20px
+$font-size-sidebar-list-lg: 0.9375rem !default; // 20px
+
 
 
 
@@ -88,8 +101,10 @@ $font-letter-spacing-buttons: 1.4px;
 $font-letter-spacing-nav: 1.4px;
 $font-letter-spacing-labels: 1px;
 $font-letter-spacing-product-card-title: 2.64px;
-$font-letter-spacing-product-card-price-title:  0.31px;;
-$font-letter-spacing-product-card-description:  0.27px;;
+$font-letter-spacing-product-card-price-title: 0.31px;
+;
+$font-letter-spacing-product-card-description: 0.27px;
+;
 
 //---- Paddings & Margins-------//
 $padding-base: 5px !default;

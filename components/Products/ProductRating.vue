@@ -1,14 +1,12 @@
 <template>
   <div class="row justify-content-between product-rating">
-    <div v-for="n in roundNumber(rating)" :key="n" class="p-0 m-0">
-      <svg-icon class="" icon="star-rating-filled" />
-    </div>
-    <div
-      v-for="n in getRatingDifference(roundNumber(rating))"
-      :key="n"
-      class="p-0 m-0"
-    >
-      <svg-icon class="" icon="star-rating" />
+    <div v-for="index in 5" :key="index" class="p-0 m-0">
+      <svg-icon
+        v-if="index <= starsFilled"
+        class=""
+        icon="star-rating-filled"
+      />
+      <svg-icon v-else class="" icon="star-rating" />
     </div>
   </div>
 </template>
@@ -19,6 +17,11 @@ export default {
     rating: {
       type: Number,
       default: null,
+    },
+  },
+  computed: {
+    starsFilled() {
+      return this.roundNumber(this.rating);
     },
   },
   methods: {
