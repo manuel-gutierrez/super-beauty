@@ -3,23 +3,24 @@
   margin-bottom: $margin-base;
 
 
- .btn {
-  border: 2px solid $white;
-  border-radius: 2px;
-  background:transparent;
-  width: 231px;
-  color: $white;
-  text-transform: uppercase;
-  font-size: $font-size-banner-button;
-  font-weight:bold;
-  padding:2px;
-  @include media-breakpoint-down(sm) {
-    width: 136px;
-    height:23px;
-    line-height: normal;
-    letter-spacing:$font-letter-spacing-buttons;
+  .btn {
+    border: 2px solid $white;
+    border-radius: 2px;
+    background: transparent;
+    width: 231px;
+    color: $white;
+    text-transform: uppercase;
+    font-size: $font-size-banner-button;
+    font-weight: bold;
+    padding: 2px;
+
+    @include media-breakpoint-down(sm) {
+      width: 136px;
+      height: 23px;
+      line-height: normal;
+      letter-spacing: $font-letter-spacing-buttons;
+    }
   }
- }
 
 }
 
@@ -29,50 +30,58 @@
   background-repeat: no-repeat;
   color: $white;
   min-height: 259px;
-  padding-left:25px;
+  padding-left: 25px;
+
   @include media-breakpoint-down(md) {
     min-height: 215px;
   }
+
   @media (max-width: 414px) {
-      min-height: 160px;
+    min-height: 160px;
   }
 
 
-  .caption{
+  .caption {
     padding-top: 8%;
+
     @include media-breakpoint-down(sm) {
       padding-top: 14%;
     }
+
     @media (max-width: 414px) {
       padding-top: 14%;
     }
-    h2{
+
+    h2 {
       font-family: $font-family-banners;
       text-transform: capitalize;
       font-size: $font-size-banner-title-lg;
       margin: 0;
-      margin-bottom:-2rem;
+      margin-bottom: -2rem;
       letter-spacing: $font-letter-spacing-headings;
 
       @include media-breakpoint-down(md) {
         font-size: $font-size-banner-title-sm*1.5;
-        margin-bottom:-20px;
+        margin-bottom: -20px;
       }
+
       @include media-breakpoint-down(sm) {
         font-size: $font-size-banner-title-sm;
-        margin-bottom:-20px;
+        margin-bottom: -20px;
       }
+
       @include media-breakpoint-down(xs) {
         font-size: $font-size-banner-title-sm;
-        margin-bottom:2px;
+        margin-bottom: 2px;
       }
     }
-    .caption-number{
+
+    .caption-number {
       font-size: $font-size-banner-number-lg;
       height: $font-size-banner-number-lg;
       font-family: $font-family-montserrat;
       line-height: normal;
-      font-weight:900;
+      font-weight: 900;
       letter-spacing: $font-letter-spacing-headings;
 
       @include media-breakpoint-down(sm) {
@@ -80,36 +89,44 @@
         height: $font-size-banner-number-sm;
         margin-bottom: 5px;
       }
+
       @include media-breakpoint-down(xs) {
         margin-top: -20px;
       }
     }
-}
+  }
 
 }
+
 .promo-big {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 397px;
   color: $black;
+
   @include media-breakpoint-down(md) {
     min-height: 215px;
   }
+
   @media (max-width: 414px) {
-      min-height: 110px;
+    min-height: 110px;
   }
-  .caption{
+
+  .caption {
     padding-top: 10%;
-    padding-right:10%;
+    padding-right: 10%;
+
     @include media-breakpoint-down(md) {
-      padding-right:5%;
+      padding-right: 5%;
     }
+
     @media (max-width: 414px) {
       padding-top: 5%;
-      padding-right:2%;
+      padding-right: 2%;
     }
-    h2{
+
+    h2 {
       font-family: $font-family-alt;
       text-transform: capitalize;
       font-size: $font-size-banner-title-lg;
@@ -122,24 +139,28 @@
       @include media-breakpoint-down(md) {
         letter-spacing: $font-letter-spacing-headings;
         font-size: $font-size-banner-title-lg-alt;
-        margin-bottom:-20px;
+        margin-bottom: -20px;
       }
+
       @include media-breakpoint-down(sm) {
         font-size: $font-size-banner-title-lg-alt;
-        margin-bottom:-20px;
+        margin-bottom: -20px;
       }
+
       @include media-breakpoint-down(xs) {
         font-size: $font-size-banner-title-lg-alt;
-        margin-bottom:2px;
+        margin-bottom: 2px;
       }
+
       @media (max-width: 414px) {
         font-size: $font-size-banner-title-sm;
       }
     }
 
-}
+  }
 
 }
+
 .promo-large {
   background-size: cover;
   background-repeat: no-repeat;
@@ -147,47 +168,55 @@
   background-color: $primary;
   min-height: 112px;
   line-height: normal;
+
   @include media-breakpoint-down(sm) {
     min-height: 172px;
   }
+
   @include media-breakpoint-down(xs) {
     min-height: 152px;
   }
+
   .logo {
     width: 156px;
     height: 85px;
+
     @include media-breakpoint-down(sm) {
       font-size: $font-size-banner-title-sm-alt;
       width: 127px;
       height: 58px;
     }
   }
+
   .caption {
 
-    color:$white;
+    color: $white;
     text-transform: uppercase;
     font-family: $font-family-base;
     font-weight: bold;
     letter-spacing: unset;
 
-    h2{
+    h2 {
       @extend .caption;
       font-size: $font-size-banner-title-lg-alt;
-      margin-bottom:-10px;
+      margin-bottom: -10px;
+
       @include media-breakpoint-down(sm) {
         font-size: $font-size-banner-title-sm-alt;
-        margin-top:0px;
-        margin-bottom:0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
       }
     }
+
     @include media-breakpoint-down(md) {
       font-size: $font-size-banner-title-sm-alt*1.5;
-      margin-bottom:-5px;
+      margin-bottom: -5px;
     }
 
     @include media-breakpoint-down(sm) {
       font-size: $font-size-banner-title-sm-alt;
     }
+
     @include media-breakpoint-down(xs) {
       font-size: $font-size-banner-title-sm-alt*1.1;
     }
@@ -196,6 +225,7 @@
 
 
 }
+
 .hero {
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,54 +233,104 @@
   background-color: $primary;
   height: 464px;
   line-height: normal;
+
   @include media-breakpoint-down(sm) {
     height: 224px;
   }
+
   .caption {
     color: $white;
-    display:block;
+    display: block;
 
-    margin-top:12%;
+    margin-top: 12%;
+
     @include media-breakpoint-down(xlg) {
       margin-left: 77%;
     }
+
     @include media-breakpoint-down(lg) {
       margin-left: 67%;
     }
+
     @include media-breakpoint-down(md) {
-      margin-top:22%;
+      margin-top: 22%;
       margin-left: 57%;
     }
+
     @include media-breakpoint-down(sm) {
       margin-left: 47%;
-      margin-top:76px;
-      margin-bottom:-20px;
-    }
-    @include media-breakpoint-down(xs) {
-      margin-left: 30%;
-      margin-top:77px;
-      margin-bottom:-20px;
+      margin-top: 76px;
+      margin-bottom: -20px;
     }
 
-    h2{
+    @include media-breakpoint-down(xs) {
+      margin-left: 30%;
+      margin-top: 77px;
+      margin-bottom: -20px;
+    }
+
+    h2 {
       font-family: $font-family-banners;
       font-size: $font-size-banner-title-lg;
+
       @include media-breakpoint-down(sm) {
         font-size: $font-size-hero-title-lg;
-        margin-top:0px;
-        margin-bottom:-5px;
+        margin-top: 0px;
+        margin-bottom: -5px;
       }
+
       @include media-breakpoint-down(xs) {
         font-size: $font-size-hero-title-lg*0.7;
-        margin-top:0px;
-        margin-bottom:-5px;
+        margin-top: 0px;
+        margin-bottom: -5px;
       }
     }
-    .btn{
+
+    .btn {
       @include media-breakpoint-up(md) {
-      width:85%;
+        width: 85%;
       }
     }
   }
 }
 
+.page-header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $white;
+  background-position: center left;
+  min-height: 109px;
+  line-height: normal;
+  padding-left: 8%;
+  margin-top: 50px;
+
+  @include media-breakpoint-down(sm) {
+    background-position: center center;
+    margin-bottom: 69px;
+
+  }
+
+  .caption {
+    color: $white;
+    text-transform: capitalize;
+    font-family: $font-family-banners;
+    font-weight: normal;
+    letter-spacing: unset;
+    height: auto;
+    padding-top: 3px;
+
+
+    h2 {
+      @extend .caption;
+      font-size: $font-size-banner-title-lg;
+      display: flex;
+      align-content: center;
+
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-page-title-sm;
+
+      }
+    }
+
+  }
+}

@@ -13,7 +13,7 @@
     "prettier.eslintIntegration": true,
     "prettier.disableLanguages": [],
     "editor.insertSpaces": true,
-    "editor.formatOnSave": false, // only if you want auto      //fomattting on saving the file
+    "editor.formatOnSave": true, // only if you want auto      //fomattting on saving the file
     "[javascript]": {
       "editor.formatOnSave": false
     },
