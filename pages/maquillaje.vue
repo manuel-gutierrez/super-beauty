@@ -82,6 +82,8 @@ export default {
     return {
       products: null,
       categoryId: 1,
+      productsFilter: [],
+      productsSort: [],
     };
   },
   computed: {
@@ -99,7 +101,6 @@ export default {
       productsInVariant: 'getProductsBySubcategoryVariant',
       priceRanges: 'findLowestAndHighestPrices',
     }),
-
     ...mapGetters('categories', {
       categoryData: 'getCategory',
     }),

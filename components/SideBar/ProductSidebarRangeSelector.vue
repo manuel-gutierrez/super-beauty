@@ -36,6 +36,7 @@
       :min="floor"
       :max="max"
       :step="step"
+      @input="emitEvent()"
     ></b-form-input>
   </div>
 </template>
@@ -73,6 +74,9 @@ export default {
       } else {
         return 0;
       }
+    },
+    emitEvent() {
+      this.$emit('update-filter', this.value);
     },
   },
 };

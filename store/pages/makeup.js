@@ -25,8 +25,9 @@ export const state = () => ({
   },
   filters: {
     brands: {
+      display: 'list',
       label: 'Marcas',
-      type: 'list',
+      type: 'BRAND',
       active: true,
       options: [
         { text: 'Orange', value: '1' },
@@ -52,24 +53,27 @@ export const state = () => ({
       ],
     },
     price: {
+      display: 'range',
       label: 'Precio',
-      type: 'range',
+      type: 'PRICE',
       active: true,
       options: [{ floor: 0 }, { ceil: 120000 }],
     },
     rating: {
+      display: 'rating-list',
       label: 'Calificación',
       active: true,
-      type: 'rating-list',
+      type: 'RATING',
       options: [],
     },
     others: {
+      display: 'list',
       label: 'Otros',
       active: true,
-      type: 'list',
+      type: 'OTHER',
       options: [
-        { text: 'Orange', value: '1' },
-        { text: 'Apple', value: '2' },
+        { text: 'Promoción', value: { inSale: true } },
+        { text: 'Disponible', value: { available: true } },
         { text: 'Pineapple', value: '3' },
         { text: 'Grape', value: '4' },
       ],
@@ -79,9 +83,6 @@ export const state = () => ({
 export const mutations = {
   setSortingValue(state, payload) {
     state.sort.selected = payload;
-  },
-  pushProducts(state, payload) {
-    state.products.push(payload);
   },
 };
 export const actions = {

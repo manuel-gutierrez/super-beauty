@@ -414,7 +414,6 @@ export const state = () => ({
 });
 export const mutations = {};
 export const actions = {};
-
 export const getters = {
   getProducts(state) {
     return state.products;
