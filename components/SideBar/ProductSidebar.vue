@@ -27,7 +27,7 @@
     <!-- Filters Section -->
     <div
       v-for="filterItem in filters"
-      :key="filterItem.active"
+      :key="filterItem.id"
       class="product-page__sidebar__section"
     >
       <h3>{{ filterItem.label }}</h3>
@@ -36,6 +36,7 @@
         v-if="
           filterItem.display === 'list' || filterItem.display === 'rating-list'
         "
+        ref="checkboxes"
         :label="filterItem.label"
         :type="filterItem.display"
         :options="filterItem.options"
@@ -45,12 +46,14 @@
       />
       <ProductSidebarRangeSelector
         v-else-if="filterItem.display === 'range'"
+        ref="rangeSelector"
         :floor="0"
         :ceil="priceRange.max"
         @update-filter="
           updateFilter(filterNames[filterItem.type], ...arguments)
         "
-      ></ProductSidebarRangeSelector>
+      >
+      </ProductSidebarRangeSelector>
     </div>
     <slot />
   </div>
@@ -73,6 +76,14 @@ export default {
   methods: {
     updateFilter(filterName, data) {
       this.$emit('filter', filterName, data);
+    },
+    clear() {
+      this.$refs.rangeSelector.forEach((rangeSelector) => {
+        rangeSelector.clear();
+      });
+      this.$refs.checkboxes.forEach((checkbox) => {
+        checkbox.clear();
+      });
     },
   },
 };

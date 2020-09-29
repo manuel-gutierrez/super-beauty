@@ -12,23 +12,24 @@
       ></b-form-checkbox-group>
     </b-form-group>
     <b-form-group v-else-if="type === 'rating-list'">
-      <b-form-checkbox-group
-        v-for="n in 5"
-        :id="label"
-        :key="n"
-        v-model="selected"
-        stacked
-        class="product-page__sidebar__checkbox-group"
-        @input="emitEvent()"
-      >
-        <b-form-checkbox :value="n"
-          ><ProductRating :rating="n"></ProductRating
-        ></b-form-checkbox>
-      </b-form-checkbox-group>
+      <div v-for="ratings in 5" :key="ratings + '-item'">
+        <b-form-checkbox-group
+          :id="label"
+          v-model="selected"
+          stacked
+          class="product-page__sidebar__checkbox-group"
+          @input="emitEvent()"
+        >
+          <b-form-checkbox :value="ratings"
+            ><ProductRating
+              :rating="Number(ratings)"
+              :label="'rating-group' + ratings++"
+            ></ProductRating
+          ></b-form-checkbox>
+        </b-form-checkbox-group>
+      </div>
     </b-form-group>
     <div>
-      Data:
-      <strong>{{ selected }}</strong>
       <slot />
     </div>
   </div>
@@ -58,6 +59,9 @@ export default {
   methods: {
     emitEvent() {
       this.$emit('update-filter', this.selected);
+    },
+    clear() {
+      this.selected = [];
     },
   },
 };

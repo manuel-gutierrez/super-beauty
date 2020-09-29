@@ -78,6 +78,9 @@ export default {
     emitEvent() {
       this.$emit('update-filter', this.value);
     },
+    clear() {
+      this.value = this.floor;
+    },
   },
 };
 </script>

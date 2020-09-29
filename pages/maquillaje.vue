@@ -9,6 +9,7 @@
             <p @click="resetFilter">RESET FILTER</p>
 
             <ProductSidebar
+              ref="sidebarFilters"
               :sub-categories="category.SubCategories"
               :filters="filters"
               :price-range="productsPriceRange"
@@ -135,7 +136,7 @@ export default {
     filterProductsBySubcategory(id) {
       return this.products.filter((product) => product.subCategoryId === id);
     },
-    ...mapMutations('pages/makeup', ['setSortingValue', 'pushProducts']),
+    ...mapMutations('pages/makeup', ['setSortingValue']),
     doSort(value) {
       this.setSortingValue(value);
     },
@@ -180,6 +181,7 @@ export default {
       );
     },
     resetFilter() {
+      this.$refs.sidebarFilters.clear();
       this.products = this.productsInCategory(this.categoryId);
       this.productsFilter = [];
     },
