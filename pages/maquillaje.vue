@@ -2,14 +2,17 @@
   <div class="container product-page">
     <div class="row">
       <!-- Filter Side Bar -->
+
       <div class="product-page__sidebar col-3 d-none d-sm-none d-md-flex">
         <div class="row w-100">
           <div class="col-12">
+            <p @click="resetFilter">RESET FILTER</p>
+
             <ProductSidebar
               :sub-categories="category.SubCategories"
               :filters="filters"
               :price-range="productsPriceRange"
-              @filter-by-variation="filterByVariant(categoryId, ...arguments)"
+              @filter="updateFilter(...arguments)"
             ></ProductSidebar>
           </div>
         </div>
@@ -84,6 +87,7 @@ export default {
       categoryId: 1,
       productsFilter: [],
       productsSort: [],
+      arr: [],
     };
   },
   computed: {
@@ -98,7 +102,8 @@ export default {
     }),
     ...mapGetters('products', {
       productsInCategory: 'getProductsByCategory',
-      productsInVariant: 'getProductsBySubcategoryVariant',
+      productsInVariant: 'filterProductsByVariant',
+      productsWithBrand: 'filterProductsByBrand',
       priceRanges: 'findLowestAndHighestPrices',
     }),
     ...mapGetters('categories', {
@@ -118,6 +123,10 @@ export default {
     productsPriceRange() {
       return this.priceRanges(this.products);
     },
+    ...mapGetters('enums', { enum: 'getEnum' }),
+    filterNames() {
+      return this.enum('filterNames');
+    },
   },
   methods: {
     countProducts() {
@@ -131,11 +140,82 @@ export default {
       this.setSortingValue(value);
     },
     filterByVariant(categoryId, subCategoryId, variantId) {
-      this.products = this.productsInVariant(
-        categoryId,
-        subCategoryId,
-        variantId
+      return this.productsInVariant(categoryId, subCategoryId, variantId);
+    },
+    filterByBrand(categoryId, brandsId, products) {
+      if (brandsId.length > 0) {
+        return products.reduce((result, product) => {
+          if (brandsId.includes(String(product.brandId))) {
+            result.push(product);
+          }
+          return result;
+        }, []);
+      }
+    },
+    filterByPrice(categoryId, price, products) {
+      return this.products.filter((product) => product.price >= Number(price));
+    },
+    filterByRate(categoryId, rates, products) {
+      if (rates.length > 0) {
+        return products.reduce((result, product) => {
+          if (rates.includes(Math.round(product.rating))) {
+            result.push(product);
+          }
+          return result;
+        }, []);
+      }
+    },
+    updateFilter(filterType, filterData) {
+      const filterItem = this.productsFilter.find(
+        (filter) => filter.type === filterType
       );
+      if (filterItem) {
+        filterItem.data = filterData;
+      } else {
+        this.productsFilter.push({ type: filterType, data: filterData });
+      }
+      this.products = this.filterProducts(
+        this.productsInCategory(this.categoryId),
+        this.productsFilter
+      );
+    },
+    resetFilter() {
+      this.products = this.productsInCategory(this.categoryId);
+      this.productsFilter = [];
+    },
+
+    filterProducts(products, filters) {
+      return filters.reduce((result, filter) => {
+        if (Array.isArray(filter.data) && filter.data.length > 0) {
+          result = this.processFilter(result, filter.type, filter.data);
+        }
+        if (
+          Object.entries(filter.data).length !== 0 &&
+          filter.data.constructor === Object
+        ) {
+          result = this.processFilter(result, filter.type, filter.data);
+        }
+        return result;
+      }, products);
+    },
+    processFilter(products, filterType, filterData) {
+      switch (filterType) {
+        case this.filterNames.VARIANT:
+          return this.filterByVariant(
+            this.categoryId,
+            filterData.variationId,
+            filterData.subCategoryId
+          );
+
+        case this.filterNames.BRAND:
+          return this.filterByBrand(this.categoryId, filterData, products);
+
+        case this.filterNames.PRICE:
+          return this.filterByPrice(this.categoryId, filterData, products);
+
+        case this.filterNames.RATING:
+          return this.filterByRate(this.categoryId, filterData, products);
+      }
     },
   },
 };

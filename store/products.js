@@ -33,6 +33,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '2',
@@ -67,6 +68,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '3',
@@ -101,6 +103,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '4',
@@ -136,6 +139,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '5',
@@ -170,6 +174,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '6',
@@ -205,6 +210,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 2.3,
+      brandId: 1,
     },
     {
       id: '7',
@@ -239,6 +245,7 @@ export const state = () => ({
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 3.3,
+      brandId: 1,
     },
     {
       id: '8',
@@ -268,11 +275,12 @@ export const state = () => ({
       productSizes: ['1.2g', '1.4g'],
       priceTitle: 'Precio al por mayor',
       price: 30000,
-      discountedPrice: 150000,
+      discountedPrice: 400,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '9',
@@ -301,12 +309,13 @@ export const state = () => ({
         'Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.',
       productSizes: ['1.2g', '1.4g'],
       priceTitle: 'Precio al por mayor',
-      price: 30000,
+      price: 12000,
       discountedPrice: 150000,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '10',
@@ -335,12 +344,13 @@ export const state = () => ({
         'Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.',
       productSizes: ['1.2g', '1.4g'],
       priceTitle: 'Precio al por mayor',
-      price: 30000,
+      price: 1000,
       discountedPrice: 150000,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '11',
@@ -369,12 +379,13 @@ export const state = () => ({
         'Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.',
       productSizes: ['1.2g', '1.4g'],
       priceTitle: 'Precio al por mayor',
-      price: 30000,
+      price: 23000,
       discountedPrice: 150000,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
     {
       id: '12',
@@ -403,12 +414,13 @@ export const state = () => ({
         'Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.',
       productSizes: ['1.2g', '1.4g'],
       priceTitle: 'Precio al por mayor',
-      price: 30000,
+      price: 3000,
       discountedPrice: 150000,
       priceTitleSecondary: 'precio al público',
       priceSecondary: 250000,
       discountedPriceSecondary: 200000,
       rating: 4.3,
+      brandId: 1,
     },
   ],
 });
@@ -447,16 +459,27 @@ export const getters = {
       (product) => product.categoryId === categoryId
     );
   },
-  getProductsBySubcategoryVariant: (state) => (
+  filterProductsByVariant: (state) => (
     categoryId,
     subCategoryId,
-    variationId
+    variationId,
+    products = state.products
   ) => {
-    return state.products.filter(
+    return products.filter(
       (product) =>
         product.categoryId === categoryId &&
         product.subCategoryId === subCategoryId &&
         product.subCategoryVariationId === variationId
+    );
+  },
+  filterProductsByBrand: (state) => (
+    categoryId,
+    brandId,
+    products = state.products
+  ) => {
+    return products.filter(
+      (product) =>
+        product.categoryId === categoryId && product.brandId === brandId
     );
   },
 

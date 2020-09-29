@@ -6,7 +6,7 @@
           class="product-sidebar__price-range_floor col-6 justify-content-start"
         >
           <money-format
-            :value="floor"
+            :value="Number(value)"
             :locale="'es-co'"
             :currency-code="'COP'"
             :subunits-value="false"
@@ -54,7 +54,7 @@ export default {
     },
     step: {
       type: Number,
-      default: 1,
+      default: 100,
     },
   },
   data() {

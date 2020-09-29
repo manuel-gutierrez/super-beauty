@@ -1,7 +1,6 @@
 <template>
   <div>
     <!-- Sub categories Section  -->
-    {{ filter }}
     <div
       v-for="subCategory in subCategories"
       :key="subCategory.name"
@@ -16,8 +15,8 @@
         <li
           @click="
             updateFilter(filterNames.VARIANT, {
-              variation: variation.id,
-              subcategory: subCategory.id,
+              variationId: variation.id,
+              subCategoryId: subCategory.id,
             })
           "
         >
@@ -64,11 +63,7 @@ export default {
     priceRange: { type: Object, default: null },
     filters: { type: Object, default: null },
   },
-  data() {
-    return {
-      filter: [],
-    };
-  },
+
   computed: {
     ...mapGetters('enums', { enum: 'getEnum' }),
     filterNames() {
@@ -77,14 +72,7 @@ export default {
   },
   methods: {
     updateFilter(filterName, data) {
-      const filterItem = this.filter.find(
-        (filter) => filter.type === filterName
-      );
-      if (filterItem) {
-        filterItem.values = data;
-      } else {
-        this.filter.push({ type: filterName, values: data });
-      }
+      this.$emit('filter', filterName, data);
     },
   },
 };
