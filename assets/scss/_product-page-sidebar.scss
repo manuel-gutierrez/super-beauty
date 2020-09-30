@@ -116,7 +116,8 @@
   padding-left: 5%;
   top: 0vh;
   overflow: auto;
-  max-height: calc(100vh + 28px);
+  max-height: 100vh;
+  // max-height: calc(100vh - 10vh);
   width: 80%;
   display: none;
   z-index: 10;
