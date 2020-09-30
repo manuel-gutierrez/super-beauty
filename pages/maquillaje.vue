@@ -7,7 +7,9 @@
           <div class="col-12">
             <div class="row align-items-center">
               <div class="col-7 product-page__sidebar__header">
-                <h2>{{ filterSection.header }}</h2>
+                <h2>
+                  {{ filterSection.header }}
+                </h2>
               </div>
               <div class="col-5 product-page__sidebar__clear-filter">
                 <p @click="resetFilter">{{ filterSection.resetText }}</p>
@@ -26,8 +28,8 @@
       <!-- // End Side Bar -->
 
       <!-- Banner Section Desktop -->
-      <div class="col-sm-9">
-        <div class="row my-0">
+      <div class="col-sm-9 product-page__banner">
+        <div class="row my-0 py-0">
           <BannerImage
             :data="banners.header.data"
             :type="banners.header.type"
@@ -36,7 +38,6 @@
         </div>
         <!-- // End Banner  Section  -->
         <!-- Sort Section Desktop -->
-
         <div class="row d-none d-sm-none d-md-flex product-page__sort-section">
           <div class="product-page__counter justify-content-start">
             <div class="product-page__counter__number">
@@ -62,6 +63,21 @@
           </div>
         </div>
         <!-- End  Sort Section Desktop -->
+        <!-- Sort Section Mobile -->
+        <div class="row d-md-none d-sm-flex product-page__sort-section-mobile">
+          <div class="product-page__counter col-12 justify-content-start">
+            <div class="product-page__counter__number">
+              {{ countProducts() }} {{ sortSection.productCounterLabel }}
+            </div>
+            <div class="product-page__sort_heading">
+              <h2>
+                {{ filterSection.header }}
+                <b-icon icon="chevron-right"></b-icon>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- End  Sort Section Mobile -->
         <div
           v-for="subCategory in category.SubCategories"
           :key="subCategory.name"
