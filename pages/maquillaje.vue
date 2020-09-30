@@ -1,7 +1,7 @@
 <template>
   <div class="container product-page">
     <div class="row">
-      <!-- Filter Side Bar -->
+      <!-- Filter Side Bar Desktop -->
       <div class="product-page__sidebar col-3 d-none d-sm-none d-md-flex">
         <div class="row w-100">
           <div class="col-12">
@@ -25,8 +25,46 @@
           </div>
         </div>
       </div>
-      <!-- // End Side Bar -->
-
+      <!-- // End Side Bar Desktop -->
+      <!-- Filter Side Bar Mobile -->
+      <div
+        :class="
+          sidebarController +
+          ' row product-page__sidebar-mobile d-sm-flex d-md-none'
+        "
+      >
+        <div class="col-12 product-page__sidebar-mobile__container">
+          <div class="row product-page__sidebar-mobile__heading">
+            <div class="col-10 product-page__sidebar-mobile__header">
+              <h2>
+                {{ filterSection.header }}
+              </h2>
+            </div>
+            <div
+              class="col-2 px-0 product-page__sidebar-mobile__close"
+              @click="toggleMobileFilters"
+            >
+              <em class="product-page__sidebar-mobile__close-icon">x</em>
+            </div>
+            <div
+              class="col-6 ml-auto pl-4 pr-4 product-page__sidebar-mobile__clear-filter"
+            >
+              <p class="d-flex justify-content-around" @click="resetFilter">
+                {{ filterSection.resetText }}
+              </p>
+            </div>
+          </div>
+          <ProductSidebar
+            ref="sidebarFilters"
+            :sub-categories="category.SubCategories"
+            :filters="filters"
+            :price-range="productsPriceRange"
+            :is-mobile="true"
+            @filter="updateFilter(...arguments)"
+          ></ProductSidebar>
+        </div>
+      </div>
+      <!-- // End Side Bar Mobile -->
       <!-- Banner Section Desktop -->
       <div class="col-sm-9 product-page__banner">
         <div class="row my-0 py-0">
@@ -69,7 +107,10 @@
             <div class="product-page__counter__number">
               {{ countProducts() }} {{ sortSection.productCounterLabel }}
             </div>
-            <div class="product-page__sort_heading">
+            <div
+              class="product-page__sort_heading"
+              @click="toggleMobileFilters"
+            >
               <h2>
                 {{ filterSection.header }}
                 <b-icon icon="chevron-right"></b-icon>
@@ -112,6 +153,7 @@ export default {
       productsFilter: [],
       productsSort: [],
       arr: [],
+      sidebarController: '',
     };
   },
   computed: {
@@ -270,6 +312,13 @@ export default {
       this.$refs.sidebarFilters.clear();
       this.products = this.productsInCategory(this.categoryId);
       this.productsFilter.length = 0;
+    },
+    toggleMobileFilters() {
+      if (this.sidebarController === '') {
+        this.sidebarController = 'show-side-bar';
+      } else {
+        this.sidebarController = '';
+      }
     },
   },
 };

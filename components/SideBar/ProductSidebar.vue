@@ -1,28 +1,30 @@
 <template>
   <div>
     <!-- Sub categories Section  -->
-    <div
-      v-for="subCategory in subCategories"
-      :key="subCategory.name"
-      class="product-page__sidebar__section"
-    >
-      <h3>{{ subCategory.name }}</h3>
-      <ul
-        v-for="variation in subCategory.subCategoriesVariation"
-        :key="variation.id"
-        class="product-page__sidebar__category-variation"
+    <div v-if="!isMobile">
+      <div
+        v-for="subCategory in subCategories"
+        :key="subCategory.name"
+        class="product-page__sidebar__section"
       >
-        <li
-          @click="
-            updateFilter(filterNames.VARIANT, {
-              variationId: variation.id,
-              subCategoryId: subCategory.id,
-            })
-          "
+        <h3>{{ subCategory.name }}</h3>
+        <ul
+          v-for="variation in subCategory.subCategoriesVariation"
+          :key="variation.id"
+          class="product-page__sidebar__category-variation"
         >
-          {{ variation.name }}
-        </li>
-      </ul>
+          <li
+            @click="
+              updateFilter(filterNames.VARIANT, {
+                variationId: variation.id,
+                subCategoryId: subCategory.id,
+              })
+            "
+          >
+            {{ variation.name }}
+          </li>
+        </ul>
+      </div>
     </div>
     <!-- Filters Section -->
     <div
@@ -65,6 +67,7 @@ export default {
     subCategories: { type: Array, default: null },
     priceRange: { type: Object, default: null },
     filters: { type: Object, default: null },
+    isMobile: { type: Boolean, default: false },
   },
 
   computed: {
