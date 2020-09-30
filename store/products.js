@@ -436,8 +436,21 @@ export const state = () => ({
     },
   ],
 });
-export const mutations = {};
-export const actions = {};
+export const mutations = {
+  setWishlistStatus(state, payload) {
+    const productItem = state.products.find(
+      (product) => product.id === payload.id
+    );
+    productItem.isInWishlist = payload.value;
+  },
+};
+export const actions = {
+  updateWishlist({ commit }, payload) {
+    // Call api  -- remember async await as this must
+    // be asyncronous.
+    commit('setWishlistStatus', payload);
+  },
+};
 export const getters = {
   getProducts(state) {
     return state.products;
