@@ -28,6 +28,7 @@
       <!-- // End Side Bar Desktop -->
       <!-- Filter Side Bar Mobile -->
       <div
+        ref="filter-sidebar"
         :class="
           sidebarController +
           ' row product-page__sidebar-mobile d-sm-flex d-md-none'
@@ -66,12 +67,12 @@
       </div>
       <!-- // End Side Bar Mobile -->
       <!-- Banner Section Desktop -->
-      <div class="col-sm-9 product-page__banner">
-        <div class="row my-0 py-0">
+      <div class="col-sm-9">
+        <div class="row my-0 py-0 product-page__banner">
           <BannerImage
             :data="banners.header.data"
             :type="banners.header.type"
-            class="col-12 px-0"
+            class="col-12 px-md-0"
           />
         </div>
         <!-- // End Banner  Section  -->
