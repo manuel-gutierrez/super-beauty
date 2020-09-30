@@ -5,6 +5,8 @@ export const state = () => ({
     BRAND: 'brand',
     VARIANT: 'variant',
     OTHER: 'other',
+    SUSTAINABLE: 'sustainable',
+    NEW: 'new',
   },
 });
 export const mutations = {};

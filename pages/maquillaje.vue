@@ -2,12 +2,17 @@
   <div class="container product-page">
     <div class="row">
       <!-- Filter Side Bar -->
-
       <div class="product-page__sidebar col-3 d-none d-sm-none d-md-flex">
         <div class="row w-100">
           <div class="col-12">
-            <p @click="resetFilter">RESET FILTER</p>
-
+            <div class="row align-items-center">
+              <div class="col-7 product-page__sidebar__header">
+                <h2>{{ filterSection.header }}</h2>
+              </div>
+              <div class="col-5 product-page__sidebar__clear-filter">
+                <p @click="resetFilter">{{ filterSection.resetText }}</p>
+              </div>
+            </div>
             <ProductSidebar
               ref="sidebarFilters"
               :sub-categories="category.SubCategories"
@@ -72,6 +77,8 @@
         </div>
       </div>
       <div class="section-spacer"></div>
+
+      <ScrollToTop />
     </div>
   </div>
 </template>
@@ -97,10 +104,18 @@ export default {
       sessionToken: 'getSessionToken',
     }),
     ...mapGetters('pages/makeup', {
-      banners: 'getBanners',
-      sortSection: 'getSortSection',
+      sections: 'getSection',
       filters: 'getFilters',
     }),
+    banners() {
+      return this.sections('banners');
+    },
+    sortSection() {
+      return this.sections('sort');
+    },
+    filterSection() {
+      return this.sections('filters');
+    },
     ...mapGetters('products', {
       productsInCategory: 'getProductsByCategory',
       productsInVariant: 'filterProductsByVariant',
@@ -166,6 +181,14 @@ export default {
         }, []);
       }
     },
+    filterBySustainable(categoryId, products) {
+      return products.filter((product) => {
+        return product.isSustainable === true;
+      });
+    },
+    filterByNew(categoryId, products) {
+      return products.filter((product) => product.new === true);
+    },
     updateFilter(filterType, filterData) {
       const filterItem = this.productsFilter.find(
         (filter) => filter.type === filterType
@@ -175,17 +198,12 @@ export default {
       } else {
         this.productsFilter.push({ type: filterType, data: filterData });
       }
+
       this.products = this.filterProducts(
         this.productsInCategory(this.categoryId),
         this.productsFilter
       );
     },
-    resetFilter() {
-      this.$refs.sidebarFilters.clear();
-      this.products = this.productsInCategory(this.categoryId);
-      this.productsFilter = [];
-    },
-
     filterProducts(products, filters) {
       return filters.reduce((result, filter) => {
         if (Array.isArray(filter.data) && filter.data.length > 0) {
@@ -208,16 +226,34 @@ export default {
             filterData.variationId,
             filterData.subCategoryId
           );
-
         case this.filterNames.BRAND:
           return this.filterByBrand(this.categoryId, filterData, products);
-
         case this.filterNames.PRICE:
           return this.filterByPrice(this.categoryId, filterData, products);
-
         case this.filterNames.RATING:
           return this.filterByRate(this.categoryId, filterData, products);
+        case this.filterNames.OTHER:
+          return this.otherFilters(filterData, products);
+        // return
+        default:
+          return this.productsInCategory(this.categoryId);
       }
+    },
+    otherFilters(filterData, products) {
+      return filterData.reduce((result, filter) => {
+        if (filter.type === this.filterNames.SUSTAINABLE) {
+          result = this.filterBySustainable(this.categoryId, products);
+        }
+        if (filter.type === this.filterNames.NEW) {
+          result = this.filterByNew(this.categoryId, products);
+        }
+        return result;
+      }, []);
+    },
+    resetFilter() {
+      this.$refs.sidebarFilters.clear();
+      this.products = this.productsInCategory(this.categoryId);
+      this.productsFilter.length = 0;
     },
   },
 };

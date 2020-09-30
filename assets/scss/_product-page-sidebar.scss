@@ -1,6 +1,19 @@
 .product-page__sidebar {
   margin-top: 13%;
 
+  .product-page__sidebar__clear-filter {
+    p {
+      border-bottom: solid $black 0.5px;
+      letter-spacing: 0.47px;
+      font-size: $font-paragraph;
+      text-align: center;
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 17%;
+      cursor: pointer;
+    }
+  }
+
   h3 {
     color: $primary;
     font-size: $font-size-sidebar-heading-lg;

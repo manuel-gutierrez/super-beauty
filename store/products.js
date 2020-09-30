@@ -5,6 +5,7 @@ export const state = () => ({
       sale: true,
       new: false,
       topSale: true,
+      isSustainable: true,
       recomended: true,
       isInWishlist: false,
       label: {
@@ -39,6 +40,7 @@ export const state = () => ({
       id: '2',
       sale: true,
       new: false,
+      isSustainable: false,
       topSale: true,
       recomended: true,
       isInWishlist: false,
@@ -73,6 +75,7 @@ export const state = () => ({
     {
       id: '3',
       sale: true,
+      isSustainable: true,
       new: false,
       topSale: true,
       recomended: true,
@@ -108,6 +111,7 @@ export const state = () => ({
     {
       id: '4',
       sale: false,
+      isSustainable: false,
       new: true,
       topSale: true,
       recomended: true,
@@ -144,6 +148,7 @@ export const state = () => ({
     {
       id: '5',
       sale: true,
+      isSustainable: false,
       new: false,
       topSale: true,
       recomended: true,
@@ -179,6 +184,7 @@ export const state = () => ({
     {
       id: '6',
       sale: true,
+      isSustainable: true,
       new: false,
       topSale: true,
       recomended: true,
@@ -215,6 +221,7 @@ export const state = () => ({
     {
       id: '7',
       sale: true,
+      isSustainable: false,
       new: false,
       topSale: true,
       recomended: true,
@@ -250,7 +257,8 @@ export const state = () => ({
     {
       id: '8',
       sale: true,
-      new: false,
+      isSustainable: true,
+      new: true,
       topSale: true,
       recomended: true,
       isInWishlist: false,
@@ -285,7 +293,8 @@ export const state = () => ({
     {
       id: '9',
       sale: true,
-      new: false,
+      new: true,
+      isSustainable: false,
       topSale: true,
       recomended: true,
       isInWishlist: false,
@@ -321,6 +330,7 @@ export const state = () => ({
       id: '10',
       sale: true,
       new: false,
+      isSustainable: true,
       topSale: true,
       recomended: true,
       isInWishlist: false,
@@ -356,6 +366,7 @@ export const state = () => ({
       id: '11',
       sale: true,
       new: false,
+      isSustainable: false,
       topSale: true,
       recomended: true,
       isInWishlist: false,
@@ -391,6 +402,7 @@ export const state = () => ({
       id: '12',
       sale: true,
       new: false,
+      isSustainable: true,
       topSale: true,
       recomended: true,
       isInWishlist: false,

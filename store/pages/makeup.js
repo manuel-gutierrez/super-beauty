@@ -1,27 +1,33 @@
 export const state = () => ({
-  banners: {
-    header: {
-      type: 'page-header',
-      data: {
-        url: '/productos',
-        caption: {
-          title: 'Maquillaje',
-        },
-        image: {
-          src: '/images/pages/product/product_banner@2x.png',
+  sections: {
+    banners: {
+      header: {
+        type: 'page-header',
+        data: {
+          url: '/productos',
+          caption: {
+            title: 'Maquillaje',
+          },
+          image: {
+            src: '/images/pages/product/product_banner@2x.png',
+          },
         },
       },
     },
-  },
-  sort: {
-    selected: 'rate',
-    sortOptions: [
-      { value: null, text: 'Selecciona un opcion' },
-      { value: 'rate', text: 'Calificación' },
-      { value: 'price', text: 'Precio' },
-    ],
-    sortLabel: 'Ordenar por:',
-    productCounterLabel: 'Productos',
+    sort: {
+      selected: 'rate',
+      sortOptions: [
+        { value: null, text: 'Selecciona un opcion' },
+        { value: 'rate', text: 'Calificación' },
+        { value: 'price', text: 'Precio' },
+      ],
+      sortLabel: 'Ordenar por:',
+      productCounterLabel: 'Productos',
+    },
+    filters: {
+      header: 'Filtros',
+      resetText: 'Limpiar Filtros',
+    },
   },
   filters: {
     brands: {
@@ -72,10 +78,11 @@ export const state = () => ({
       active: true,
       type: 'OTHER',
       options: [
-        { text: 'Promoción', value: { inSale: true } },
-        { text: 'Disponible', value: { available: true } },
-        { text: 'Pineapple', value: '3' },
-        { text: 'Grape', value: '4' },
+        {
+          text: 'Producto Sostenible',
+          value: { type: 'sustainable', data: '' },
+        },
+        { text: 'Nuevo', value: { type: 'new', data: '' } },
       ],
     },
   },
@@ -90,11 +97,8 @@ export const actions = {
 };
 
 export const getters = {
-  getSortSection(state) {
-    return state.sort;
-  },
-  getBanners(state) {
-    return state.banners;
+  getSection: (state) => (sectionName) => {
+    return state.sections[sectionName];
   },
   getFilters(state) {
     return state.filters;
