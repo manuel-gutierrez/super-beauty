@@ -3,7 +3,8 @@
     <ProductCardHeader
       :label-type="product.label.type"
       :label-text="product.label.text"
-      :in-wish-list="product.isInWishlist"
+      :in-wishlist="product.isInWishlist"
+      @update-wishlist="toggleWishlistStatus"
     ></ProductCardHeader>
     <nuxt-link :to="'product/' + product.id">
       <ProductCardImage
@@ -60,11 +61,34 @@
 </template>
 
 <script>
+import { mapActions, mapMutations } from 'vuex';
 export default {
   props: {
     product: {
       type: Object,
       default: null,
+    },
+  },
+  methods: {
+    ...mapActions('products', ['updateWishlist']),
+    ...mapMutations('wishlist', {
+      incrementWishlistCounter: 'incrementWishlistCounter',
+      decrementWishlistCounter: 'decrementWishlistCounter',
+    }),
+    toggleWishlistStatus() {
+      if (!this.product.isInWishlist) {
+        this.incrementWishlistCounter();
+        this.updateWishlist({
+          id: this.product.id,
+          value: true,
+        });
+      } else {
+        this.decrementWishlistCounter();
+        this.updateWishlist({
+          id: this.product.id,
+          value: false,
+        });
+      }
     },
   },
 };

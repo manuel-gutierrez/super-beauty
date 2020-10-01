@@ -1,12 +1,18 @@
 <template>
   <div class="row justify-content-between product-rating">
-    <div v-for="index in 5" :key="index" class="p-0 m-0">
-      <svg-icon
-        v-if="index <= starsFilled"
-        class=""
-        icon="star-rating-filled"
-      />
-      <svg-icon v-else class="" icon="star-rating" />
+    <div
+      v-for="activeStar in starsFilled"
+      :key="label + activeStar++ + '--filled'"
+      class="p-0 m-0"
+    >
+      <svg-icon class="" icon="star-rating-filled" />
+    </div>
+    <div
+      v-for="star in starsEmpty"
+      :key="label + star++ + '--notfilled'"
+      class="p-0 m-0"
+    >
+      <svg-icon class="" icon="star-rating" />
     </div>
   </div>
 </template>
@@ -18,10 +24,17 @@ export default {
       type: Number,
       default: null,
     },
+    label: {
+      type: String,
+      default: 'rating-group',
+    },
   },
   computed: {
     starsFilled() {
       return this.roundNumber(this.rating);
+    },
+    starsEmpty() {
+      return 5 - this.roundNumber(this.rating);
     },
   },
   methods: {
@@ -35,9 +48,6 @@ export default {
         case rate > 0 && rate < 5:
           return rate;
       }
-    },
-    getRatingDifference(rating) {
-      return 5 - rating;
     },
   },
 };

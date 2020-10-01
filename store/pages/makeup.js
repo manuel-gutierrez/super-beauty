@@ -1,32 +1,39 @@
 export const state = () => ({
-  banners: {
-    header: {
-      type: 'page-header',
-      data: {
-        url: '/productos',
-        caption: {
-          title: 'Maquillaje',
-        },
-        image: {
-          src: '/images/pages/product/product_banner@2x.png',
+  sections: {
+    banners: {
+      header: {
+        type: 'page-header',
+        data: {
+          url: '/productos',
+          caption: {
+            title: 'Maquillaje',
+          },
+          image: {
+            src: '/images/pages/product/product_banner@2x.png',
+          },
         },
       },
     },
-  },
-  sort: {
-    selected: 'rate',
-    sortOptions: [
-      { value: null, text: 'Selecciona un opcion' },
-      { value: 'rate', text: 'Calificación' },
-      { value: 'price', text: 'Precio' },
-    ],
-    sortLabel: 'Ordenar por:',
-    productCounterLabel: 'Productos',
+    sort: {
+      selected: 'rate',
+      sortOptions: [
+        { value: null, text: 'Selecciona un opcion' },
+        { value: 'rate', text: 'Calificación' },
+        { value: 'price', text: 'Precio' },
+      ],
+      sortLabel: 'Ordenar por:',
+      productCounterLabel: 'Productos',
+    },
+    filters: {
+      header: 'Filtros',
+      resetText: 'Limpiar Filtros',
+    },
   },
   filters: {
     brands: {
+      display: 'list',
       label: 'Marcas',
-      type: 'list',
+      type: 'BRAND',
       active: true,
       options: [
         { text: 'Orange', value: '1' },
@@ -52,26 +59,30 @@ export const state = () => ({
       ],
     },
     price: {
+      display: 'range',
       label: 'Precio',
-      type: 'range',
+      type: 'PRICE',
       active: true,
       options: [{ floor: 0 }, { ceil: 120000 }],
     },
     rating: {
+      display: 'rating-list',
       label: 'Calificación',
       active: true,
-      type: 'rating-list',
+      type: 'RATING',
       options: [],
     },
     others: {
+      display: 'list',
       label: 'Otros',
       active: true,
-      type: 'list',
+      type: 'OTHER',
       options: [
-        { text: 'Orange', value: '1' },
-        { text: 'Apple', value: '2' },
-        { text: 'Pineapple', value: '3' },
-        { text: 'Grape', value: '4' },
+        {
+          text: 'Producto Sostenible',
+          value: { type: 'sustainable', data: '' },
+        },
+        { text: 'Nuevo', value: { type: 'new', data: '' } },
       ],
     },
   },
@@ -80,20 +91,14 @@ export const mutations = {
   setSortingValue(state, payload) {
     state.sort.selected = payload;
   },
-  pushProducts(state, payload) {
-    state.products.push(payload);
-  },
 };
 export const actions = {
   // For future use.
 };
 
 export const getters = {
-  getSortSection(state) {
-    return state.sort;
-  },
-  getBanners(state) {
-    return state.banners;
+  getSection: (state) => (sectionName) => {
+    return state.sections[sectionName];
   },
   getFilters(state) {
     return state.filters;
