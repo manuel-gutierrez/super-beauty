@@ -3,7 +3,7 @@
     class="row product-card-image p-0"
     :style="getBackgroundImage(url)"
     role="img"
-    :aria-label="title"
+    :aria-label="caption"
   >
     <slot />
   </div>
@@ -16,7 +16,7 @@ export default {
       type: String,
       default: null,
     },
-    title: {
+    caption: {
       type: String,
       default: null,
     },

@@ -1,39 +1,53 @@
 <template>
   <div class="row">
-    <div class="col-4">
-      <ProductSidebar
-        :sub-categories="category.SubCategories"
-        @filter-by-variation="change('New Word')"
-      ></ProductSidebar>
+    <div class="col-2">
+      <ProductCard
+        v-for="productItem in products"
+        :key="productItem.id"
+        :product="productItem"
+        class="px-3"
+      />
     </div>
-    <div class="col-8">
+    <!-- <div class="col-8">
       <h2>{{ message }}</h2>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapMutations, mapGetters } from 'vuex';
 export default {
+  async fetch({ $axios, store }) {
+    try {
+      const productFetch = await $axios.$get(
+        process.env.VUE_APP_URL + '/sample-data/products.json'
+      );
+      store.commit('products/parseProducts', productFetch);
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
   computed: {
-    ...mapGetters('categories', {
-      categories: 'getCategory',
+    ...mapGetters('login', {
+      isloggedIn: 'getCurrentLoginStatus',
+      sessionToken: 'getSessionToken',
     }),
-    category() {
-      return this.categories(1);
-    },
-    message: {
-      set(word) {
-        return word;
-      },
-      get() {
-        return 'First Message';
-      },
-    },
+    // ...mapGetters('pages/home', {
+    //   banners: 'getBanners',
+    //   headers: 'getHeaders',
+    // }),
+    ...mapGetters('products', {
+      products: 'getProducts',
+      productsInSale: 'getProductsInSale',
+      recomendedProducts: 'getRecomendedProducts',
+      topSaleProducts: 'getTopSaleProducts',
+    }),
   },
   methods: {
-    change(word) {
-      this.message = word;
+    ...mapMutations('login', ['toggleLoginStatus']),
+
+    logIn() {
+      this.toggleLoginStatus();
     },
   },
 };
