@@ -16,48 +16,48 @@
         type="info"
       >
       </ProductCardCaption>
-      <!-- Main Price  -->
+
       <div v-for="price in product.pricing" :key="price.pricingType">
-        <ProductCardCaption
-          v-if="price.pricingType === 'VOLUME_PRICING'"
-          :title="price.pricingLabel"
-          :amount="price.priceMoney.amount"
-          :currency="price.priceMoney.currency"
-          type="price"
-        >
-        </ProductCardCaption>
-        <ProductCardCaption
-          v-if="price.pricingType === 'FIXED_PRICING'"
-          :title="price.pricingLabel"
-          :amount="price.priceMoney.amount"
-          :currency="price.priceMoney.currency"
-          type="price-secondary"
-        >
-        </ProductCardCaption>
+        <!-- Sale Price  -->
+        <div v-if="product.sale.active">
+          <ProductCardCaption
+            v-if="price.pricingType === 'VOLUME_PRICING'"
+            :title="price.pricingLabel"
+            :amount="price.priceMoney.amount"
+            :discounted-price="price.salePriceMoney.amount"
+            :currency="price.salePriceMoney.currency"
+            type="price"
+          >
+          </ProductCardCaption>
+          <ProductCardCaption
+            v-if="price.pricingType === 'FIXED_PRICING'"
+            :title="price.pricingLabel"
+            :amount="price.priceMoney.amount"
+            :discounted-price="price.salePriceMoney.amount"
+            :currency="price.salePriceMoney.currency"
+            type="price-secondary"
+          >
+          </ProductCardCaption>
+        </div>
+        <div v-else>
+          <ProductCardCaption
+            v-if="price.pricingType === 'VOLUME_PRICING'"
+            :title="price.pricingLabel"
+            :amount="price.priceMoney.amount"
+            :currency="price.priceMoney.currency"
+            type="price"
+          >
+          </ProductCardCaption>
+          <ProductCardCaption
+            v-if="price.pricingType === 'FIXED_PRICING'"
+            :title="price.pricingLabel"
+            :amount="price.priceMoney.amount"
+            :currency="price.priceMoney.currency"
+            type="price-secondary"
+          >
+          </ProductCardCaption>
+        </div>
       </div>
-      <!-- <ProductCardCaption
-          :title="product.pricing"
-          :price="product.price"
-          :discounted-price="product.discountedPrice"
-          type="price"
-        >
-        </ProductCardCaption> -->
-      <!-- Secondary Price  -->
-      <!-- <ProductCardCaption
-        v-if="product.sale"
-        :title="product.priceTitleSecondary"
-        :price="product.priceSecondary"
-        :discounted-price="product.discountedPriceSecondary"
-        type="price-secondary"
-      >
-      </ProductCardCaption>
-      <ProductCardCaption
-        v-else
-        :title="product.priceTitleSecondary"
-        :price="product.priceSecondary"
-        type="price-secondary"
-      >
-      </ProductCardCaption> -->
       <!-- Product Rating -->
       <ProductRating
         class="product-rating--card"

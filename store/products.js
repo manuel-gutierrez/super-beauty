@@ -46,9 +46,10 @@ export const getters = {
     }
   },
   getProductsByCategory: (state) => (categoryId) => {
-    return state.products.filter(
-      (product) => product.categoryId === categoryId
-    );
+    return state.products.filter((product) => {
+      console.log(product.category.id);
+      return Number(product.category.id) === categoryId;
+    });
   },
   filterProductsByVariant: (state) => (
     categoryId,

@@ -11,35 +11,35 @@
         class="row product-card-caption__amount d-flex justify-content-center align-items-center"
       >
         <money-format
-          v-if="amount"
+          v-if="amount && !discountedPrice"
           :value="amount"
           :class="'product-card-caption__amount--' + type"
           :locale="'es-co'"
-          :currency-code="currency"
+          :currency-code="'COP'"
           :subunits-value="false"
           :hide-subunits="true"
         >
         </money-format>
-        <!-- <money-format
+        <money-format
           v-else-if="amount && discountedPrice"
           :value="amount"
           :class="'product-card-caption__amount--' + type + '--discount'"
           :locale="'es-co'"
-          :currency-code="currency"
+          :currency-code="'COP'"
           :subunits-value="false"
           :hide-subunits="true"
         >
-        </money-format> -->
-        <!-- <money-format
+        </money-format>
+        <money-format
           v-if="discountedPrice"
           :value="discountedPrice"
           :class="'product-card-caption__amount-discounted--' + type"
           :locale="'es-co'"
-          :currency-code="currency"
+          :currency-code="'COP'"
           :subunits-value="false"
           :hide-subunits="true"
         >
-        </money-format> -->
+        </money-format>
       </div>
     </div>
   </div>
@@ -63,10 +63,6 @@ export default {
     amount: {
       type: Number,
       default: null,
-    },
-    currency: {
-      type: String,
-      default: 'COP',
     },
     discountedPrice: {
       type: Number,
