@@ -133,16 +133,6 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex';
 export default {
-  async fetch({ $axios, store }) {
-    try {
-      const productFetch = await $axios.$get(
-        process.env.VUE_APP_URL + '/sample-data/products.json'
-      );
-      store.commit('products/parseProducts', productFetch);
-    } catch (error) {
-      throw new Error(error);
-    }
-  },
   computed: {
     ...mapGetters('login', {
       isloggedIn: 'getCurrentLoginStatus',

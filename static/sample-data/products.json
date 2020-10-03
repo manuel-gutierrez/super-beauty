@@ -47,7 +47,7 @@
         "pricingType": "VOLUME_PRICING",
         "pricingLabel": "Precio al por mayor",
         "priceMoney": {
-          "amount": 70000,
+          "amount": 170000,
           "currency": "COP"
         }
       },
@@ -145,9 +145,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -649,9 +649,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -1145,9 +1145,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -1633,9 +1633,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -2129,9 +2129,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -2633,9 +2633,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -3129,9 +3129,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"
@@ -3617,9 +3617,9 @@
       }
     },
     "category": {
-      "id": "1",
-      "subcategoryId": "1",
-      "subCategoryVariationId": "1"
+      "id": 1,
+      "subCategoryId": 1,
+      "subCategoryVariationId": 1
     },
     "brand": {
       "id": "1"

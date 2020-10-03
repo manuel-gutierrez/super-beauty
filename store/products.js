@@ -2,8 +2,8 @@ export const state = () => ({
   products: [],
 });
 export const mutations = {
-  async parseProducts(state, payload) {
-    state.products = await payload;
+  parseProducts(state, payload) {
+    state.products = payload;
   },
   setWishlistStatus(state, payload) {
     const productItem = state.products.find(
@@ -45,10 +45,15 @@ export const getters = {
       });
     }
   },
+  getProductsByRatingRange: (state) => (raitingCeil, raitingFloor) => {
+    return state.products.filter(
+      (product) =>
+        product.rating <= raitingCeil && product.rating >= raitingFloor
+    );
+  },
   getProductsByCategory: (state) => (categoryId) => {
     return state.products.filter((product) => {
-      console.log(product.category.id);
-      return Number(product.category.id) === categoryId;
+      return product.category.id === categoryId;
     });
   },
   filterProductsByVariant: (state) => (
@@ -57,12 +62,13 @@ export const getters = {
     variationId,
     products = state.products
   ) => {
-    return products.filter(
-      (product) =>
-        product.categoryId === categoryId &&
-        product.subCategoryId === subCategoryId &&
-        product.subCategoryVariationId === variationId
-    );
+    return products.filter((product) => {
+      return (
+        product.category.id === categoryId &&
+        product.category.subCategoryId === subCategoryId &&
+        product.category.subCategoryVariationId === variationId
+      );
+    });
   },
   filterProductsByBrand: (state) => (
     categoryId,
@@ -74,26 +80,14 @@ export const getters = {
         product.categoryId === categoryId && product.brandId === brandId
     );
   },
-
-  getProductsByRatingRange: (state) => (raitingCeil, raitingFloor) => {
-    return state.products.filter(
-      (product) =>
-        product.rating <= raitingCeil && product.rating >= raitingFloor
-    );
-  },
-
-  findLowestAndHighestPrices: (state) => (productsArray) => {
-    const minValue = (products, fn) =>
-      Math.min(
-        ...products.map(typeof fn === 'function' ? fn : (val) => val[fn])
-      );
-    const maxValue = (products, fn) =>
-      Math.max(
-        ...products.map(typeof fn === 'function' ? fn : (val) => val[fn])
-      );
+  findLowestAndHighestPrices: (state) => (products) => {
+    const pricing = products.reduce((result, product) => {
+      result.push(product.pricing[0].priceMoney.amount);
+      return result;
+    }, []);
     return {
-      min: minValue(productsArray, 'price'),
-      max: maxValue(productsArray, 'price'),
+      min: Math.min(...pricing),
+      max: Math.max(...pricing),
     };
   },
 };
