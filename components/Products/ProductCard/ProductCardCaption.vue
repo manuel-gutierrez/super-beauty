@@ -11,8 +11,8 @@
         class="row product-card-caption__amount d-flex justify-content-center align-items-center"
       >
         <money-format
-          v-if="price && !discountedPrice"
-          :value="price"
+          v-if="amount && !discountedPrice"
+          :value="amount"
           :class="'product-card-caption__amount--' + type"
           :locale="'es-co'"
           :currency-code="'COP'"
@@ -21,8 +21,8 @@
         >
         </money-format>
         <money-format
-          v-else-if="price && discountedPrice"
-          :value="price"
+          v-else-if="amount && discountedPrice"
+          :value="amount"
           :class="'product-card-caption__amount--' + type + '--discount'"
           :locale="'es-co'"
           :currency-code="'COP'"
@@ -60,7 +60,7 @@ export default {
       type: String,
       default: null,
     },
-    price: {
+    amount: {
       type: Number,
       default: null,
     },

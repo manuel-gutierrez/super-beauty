@@ -135,21 +135,21 @@
         </div>
       </div>
       <div class="section-spacer"></div>
-
       <ScrollToTop />
     </div>
   </div>
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
+
 export default {
   fetch() {
     this.products = this.productsInCategory(this.categoryId);
   },
   data() {
     return {
-      products: null,
+      products: [],
       categoryId: 1,
       productsFilter: [],
       productsSort: [],
@@ -158,6 +158,8 @@ export default {
     };
   },
   computed: {
+    ...mapGetters('categories', { categoryData: 'getCategory' }),
+    ...mapGetters('enums', { enum: 'getEnum' }),
     ...mapGetters('login', {
       isloggedIn: 'getCurrentLoginStatus',
       sessionToken: 'getSessionToken',
@@ -166,6 +168,13 @@ export default {
       sections: 'getSection',
       filters: 'getFilters',
     }),
+    ...mapGetters('products', {
+      productsInCategory: 'getProductsByCategory',
+      productsInVariant: 'filterProductsByVariant',
+      productsWithBrand: 'filterProductsByBrand',
+      priceRanges: 'findLowestAndHighestPrices',
+    }),
+
     banners() {
       return this.sections('banners');
     },
@@ -175,17 +184,15 @@ export default {
     filterSection() {
       return this.sections('filters');
     },
-    ...mapGetters('products', {
-      productsInCategory: 'getProductsByCategory',
-      productsInVariant: 'filterProductsByVariant',
-      productsWithBrand: 'filterProductsByBrand',
-      priceRanges: 'findLowestAndHighestPrices',
-    }),
-    ...mapGetters('categories', {
-      categoryData: 'getCategory',
-    }),
+
     category() {
       return this.categoryData(1);
+    },
+    productsPriceRange() {
+      return this.priceRanges(this.products);
+    },
+    filterNames() {
+      return this.enum('filterNames');
     },
     selected: {
       set(selected) {
@@ -195,24 +202,22 @@ export default {
         return this.sortSection.selected;
       },
     },
-    productsPriceRange() {
-      return this.priceRanges(this.products);
-    },
-    ...mapGetters('enums', { enum: 'getEnum' }),
-    filterNames() {
-      return this.enum('filterNames');
-    },
   },
+
   methods: {
-    countProducts() {
-      return this.products.length;
-    },
-    filterProductsBySubcategory(id) {
-      return this.products.filter((product) => product.subCategoryId === id);
-    },
     ...mapMutations('pages/makeup', ['setSortingValue']),
     doSort(value) {
       this.setSortingValue(value);
+    },
+    countProducts() {
+      if (this.products) {
+        return this.products.length;
+      }
+    },
+    filterProductsBySubcategory(id) {
+      return this.products.filter((product) => {
+        return product.category.subCategoryId === id;
+      });
     },
     filterByVariant(categoryId, subCategoryId, variantId) {
       return this.productsInVariant(categoryId, subCategoryId, variantId);
@@ -220,7 +225,7 @@ export default {
     filterByBrand(categoryId, brandsId, products) {
       if (brandsId.length > 0) {
         return products.reduce((result, product) => {
-          if (brandsId.includes(String(product.brandId))) {
+          if (brandsId.includes(String(product.brand.id))) {
             result.push(product);
           }
           return result;
@@ -228,12 +233,14 @@ export default {
       }
     },
     filterByPrice(categoryId, price, products) {
-      return this.products.filter((product) => product.price >= Number(price));
+      return this.products.filter((product) => {
+        return product.pricing[0].priceMoney.amount >= Number(price);
+      });
     },
     filterByRate(categoryId, rates, products) {
       if (rates.length > 0) {
         return products.reduce((result, product) => {
-          if (rates.includes(Math.round(product.rating))) {
+          if (rates.includes(Math.round(product.rating.score))) {
             result.push(product);
           }
           return result;
@@ -242,11 +249,11 @@ export default {
     },
     filterBySustainable(categoryId, products) {
       return products.filter((product) => {
-        return product.isSustainable === true;
+        return product.customAttributeValues.SUSTAINABLE.data === true;
       });
     },
     filterByNew(categoryId, products) {
-      return products.filter((product) => product.new === true);
+      return products.filter((product) => product.tags.includes('NEW'));
     },
     updateFilter(filterType, filterData) {
       const filterItem = this.productsFilter.find(
@@ -257,7 +264,6 @@ export default {
       } else {
         this.productsFilter.push({ type: filterType, data: filterData });
       }
-
       this.products = this.filterProducts(
         this.productsInCategory(this.categoryId),
         this.productsFilter
@@ -265,13 +271,19 @@ export default {
     },
     filterProducts(products, filters) {
       return filters.reduce((result, filter) => {
+        // For data types : Arrays;
         if (Array.isArray(filter.data) && filter.data.length > 0) {
           result = this.processFilter(result, filter.type, filter.data);
         }
+        // For data types : Objects;
         if (
           Object.entries(filter.data).length !== 0 &&
           filter.data.constructor === Object
         ) {
+          result = this.processFilter(result, filter.type, filter.data);
+        }
+        // For Data type Int
+        if (filter.data) {
           result = this.processFilter(result, filter.type, filter.data);
         }
         return result;
