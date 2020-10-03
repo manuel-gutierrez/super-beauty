@@ -5,13 +5,15 @@
         class="navbar-desktop-wrapper w-100 justify-content-between"
       >
         <b-nav-item href="#">Nuevo</b-nav-item>
-        <b-nav-item href="#">Maquillaje</b-nav-item>
-        <b-nav-item href="#">Cuidado de la piel</b-nav-item>
-        <b-nav-item href="#">Capilar</b-nav-item>
-        <b-nav-item href="#">Fragancias</b-nav-item>
-        <b-nav-item href="#">Herramientas</b-nav-item>
-        <b-nav-item href="#">Comunidad</b-nav-item>
-        <b-nav-item href="#">Marcas</b-nav-item>
+        <b-nav-item>
+          <nuxt-link to="/maquillaje">Maquillaje</nuxt-link></b-nav-item
+        >
+        <b-nav-item href="/maquillaje">Cuidado de la piel</b-nav-item>
+        <b-nav-item href="/maquillaje">Capilar</b-nav-item>
+        <b-nav-item href="/maquillaje">Fragancias</b-nav-item>
+        <b-nav-item href="/maquillaje">Herramientas</b-nav-item>
+        <b-nav-item href="/maquillaje">Comunidad</b-nav-item>
+        <b-nav-item href="/maquillaje">Marcas</b-nav-item>
       </b-navbar-nav>
     </b-navbar>
   </div>

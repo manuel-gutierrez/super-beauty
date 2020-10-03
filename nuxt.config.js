@@ -1,3 +1,4 @@
+import webpack from 'webpack';
 export default {
   /*
    ** Nuxt rendering mode
@@ -49,7 +50,7 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
-    { src: './plugins/vue-slick-carousel.js', ssr: false },
+    { src: './plugins/vue-slick-carousel.js' },
     { src: './plugins/vue-money-format.js' },
   ],
   /*
