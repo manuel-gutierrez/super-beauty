@@ -89,5 +89,4 @@ sw.*
 # Vim swap files
 *.swp
 
-# DATA SCHEMAS
-schemas/
+schemas/*
