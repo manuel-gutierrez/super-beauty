@@ -67,22 +67,22 @@
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
+            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
             "caption": "Orgasm Eyeshadow Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
+            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
             "caption": "Orgasm Eyeshadow Palette"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
+            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
             "caption": "Orgasm Eyeshadow Palette"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
+            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
             "caption": "Orgasm Eyeshadow Palette"
           }
         ]

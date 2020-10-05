@@ -1,0 +1,24 @@
+ .tiles {
+   padding-left: 0px;
+ }
+
+ .tile {
+   list-style: none;
+   border-radius: 5px;
+   border: solid 1px #626262;
+   font-size: $font-size-tiles;
+   width: 58px;
+   height: 21px;
+   line-height: 1.25rem;
+   padding: 1px;
+   padding-left: 10px;
+   margin-left: 5px;
+
+ }
+
+ .tile-active {
+   @extend .tile;
+   color: $white;
+   background: $primary;
+   border: unset
+ }

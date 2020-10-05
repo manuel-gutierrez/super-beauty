@@ -14,14 +14,24 @@
     <div class="row">
       <div class="col-4 product-detail-page__images">
         <ProductImageCarousel class="col-12">
-          <div v-for="image in product.images" :key="image.orinal">
+          <div v-for="image in product.images" :key="image.ordinal">
             <ProductCardImage
               :url="image.url"
               :caption="image.caption"
             ></ProductCardImage>
           </div>
         </ProductImageCarousel>
-        <div class="col-12">Imagen Opciones</div>
+        <div class="col-12 product-detail-page__image-detail">
+          <div
+            v-for="image in product.customAttributeValues.IMAGE_DETAIL.data"
+            :key="image.ordinal"
+          >
+            <ProductCardImage
+              :url="image.url"
+              :caption="image.caption"
+            ></ProductCardImage>
+          </div>
+        </div>
       </div>
       <div class="col-8 d-flex justify-content-start flex-wrap">
         <!-- Product Info -->
@@ -96,21 +106,26 @@
         </div>
         <!--// END Product Pricing -->
         <!-- Variations -->
-        <section class="product-detail-page__product-variations">
-          <div class="col-12 product-detail-page__pproduct-variations__size">
-            Size
+        <section class="col-12 product-detail-page__product-variations">
+          <div class="product-detail-page__pproduct-variations__size d-flex">
+            Tamaño:
+            <ProductSizeTiles
+              :tiles="weights"
+              :selected="0"
+              class="d-flex justify-content-start align-content-center"
+            ></ProductSizeTiles>
           </div>
-          <div class="col-12 product-detail-page__product-variations__colors">
+          <div class="product-detail-page__product-variations__colors">
             Colors
           </div>
         </section>
         <!--// END Product Variations -->
         <!-- Actions -->
-        <sections
+        <section
           class="col-12 product-detail-page__product-variations__actions"
         >
-          Actions
-        </sections>
+          <div class="">Actions</div>
+        </section>
         <!--// END Product Actions -->
       </div>
     </div>
@@ -134,6 +149,9 @@ export default {
     }),
     product() {
       return this.getProduct(this.$route.params.id);
+    },
+    weights() {
+      return ['1.2g', '3.4g'];
     },
   },
   mounted() {},
