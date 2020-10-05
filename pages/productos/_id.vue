@@ -119,7 +119,10 @@
             ></ProductSizeTiles>
           </div>
           <div class="product-detail-page__product-variations__colors">
-            Colors
+            <p>Color: {{ product.customAttributeValues.COLORS.name }}</p>
+            <ProductColorTiles
+              :color-tiles="product.customAttributeValues.COLORS.data"
+            ></ProductColorTiles>
           </div>
         </section>
         <!--// END Product Variations -->
@@ -157,7 +160,7 @@ export default {
       return ['1.2g', '3.4g'];
     },
   },
-  mounted() {},
+  methods: {},
 };
 </script>
 
