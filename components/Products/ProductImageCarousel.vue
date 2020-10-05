@@ -25,20 +25,27 @@ export default {
       type: Number,
       default: 1,
     },
+    arrows: {
+      type: Boolean,
+      default: false,
+    },
+    dots: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
       settings: {
-        centerPadding: '20px',
         focusOnSelect: true,
         infinite: false,
         slidesToShow: this.itemsToDisplay,
         slidesToScroll: 1,
-        dots: true,
+        dots: this.dots,
         dotsClass: 'slick-dots custom-dot-class',
         speed: 500,
         cssEase: 'ease',
-        arrows: false,
+        arrows: this.arrows,
         responsive: [
           {
             breakpoint: 600,

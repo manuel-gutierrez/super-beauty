@@ -13,7 +13,7 @@
     <!-- Product First Section -->
     <div class="row">
       <div class="col-4 product-detail-page__images">
-        <ProductImageCarousel class="col-12">
+        <ProductImageCarousel class="col-12" :dots="true">
           <div v-for="image in product.images" :key="image.ordinal">
             <ProductCardImage
               :url="image.url"
@@ -21,16 +21,19 @@
             ></ProductCardImage>
           </div>
         </ProductImageCarousel>
-        <div class="col-12 product-detail-page__image-detail">
-          <div
-            v-for="image in product.customAttributeValues.IMAGE_DETAIL.data"
-            :key="image.ordinal"
-          >
-            <ProductCardImage
-              :url="image.url"
-              :caption="image.caption"
-            ></ProductCardImage>
-          </div>
+        <div class="product-detail-page__image-detail">
+          <ProductImageCarousel class="" :items-to-display="4" :arrows="true">
+            <div
+              v-for="image in product.customAttributeValues.IMAGE_DETAIL.data"
+              :key="image.ordinal"
+            >
+              <ProductCardImage
+                :url="image.url"
+                :caption="image.caption"
+                class="ml-3 product-detail-page__image-detail__image"
+              ></ProductCardImage>
+            </div>
+          </ProductImageCarousel>
         </div>
       </div>
       <div class="col-8 d-flex justify-content-start flex-wrap">

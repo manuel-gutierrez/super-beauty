@@ -19,6 +19,6 @@
  .tile-active {
    @extend .tile;
    color: $white;
-   background: $primary;
+   background: $secondary;
    border: unset
  }
