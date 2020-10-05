@@ -53,7 +53,7 @@
       },
       {
         "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al por mayor",
+        "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
           "currency": "COP"

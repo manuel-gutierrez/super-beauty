@@ -1,0 +1,110 @@
+.product-detail-page {
+
+  .product-detail-page__breadcrumbs {
+    font-size: $font-size-breadcrumbs;
+    font-weight: bold;
+    margin-top: 95px;
+
+    :last-child {
+      font-weight: normal;
+    }
+  }
+
+  .product-detail-page__images {
+    .product-card-image {
+      height: 320px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .carousel .slick-dots {
+      right: 10.5vw;
+    }
+  }
+
+  .product-detail-page__info {
+
+
+    .product-detail-page__product-detail {
+      text-transform: uppercase;
+
+      .product-detail-page__product-name {
+        h2 {
+          color: $primary
+        }
+      }
+
+      .product-detail-page__product-reference {
+        font-size: $font-size-h2-sm;
+      }
+
+      .product-detail-page__product-sku {
+        font-size: $font-paragraph-md;
+      }
+    }
+
+    .product-detail-page__rating {
+      color: #626262;
+      margin-bottom: 20px;
+
+      .product-detail-page__rating__stars {
+        .product-rating {
+          padding-left: 20%
+        }
+      }
+
+      .product-detail-page__rating__counter {
+        font-size: $font-paragraph-sm;
+      }
+
+      .product-detail-page__rating__likes {
+        padding-top: 4px;
+
+        .b-icon {
+          color: $primary;
+        }
+
+        span {
+          font-size: $font-paragraph-sm;
+          position: relative;
+          top: -6px;
+          left: 2px;
+        }
+
+      }
+    }
+
+  }
+
+  .product-detail-page__pricing {
+    padding-top: 10%;
+
+    .product-detail-page__pricing__price {
+      max-width: 50%;
+
+      h3 {
+        color: $secondary;
+        font-size: $font-size-h3-sm;
+        letter-spacing: 0.45px;
+      }
+
+      .product-detail-page__pricing__price__amount {
+        font-size: $font-paragraph-xlg;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        h3 {
+          font-size: $font-size-h3-xs;
+        }
+
+        .product-detail-page__pricing__price__amount {
+          font-size: $font-paragraph-lg;
+        }
+      }
+    }
+  }
+
+
+}
