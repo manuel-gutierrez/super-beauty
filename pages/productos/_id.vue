@@ -133,8 +133,15 @@
         <!-- Actions -->
         <section class="col-12 d-flex product-detail-page__actions">
           <ProductAddToCart class="col-md-4"></ProductAddToCart>
-          <div class="col-md-4"><button>WISHLIST</button></div>
-          <div class="col-md-4"><button>SHARE</button></div>
+          <div class="col-md-4 product-detail-page__actions__wishlist">
+            <WishlistButton
+              :in-wishlist="product.isInWishlist"
+              @update-wishlist="toggleWishlistStatus()"
+            ></WishlistButton>
+          </div>
+          <div class="col-md-4 product-detail-page__actions__share">
+            <button>SHARE</button>
+          </div>
         </section>
         <!--// END Product Actions -->
       </div>
@@ -147,7 +154,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations, mapActions } from 'vuex';
 export default {
   computed: {
     ...mapGetters('login', {
@@ -164,7 +171,28 @@ export default {
       return ['1.2g', '3.4g'];
     },
   },
-  methods: {},
+  methods: {
+    ...mapMutations('wishlist', {
+      incrementWishlistCounter: 'incrementWishlistCounter',
+      decrementWishlistCounter: 'decrementWishlistCounter',
+    }),
+    ...mapActions('products', ['updateWishlist']),
+    toggleWishlistStatus() {
+      if (!this.product.isInWishlist) {
+        this.incrementWishlistCounter();
+        this.updateWishlist({
+          id: this.product.id,
+          value: true,
+        });
+      } else {
+        this.decrementWishlistCounter();
+        this.updateWishlist({
+          id: this.product.id,
+          value: false,
+        });
+      }
+    },
+  },
 };
 </script>
 

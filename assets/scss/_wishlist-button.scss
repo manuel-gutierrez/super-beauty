@@ -1,0 +1,16 @@
+.wishlist-button {
+  button {
+    background: $white;
+    color: $black;
+    border: solid $black 1px;
+    font-weight: bold,
+  }
+
+  .wishlist-button__icon {
+    color: $black
+  }
+
+  .wishlist-button__icon--selected {
+    color: $primary
+  }
+}
