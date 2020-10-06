@@ -1,7 +1,7 @@
 <template>
   <div class="container product-detail-page">
     <div class="row">
-      <div class="col-4 mr-auto"><</div>
+      <div class="col-4 mr-auto">as</div>
     </div>
   </div>
 </template>
