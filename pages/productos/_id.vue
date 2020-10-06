@@ -131,10 +131,10 @@
         </section>
         <!--// END Product Variations -->
         <!-- Actions -->
-        <section
-          class="col-12 product-detail-page__product-variations__actions"
-        >
-          <div class="">Actions</div>
+        <section class="col-12 d-flex product-detail-page__actions">
+          <ProductAddToCart class="col-md-4"></ProductAddToCart>
+          <div class="col-md-4"><button>WISHLIST</button></div>
+          <div class="col-md-4"><button>SHARE</button></div>
         </section>
         <!--// END Product Actions -->
       </div>
