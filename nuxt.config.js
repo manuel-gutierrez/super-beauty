@@ -1,4 +1,3 @@
-import webpack from 'webpack';
 export default {
   /*
    ** Nuxt rendering mode

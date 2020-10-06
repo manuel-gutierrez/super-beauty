@@ -2,7 +2,7 @@
   <div class="container product-detail-page">
     <!-- Breadcrumbs -->
     <div class="row">
-      <div class="col-4 mr-auto">
+      <div class="col-md-4 mr-auto">
         <ProductBreadcrumbs
           class="product-detail-page__breadcrumbs"
           :category="product.category"
@@ -12,9 +12,13 @@
     <!--//END Breadcrumbs  -->
     <!-- Product First Section -->
     <div class="row">
-      <div class="col-4 product-detail-page__images">
+      <div class="col-md-4 product-detail-page__images">
         <ProductImageCarousel class="col-12" :dots="true">
           <div v-for="image in product.images" :key="image.ordinal">
+            <ProductLabel
+              :label-type="product.label.type"
+              :label-text="product.label.text"
+            ></ProductLabel>
             <ProductCardImage
               :url="image.url"
               :caption="image.caption"
@@ -36,9 +40,9 @@
           </ProductImageCarousel>
         </div>
       </div>
-      <div class="col-8 d-flex justify-content-start flex-wrap">
+      <div class="col-md-8 d-flex justify-content-start flex-wrap">
         <!-- Product Info -->
-        <div class="col-8 product-detail-page__info">
+        <div class="col-md-8 product-detail-page__info">
           <section class="product-detail-page__product-detail">
             <div class="product-detail-page__product-name">
               <h2>{{ product.title }}</h2>
@@ -73,7 +77,7 @@
         <!--// END Product Info -->
         <!-- Product Pricing -->
         <div
-          class="col-4 mr-0 pr-0 product-detail-page__pricing d-flex-block justify-content-end text-right"
+          class="col-md-4 mr-0 pr-0 product-detail-page__pricing d-flex-block justify-content-end text-right"
         >
           <div
             v-for="price in product.pricing"

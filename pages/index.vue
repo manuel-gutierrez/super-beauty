@@ -18,29 +18,32 @@
     <!-- End Carousel -->
     <div class="container">
       <!-- Section 1 -->
+
       <div class="section-spacer"></div>
-      <div class="row">
-        <h2
-          class="d-flex justify-content-center w-100 my-3 home-section__header"
-        >
-          {{ headers.firstSection }}
-        </h2>
-      </div>
-      <div class="row-fluid">
-        <div>
-          <ProductCardCarousel>
-            <ProductCard
-              v-for="productItem in topSaleProducts"
-              :key="productItem.id"
-              :product="productItem"
-              class="px-3"
-            />
-          </ProductCardCarousel>
+      <section v-if="topSaleProducts.length > 0">
+        <div class="row">
+          <h2
+            class="d-flex justify-content-center w-100 my-3 home-section__header"
+          >
+            {{ headers.firstSection }}
+          </h2>
         </div>
-      </div>
-      <div class="row d-flex justify-content-center mb-5 mt-3">
-        <button class="" href="#">Ver Todos</button>
-      </div>
+        <div class="row-fluid">
+          <div>
+            <ProductCardCarousel>
+              <ProductCard
+                v-for="productItem in topSaleProducts"
+                :key="productItem.id"
+                :product="productItem"
+                class="px-3"
+              />
+            </ProductCardCarousel>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mb-5 mt-3">
+          <button class="" href="#">Ver Todos</button>
+        </div>
+      </section>
       <div class="section-spacer"></div>
       <div class="row">
         <BannerImage
@@ -57,53 +60,56 @@
       </div>
       <!-- //End Section 1 -->
       <!-- Section 2 -->
-
-      <div class="section-spacer"></div>
-      <div class="row">
-        <h2 class="d-flex justify-content-center w-100 home-section__header">
-          {{ headers.secondSection }}
-        </h2>
-      </div>
-      <div class="row-fluid">
-        <div>
-          <ProductCardCarousel>
-            <ProductCard
-              v-for="productItem in recomendedProducts"
-              :key="productItem.id"
-              :product="productItem"
-              class="px-3"
-            />
-          </ProductCardCarousel>
+      <section v-if="recomendedProducts.length > 0">
+        <div class="section-spacer"></div>
+        <div class="row">
+          <h2 class="d-flex justify-content-center w-100 home-section__header">
+            {{ headers.secondSection }}
+          </h2>
         </div>
-      </div>
-      <div class="row d-flex justify-content-center mb-5 mt-3">
-        <button class="" href="#">Ver Todos</button>
-      </div>
+        <div class="row-fluid">
+          <div>
+            <ProductCardCarousel>
+              <ProductCard
+                v-for="productItem in recomendedProducts"
+                :key="productItem.id"
+                :product="productItem"
+                class="px-3"
+              />
+            </ProductCardCarousel>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mb-5 mt-3">
+          <button class="" href="#">Ver Todos</button>
+        </div>
+      </section>
       <!-- // End Section 2 -->
-      <!-- Section 3 -->
+      <!-- Section 3 : Sale Products -->
       <div class="section-spacer"></div>
-      <div class="row">
-        <h2
-          class="d-flex my-3 justify-content-center w-100 my-3 home-section__header"
-        >
-          {{ headers.thirdSection }}
-        </h2>
-      </div>
-      <div class="row-fluid">
-        <div>
-          <ProductCardCarousel>
-            <ProductCard
-              v-for="productItem in productsInSale"
-              :key="productItem.id"
-              :product="productItem"
-              class="px-3"
-            />
-          </ProductCardCarousel>
+      <section v-if="productsInSale.length > 0">
+        <div class="row">
+          <h2
+            class="d-flex my-3 justify-content-center w-100 my-3 home-section__header"
+          >
+            {{ headers.thirdSection }}
+          </h2>
         </div>
-      </div>
-      <div class="row d-flex justify-content-center mb-5 mt-3">
-        <button class="" href="#">Ver Todos</button>
-      </div>
+        <div class="row-fluid">
+          <div>
+            <ProductCardCarousel>
+              <ProductCard
+                v-for="productItem in productsInSale"
+                :key="productItem.id"
+                :product="productItem"
+                class="px-3"
+              />
+            </ProductCardCarousel>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center mb-5 mt-3">
+          <button class="" href="#">Ver Todos</button>
+        </div>
+      </section>
       <!-- //  End Section 3 -->
       <!-- Section 4 -->
       <div class="section-spacer"></div>
