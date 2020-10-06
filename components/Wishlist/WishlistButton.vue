@@ -1,6 +1,6 @@
 <template>
   <div class="wishlist-button">
-    <button v-if="inWishlist" @click="$emit('update-wishlist')">
+    <button v-if="!inWishlist" @click="$emit('update-wishlist')">
       <b-icon class="wishlist-button__icon" icon="heart" /> Agregar a Favoritos
     </button>
     <button v-else @click="$emit('update-wishlist')">

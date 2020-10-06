@@ -140,7 +140,7 @@
             ></WishlistButton>
           </div>
           <div class="col-md-4 product-detail-page__actions__share">
-            <button>SHARE</button>
+            <ShareButton @shareProduct="shareProduct()" />
           </div>
         </section>
         <!--// END Product Actions -->
@@ -192,6 +192,10 @@ export default {
         });
       }
     },
+  },
+  shareProduct() {
+    // This is a place holder for future use.
+    return false;
   },
 };
 </script>
