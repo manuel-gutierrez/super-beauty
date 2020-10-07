@@ -1,0 +1,41 @@
+.add-to-cart__modal {
+  .add-to-cart__modal__product-image {
+    width: 140px;
+    height: 140px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+
+  .add-to-cart__modal__product-detail {
+    .add-to-cart__modal__product-detail__name h3 {
+      font-size: $font-size-h3-sm;
+      font-weight: bold;
+      color: $secondary;
+      text-transform: uppercase;
+      letter-spacing: 3.12px;
+      margin-bottom: 0px;
+    }
+
+    .add-to-cart__modal__product-detail__reference p {
+      font-size: $font-paragraph-md;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.24px;
+
+    }
+
+    .add-to-cart__modal__product-detail__sku {
+      font-family: $font-family-montserrat;
+      font-weight: 200;
+      font-size: $font-paragraph-xs;
+    }
+
+    .add-to-cart__modal__product-detail__price {
+      font-size: $font-paragraph-md;
+      font-weight: bold;
+      letter-spacing: 0.39px;
+    }
+
+  }
+}

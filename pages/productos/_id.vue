@@ -135,7 +135,7 @@
           class="col-md-12 mx-0 d-flex justify-content-between align-content-end flex-wrap product-detail-page__actions"
         >
           <div class="w-50 product-detail-page__actions__add-to-cart">
-            <ProductAddToCart :product-id="product.id"></ProductAddToCart>
+            <ProductAddToCart :product="product"></ProductAddToCart>
           </div>
           <div class="ml-auto mr-2 product-detail-page__actions__wishlist">
             <WishlistButton
