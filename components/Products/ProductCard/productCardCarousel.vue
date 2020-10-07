@@ -41,7 +41,7 @@ export default {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 6,
+              slidesToShow: this.itemsToDisplay,
               slidesToScroll: 2,
             },
           },

@@ -5,8 +5,9 @@
       @counterUpdate="updateData(...arguments)"
     ></AddToCartCounter>
     <div class="flex-grow-1 add-to-cart__button">
-      <button>Agregar al carrito</button>
+      <button @click="addToCart()">Agregar al carrito</button>
     </div>
+    <AddToCartModal modal-id="product-detail-modal"></AddToCartModal>
   </div>
 </template>
 
@@ -20,6 +21,9 @@ export default {
   methods: {
     updateData(counter) {
       this.itemCounter = counter;
+    },
+    addToCart() {
+      this.$bvModal.show('product-detail-modal');
     },
   },
 };
