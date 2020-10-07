@@ -152,7 +152,9 @@
     </div>
     <!--// END Product First Section -->
     <!-- Product Second Section -->
-    <div class="row"></div>
+    <div class="row">
+      <ProductTabs class="col-12" :tabs="productTabs"></ProductTabs>
+    </div>
     <!--//END Product Second Section -->
   </div>
 </template>
@@ -173,6 +175,9 @@ export default {
     },
     weights() {
       return ['1.2g', '3.4g'];
+    },
+    productTabs() {
+      return this.getTabs();
     },
   },
   methods: {
@@ -196,10 +201,26 @@ export default {
         });
       }
     },
-  },
-  shareProduct() {
-    // This is a place holder for future use.
-    return false;
+    shareProduct() {
+      // This is a place holder for future use.
+      return false;
+    },
+    getTabs() {
+      const tabsItems = [
+        'DETAILS',
+        'INSTRUCTIONS',
+        'INGREDIENTS',
+        'BRAND',
+        'DELIVERY_RETURNS',
+      ];
+      const tabs = [];
+      for (const property in this.product.customAttributeValues) {
+        if (tabsItems.includes(property)) {
+          tabs.push(this.product.customAttributeValues[property]);
+        }
+      }
+      return tabs;
+    },
   },
 };
 </script>
