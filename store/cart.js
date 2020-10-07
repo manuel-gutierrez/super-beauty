@@ -31,12 +31,10 @@ export const mutations = {
 };
 export const actions = {
   addToCart({ commit, state }, payload) {
-    console.log('Entro', payload.qty);
     const productItem = state.products.find(
       (product) => product.id === payload.id
     );
     if (!productItem && payload.qty > 0) {
-      console.log(payload);
       commit('addProductToCart', payload);
       commit('incrementCartCounter');
     } else if (productItem && productItem.qty !== payload.qty) {
