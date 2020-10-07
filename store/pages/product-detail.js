@@ -5,6 +5,10 @@ export const state = () => ({
       recommendedProductsTitle: 'Recomendados superbeauty',
       freeShippingTitle:
         'Felicitaciones ¡Has calificado para obtener el envío gratis!',
+      totalLabel: 'Compra Total',
+      totalLabelSuffix: 'items',
+      checkoutButtonLabel: 'CHECK OUT',
+      continueShoppingButton: 'SEGUIR COMPRANDO',
     },
   },
 });

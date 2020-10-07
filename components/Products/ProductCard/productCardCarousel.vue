@@ -25,6 +25,14 @@ export default {
       type: Number,
       default: 6,
     },
+    bullets: {
+      type: Boolean,
+      default: false,
+    },
+    arrows: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -36,7 +44,8 @@ export default {
         slidesToScroll: 2,
         speed: 500,
         cssEase: 'ease',
-        arrows: true,
+        bullets: this.bullets,
+        arrows: this.arrows,
         responsive: [
           {
             breakpoint: 1024,

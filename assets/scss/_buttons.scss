@@ -13,3 +13,9 @@ button {
     margin-top: ($spacer * .25);
   }
 }
+
+.button-outline {
+  background-color: transparent;
+  color: $gray;
+  border: solid $light-gray 1px;
+}

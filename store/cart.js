@@ -1,5 +1,6 @@
 export const state = () => ({
   counter: 0,
+  freeShippingValue: 600000,
   products: [],
 });
 export const mutations = {
@@ -50,5 +51,8 @@ export const actions = {
 export const getters = {
   getCartCounter(state) {
     return state.counter;
+  },
+  getFreeShippingValue(state) {
+    return state.freeShippingValue;
   },
 };
