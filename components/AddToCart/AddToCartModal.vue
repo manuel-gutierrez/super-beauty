@@ -44,7 +44,7 @@
       </div>
     </section>
 
-    <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-example')"
+    <b-button class="mt-3" block @click="$bvModal.hide(modalId)"
       >Close Me</b-button
     >
   </b-modal>
