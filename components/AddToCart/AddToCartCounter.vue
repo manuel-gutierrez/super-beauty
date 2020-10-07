@@ -1,5 +1,5 @@
 <template>
-  <div class="add-to-cart-counter d-flex justify-content-start text-center">
+  <div class="add-to-cart-counter d-flex text-center">
     <div class="w-25 add-to-cart-counter-decrease" @click="decrease()">
       <b-icon icon="dash"></b-icon>
     </div>

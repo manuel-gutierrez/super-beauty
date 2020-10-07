@@ -1,10 +1,10 @@
 <template>
-  <div clas="add-to-cart-product d-flex justify-content-start">
+  <div class="add-to-cart d-flex">
     <AddToCartCounter
-      class=""
+      class="d-flex"
       @counterUpdate="updateData(...arguments)"
     ></AddToCartCounter>
-    <div class="add-to-cart-product__button">
+    <div class="flex-grow-1 add-to-cart__button">
       <button>Agregar al carrito</button>
     </div>
   </div>

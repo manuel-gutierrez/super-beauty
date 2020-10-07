@@ -6,7 +6,7 @@
     "title": "NARS",
     "reference": "Orgasm Eyeshadow Palette",
     "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
+    "isInWishlist": true,
     "weight": 1.2,
     "color": {
       "name": "Ivory",
@@ -190,11 +190,15 @@
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B",
+          "#7F4D32",
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B"
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
         ]
       }
     },

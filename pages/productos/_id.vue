@@ -113,7 +113,7 @@
         </div>
         <!--// END Product Pricing -->
         <!-- Variations -->
-        <section class="col-12 product-detail-page__product-variations">
+        <section class="col-md-12 mx-0 product-detail-page__product-variations">
           <div class="product-detail-page__pproduct-variations__size d-flex">
             Tamaño:
             <ProductSizeTiles
@@ -131,15 +131,19 @@
         </section>
         <!--// END Product Variations -->
         <!-- Actions -->
-        <section class="col-12 d-flex product-detail-page__actions">
-          <ProductAddToCart class="col-md-4"></ProductAddToCart>
-          <div class="col-md-4 product-detail-page__actions__wishlist">
+        <section
+          class="col-md-12 mx-0 d-flex justify-content-between align-content-end flex-wrap product-detail-page__actions"
+        >
+          <div class="w-50 product-detail-page__actions__add-to-cart">
+            <ProductAddToCart></ProductAddToCart>
+          </div>
+          <div class="ml-auto mr-2 product-detail-page__actions__wishlist">
             <WishlistButton
               :in-wishlist="product.isInWishlist"
               @update-wishlist="toggleWishlistStatus()"
             ></WishlistButton>
           </div>
-          <div class="col-md-4 product-detail-page__actions__share">
+          <div class="product-detail-page__actions__share">
             <ShareButton @shareProduct="shareProduct()" />
           </div>
         </section>

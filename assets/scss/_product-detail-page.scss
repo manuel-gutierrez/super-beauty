@@ -121,7 +121,9 @@
 
   .product-detail-page__actions {
     margin-bottom: 10px;
-
+    padding-bottom: 35px;
+    border-bottom: solid $black 1px;
+    line-height: 28px;
   }
 
 }
