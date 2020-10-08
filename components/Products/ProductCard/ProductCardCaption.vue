@@ -1,5 +1,30 @@
 <template>
-  <div class="row product-card-caption">
+  <div v-if="variation == 'large'" class="product-card-caption--large">
+    <h2
+      v-if="title"
+      :class="'product-card-caption__title--' + type + '--' + variation"
+    >
+      {{ title }}
+    </h2>
+    <p
+      v-if="reference"
+      :class="'product-card-caption__description--' + type + '--' + variation"
+    >
+      {{ reference }}
+    </p>
+    <div v-if="type == 'price'">
+      <money-format
+        :value="amount"
+        :class="'product-card-caption__amount--' + type + '--' + variation"
+        :locale="'es-co'"
+        :currency-code="'COP'"
+        :subunits-value="false"
+        :hide-subunits="true"
+      >
+      </money-format>
+    </div>
+  </div>
+  <div v-else class="row product-card-caption">
     <div class="col-12 text-center p-0">
       <h2 :class="'product-card-caption__title--' + type">
         {{ title }}
@@ -66,6 +91,10 @@ export default {
     },
     discountedPrice: {
       type: Number,
+      default: null,
+    },
+    variation: {
+      type: String,
       default: null,
     },
   },

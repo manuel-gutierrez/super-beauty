@@ -10,6 +10,9 @@ export const state = () => ({
       checkoutButtonLabel: 'CHECK OUT',
       continueShoppingButton: 'SEGUIR COMPRANDO',
     },
+    thirdSection: {
+      title: 'Llevalo con',
+    },
   },
 });
 export const mutations = {

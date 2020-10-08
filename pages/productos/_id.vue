@@ -152,10 +152,21 @@
     </div>
     <!--// END Product First Section -->
     <!-- Product Second Section -->
-    <div class="row">
+    <div class="row product-detail-page__tabs">
       <ProductTabs class="col-12" :tabs="productTabs"></ProductTabs>
     </div>
     <!--//END Product Second Section -->
+    <!-- Product Third Section -->
+    <div class="row product-detail-page__related-products">
+      <div class="col-md-12 product-detail-page__related-products__title">
+        <h2>{{ relatedProducts.title }}</h2>
+      </div>
+      <div class="col-md-4 product-detail-page__related-products__products">
+        <ProductCard :product="product" variation="large"></ProductCard>
+      </div>
+    </div>
+    <div class="py-4">asdasd</div>
+    <!--//END Product Third Section -->
   </div>
 </template>
 
@@ -170,6 +181,12 @@ export default {
     ...mapGetters('products', {
       getProduct: 'getProductById',
     }),
+    ...mapGetters('pages/product-detail', {
+      getSection: 'getSection',
+    }),
+    relatedProducts() {
+      return this.getSection('thirdSection');
+    },
     product() {
       return this.getProduct(this.$route.params.id);
     },

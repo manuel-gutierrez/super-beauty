@@ -18,17 +18,21 @@
 // Components
 @import './logo.scss';
 @import './banners.scss';
-@import './product-card.scss';
+
 @import './product-rating.scss';
 @import './carousel.scss';
 @import './buttons.scss';
 @import './scroll-to-top.scss';
 //##Product
+@import './product-card.scss';
+@import './product-card-caption.scss';
 @import './product-page-sidebar.scss';
 @import './product-size-tiles.scss';
 @import './product-color-tiles.scss';
 @import './product-label.scss';
 @import './product-tabs.scss';
+
+
 //##Add to cart
 @import './add-to-cart.scss';
 @import './add-to-cart-counter.scss';

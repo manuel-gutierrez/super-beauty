@@ -37,67 +37,31 @@
     }
   }
 
-  .product-card-caption {
-    text-transform: uppercase;
-    font-weight: bold;
+
+
+
+}
+
+.product-card--large {
+  min-width: 327px;
+
+
+  .product-card-image {
+    background: no-repeat center center / 140px 140px;
+    min-height: 125px;
+
+    @include media-breakpoint-down(sm) {
+      background: no-repeat center center / 124px 124px;
+      min-height: 90px;
+    }
   }
 
-  .product-card-caption__title--info {
-    font-size: $font-size-product-card-title;
-    letter-spacing: $font-letter-spacing-product-card-title;
-    margin: 0;
-  }
+  .product-card__button {
+    button {
+      min-width: unset;
+      background: $secondary;
+      font-size: $font-size-button-sm;
+    }
 
-  .product-card-caption__description--info {
-    font-size: $font-size-product-card-description;
-    letter-spacing: $font-letter-spacing-product-card-description;
-    margin-top: -10px;
-    margin-bottom: -25px;
-  }
-
-  .product-card-caption__title--price {
-    font-size: $font-size-product-card-price-title;
-    color: $primary;
-    letter-spacing: $font-letter-spacing-product-card-price-title;
-    margin-bottom: -5px;
-  }
-
-  .product-card-caption__title--price-secondary {
-    font-size: $font-size-product-card-price-secondary-title;
-    color: $primary;
-    letter-spacing: $font-letter-spacing-product-card-price-title;
-    margin-bottom: -5px;
-    margin-top: 4px;
-  }
-
-  /* ---Amount---*/
-  .product-card-caption__amount {
-    margin-bottom: 0px;
-  }
-
-  .product-card-caption__amount--price {
-    margin-top: 0px;
-  }
-
-  .product-card-caption__amount--price--discount,
-  .product-card-caption__amount--price-secondary--discount {
-    text-decoration: line-through;
-    font-size: $font-size-product-card-price-secondary-ammount;
-    font-family: $font-family-montserrat;
-    font-weight: 300;
-    letter-spacing: -1px;
-    margin-right: 2px;
-  }
-
-  .product-card-caption__amount-discounted--price,
-  .product-card-caption__amount-discounted--price-secondary {
-    color: $discount;
-    font-size: $font-size-product-card-price-discount-ammount;
-  }
-
-  .product-card-caption__amount-discounted--price-secondary,
-  .product-card-caption__amount--price-secondary {
-    font-size: $font-size-product-card-price-secondary-ammount;
-    margin-top: 0px;
   }
 }
