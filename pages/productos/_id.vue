@@ -188,6 +188,7 @@
       <div class="col-md-12 section-header">
         <h2>{{ productRating.title }}</h2>
       </div>
+      <ProgressBarRatingGroup />
     </div>
     <!--//END Section 4  -->
     <div class="section-spacer"></div>

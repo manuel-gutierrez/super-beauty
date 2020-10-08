@@ -1,12 +1,8 @@
-const axios = require('axios');
 export const actions = {
-  async nuxtServerInit({ commit }) {
+  async nuxtServerInit({ dispatch }) {
     try {
-      const response = await axios.get(
-        process.env.VUE_APP_URL + '/sample-data/products.json'
-      );
-      const data = response.data;
-      await commit('products/parseProducts', data);
+      await dispatch('products/getProducts');
+      await dispatch('ratings/getRatings');
     } catch (error) {
       throw new Error(error);
     }

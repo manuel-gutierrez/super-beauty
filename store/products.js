@@ -1,3 +1,4 @@
+const axios = require('axios');
 export const state = () => ({
   products: [],
 });
@@ -15,6 +16,13 @@ export const mutations = {
 export const actions = {
   updateWishlist({ commit }, payload) {
     commit('setWishlistStatus', payload);
+  },
+  async getProducts({ commit }, payload) {
+    const response = await axios.get(
+      process.env.VUE_APP_URL + '/sample-data/products.json'
+    );
+    const data = response.data;
+    await commit('parseProducts', data);
   },
 };
 export const getters = {

@@ -1,0 +1,100 @@
+{
+    "id": "1",
+    "productID": "1",
+    "scoreAvg": 4.5,
+    "rates": [
+        {
+            "createdAt": "2020-06-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 4,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": false,
+            "variationId": ""
+        },
+        {
+            "createdAt": "2020-07-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 3,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": true,
+            "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
+        },
+        {
+            "createdAt": "2020-06-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 4,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": false,
+            "variationId": ""
+        },
+        {
+            "createdAt": "2020-07-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 3,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": true,
+            "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
+        },
+        {
+            "createdAt": "2020-06-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 4,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": false,
+            "variationId": ""
+        },
+        {
+            "createdAt": "2020-07-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 3,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": true,
+            "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
+        },
+        {
+            "createdAt": "2020-06-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 4,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": false,
+            "variationId": ""
+        },
+        {
+            "createdAt": "2020-07-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 3,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": true,
+            "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
+        },
+        {
+            "createdAt": "2020-06-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 4,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": false,
+            "variationId": ""
+        },
+        {
+            "createdAt": "2020-07-18T17:55:56.646Z",
+            "userId": "1",
+            "score": 3,
+            "comment": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste.",
+            "recommend": true,
+            "verified": true,
+            "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
+        }
+
+    ],
+    "recomendationsAvg": 0.81,
+    "likes": 2700
+}
