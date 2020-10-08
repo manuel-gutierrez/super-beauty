@@ -189,12 +189,39 @@
       </div>
     </div>
     <!--//END Section 4  -->
-
     <div class="section-spacer"></div>
+
     <!-- Section 5: Photos -->
     <div class="row product-detail-page__photos">
       <div class="col-md-12 section-header">
         <h2>{{ productPhotos.title }}</h2>
+      </div>
+      <div class="row w-100 justify-content-around">
+        <div
+          v-for="photo in photosToDownload"
+          :key="photo.ordinal"
+          class="d-none d-md-flex"
+        >
+          <ProductDownloadImage :url="photo.url" :caption="photo.caption" />
+        </div>
+        <div class="w-100">
+          <ProductImageCarousel :items-to-display="2" :arrows="true">
+            <div
+              v-for="photo in photosToDownload"
+              :key="photo.ordinal"
+              class="d-sm-none"
+            >
+              <ProductDownloadImage :url="photo.url" :caption="photo.caption" />
+            </div>
+          </ProductImageCarousel>
+        </div>
+        <div
+          class="row w-100 justify-content-center product-detail-page__photos__button"
+        >
+          <button class="d-flex justify-content-center align-items-center">
+            {{ productPhotos.buttonTitle }} <SvgIcon icon="download-icon" />
+          </button>
+        </div>
       </div>
     </div>
     <!--//END Section 5 -->
@@ -255,6 +282,9 @@ export default {
     },
     productTabs() {
       return this.getTabs();
+    },
+    photosToDownload() {
+      return this.product.customAttributeValues.PRODUCT_DOWNLOAD_IMAGES.data;
     },
   },
   methods: {

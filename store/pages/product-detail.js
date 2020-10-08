@@ -20,6 +20,7 @@ export const state = () => ({
     },
     section_5: {
       title: 'fotos del producto',
+      buttonTitle: 'DESCARGAR TODOS',
     },
     section_6: {
       title: 'Productos Similares',

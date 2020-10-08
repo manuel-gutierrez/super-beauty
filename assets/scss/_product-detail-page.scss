@@ -141,7 +141,24 @@
   .product-detail-page__ratings {}
 
   // Section 5: Product Photos
-  .product-detail-page__photos {}
+  .product-detail-page__photos {
+    .product-detail-page__photos__button {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      min-height: 31px;
+
+
+      button {
+        max-height: 31px;
+        background: $secondary;
+
+        .icon {
+          margin-left: 10px;
+        }
+      }
+
+    }
+  }
 
   // Section 6: Similar Products
   .product-detail-page__similar-products {}
