@@ -2,8 +2,8 @@
   <div>
     <ul class="color-tiles d-flex">
       <li
-        v-for="tile in colorTiles"
-        :key="tile"
+        v-for="(tile, index) in colorTiles"
+        :key="tile + '-' + index"
         class="color-tile"
         :style="background(tile)"
       ></li>

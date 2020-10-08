@@ -8,7 +8,7 @@
       <button @click="updateCart()">Agregar al carrito</button>
     </div>
     <AddToCartModal
-      modal-id="product-detail-modal"
+      :modal-id="modalId"
       :product="product"
       :checkout-data="checkoutData"
     ></AddToCartModal>
@@ -23,16 +23,24 @@ export default {
       type: Object,
       default: null,
     },
+    counter: {
+      type: Boolean,
+      default: true,
+    },
+    modalId: {
+      type: String,
+      default: 'product-detail-modal',
+    },
   },
   data() {
     return {
       itemCounter: 1,
-      pricingType: 'VOLUME_PRICING',
+      pricingType: 'FIXED_PRICING',
     };
   },
   computed: {
     productPrice() {
-      return this.getPrice('VOLUME_PRICING');
+      return this.getPrice('FIXED_PRICING');
     },
 
     checkoutData() {
@@ -50,6 +58,7 @@ export default {
       this.itemCounter = counter;
     },
     updateCart() {
+      console.log(this.product.id);
       this.itemCounter > 0
         ? this.addProductToCart(this.checkoutData)
         : this.removeProductFromCart();

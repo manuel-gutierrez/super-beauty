@@ -172,11 +172,12 @@
         :bullets="true"
         class="d-flex justify-content-around"
       >
-        <ProductCard :product="product" variation="large" />
-        <ProductCard :product="product" variation="large" />
-        <ProductCard :product="product" variation="large" />
-        <ProductCard :product="product" variation="large" />
-        <ProductCard :product="product" variation="large" />
+        <ProductCard
+          v-for="relatedProduct in recomendedProducts"
+          :key="relatedProduct.ordinal"
+          :product="relatedProduct"
+          variation="large"
+        />
       </ProductCardCarousel>
     </div>
     <!--//END Section 3-->
