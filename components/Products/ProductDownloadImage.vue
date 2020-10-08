@@ -5,7 +5,10 @@
     role="img"
     :aria-label="caption"
   >
-    <div class="product-download-image__download-box">
+    <div
+      class="product-download-image__download-box"
+      @click="downloadImage(url, caption)"
+    >
       <SvgIcon icon="download-icon" />
     </div>
     <slot />
@@ -32,6 +35,20 @@ export default {
       return {
         backgroundImage: `url(${image})`,
       };
+    },
+    downloadImage(fileUrl, fileName) {
+      this.$axios({
+        url: fileUrl,
+        method: 'GET',
+        responseType: 'blob',
+      }).then((response) => {
+        const url = window.URL.createObjectURL(new Blob([response.data]));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', `${fileName}.png`);
+        document.body.appendChild(link);
+        link.click();
+      });
     },
   },
 };

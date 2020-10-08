@@ -218,7 +218,10 @@
         <div
           class="row w-100 justify-content-center product-detail-page__photos__button"
         >
-          <button class="d-flex justify-content-center align-items-center">
+          <button
+            class="d-flex justify-content-center align-items-center"
+            @click="downloadProductImages(photosToDownload)"
+          >
             {{ productPhotos.buttonTitle }} <SvgIcon icon="download-icon" />
           </button>
         </div>
@@ -327,6 +330,29 @@ export default {
         }
       }
       return tabs;
+    },
+    downloadImage(fileUrl, fileName) {
+      this.$axios({
+        url: fileUrl,
+        method: 'GET',
+        responseType: 'blob',
+      })
+        .then((response) => {
+          const url = window.URL.createObjectURL(new Blob([response.data]));
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', `${fileName}.png`);
+          document.body.appendChild(link);
+          link.click();
+        })
+        .catch((error) => {
+          throw new Error(`Error downloading Image: ${error}`);
+        });
+    },
+    async downloadProductImages(images) {
+      await images.forEach((image) => {
+        this.downloadImage(image.url, image.caption);
+      });
     },
   },
 };
