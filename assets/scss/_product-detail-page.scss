@@ -1,5 +1,12 @@
 .product-detail-page {
 
+  // General
+
+  .section-header {
+    text-align: center;
+  }
+
+  // Breadcrumbs
   .product-detail-page__breadcrumbs {
     font-size: $font-size-breadcrumbs;
     font-weight: bold;
@@ -10,6 +17,7 @@
     }
   }
 
+  // Section 1: Detail and Images
   .product-detail-page__images {
     .product-card-image {
       height: 320px;
@@ -125,5 +133,18 @@
     border-bottom: solid $black 1px;
     line-height: 28px;
   }
+
+  // Section 3: Related Products
+  .product-detail-page__related-products {}
+
+  // Section 4: Rating
+  .product-detail-page__ratings {}
+
+  // Section 5: Product Photos
+  .product-detail-page__photos {}
+
+  // Section 6: Similar Products
+  .product-detail-page__similar-products {}
+
 
 }

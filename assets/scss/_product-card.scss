@@ -44,11 +44,13 @@
 
 .product-card--large {
   min-width: 327px;
-
+  min-height: 128px;
+  display: flex !important;
+  margin-left: 10px;
 
   .product-card-image {
-    background: no-repeat center center / 140px 140px;
-    min-height: 125px;
+    background: no-repeat center center / 125px 125px;
+    min-height: 160px;
 
     @include media-breakpoint-down(sm) {
       background: no-repeat center center / 124px 124px;

@@ -10,8 +10,19 @@ export const state = () => ({
       checkoutButtonLabel: 'CHECK OUT',
       continueShoppingButton: 'SEGUIR COMPRANDO',
     },
-    thirdSection: {
-      title: 'Llevalo con',
+    section_1: {},
+    section_2: {},
+    section_3: {
+      title: 'LLÉVALO CON',
+    },
+    section_4: {
+      title: 'Calificaciones y comentarios',
+    },
+    section_5: {
+      title: 'fotos del producto',
+    },
+    section_6: {
+      title: 'Productos Similares',
     },
   },
 });

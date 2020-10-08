@@ -10,7 +10,8 @@
       </div>
     </div>
     <!--//END Breadcrumbs  -->
-    <!-- Product First Section -->
+
+    <!-- Section 1: Image and Pricing -->
     <div class="row">
       <div class="col-md-4 product-detail-page__images">
         <ProductImageCarousel class="col-12" :dots="true">
@@ -150,23 +151,71 @@
         <!--// END Product Actions -->
       </div>
     </div>
-    <!--// END Product First Section -->
-    <!-- Product Second Section -->
+    <!--// END Section 1 -->
+
+    <!-- Section 2: Product Tabs -->
     <div class="row product-detail-page__tabs">
       <ProductTabs class="col-12" :tabs="productTabs"></ProductTabs>
     </div>
-    <!--//END Product Second Section -->
-    <!-- Product Third Section -->
+    <!--//END Section 2 -->
+    <div class="section-spacer"></div>
+
+    <!-- Section 3: Related Products-->
     <div class="row product-detail-page__related-products">
-      <div class="col-md-12 product-detail-page__related-products__title">
+      <div class="col-md-12 section-header">
         <h2>{{ relatedProducts.title }}</h2>
       </div>
-      <div class="col-md-4 product-detail-page__related-products__products">
-        <ProductCard :product="product" variation="large"></ProductCard>
+    </div>
+    <div class="product-detail-page__related-products__products">
+      <ProductCardCarousel
+        :items-to-display="3"
+        :bullets="true"
+        class="d-flex justify-content-around"
+      >
+        <ProductCard :product="product" variation="large" />
+        <ProductCard :product="product" variation="large" />
+        <ProductCard :product="product" variation="large" />
+        <ProductCard :product="product" variation="large" />
+        <ProductCard :product="product" variation="large" />
+      </ProductCardCarousel>
+    </div>
+    <!--//END Section 3-->
+
+    <div class="section-spacer"></div>
+    <!-- Section 4: Rating and Comments-->
+    <div class="row product-detail-page__ratings">
+      <div class="col-md-12 section-header">
+        <h2>{{ productRating.title }}</h2>
       </div>
     </div>
-    <div class="py-4">asdasd</div>
-    <!--//END Product Third Section -->
+    <!--//END Section 4  -->
+
+    <div class="section-spacer"></div>
+    <!-- Section 5: Photos -->
+    <div class="row product-detail-page__photos">
+      <div class="col-md-12 section-header">
+        <h2>{{ productPhotos.title }}</h2>
+      </div>
+    </div>
+    <!--//END Section 5 -->
+
+    <div class="section-spacer"></div>
+    <!-- Section 6: Similar Products -->
+    <div class="row w-100 product-detail-page__similar-products">
+      <div class="col-md-12 section-header">
+        <h2>{{ similarProducts.title }}</h2>
+      </div>
+      <ProductCardCarousel>
+        <ProductCard
+          v-for="productItem in recomendedProducts"
+          :key="productItem.id"
+          :product="productItem"
+          class="px-3"
+        />
+      </ProductCardCarousel>
+    </div>
+    <!--//END Section 6 -->
+    <div class="section-spacer"></div>
   </div>
 </template>
 
@@ -180,12 +229,23 @@ export default {
     }),
     ...mapGetters('products', {
       getProduct: 'getProductById',
+      recomendedProducts: 'getRecomendedProducts',
     }),
     ...mapGetters('pages/product-detail', {
       getSection: 'getSection',
     }),
+
     relatedProducts() {
-      return this.getSection('thirdSection');
+      return this.getSection('section_3');
+    },
+    productRating() {
+      return this.getSection('section_4');
+    },
+    productPhotos() {
+      return this.getSection('section_5');
+    },
+    similarProducts() {
+      return this.getSection('section_6');
     },
     product() {
       return this.getProduct(this.$route.params.id);

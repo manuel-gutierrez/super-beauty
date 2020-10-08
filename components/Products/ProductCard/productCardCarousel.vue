@@ -37,11 +37,10 @@ export default {
   data() {
     return {
       settings: {
-        centerPadding: '10px',
         focusOnSelect: true,
         infinite: false,
         slidesToShow: this.itemsToDisplay,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         speed: 500,
         cssEase: 'ease',
         bullets: this.bullets,
