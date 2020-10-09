@@ -4,7 +4,7 @@ export const state = () => ({
 });
 export const mutations = {
   parseRatings(state, payload) {
-    state.products = payload;
+    state.ratings = payload;
   },
 };
 export const actions = {
@@ -14,5 +14,10 @@ export const actions = {
     );
     const data = response.data;
     await commit('parseRatings', data);
+  },
+};
+export const getters = {
+  getProductRating: (state) => (id) => {
+    return state.ratings.find((rating) => rating.productId === id);
   },
 };

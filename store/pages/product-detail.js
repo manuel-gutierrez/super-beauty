@@ -17,6 +17,10 @@ export const state = () => ({
     },
     section_4: {
       title: 'Calificaciones y comentarios',
+      RatingLabelSingular: 'Estrella',
+      RatingLabelPlural: 'Estrellas',
+      RatingCounterLabel: 'Calificaciones',
+      PercentageLabel: 'Recomendado',
     },
     section_5: {
       title: 'fotos del producto',

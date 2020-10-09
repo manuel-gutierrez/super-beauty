@@ -1,14 +1,21 @@
-.product-rating{
-  color:$primary;
+.product-rating {
+  color: $primary;
 
   padding-left: 25%;
   padding-right: 25%;
-  svg.icon{
-    height:$font-size-icons-sm;
-    width: $font-size-icons-sm ;
+
+  svg.icon {
+    height: $font-size-icons-sm;
+    width: $font-size-icons-sm;
 
   }
 }
-.product-rating--card{
-  margin-top:-10px;
+
+.product-rating--card {
+  margin-top: -10px;
+}
+
+.product-rating__score {
+  font-size: $font-paragraph-lg;
+  color: $light-gray
 }

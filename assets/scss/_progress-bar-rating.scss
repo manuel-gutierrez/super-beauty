@@ -1,10 +1,10 @@
 .progress-bar-rating {
-
+  margin-bottom: 15px;
 
   .progress-bar-rating__bar {
-    width: 436px;
+
     height: 18px;
-    margin-left: 15px;
+    margin-left: 5px;
     margin-right: 15px;
     border: solid $gray 1px;
     box-sizing: border-box;
@@ -18,5 +18,45 @@
       background-color: #9117b4;
       background-image: $background-gradient-progress-bar;
     }
+  }
+
+  .label {
+    margin-right: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    align-content: center;
+
+  }
+
+  .progress-bar-rating__value {
+    @extend .label;
+
+    p {
+      font-family: $font-family-montserrat;
+      font-size: $font-paragraph;
+      justify-self: flex-end;
+      margin-bottom: 0px;
+    }
+
+  }
+
+  .progress-bar-rating__label p {
+    @extend .label;
+
+    p {
+      font-family: $font-family-montserrat;
+      font-size: $font-paragraph;
+      justify-self: flex-start;
+    }
+  }
+}
+
+.progress-bar-rating-group {
+  .progress-bar-rating-group__counter {
+    font-size: $font-size-h3-sm;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $secondary;
+    margin-bottom: 32px;
   }
 }

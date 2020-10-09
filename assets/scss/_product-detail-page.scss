@@ -138,7 +138,47 @@
   .product-detail-page__related-products {}
 
   // Section 4: Rating
-  .product-detail-page__ratings {}
+  .product-detail-page__ratings {
+    .product-detail-page__ratings__stars {
+      font-size: $font-size-icons;
+      margin-top: 3%;
+
+      .product-rating {
+        padding-left: 5%;
+        padding-right: 5%;
+
+        svg.icon {
+          height: 2rem;
+          width: 2rem;
+        }
+      }
+
+
+    }
+
+    .product-detail-page__ratings__recommended {
+      .product-detail-page__ratings__percentage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: $font-size-banner-title-lg;
+          color: $secondary;
+          font-weight: bold;
+          align-self: center;
+        }
+
+        .product-detail-page__ratings__percentage-label {
+          font-size: $font-paragraph-lg;
+          color: $light-gray
+        }
+
+      }
+
+
+    }
+  }
 
   // Section 5: Product Photos
   .product-detail-page__photos {

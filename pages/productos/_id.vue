@@ -186,9 +186,36 @@
     <!-- Section 4: Rating and Comments-->
     <div class="row product-detail-page__ratings">
       <div class="col-md-12 section-header">
-        <h2>{{ productRating.title }}</h2>
+        <h2>{{ ratingSection.title }}</h2>
       </div>
-      <ProgressBarRatingGroup />
+      <div class="row w-100 justify-content-start">
+        <div class="col-md-6 product-detail-page__ratings__progress-bars">
+          <ProgressBarRatingGroup :rates="productRating.rates" />
+        </div>
+        <div
+          class="col-md-3 product-detail-page__ratings__stars justify-content-center align-self-center"
+        >
+          <ProductRating
+            :rating="productRating.scoreAvg"
+            :score-visible="true"
+          ></ProductRating>
+        </div>
+        <div class="col-sm-3 product-detail-page__ratings__recommended">
+          <section>
+            <button>ESCRIBE UNA RESEÑA</button>
+          </section>
+          <section class="h-100 product-detail-page__ratings__percentage">
+            <div>
+              <p class="text-center">82%</p>
+              <p
+                class="text-center mt-4 product-detail-page__ratings__percentage-label"
+              >
+                {{ ratingSection.PercentageLabel }}
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
     <!--//END Section 4  -->
     <div class="section-spacer"></div>
@@ -263,6 +290,9 @@ export default {
       getProduct: 'getProductById',
       recomendedProducts: 'getRecomendedProducts',
     }),
+    ...mapGetters('ratings', {
+      getProductRating: 'getProductRating',
+    }),
     ...mapGetters('pages/product-detail', {
       getSection: 'getSection',
     }),
@@ -270,8 +300,11 @@ export default {
     relatedProducts() {
       return this.getSection('section_3');
     },
-    productRating() {
+    ratingSection() {
       return this.getSection('section_4');
+    },
+    productRating() {
+      return this.getProductRating(this.product.id);
     },
     productPhotos() {
       return this.getSection('section_5');
