@@ -165,30 +165,30 @@
       <div class="col-md-12 section-header">
         <h2>{{ relatedProducts.title }}</h2>
       </div>
-    </div>
-    <div class="product-detail-page__related-products__products">
-      <ProductCardCarousel
-        :items-to-display="3"
-        :bullets="true"
-        class="d-flex justify-content-around"
-      >
-        <ProductCard
-          v-for="relatedProduct in recomendedProducts"
-          :key="relatedProduct.ordinal"
-          :product="relatedProduct"
-          variation="large"
-        />
-      </ProductCardCarousel>
+      <div class="row w-100 product-detail-page__related-products__products">
+        <ProductCardCarousel
+          :items-to-display="3"
+          :bullets="true"
+          class="d-flex justify-content-around"
+        >
+          <ProductCard
+            v-for="relatedProduct in recomendedProducts"
+            :key="relatedProduct.ordinal"
+            :product="relatedProduct"
+            variation="large"
+          />
+        </ProductCardCarousel>
+      </div>
     </div>
     <!--//END Section 3-->
 
     <div class="section-spacer"></div>
     <!-- Section 4: Rating and Comments-->
-    <div class="row product-detail-page__ratings">
+    <div class="row-fluid product-detail-page__ratings">
       <div class="col-md-12 section-header">
         <h2>{{ ratingSection.title }}</h2>
       </div>
-      <div class="row w-100 justify-content-start">
+      <div class="row justify-content-start">
         <div class="col-md-6 product-detail-page__ratings__progress-bars">
           <ProgressBarRatingGroup :rates="productRating.rates" />
         </div>
@@ -215,6 +215,16 @@
             </div>
           </section>
         </div>
+      </div>
+      <div class="row product-detail-page__ratings__comments">
+        <div
+          class="col-md-12 product-detail-page__ratings__comments__filters justify-content-center align-items-center"
+        >
+          <CommentsFilter></CommentsFilter>
+        </div>
+        <div
+          class="product-detail-page__ratings__comments__feed row w-100"
+        ></div>
       </div>
     </div>
     <!--//END Section 4  -->

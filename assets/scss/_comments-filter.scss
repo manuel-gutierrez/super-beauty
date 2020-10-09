@@ -1,0 +1,52 @@
+.comments-filter{
+  border-top: solid $light-gray 1px ;
+  border-bottom: solid $light-gray 1px ;
+  min-height: 81px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+
+  .comments-filter__checkbox__group{
+    font-size: $font-paragraph;
+    font-weight: bold;
+  }
+
+   .comments-filter__selectors{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    section{
+      display:flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .comments-filter__selectors__label {
+      color: $secondary;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+    .comments-filter__selectors__input {
+      .custom-select{
+        font-size: $font-paragraph;
+        font-weight: bold;
+        letter-spacing: $font-letter-spacing-buttons;
+        background-color: $white;
+        text-transform: capitalize;
+        text-align: center;
+        color: $black;
+        border: none;
+        min-width: fit-content;
+        margin-top: 0;
+        padding: 0px;
+        padding-left: 15px;
+        padding-right: 25px;
+      }
+
+    }
+   }
+
+
+
+}
