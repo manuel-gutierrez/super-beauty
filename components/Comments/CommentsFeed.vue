@@ -13,7 +13,7 @@
 export default {
   props: {
     comment: {
-      type: Array,
+      type: Object,
       default: null,
     },
   },

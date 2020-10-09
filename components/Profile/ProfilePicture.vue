@@ -3,7 +3,7 @@
     <b-img
       v-bind="imgProps"
       src="/images/profile/profile_picture_ratings@2x.png"
-      alt="Rounded image"
+      alt="Imagen de Perfil"
     ></b-img>
     <span v-if="profileSlug"> {{ profileSlug }}</span>
   </div>

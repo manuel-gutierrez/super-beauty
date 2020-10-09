@@ -11,14 +11,23 @@
         ></CommentsVerifiedTag>
       </div>
     </div>
-    <div class="col-md-12 comments-card__comment_color">
-      {{ comment.color }}
+    <div class="col-md-12 pl-1 my-2 comments-card__comment_color">
+      <CommentsColorTag
+        label="Color"
+        :color-name="comment.color.name"
+        :color="comment.color.value"
+      ></CommentsColorTag>
     </div>
-    <div class="col-md-12 comments-card__comment_comment">
+    <div class="col-md-12 comments-card__comment__content">
       <p>{{ comment.comment }}</p>
+      <p class="comments-card__comment__content__recommend">
+        <svg-icon icon="check" /> Recomienda este producto
+      </p>
+      <div class="comments-card__comment__content___buttons">
+        <button>ME FUE UTIL (1)</button>
+        <button>NO ME FUE UTIL (0)</button>
+      </div>
     </div>
-    <div class="col-md-12 comments-card__comment_recommendation"></div>
-    <div class="col-md-12 comments-card__comment_buttons"></div>
   </div>
 </template>
 

@@ -13,11 +13,7 @@
         "verified": false,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": ""
       },
@@ -30,11 +26,7 @@
         "verified": true,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
       },
@@ -47,11 +39,7 @@
         "verified": false,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": ""
       },
@@ -64,11 +52,7 @@
         "verified": true,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
       },
@@ -81,11 +65,7 @@
         "verified": false,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": ""
       },
@@ -98,11 +78,7 @@
         "verified": true,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
       },
@@ -115,11 +91,7 @@
         "verified": false,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": ""
       },
@@ -132,11 +104,7 @@
         "verified": true,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
       },
@@ -149,11 +117,7 @@
         "verified": false,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": ""
       },
@@ -166,11 +130,7 @@
         "verified": true,
         "color": {
           "name": "Ivory",
-          "image": {
-            "ordinal": 0,
-            "url": "/images/color.png",
-            "caption": "Ivory Color"
-          }
+          "value": "#DBB798"
         },
         "variationId": "VPHJHCOAAAASSSSSSSSSDDDUD"
       }
