@@ -221,6 +221,11 @@
           class="col-md-12 product-detail-page__ratings__comments__filters justify-content-center align-items-center"
         >
           <CommentsFilter></CommentsFilter>
+          <CommentsFeed
+            v-for="content in productRating.rates"
+            :key="content.id"
+            :comment="content"
+          ></CommentsFeed>
         </div>
         <div
           class="product-detail-page__ratings__comments__feed row w-100"

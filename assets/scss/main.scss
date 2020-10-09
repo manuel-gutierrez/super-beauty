@@ -23,6 +23,7 @@
 @import './carousel.scss';
 @import './buttons.scss';
 @import './scroll-to-top.scss';
+
 //##Product
 @import './product-card.scss';
 @import './product-card-caption.scss';
@@ -47,6 +48,13 @@
 
 //##Comments
 @import  './_comments-filter.scss';
+@import  './_comments-feed.scss';
+@import  './_comments-card.scss';
+@import  './_comments-verified-tag.scss';
+
+//##Profile Picture
+@import  './_profile-picture.scss';
+
 
 // Pages
 @import './product-page.scss';
