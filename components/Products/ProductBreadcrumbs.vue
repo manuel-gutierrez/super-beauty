@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <span>{{ categoryName }} |</span>
     <span>{{ subCategoryName }} |</span>
     <span>{{ variationName }} </span>
