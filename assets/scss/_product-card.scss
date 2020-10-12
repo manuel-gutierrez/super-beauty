@@ -32,8 +32,8 @@
     min-height: 115px;
 
     @include media-breakpoint-down(sm) {
-      background: no-repeat center center / 90px 0px;
-      min-height: 90px;
+      background: no-repeat center center / 95px 95px;
+      min-height: 100px;
     }
   }
 

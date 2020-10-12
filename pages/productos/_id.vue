@@ -115,7 +115,7 @@
         <!--// END Product Pricing -->
         <!-- Variations -->
         <section class="col-md-12 mx-0 product-detail-page__product-variations">
-          <div class="product-detail-page__pproduct-variations__size d-flex">
+          <div class="product-detail-page__product-variations__size d-flex">
             Tamaño:
             <ProductSizeTiles
               :tiles="weights"
