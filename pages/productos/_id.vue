@@ -155,7 +155,7 @@
     <div class="section-spacer"></div>
     <!-- Section 2: Product Tabs -->
     <div class="row product-detail-page__tabs">
-      <ProductTabs class="col-12" :tabs="productTabs"></ProductTabs>
+      <ProductTabs class="col-md-12" :tabs="productTabs"></ProductTabs>
     </div>
     <!--//END Section 2 -->
     <div class="section-spacer"></div>
