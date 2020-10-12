@@ -28,11 +28,11 @@
 
 
   .product-card-image {
-    background: no-repeat center center / 140px 140px;
+    background: no-repeat center center / 110px 110px;
     min-height: 115px;
 
     @include media-breakpoint-down(sm) {
-      background: no-repeat center center / 124px 124px;
+      background: no-repeat center center / 90px 0px;
       min-height: 90px;
     }
   }
