@@ -46,7 +46,7 @@
       :in-wishlist="product.isInWishlist"
       @update-wishlist="toggleWishlistStatus"
     ></ProductCardHeader>
-    <nuxt-link :to="'product/' + product.id">
+    <nuxt-link :to="'productos/' + product.id">
       <ProductCardImage :url="product.images[0].url" :caption="product.caption">
       </ProductCardImage>
       <!-- Description  -->
