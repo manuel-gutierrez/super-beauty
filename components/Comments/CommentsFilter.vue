@@ -67,10 +67,7 @@ export default {
     },
   },
   methods: {
-    emitEvent(inputName, value) {
-      console.log('filter-activated', inputName);
-      console.log('filter-value', value);
-    },
+    emitEvent(inputName, value) {},
   },
 };
 </script>
