@@ -35,7 +35,7 @@ export const getters = {
   getRecomendedProducts(state) {
     if (state.products) {
       return state.products.filter((product) => {
-        return product.tags.includes('RECOMENDED');
+        return product.tags.includes('RECOMMENDED');
       });
     }
   },

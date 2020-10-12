@@ -1,6 +1,6 @@
 [
   {
-    "id": "97143852-a62c-44fb-941c-92004bdc8a40",
+    "id": "14e1ae62-9144-4493-b883-e892f5cd6c66",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
@@ -49,6 +49,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -56,6 +60,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -222,7 +230,7 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
       "active": false,
@@ -275,13 +283,13 @@
     ]
   },
   {
-    "id": "e4dcba6c-c253-4bf8-b7a2-dbbb8b88638a",
+    "id": "6eff8473-885a-44ae-85cd-3aa39060fed1",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
     "reference": "Orgasm Eyeshadow Palette",
     "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
+    "isInWishlist": true,
     "weight": 1.2,
     "color": {
       "name": "Ivory",
@@ -298,7 +306,7 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
@@ -324,6 +332,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -331,6 +343,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -402,29 +418,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
+          },
+          {
+            "ordinal": 4,
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
+          },
+          {
+            "ordinal": 5,
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -465,11 +491,15 @@
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B",
+          "#7F4D32",
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B"
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
         ]
       }
     },
@@ -483,10 +513,10 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
-      "active": false,
+      "active": true,
       "id": "1"
     },
     "label": {
@@ -536,13 +566,13 @@
     ]
   },
   {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
+    "id": "3aad1a64-2e96-40fe-9838-97af5cde903e",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
     "reference": "Orgasm Eyeshadow Palette",
     "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
+    "isInWishlist": true,
     "weight": 1.2,
     "color": {
       "name": "Ivory",
@@ -559,17 +589,17 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product_large@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
         "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
+        "url": "/images/product_card/product_large@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
         "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
+        "url": "/images/product_card/product_large@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       }
     ],
@@ -585,6 +615,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -592,6 +626,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -663,2297 +701,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
           },
           {
             "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
           },
           {
             "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -2994,272 +774,15 @@
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B",
-          "#C3977B",
-          "#DBB798",
-          "#B59271",
-          "#C3977B"
-        ]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": [
+          "#7F4D32",
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B",
+          "#7F4D32",
           "#C3977B",
           "#DBB798",
           "#B59271",
-          "#C3977B"
+          "#7F4D32"
         ]
       }
     },
@@ -3273,10 +796,10 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
-      "active": false,
+      "active": true,
       "id": "1"
     },
     "label": {
@@ -3326,7 +849,7 @@
     ]
   },
   {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
+    "id": "cb3c550d-606c-4042-8124-a090c8b1bd93",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
@@ -3349,7 +872,7 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product_large@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
@@ -3375,6 +898,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -3382,6 +909,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -3453,29 +984,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
+          },
+          {
+            "ordinal": 4,
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
+          },
+          {
+            "ordinal": 5,
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -3512,7 +1053,20 @@
       "COLORS": {
         "name": "Ivory",
         "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
+        "data": [
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
+        ]
       }
     },
     "category": {
@@ -3525,7 +1079,7 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
       "active": false,
@@ -3578,13 +1132,13 @@
     ]
   },
   {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
+    "id": "f9d8b665-3f5d-4505-8192-0fe522b4f9bd",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
     "reference": "Orgasm Eyeshadow Palette",
     "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
+    "isInWishlist": true,
     "weight": 1.2,
     "color": {
       "name": "Ivory",
@@ -3601,7 +1155,7 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product_large@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
@@ -3627,6 +1181,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -3634,6 +1192,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -3705,29 +1267,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
+          },
+          {
+            "ordinal": 4,
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
+          },
+          {
+            "ordinal": 5,
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -3764,7 +1336,20 @@
       "COLORS": {
         "name": "Ivory",
         "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
+        "data": [
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
+        ]
       }
     },
     "category": {
@@ -3777,10 +1362,10 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "RECOMMENDED", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
-      "active": false,
+      "active": true,
       "id": "1"
     },
     "label": {
@@ -3830,13 +1415,13 @@
     ]
   },
   {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
+    "id": "f0a6d055-fba7-4d29-ad42-31d911b5bd89",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
     "reference": "Orgasm Eyeshadow Palette",
     "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
+    "isInWishlist": true,
     "weight": 1.2,
     "color": {
       "name": "Ivory",
@@ -3853,7 +1438,7 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
@@ -3879,6 +1464,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -3886,6 +1475,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -3957,29 +1550,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
+          },
+          {
+            "ordinal": 4,
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
+          },
+          {
+            "ordinal": 5,
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -4016,7 +1619,20 @@
       "COLORS": {
         "name": "Ivory",
         "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
+        "data": [
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
+        ]
       }
     },
     "category": {
@@ -4029,7 +1645,7 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "RECOMMENDED", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
       "active": false,
@@ -4082,7 +1698,7 @@
     ]
   },
   {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
+    "id": "9d9aa106-71f9-482b-a0fc-4e663fed26ef",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
@@ -4105,7 +1721,7 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product_large@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
@@ -4131,6 +1747,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -4138,6 +1758,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -4209,29 +1833,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
+          },
+          {
+            "ordinal": 4,
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
+          },
+          {
+            "ordinal": 5,
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -4268,7 +1902,20 @@
       "COLORS": {
         "name": "Ivory",
         "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
+        "data": [
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
+        ]
       }
     },
     "category": {
@@ -4281,7 +1928,7 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
       "active": false,
@@ -4334,13 +1981,13 @@
     ]
   },
   {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
+    "id": "484a7f56-138a-4609-8b85-acd1050b6966",
     "sku": 20254858,
     "updatedAt": "2020-06-18T17:55:56.646Z",
     "title": "NARS",
     "reference": "Orgasm Eyeshadow Palette",
     "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
+    "isInWishlist": true,
     "weight": 1.2,
     "color": {
       "name": "Ivory",
@@ -4357,7 +2004,7 @@
     "images": [
       {
         "ordinal": 0,
-        "url": "/images/product_card/product.png",
+        "url": "/images/product_card/product@2x.png",
         "caption": "Orgasm Eyeshadow Palette"
       },
       {
@@ -4383,6 +2030,10 @@
         "priceMoney": {
           "amount": 170000,
           "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 60000,
+          "currency": "COP"
         }
       },
       {
@@ -4390,6 +2041,10 @@
         "pricingLabel": "Precio al público",
         "priceMoney": {
           "amount": 60000,
+          "currency": "COP"
+        },
+        "salePriceMoney": {
+          "amount": 40000,
           "currency": "COP"
         }
       }
@@ -4461,281 +2116,39 @@
           }
         ]
       },
-      "PRODUCT_IMAGES_DOWNLOAD": {
+      "PRODUCT_DOWNLOAD_IMAGES": {
         "name": "Fotos del producto",
         "type": "IMAGE",
         "data": [
           {
             "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_1@2x.png",
+            "caption": "Color Palette"
           },
           {
             "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_2@2x.png",
+            "caption": "Lipstick"
           },
           {
             "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_3@2x.png",
+            "caption": "Nail Polisher"
           },
           {
             "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "SUSTAINABLE": {
-        "name": "Sostenible",
-        "type": "BOOLEAN",
-        "data": true
-      },
-      "DETAILS": {
-        "name": "Detalles",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INSTRUCTIONS": {
-        "name": "Cómo Utilizar",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "INGREDIENTS": {
-        "name": "Ingredientes",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "BRAND": {
-        "name": "Sobre de la marca",
-        "type": "PARAGRAPH",
-        "data": "Jugar con colores y hacer combinaciones es algo que nos encanta. Las sombras compactas de alta cobertura shimmer Studio Look tienen colores intensos que te permiten hacer técnicas como el cut crease o el smokey eyes como nunca antes lo imaginaste. Lo mejor de todo es que la aplicación de estas sombras duran horas de horas (hasta 10 horas según pruebas hechas en laboratorios Efisein). Ni la fiesta más larga podrá en contra de tu maquillaje. Así que prepárate para ser la protagonista de las fotos. A qué jamás pensaste decir “Etiquétame, no necesito ver la foto antes”. Bueno, ahora será posible. Y como sabemos que sobre acabados y colores no han escrito los autores, estas sombras vienen con un acabado shimmer que le dará todo el brillo que tu mirada necesita."
-      },
-      "DELIVERY_RETURNS": {
-        "name": "Envio y Devoluciones",
-        "type": "PARAGRAPH",
-        "data": "Devoluciones estandar"
-      },
-      "COLORS": {
-        "name": "Ivory",
-        "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
-      }
-    },
-    "category": {
-      "id": 1,
-      "subCategoryId": 1,
-      "subCategoryVariationId": 1
-    },
-    "brand": {
-      "id": "1"
-    },
-    "relatedProducts": ["1", "2", "3", "4"],
-    "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
-    "metadata": {},
-    "sale": {
-      "active": false,
-      "id": "1"
-    },
-    "label": {
-      "type": "promo",
-      "text": "-15%"
-    },
-    "type": "REGULAR",
-    "variations": [
-      {
-        "id": "VBJNPHCOKDFECR6VU25WRJUD",
-        "updatedAt": "2020-06-18T17:55:56.646Z",
-        "data": {
-          "name": "BIG",
-          "attributesVariations": [
-            {
-              "weight": 3.4
-            }
-          ],
-          "pricing": [
-            {
-              "pricingType": "VOLUME_PRICING",
-              "pricingLabel": "Precio al por mayor",
-              "priceMoney": {
-                "amount": 70000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 60000,
-                "currency": "COP"
-              }
-            },
-            {
-              "pricingType": "FIXED_PRICING",
-              "pricingLabel": "Precio al publico",
-              "priceMoney": {
-                "amount": 125000,
-                "currency": "COP"
-              },
-              "salePriceMoney": {
-                "amount": 100000,
-                "currency": "COP"
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "c1400f63-db1f-4463-8bfb-580f984f1f43",
-    "sku": 20254858,
-    "updatedAt": "2020-06-18T17:55:56.646Z",
-    "title": "NARS",
-    "reference": "Orgasm Eyeshadow Palette",
-    "description": "Una paleta de sombras con 4 tonos ámbar que ofrece incontables combinaciones. Cuenta con una variedad de texturas que van de mate a satinado y escarchado para crear looks de día y de noche. Los colores son saturados, suaves y uniformes, y vienen en un empaque compacto para facilitar su transporte.",
-    "isInWishlist": false,
-    "weight": 1.2,
-    "color": {
-      "name": "Ivory",
-      "image": {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Ivory Color"
-      }
-    },
-    "rating": {
-      "id": "1",
-      "score": 4.3
-    },
-    "images": [
-      {
-        "ordinal": 0,
-        "url": "/images/product_card/product.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 1,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      },
-      {
-        "ordinal": 2,
-        "url": "/images/product_card/product@2x.png",
-        "caption": "Orgasm Eyeshadow Palette"
-      }
-    ],
-    "dimensions": {
-      "length": 20,
-      "width": 20,
-      "height": 10
-    },
-    "pricing": [
-      {
-        "pricingType": "VOLUME_PRICING",
-        "pricingLabel": "Precio al por mayor",
-        "priceMoney": {
-          "amount": 170000,
-          "currency": "COP"
-        }
-      },
-      {
-        "pricingType": "FIXED_PRICING",
-        "pricingLabel": "Precio al público",
-        "priceMoney": {
-          "amount": 60000,
-          "currency": "COP"
-        }
-      }
-    ],
-    "customAttributeValues": {
-      "IMAGE_DETAIL": {
-        "name": "Palette Detail",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_4@2x.png",
+            "caption": "More Colors"
           },
           {
             "ordinal": 4,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_5@2x.png",
+            "caption": "Shadows"
           },
           {
             "ordinal": 5,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 6,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 7,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 8,
-            "url": "/images/pages/product-detail/detalle_producto_1@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 9,
-            "url": "/images/pages/product-detail/detalle_producto_2@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 10,
-            "url": "/images/pages/product-detail/detalle_producto_3@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 11,
-            "url": "/images/pages/product-detail/detalle_producto_4@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          }
-        ]
-      },
-      "PRODUCT_IMAGES_DOWNLOAD": {
-        "name": "Fotos del producto",
-        "type": "IMAGE",
-        "data": [
-          {
-            "ordinal": 0,
-            "url": "/images/product_card/product.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 1,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 2,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
-          },
-          {
-            "ordinal": 3,
-            "url": "/images/product_card/product@2x.png",
-            "caption": "Orgasm Eyeshadow Palette"
+            "url": "/images/product_download/product_download_6@2x.png",
+            "caption": "Kit"
           }
         ]
       },
@@ -4772,7 +2185,20 @@
       "COLORS": {
         "name": "Ivory",
         "type": "ARRAY",
-        "data": ["#C3977B", "#DBB798", "#B59271", "#C3977B"]
+        "data": [
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32",
+          "#C3977B",
+          "#DBB798",
+          "#B59271",
+          "#7F4D32"
+        ]
       }
     },
     "category": {
@@ -4785,7 +2211,7 @@
     },
     "relatedProducts": ["1", "2", "3", "4"],
     "complementaryProducts": ["1", "2", "3", "4"],
-    "tags": ["NEW", "SALE", "TOPSALE", "RECOMENDED", "SUSTAINABLE"],
+    "tags": ["NEW", "SALE", "TOPSALE", "SUSTAINABLE"],
     "metadata": {},
     "sale": {
       "active": false,
