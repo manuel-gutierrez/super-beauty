@@ -1,0 +1,16 @@
+.add-to-cart-counter {
+  min-width: 80px;
+  border: solid #AAAAAA 1px;
+  font-size: $font-size-add-to-cart-counter;
+  align-self: flex-end;
+
+  .add-to-cart-counter-decrease,
+  .add-to-cart-counter-increase {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+}

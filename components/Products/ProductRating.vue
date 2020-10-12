@@ -14,6 +14,12 @@
     >
       <svg-icon class="" icon="star-rating" />
     </div>
+    <div
+      v-if="scoreVisible"
+      class="row pt-3 w-100 product-rating__score justify-content-center align-items-center"
+    >
+      <div>{{ starsFilled }}<span>/5</span><span> Estrellas</span></div>
+    </div>
   </div>
 </template>
 
@@ -27,6 +33,10 @@ export default {
     label: {
       type: String,
       default: 'rating-group',
+    },
+    scoreVisible: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {

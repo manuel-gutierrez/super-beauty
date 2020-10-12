@@ -1,6 +1,6 @@
 <template>
   <div
-    class="row product-card-image p-0"
+    class="product-card-image p-0"
     :style="getBackgroundImage(url)"
     role="img"
     :aria-label="caption"

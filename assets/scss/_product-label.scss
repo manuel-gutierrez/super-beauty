@@ -1,0 +1,23 @@
+.product-label {
+  width: 35px;
+  height: 14px;
+  line-height: normal;
+  color: $white;
+  margin: '0px';
+  padding: 2px;
+  text-align: center;
+  font-size: $font-paragraph-sm;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: $font-letter-spacing-labels;
+}
+
+.product-label--new {
+  @extend .product-label;
+  background: $background-gradient-primary;
+}
+
+.product-label--promo {
+  @extend .product-label;
+  background: $background-gradient-secondary;
+}

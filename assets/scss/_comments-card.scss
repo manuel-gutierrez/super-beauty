@@ -1,0 +1,28 @@
+.comments-card{
+    padding-right:0px;
+    .product-rating{
+      padding-right: 15%;
+      padding-left: 16%;
+    }
+
+    .comments-card__comment__content{
+      padding-right:0px;
+      .comments-card__comment__content__recommend{
+        font-weight: bold;
+      }
+      .comments-card__comment__content__recommend{
+        .icon{
+          color: $primary;
+        }
+      }
+      .comments-card__comment__content___buttons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+          background:$secondary;
+          margin-left:15px;
+        }
+      }
+    }
+}

@@ -1,0 +1,11 @@
+.product-comments{
+  .product-comments__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 43px;
+    button{
+      background: $secondary;
+    }
+  }
+}

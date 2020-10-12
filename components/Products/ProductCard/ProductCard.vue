@@ -1,5 +1,45 @@
 <template>
-  <div class="product-card">
+  <!-- Large Prodduct Card Variation -->
+  <div
+    v-if="variation === 'large'"
+    class="row justify-content-start product-card--large"
+  >
+    <ProductCardImage
+      :url="product.images[0].url"
+      :caption="product.caption"
+      class="col-md-4"
+    >
+    </ProductCardImage>
+    <div class="col-md-8">
+      <!-- Description  -->
+      <div class="row justify-content-start">
+        <ProductCardCaption
+          :title="product.title"
+          :reference="product.reference"
+          type="info"
+          class="col-sm-12 product-card__info--large"
+          :variation="variation"
+        ></ProductCardCaption>
+      </div>
+      <!-- Price and Add to cart -->
+      <div class="row justify-content-start align-items-end pr-4">
+        <div class="col-sm product-card__add-to-cart--large">
+          <ProductCardCaption
+            v-if="productSinglePrice"
+            :amount="productSinglePrice.amount"
+            :currency="productSinglePrice.currency"
+            type="price"
+            :variation="variation"
+          ></ProductCardCaption>
+        </div>
+        <div class="col-sm product-card__button">
+          <button @click="$emit('add-to-cart', product.id)">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Normal Product Card -->
+  <div v-else class="product-card">
     <ProductCardHeader
       :label-type="product.label.type"
       :label-text="product.label.text"
@@ -75,6 +115,15 @@ export default {
       type: Object,
       default: null,
     },
+    variation: {
+      type: String,
+      default: 'normal',
+    },
+  },
+  computed: {
+    productSinglePrice() {
+      return this.getPrice('VOLUME_PRICING');
+    },
   },
   methods: {
     ...mapActions('products', ['updateWishlist']),
@@ -95,6 +144,16 @@ export default {
           id: this.product.id,
           value: false,
         });
+      }
+    },
+    getPrice(type) {
+      const pricingItem = this.product.pricing.find(
+        (price) => price.pricingType === type
+      );
+      if (pricingItem) {
+        return pricingItem.priceMoney;
+      } else {
+        return Error('Product do not have this price type: ' + type);
       }
     },
   },
