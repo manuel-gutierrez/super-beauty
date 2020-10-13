@@ -65,6 +65,42 @@
               sku: {{ product.sku }}
             </div>
           </section>
+          <!-- PRICING SECTION ::: MOBILE  -->
+          <section>
+            <div class="d-sm-none d-block product-detail-page__pricing">
+              <div
+                v-for="price in product.pricing"
+                :key="price.pricingType"
+                class="mr-0 pr-0 product-detail-page__pricing__price"
+              >
+                <h3
+                  v-if="price.pricingType == 'VOLUME_PRICING'"
+                  v-b-tooltip.hover="{
+                    id: `${price.pricingType}`,
+                    variant: 'primary',
+                    placement: 'top',
+                    customClass: 'product-detail-page__pricing__price__tooltip',
+                  }"
+                  title="Compra $600.000 y recibe el envío gratis"
+                  class="product-detail-page__pricing__price__label"
+                >
+                  {{ price.pricingLabel }}
+                </h3>
+                <h3 v-else class="product-detail-page__pricing__price__label">
+                  {{ price.pricingLabel }}
+                </h3>
+
+                <money-format
+                  :value="price.priceMoney.amount"
+                  :locale="'es-co'"
+                  :currency-code="price.priceMoney.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class="product-detail-page__pricing__price__amount"
+                ></money-format>
+              </div>
+            </div>
+          </section>
           <section class="product-detail-page__rating">
             <div class="row d-flex align-items-center">
               <span
@@ -88,7 +124,7 @@
         <!--// END Product Info -->
         <!-- Product Pricing -->
         <div
-          class="col-md-4 mr-0 pr-0 product-detail-page__pricing d-flex-block justify-content-end text-right"
+          class="d-none d-md-block justify-content-end text-right col-md-4 mr-0 pr-0 product-detail-page__pricing"
         >
           <div
             v-for="price in product.pricing"

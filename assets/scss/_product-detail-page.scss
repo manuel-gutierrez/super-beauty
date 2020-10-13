@@ -92,20 +92,31 @@
 
       .product-detail-page__product-name {
         h2 {
-          color: $secondary;
-          margin-bottom:0px;
+          color: #bb29bb;
+          margin-bottom: 0px;
+          font-weight: bold;
+          letter-spacing: 2.5px;
+          font-size: $font-size-h2-sm;
+          @include media-breakpoint-down(xs) {
+            margin-bottom: 0px;
+            font-size:$font-size-h2-sm ;
+          }
         }
-
+      }
 
       .product-detail-page__product-reference {
         font-size: $font-size-h2-sm;
+        @include media-breakpoint-down(xs) {
+          font-size:$font-paragraph;
+
+        }
       }
 
       .product-detail-page__product-sku {
         font-size: $font-paragraph-md;
       }
     }
-  }
+
     .product-detail-page__description {
       p {
         letter-spacing: 0px;
@@ -148,7 +159,9 @@
 
   .product-detail-page__pricing {
     padding-top: 10%;
-
+    @include media-breakpoint-down(xs) {
+      padding-top: 0%;
+    }
     .product-detail-page__pricing__price {
       max-width: 50%;
 
@@ -156,11 +169,19 @@
         color: $secondary;
         font-size: $font-size-h3-sm;
         letter-spacing: 0.45px;
+        @include media-breakpoint-down(xs) {
+          font-size: $font-size-h3-xs;
+          margin-bottom: 0px;
+          margin-top: 5px;
+        }
       }
 
       .product-detail-page__pricing__price__amount {
         font-size: $font-paragraph-xlg;
         font-weight: bold;
+        @include media-breakpoint-down(xs) {
+          font-size: $font-paragraph;
+        }
       }
 
       &:last-child {
@@ -170,6 +191,9 @@
 
         .product-detail-page__pricing__price__amount {
           font-size: $font-paragraph-lg;
+          @include media-breakpoint-down(xs) {
+            font-size: $font-paragraph-md;
+          }
         }
       }
     }
@@ -267,6 +291,7 @@
 
   // Section 6: Similar Products
   .product-detail-page__similar-products {}
+
 
 
 }
