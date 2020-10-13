@@ -4,7 +4,7 @@
     <div class="row product-detail-page__breadcrumbs">
       <div class="col-md-4 mr-auto">
         <ProductBreadcrumbs
-          class="product-detail-page__breadcrumbs"
+          class=""
           :category="product.category"
         ></ProductBreadcrumbs>
       </div>

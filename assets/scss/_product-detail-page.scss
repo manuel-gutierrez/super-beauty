@@ -7,13 +7,24 @@
 
   // Breadcrumbs
   .product-detail-page__breadcrumbs {
-    font-size: $font-size-breadcrumbs;
-    font-weight: bold;
-    margin-top: 30px;
-
-    :last-child {
-      font-weight: normal;
+    span{
+      font-size: $font-size-breadcrumbs;
+      font-weight: bold;
+      margin-top: 30px;
     }
+    span:last-child {
+      color:$gray;
+    }
+    @include media-breakpoint-down(md) {
+      margin-top: $vertical-section-spacer-md;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: $vertical-section-spacer-sm;
+    }
+    @include media-breakpoint-down(xs) {
+      margin-top: $vertical-section-spacer-xs;
+    }
+
   }
 
   // Section 1: Detail and Images
