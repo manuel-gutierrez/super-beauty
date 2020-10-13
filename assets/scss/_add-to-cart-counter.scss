@@ -1,6 +1,9 @@
-.add-to-cart-counter {
+.add-to-cart-counter{
   min-width: 80px;
-  border: solid #AAAAAA 1px;
+  font-family: $font-family-montserrat;
+  border: solid $light-gray 1px;
+  color: $light-gray;
+  font-weight: bold;
   font-size: $font-size-add-to-cart-counter;
   align-self: flex-end;
 
@@ -12,5 +15,4 @@
       transform: scale(1.3);
     }
   }
-
 }

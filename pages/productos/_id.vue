@@ -14,7 +14,7 @@
     <!-- Section 1: Image and Pricing -->
     <div class="row">
       <div class="col-md-4 product-detail-page__images">
-        <ProductImageCarousel class="col-12" :dots="true">
+        <ProductImageCarousel class="mt-2 col-12" :dots="true">
           <div v-for="image in product.images" :key="image.ordinal">
             <ProductLabel
               :label-type="product.label.type"
@@ -27,7 +27,11 @@
           </div>
         </ProductImageCarousel>
         <div class="product-detail-page__image-detail">
-          <ProductImageCarousel class="" :items-to-display="4" :arrows="true">
+          <ProductImageCarousel
+            class="mt-2"
+            :items-to-display="4"
+            :arrows="true"
+          >
             <div
               v-for="image in product.customAttributeValues.IMAGE_DETAIL.data"
               :key="image.ordinal"
@@ -114,6 +118,7 @@
         </div>
         <!--// END Product Pricing -->
         <!-- Variations -->
+
         <section class="col-md-12 mx-0 product-detail-page__product-variations">
           <div class="product-detail-page__product-variations__size d-flex">
             Tamaño:
@@ -123,7 +128,7 @@
               class="d-flex justify-content-start align-content-center"
             ></ProductSizeTiles>
           </div>
-          <div class="product-detail-page__product-variations__colors">
+          <div class="mt-3 product-detail-page__product-variations__colors">
             <p>Color: {{ product.customAttributeValues.COLORS.name }}</p>
             <ProductColorTiles
               :color-tiles="product.customAttributeValues.COLORS.data"
@@ -133,7 +138,7 @@
         <!--// END Product Variations -->
         <!-- Actions -->
         <section
-          class="col-md-12 mx-0 d-flex justify-content-between align-content-end flex-wrap product-detail-page__actions"
+          class="col-md-12 mt-4 mx-0 d-flex justify-content-between align-content-end flex-wrap product-detail-page__actions"
         >
           <div class="w-50 product-detail-page__actions__add-to-cart">
             <ProductAddToCart :product="product"></ProductAddToCart>
