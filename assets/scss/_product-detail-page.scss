@@ -19,16 +19,29 @@
   // Section 1: Detail and Images
   .product-detail-page__images {
     .product-card-image {
+      position: relative;
       height: 328px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      .sustainable-tag{
+        position: absolute;
+        bottom: 27px;
+        right: 10px;
+        z-index: 10;
+        height: 56px;
+        width: 56px;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: $white;
+      }
+      .product-label {
+        position: absolute;
+        top: 35px;
+      }
     }
 
-    .product-label {
-      position: relative;
-      top: 35px;
-    }
+
 
     .carousel .slick-dots {
       bottom: 15px;
