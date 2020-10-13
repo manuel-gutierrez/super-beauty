@@ -184,7 +184,7 @@
           </div>
         </section>
         <!--// END Product Variations -->
-        <!-- Actions ::: WEB -->
+        <!-- Actions -->
         <section
           class="col-md-12 mt-4 mx-0 d-flex justify-content-start align-content-center flex-wrap product-detail-page__actions"
         >
@@ -199,6 +199,16 @@
           </div>
           <div class="mr-2 product-detail-page__actions__share">
             <ShareButton @shareProduct="shareProduct()" />
+          </div>
+        </section>
+        <!-- TILES ::: MOBILE  -->
+        <section
+          class="col-md-12 pl-0 product-detail-page__product-variations__colors"
+        >
+          <div class="">
+            <ProductColorTiles
+              :color-tiles="product.customAttributeValues.COLORS.data"
+            ></ProductColorTiles>
           </div>
         </section>
 

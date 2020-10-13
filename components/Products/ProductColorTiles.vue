@@ -1,12 +1,18 @@
 <template>
   <div>
-    <ul class="color-tiles d-flex">
-      <li
-        v-for="(tile, index) in colorTiles"
-        :key="tile + '-' + index"
-        class="color-tile"
-        :style="background(tile)"
-      ></li>
+    <ul class="d-none d-md-flex color-tiles">
+      <ProductImageCarousel :items-to-display="12" :arrows="true">
+        <li v-for="(tile, index) in colorTiles" :key="tile + '-' + index">
+          <div :style="background(tile)" class="color-tile" />
+        </li>
+      </ProductImageCarousel>
+    </ul>
+    <ul class="d-sm-flex d-md-none color-tiles">
+      <ProductImageCarousel :items-to-display="6" :arrows="true">
+        <li v-for="(tile, index) in colorTiles" :key="tile + '-' + index">
+          <div :style="background(tile)" class="color-tile" />
+        </li>
+      </ProductImageCarousel>
     </ul>
   </div>
 </template>
@@ -21,7 +27,7 @@ export default {
   },
   methods: {
     background(color) {
-      return 'background-color:' + color;
+      return 'background:' + color;
     },
   },
 };

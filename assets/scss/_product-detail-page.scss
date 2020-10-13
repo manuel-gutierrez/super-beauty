@@ -236,6 +236,10 @@
     .product-detail-page__actions__wishlist{
       align-self: center;
     }
+    @include media-breakpoint-down(xs) {
+      border-bottom: transparent;
+      padding-bottom: 10px;
+    }
   }
 
   // Section 3: Related Products
