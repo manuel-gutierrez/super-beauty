@@ -5,7 +5,6 @@
     }
   ],
   "settings": {
-    "eslint.enable": true,
     "window.zoomLevel": 0,
     "files.trimTrailingWhitespace": true,
     "prettier.singleQuote": true,
@@ -36,16 +35,7 @@
       "config": true
     },
     "eslint.alwaysShowStatus": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [{
-        "autoFix": true,
-        "language": "javascript"
-      },
-      {
-        "autoFix": true,
-        "language": "vue"
-      }
-    ],
+    "eslint.validate": ["javascript","vue"],
     "attrsSorter.order": [
       "is",
       "v-for",
