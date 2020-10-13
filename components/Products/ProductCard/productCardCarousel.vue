@@ -25,23 +25,31 @@ export default {
       type: Number,
       default: 6,
     },
+    bullets: {
+      type: Boolean,
+      default: false,
+    },
+    arrows: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
       settings: {
-        centerPadding: '10px',
         focusOnSelect: true,
         infinite: false,
         slidesToShow: this.itemsToDisplay,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         speed: 500,
         cssEase: 'ease',
-        arrows: true,
+        bullets: this.bullets,
+        arrows: this.arrows,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 6,
+              slidesToShow: this.itemsToDisplay,
               slidesToScroll: 2,
             },
           },

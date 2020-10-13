@@ -1,0 +1,14 @@
+.share-button {
+  button {
+    background: $white;
+    color: $black;
+    border: solid $black 1px;
+    font-weight: bold;
+    min-width: 100%;
+  }
+
+  .share-button__icon {
+    height: $font-size-button
+  }
+
+}

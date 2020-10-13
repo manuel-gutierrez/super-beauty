@@ -22,23 +22,4 @@ export default {
 };
 </script>
 
-<style>
-svg.icon {
-  fill: currentColor;
-  height: auto;
-  margin-bottom: 0.125em;
-  vertical-align: middle;
-  width: 1em;
-}
-svg.icon-spin {
-  animation: icon-spin 2s infinite linear;
-}
-@keyframes icon-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-</style>
+<style></style>

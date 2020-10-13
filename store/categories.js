@@ -124,4 +124,28 @@ export const getters = {
   getCategory: (state) => (categoryId) => {
     return state.categories.find((category) => category.id === categoryId);
   },
+  getName: (state) => (type, categoryObject) => {
+    const category = state.categories.find(
+      (categoryData) => categoryData.id === categoryObject.id
+    );
+    const subCategory = category.SubCategories.reduce((result, subcategory) => {
+      if (subcategory.id === categoryObject.subCategoryId) {
+        result = subcategory;
+      }
+      return result;
+    }, {});
+
+    switch (type) {
+      case 'category':
+        return category.name;
+      case 'subcategory':
+        return subCategory.name;
+      case 'variation':
+        return subCategory.subCategoriesVariation.find(
+          (variation) => variation.id === categoryObject.subCategoryVariationId
+        ).name;
+      default:
+        return '';
+    }
+  },
 };

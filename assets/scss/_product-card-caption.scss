@@ -1,0 +1,85 @@
+.product-card-caption {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  .product-card-caption__title--info {
+    font-size: $font-size-product-card-title;
+    letter-spacing: $font-letter-spacing-product-card-title;
+    margin: 0;
+  }
+
+  .product-card-caption__description--info {
+    font-size: $font-size-product-card-description;
+    letter-spacing: $font-letter-spacing-product-card-description;
+    margin-top: -10px;
+    margin-bottom: -25px;
+  }
+
+
+  .product-card-caption__title--price {
+    font-size: $font-size-product-card-price-title;
+    color: $primary;
+    letter-spacing: $font-letter-spacing-product-card-price-title;
+    margin-bottom: -5px;
+  }
+
+  .product-card-caption__title--price-secondary {
+    font-size: $font-size-product-card-price-secondary-title;
+    color: $primary;
+    letter-spacing: $font-letter-spacing-product-card-price-title;
+    margin-bottom: -5px;
+    margin-top: 4px;
+  }
+
+  /* ---Amount---*/
+  .product-card-caption__amount {
+    margin-bottom: 0px;
+  }
+
+  .product-card-caption__amount--price {
+    margin-top: 0px;
+  }
+
+  .product-card-caption__amount--price--discount,
+  .product-card-caption__amount--price-secondary--discount {
+    text-decoration: line-through;
+    font-size: $font-size-product-card-price-secondary-ammount;
+    font-family: $font-family-montserrat;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-right: 2px;
+  }
+
+  .product-card-caption__amount-discounted--price,
+  .product-card-caption__amount-discounted--price-secondary {
+    color: $discount;
+    font-size: $font-size-product-card-price-discount-ammount;
+  }
+
+  .product-card-caption__amount-discounted--price-secondary,
+  .product-card-caption__amount--price-secondary {
+    font-size: $font-size-product-card-price-secondary-ammount;
+    margin-top: 0px;
+  }
+}
+
+.product-card-caption--large {
+  .product-card-caption__description--info--large {
+    font-size: $font-paragraph;
+    letter-spacing: $font-letter-spacing-product-card-description;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .product-card-caption__title--info--large {
+    font-size: $font-size-h2-sm;
+    letter-spacing: 1.44px;
+    font-weight: normal;
+    color: $secondary;
+  }
+
+  .product-card__info--large {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

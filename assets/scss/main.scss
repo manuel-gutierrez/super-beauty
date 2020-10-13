@@ -18,13 +18,47 @@
 // Components
 @import './logo.scss';
 @import './banners.scss';
-@import './product-card.scss';
+@import './svg-icon.scss';
+
 @import './product-rating.scss';
 @import './carousel.scss';
 @import './buttons.scss';
 @import './scroll-to-top.scss';
+
+//##Product
+@import './product-card.scss';
+@import './product-card-caption.scss';
 @import './product-page-sidebar.scss';
+@import './product-size-tiles.scss';
+@import './product-color-tiles.scss';
+@import './product-label.scss';
+@import './product-tabs.scss';
+@import './product-download-image.scss';
+
+//##Progress Bars
+@import './progress-bar-rating';
+
+//##Add to cart
+@import './add-to-cart.scss';
+@import './add-to-cart-counter.scss';
+@import './add-to-cart-modal.scss';
+
+//##Wishlist
+@import './wishlist-button.scss';
+@import './share-button.scss';
+
+//##Comments
+@import  './_comments.scss';
+@import  './_comments-filter.scss';
+@import  './_comments-feed.scss';
+@import  './_comments-card.scss';
+@import  './_comments-verified-tag.scss';
+@import  './_comments-color-tag.scss';
+
+//##Profile Picture
+@import  './_profile-picture.scss';
 
 
 // Pages
 @import './product-page.scss';
+@import './product-detail-page.scss';

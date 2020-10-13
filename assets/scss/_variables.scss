@@ -9,12 +9,14 @@ $primary: #9117b4;
 $secondary: #bb29bb;
 $discount: #FF4854;
 $icon-background-color: #FFFF;
+$gray: #5F5F5F;
+$light-gray: #C1C1C1;
 
 //== Backgrounds
 $background-gradient-primary : transparent linear-gradient(269deg, #BB29BB 0%, #5C06A8 100%) 0% 0% no-repeat padding-box;
 $background-gradient-secondary : transparent linear-gradient(90deg, #F27D39 1%, #FF4555 100%) 0% 0% no-repeat padding-box;
 $background-gradient-scroll-bar-vertical : transparent linear-gradient(180deg, #8D15B4 0%, #BB29BB 100%) 0% 0% no-repeat padding-box;
-
+$background-gradient-progress-bar: linear-gradient(90deg, #9117b4 0%, #bb29bb 100%);
 
 //== Typography
 $font-color-primary: $primary;
@@ -30,17 +32,23 @@ $font-family-montserrat: "Montserrat";
 
 //---- Font Sizes-------//
 $font-size-base: 1rem;
+
 //==Headings
 $font-size-h1: 3.3125rem;
 $font-size-h2: 1.87rem !default;
-$font-size-h2-sm: 1.25rem !default;
+$font-size-h2-sm: 1.25rem !default; // 20px
 $font-size-h3: 1.6875rem !default;
+$font-size-h3-sm: 0.9375rem !default; // 15px
+$font-size-h3-xs: 0.75rem !default; // 12px
 $font-size-h4: 1rem !default;
 $font-size-h5: 0.6875rem !default;
 $font-size-h6: 0.5625rem !default;
 
 //==Paragraph
+
 $font-paragraph: 0.875rem !default; // 14 px
+$font-paragraph-xlg: 1.625rem !default; // 26 px
+$font-paragraph-lg: 1.125rem !default; // 18 px
 $font-paragraph-md:0.75rem !default; // 12 px
 $font-paragraph-sm: 0.625rem !default; // 10px
 $font-paragraph-xs: 0.5rem !default; // 8px
@@ -49,6 +57,9 @@ $font-paragraph-xs: 0.5rem !default; // 8px
 $font-size-navbar: $font-paragraph-sm !default;
 $font-size-navbar-lg: $font-paragraph !default;
 $font-size-mobile-menu: 1.57rem !default;
+
+//==Breadcrumbs
+$font-size-breadcrumbs: 0.9375rem !default; // 15px
 
 //==Footer
 $font-size-footer: $font-paragraph !default;
@@ -78,6 +89,8 @@ $font-size-page-title-sm: 1.875rem !default; // 30px
 
 //==Buttons
 $font-size-banner-button: 0.875rem !default; // 14px
+$font-size-button: 0.875rem !default; // 14px
+$font-size-button-sm: 0.625rem !default; // 10px
 
 //==Product Card
 $font-size-product-card-title: 0.6875rem !default; // 11px
@@ -92,7 +105,11 @@ $font-size-sidebar-heading-lg: 1.25rem !default; // 20px
 $font-size-sidebar-list-lg: 0.9375rem !default; // 20px
 
 
+//==Tiles
+$font-size-tiles: 0.6875rem !default; // 11px
 
+//==Add to cart
+$font-size-add-to-cart-counter: 1.25rem !default; // 20px
 
 //---- Font Spacing-------//
 $font-letter-spacing-10: 10px;

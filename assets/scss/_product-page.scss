@@ -1,7 +1,16 @@
 .product-page {
+  .product-page__banner {
+    .page-header {
+      @include media-breakpoint-down(sm) {
+        margin-top: 0px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   .product-page__sort-section {
     position: relative;
-    top: 4%;
+    top: 2%;
     width: 100%;
 
 
@@ -44,6 +53,28 @@
       }
     }
   }
+
+  .product-page__sort-section-mobile {
+
+    .product-page__counter {
+      font-size: $font-paragraph-sm;
+      color: $secondary;
+      height: 10px;
+    }
+
+    .product-page__counter__number {
+      @extend .product-page__counter;
+      font-weight: bold;
+    }
+
+    .product-page__sort_heading h2 {
+      color: $black;
+      font-size: $font-paragraph;
+      margin-top: 7px;
+      letter-spacing: $font-letter-spacing-nav;
+    }
+  }
+
 
 
 
