@@ -1,7 +1,6 @@
 .product-detail-page {
 
   // General
-
   .section-header {
     text-align: center;
   }
@@ -20,7 +19,7 @@
   // Section 1: Detail and Images
   .product-detail-page__images {
     .product-card-image {
-      height: 320px;
+      height: 328px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -32,21 +31,24 @@
     }
 
     .carousel .slick-dots {
+      bottom: 15px;
       right: 42%;
     }
   }
 
   .product-detail-page__info {
 
+    margin-top:-5px;
 
     .product-detail-page__product-detail {
       text-transform: uppercase;
 
       .product-detail-page__product-name {
         h2 {
-          color: $primary
+          color: $secondary;
+          margin-bottom:0px;
         }
-      }
+
 
       .product-detail-page__product-reference {
         font-size: $font-size-h2-sm;
@@ -54,6 +56,13 @@
 
       .product-detail-page__product-sku {
         font-size: $font-paragraph-md;
+      }
+    }
+  }
+    .product-detail-page__description {
+      p {
+        letter-spacing: 0px;
+        font-size: $font-paragraph;
       }
     }
 
@@ -126,7 +135,9 @@
       width: 43px;
     }
   }
-
+  .product-detail-page__product-variations{
+    margin-top: $vertical-section-spacer-xs;
+  }
   .product-detail-page__actions {
     margin-bottom: 10px;
     padding-bottom: 35px;
