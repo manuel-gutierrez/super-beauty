@@ -20,10 +20,13 @@
               :label-type="product.label.type"
               :label-text="product.label.text"
             ></ProductLabel>
-            <ProductCardImage
-              :url="image.url"
-              :caption="image.caption"
-            ></ProductCardImage>
+            <ProductCardImage :url="image.url" :caption="image.caption">
+              <b-img
+                v-if="isSustainable"
+                src="@/assets/images/sustainable-tag.png"
+                class="sustainable-tag"
+              ></b-img>
+            </ProductCardImage>
           </div>
         </ProductImageCarousel>
         <div class="product-detail-page__image-detail">
@@ -40,7 +43,8 @@
                 :url="image.url"
                 :caption="image.caption"
                 class="ml-3 product-detail-page__image-detail__image"
-              ></ProductCardImage>
+              >
+              </ProductCardImage>
             </div>
           </ProductImageCarousel>
         </div>
@@ -336,6 +340,9 @@ export default {
     },
     photosToDownload() {
       return this.product.customAttributeValues.PRODUCT_DOWNLOAD_IMAGES.data;
+    },
+    isSustainable() {
+      return this.product.tags.includes('SUSTAINABLE');
     },
   },
   methods: {
