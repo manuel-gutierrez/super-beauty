@@ -14,6 +14,7 @@
     <!-- Section 1: Image and Pricing -->
     <div class="row product-detail-page__product-details">
       <div class="col-md-4 product-detail-page__images">
+        <!-- Main Image  -->
         <ProductImageCarousel class="mt-2 col-12" :dots="true">
           <div v-for="image in product.images" :key="image.ordinal">
             <ProductLabel
@@ -29,9 +30,10 @@
             </ProductCardImage>
           </div>
         </ProductImageCarousel>
+        <!-- Image Detail -->
         <div class="product-detail-page__image-detail">
           <ProductImageCarousel
-            class="mt-2"
+            class="mt-2 product-detail-page__image-detail__carousel"
             :items-to-display="4"
             :arrows="true"
           >

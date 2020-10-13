@@ -15,26 +15,21 @@
     span:last-child {
       color:$gray;
     }
-    @include media-breakpoint-down(md) {
-      margin-top: $vertical-section-spacer-md;
-    }
-    @include media-breakpoint-down(sm) {
-      margin-top: $vertical-section-spacer-sm;
-    }
-    @include media-breakpoint-down(xs) {
-      margin-top: $vertical-section-spacer-xs;
-    }
-
   }
 
   // Section 1: Detail and Images
   .product-detail-page__images {
+
     .product-card-image {
       position: relative;
       height: 328px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      @include media-breakpoint-down(xs) {
+        height: 200px;
+      }
+
       .sustainable-tag{
         position: absolute;
         bottom: 27px;
@@ -45,20 +40,48 @@
         padding: 5px;
         border-radius: 50%;
         background-color: $white;
+        @include media-breakpoint-down(xs) {
+          bottom: 10px;
+          right: 65px;
+        }
       }
-      .product-label {
-        position: absolute;
-        top: 35px;
-      }
+
     }
-
-
+    .product-label {
+      position: absolute;
+      top: 5px;
+      z-index: 10;
+    }
 
     .carousel .slick-dots {
-      bottom: 15px;
-      right: 42%;
+      position:absolute;
+      bottom: 10px;
+      right: 43%;
+      color: $secondary;
+      @include media-breakpoint-down(xs) {
+        bottom: 0px;
+      }
+    }
+    .carousel .slick-dots li.slick-active button:before {
+      color: $secondary;
+      opacity: 1;
+    }
+    .carousel .slick-dots li button:before{
+      color: $light-gray;
+    }
+
+  }
+  .product-detail-page__image-detail {
+    .product-detail-page__image-detail__carousel{
+      padding-left: 5%;
+      padding-right: 10%;
+      @include media-breakpoint-down(xs) {
+        padding-left: 15%;
+        padding-right: 20%;
+      }
     }
   }
+
 
   .product-detail-page__info {
 
