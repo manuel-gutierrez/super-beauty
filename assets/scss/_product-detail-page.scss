@@ -121,6 +121,7 @@
       p {
         letter-spacing: 0px;
         font-size: $font-paragraph;
+        line-height: 1rem;
       }
     }
 
@@ -128,13 +129,19 @@
       color: #626262;
       margin-bottom: 20px;
 
+
+
       .product-detail-page__rating__stars {
         .product-rating {
-          padding-left: 20%
+          padding-left: 20%;
+          padding-right: 12%;
+          position:relative;
+          top: -2px;
         }
       }
 
       .product-detail-page__rating__counter {
+        justify-content: flex-start;
         font-size: $font-paragraph-sm;
       }
 
@@ -143,13 +150,13 @@
 
         .b-icon {
           color: $primary;
+          position: relative;
+          top: 3px;
+          margin-right: 2px;
         }
 
-        span {
+        label {
           font-size: $font-paragraph-sm;
-          position: relative;
-          top: -6px;
-          left: 2px;
         }
 
       }
@@ -208,12 +215,27 @@
   }
   .product-detail-page__product-variations{
     margin-top: $vertical-section-spacer-xs;
+    .product-detail-page__product-variations__size{
+      text-transform: uppercase;
+      font-size: $font-paragraph-md;
+      font-weight: bold;
+      ul{
+        text-transform: capitalize;
+      }
+    }
+    .product-detail-page__product-variations__colors{
+      font-weight: bold;
+      font-size: $font-paragraph-md;
+    }
   }
   .product-detail-page__actions {
     margin-bottom: 10px;
     padding-bottom: 35px;
     border-bottom: solid $black 1px;
     line-height: 28px;
+    .product-detail-page__actions__wishlist{
+      align-self: center;
+    }
   }
 
   // Section 3: Related Products

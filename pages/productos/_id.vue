@@ -102,19 +102,20 @@
             </div>
           </section>
           <section class="product-detail-page__rating">
-            <div class="row d-flex align-items-center">
-              <span
-                class="col-4 pl-0 align-items-center product-detail-page__rating__stars"
-                ><ProductRating :rating="product.rating.score"></ProductRating
-              ></span>
-              <span class="col-2 pl-0 product-detail-page__rating__counter"
-                >14 Reseñas</span
+            <div class="row align-items-center justify-content-start">
+              <div
+                class="col-6 col-md-4 pl-0 align-items-center product-detail-page__rating__stars"
               >
-              <span class="col-6 product-detail-page__rating__likes"
-                ><ProductLike>
-                  <span>2.7K likes</span>
-                </ProductLike>
-              </span>
+                <ProductRating :rating="product.rating.score"></ProductRating>
+              </div>
+              <div
+                class="col-3 col-md-2 pl-0 product-detail-page__rating__counter"
+              >
+                14 Reseñas
+              </div>
+              <div class="col-3 col-md-6 product-detail-page__rating__likes">
+                <ProductLike> <label> 2.7K likes</label> </ProductLike>
+              </div>
             </div>
           </section>
           <section class="product-detail-page__description">
@@ -170,31 +171,37 @@
               class="d-flex justify-content-start align-content-center"
             ></ProductSizeTiles>
           </div>
-          <div class="mt-3 product-detail-page__product-variations__colors">
-            <p>Color: {{ product.customAttributeValues.COLORS.name }}</p>
+          <div
+            class="row d-none d-md-flex mt-3 product-detail-page__product-variations__colors"
+          >
+            <div class="col-md-12 mb-2 justify-content-start">
+              Color: {{ product.customAttributeValues.COLORS.name }}
+            </div>
             <ProductColorTiles
               :color-tiles="product.customAttributeValues.COLORS.data"
+              class="col-md-12"
             ></ProductColorTiles>
           </div>
         </section>
         <!--// END Product Variations -->
-        <!-- Actions -->
+        <!-- Actions ::: WEB -->
         <section
-          class="col-md-12 mt-4 mx-0 d-flex justify-content-between align-content-end flex-wrap product-detail-page__actions"
+          class="col-md-12 mt-4 mx-0 d-flex justify-content-start align-content-center flex-wrap product-detail-page__actions"
         >
-          <div class="w-50 product-detail-page__actions__add-to-cart">
+          <div class="mr-2 product-detail-page__actions__add-to-cart">
             <ProductAddToCart :product="product"></ProductAddToCart>
           </div>
-          <div class="ml-auto mr-2 product-detail-page__actions__wishlist">
+          <div class="mr-2 product-detail-page__actions__wishlist">
             <WishlistButton
               :in-wishlist="product.isInWishlist"
               @update-wishlist="toggleWishlistStatus()"
             ></WishlistButton>
           </div>
-          <div class="product-detail-page__actions__share">
+          <div class="mr-2 product-detail-page__actions__share">
             <ShareButton @shareProduct="shareProduct()" />
           </div>
         </section>
+
         <!--// END Product Actions -->
       </div>
     </div>
