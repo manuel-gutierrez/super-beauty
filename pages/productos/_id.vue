@@ -189,7 +189,7 @@
       <div class="col-md-12 section-header">
         <h2>{{ ratingSection.title }}</h2>
       </div>
-      <div class="col-md-12 justify-content-start">
+      <div class="col-md-12 product-detail-page__ratings__data">
         <div class="col-md-6 product-detail-page__ratings__progress-bars">
           <ProgressBarRatingGroup :rates="productRating.rates" />
         </div>
@@ -201,7 +201,7 @@
             :score-visible="true"
           ></ProductRating>
         </div>
-        <div class="col-sm-3 product-detail-page__ratings__recommended">
+        <div class="col-md-3 product-detail-page__ratings__recommended">
           <section>
             <button>ESCRIBE UNA RESEÑA</button>
           </section>

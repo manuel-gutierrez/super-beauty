@@ -150,6 +150,12 @@
 
   // Section 4: Rating
   .product-detail-page__ratings {
+    width: 100%;
+    .product-detail-page__ratings__data{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
     .product-detail-page__ratings__stars {
       font-size: $font-size-icons;
       margin-top: 3%;
