@@ -1,7 +1,7 @@
 <template>
   <div class="container product-detail-page">
     <!-- Breadcrumbs -->
-    <div class="row">
+    <div class="row product-detail-page__breadcrumbs">
       <div class="col-md-4 mr-auto">
         <ProductBreadcrumbs
           class="product-detail-page__breadcrumbs"
@@ -12,7 +12,7 @@
     <!--//END Breadcrumbs  -->
 
     <!-- Section 1: Image and Pricing -->
-    <div class="row">
+    <div class="row product-detail-page__product-details">
       <div class="col-md-4 product-detail-page__images">
         <ProductImageCarousel class="mt-2 col-12" :dots="true">
           <div v-for="image in product.images" :key="image.ordinal">
@@ -157,10 +157,10 @@
       </div>
     </div>
     <!--// END Section 1 -->
-
+    <div class="section-spacer"></div>
     <!-- Section 2: Product Tabs -->
     <div class="row product-detail-page__tabs">
-      <ProductTabs class="col-12" :tabs="productTabs"></ProductTabs>
+      <ProductTabs class="col-md-12" :tabs="productTabs"></ProductTabs>
     </div>
     <!--//END Section 2 -->
     <div class="section-spacer"></div>
@@ -170,12 +170,8 @@
       <div class="col-md-12 section-header">
         <h2>{{ relatedProducts.title }}</h2>
       </div>
-      <div class="row w-100 product-detail-page__related-products__products">
-        <ProductCardCarousel
-          :items-to-display="3"
-          :bullets="true"
-          class="d-flex justify-content-around"
-        >
+      <div class="col-md-12 product-detail-page__related-products__products">
+        <ProductCardCarousel :items-to-display="3" :bullets="true">
           <ProductCard
             v-for="relatedProduct in recomendedProducts"
             :key="relatedProduct.ordinal"
@@ -189,11 +185,11 @@
 
     <div class="section-spacer"></div>
     <!-- Section 4: Rating and Comments-->
-    <div class="row-fluid product-detail-page__ratings">
+    <div class="row product-detail-page__ratings">
       <div class="col-md-12 section-header">
         <h2>{{ ratingSection.title }}</h2>
       </div>
-      <div class="row justify-content-start">
+      <div class="col-md-12 justify-content-start">
         <div class="col-md-6 product-detail-page__ratings__progress-bars">
           <ProgressBarRatingGroup :rates="productRating.rates" />
         </div>
@@ -221,7 +217,7 @@
           </section>
         </div>
       </div>
-      <div class="row product-detail-page__ratings__comments">
+      <div class="col-md-12 product-detail-page__ratings__comments">
         <div
           class="col-md-12 product-detail-page__ratings__comments__filters justify-content-center align-items-center"
         >
@@ -275,18 +271,20 @@
 
     <div class="section-spacer"></div>
     <!-- Section 6: Similar Products -->
-    <div class="row w-100 product-detail-page__similar-products">
+    <div class="row product-detail-page__similar-products">
       <div class="col-md-12 section-header">
         <h2>{{ similarProducts.title }}</h2>
       </div>
-      <ProductCardCarousel>
-        <ProductCard
-          v-for="productItem in recomendedProducts"
-          :key="productItem.id"
-          :product="productItem"
-          class="px-3"
-        />
-      </ProductCardCarousel>
+      <div class="col-md-12">
+        <ProductCardCarousel>
+          <ProductCard
+            v-for="productItem in recomendedProducts"
+            :key="productItem.id"
+            :product="productItem"
+            class="px-3"
+          />
+        </ProductCardCarousel>
+      </div>
     </div>
     <!--//END Section 6 -->
     <div class="section-spacer"></div>
