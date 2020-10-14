@@ -1,7 +1,6 @@
 <template>
   <client-only placeholder="Cargando..">
     <VueSlickCarousel class="carousel" v-bind="settings">
-      <slot />
       <template #prevArrow="arrowOption">
         <div class="custom-arrow-prev--products">
           <b-icon
@@ -15,6 +14,7 @@
           <b-icon icon="chevron-right"></b-icon>
         </div>
       </template>
+      <slot />
     </VueSlickCarousel>
   </client-only>
 </template>
