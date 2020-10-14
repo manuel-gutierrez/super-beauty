@@ -108,7 +108,6 @@
         font-size: $font-size-h2-sm;
         @include media-breakpoint-down(xs) {
           font-size:$font-paragraph;
-
         }
       }
 
@@ -271,21 +270,42 @@
     }
 
     .product-detail-page__ratings__recommended {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      button{
+        background: $secondary;
+      }
+
       .product-detail-page__ratings__percentage {
         display: flex;
         align-items: center;
         justify-content: center;
-
+        @include media-breakpoint-down(xs) {
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
         p {
           font-size: $font-size-banner-title-lg;
           color: $secondary;
           font-weight: bold;
-          align-self: center;
+          margin:0px;
+          @include media-breakpoint-down(xs) {
+            width: 100%;
+            font-size: $font-paragraph-xlg;
+          }
+
         }
 
         .product-detail-page__ratings__percentage-label {
           font-size: $font-paragraph-lg;
-          color: $light-gray
+          color: $light-gray;
+          @include media-breakpoint-down(xs) {
+            font-size: $font-paragraph-sm;
+            font-weight: 100;
+          }
         }
 
       }

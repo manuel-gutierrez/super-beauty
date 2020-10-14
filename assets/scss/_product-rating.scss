@@ -17,5 +17,17 @@
 
 .product-rating__score {
   font-size: $font-paragraph-lg;
-  color: $light-gray
+  color: $light-gray;
+  padding-top:10%;
+  @include media-breakpoint-down(xs) {
+    font-size: $font-paragraph-sm;
+    font-weight: 100;
+    padding-top:0px;
+    text-align: center;
+  }
+  .product-rating__score__label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
