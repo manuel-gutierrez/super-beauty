@@ -244,7 +244,7 @@
   // Section 3: Related Products
   .product-detail-page__related-products {
     display:flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     .carousel{
       width: 100%;
