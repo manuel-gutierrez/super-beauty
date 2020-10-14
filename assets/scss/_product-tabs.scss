@@ -1,13 +1,45 @@
 .product-tabs {
   margin-top: 35px;
-
+  @include media-breakpoint-down(xs) {
+    margin-top: 0px;
+    .card{
+      border: unset;
+    }
+  }
   .product-tabs__title {
     text-transform: uppercase;
     font-size: $font-size-h2;
     font-family: $font-family-alt;
     font-weight: bold;
     color: $black !important;
+    @include media-breakpoint-down(xs) {
+      border-bottom: solid $light-gray 1px ;
+      margin-bottom: 0px !important;
 
+      button {
+        @include button-variant(
+          $white,
+          $white,
+          $hover-background: $white,
+          $hover-border: $white,
+          $active-background: transparent,
+          $active-border: transparent
+        );
+        background: $white;
+        color:$black;
+        border: unset;
+        border-radius: unset;
+        text-align: left;
+        display: flex;
+        justify-content: start;
+        span {
+          justify-content: flex-end;
+        }
+        .b-icon {
+          font-size: $font-size-icons-sm;
+        }
+      }
+    }
   }
 
   .product-tabs__title--active {
