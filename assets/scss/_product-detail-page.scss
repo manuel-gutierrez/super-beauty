@@ -242,7 +242,14 @@
   }
 
   // Section 3: Related Products
-  .product-detail-page__related-products {}
+  .product-detail-page__related-products {
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    .carousel{
+      width: 100%;
+    }
+  }
 
   // Section 4: Rating
   .product-detail-page__ratings {
