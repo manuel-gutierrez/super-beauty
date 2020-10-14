@@ -4,23 +4,21 @@
     margin-right: 15px;
    }
    .carousel{
-    padding-left: 20px;
-    padding-right: 16px;
-    margin-top:5px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 8px;
    }
- }
-
- .color-tile {
-   list-style: none;
-   border-radius: 5px;
-   min-width: 45px;
-   min-height: 45px;
-
-   @include media-breakpoint-down(xs) {
-    min-width: 30px;
+   .color-tile {
+    list-style: none;
+    border-radius: 5px;
+    min-width: 45px;
     min-height: 45px;
-    margin:5%;
+    @include media-breakpoint-down(xs) {
+     min-width: 35px;
+     min-height: 35px;
+     margin:5%;
+   }
   }
-
-
  }
+
+

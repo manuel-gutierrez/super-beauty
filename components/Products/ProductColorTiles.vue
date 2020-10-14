@@ -8,7 +8,7 @@
       </ProductImageCarousel>
     </ul>
     <ul class="d-sm-flex d-md-none color-tiles">
-      <ProductImageCarousel :items-to-display="6" :arrows="true">
+      <ProductImageCarousel :items-to-display="7" :arrows="true">
         <li v-for="(tile, index) in colorTiles" :key="tile + '-' + index">
           <div :style="background(tile)" class="color-tile" />
         </li>
