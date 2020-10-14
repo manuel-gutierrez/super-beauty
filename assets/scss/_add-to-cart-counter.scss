@@ -8,6 +8,7 @@
   align-self: flex-end;
   @include media-breakpoint-down(xs) {
     min-width: 70px;
+    font-size: $font-size-add-to-cart-counter-sm;
   }
   .add-to-cart-counter-decrease,
   .add-to-cart-counter-increase {
