@@ -203,7 +203,7 @@
         </section>
         <!-- TILES ::: MOBILE  -->
         <section
-          class="col-md-12 pl-0 product-detail-page__product-variations__colors"
+          class="col-md-12 d-md-none pl-0 product-detail-page__product-variations__colors"
         >
           <div class="">
             <ProductColorTiles
