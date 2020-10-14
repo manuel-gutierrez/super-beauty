@@ -229,7 +229,10 @@
       <div class="col-md-12 section-header">
         <h2>{{ relatedProducts.title }}</h2>
       </div>
-      <div class="col-md-12 product-detail-page__related-products__products">
+      <!-- ::: DESKTOP -->
+      <div
+        class="col-md-12 d-none d-md-flex product-detail-page__related-products__products"
+      >
         <ProductCardCarousel :items-to-display="3" :bullets="true">
           <ProductCard
             v-for="relatedProduct in recomendedProducts"
@@ -238,6 +241,17 @@
             variation="large"
           />
         </ProductCardCarousel>
+      </div>
+      <!-- ::: MOBILE  -->
+      <div
+        class="col-md-12 d-md-none product-detail-page__related-products__products"
+      >
+        <ProductCard
+          v-for="relatedProduct in recomendedProducts"
+          :key="relatedProduct.ordinal"
+          :product="relatedProduct"
+          variation="large"
+        />
       </div>
     </div>
     <!--//END Section 3-->
@@ -371,6 +385,8 @@
     </div>
     <!--//END Section 6 -->
     <div class="section-spacer"></div>
+    <div class="d-md-none section-spacer mb-5"></div>
+    <ScrollToTop />
   </div>
 </template>
 
