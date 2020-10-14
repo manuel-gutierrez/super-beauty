@@ -203,7 +203,7 @@
         </section>
         <!-- TILES ::: MOBILE  -->
         <section
-          class="col-md-12 pl-0 product-detail-page__product-variations__colors"
+          class="col-md-12 d-md-none pl-0 product-detail-page__product-variations__colors"
         >
           <div class="">
             <ProductColorTiles
@@ -249,11 +249,13 @@
         <h2>{{ ratingSection.title }}</h2>
       </div>
       <div class="col-md-12 product-detail-page__ratings__data">
-        <div class="col-md-6 product-detail-page__ratings__progress-bars">
-          <ProgressBarRatingGroup :rates="productRating.rates" />
+        <div
+          class="col-md-6 d-none d-md-flex product-detail-page__ratings__progress-bars"
+        >
+          <ProgressBarRatingGroup :rates="productRating.rates" class="w-100" />
         </div>
         <div
-          class="col-md-3 product-detail-page__ratings__stars justify-content-center align-self-center"
+          class="col-md-3 d-none d-md-flex product-detail-page__ratings__stars justify-content-center align-self-center"
         >
           <ProductRating
             :rating="productRating.scoreAvg"
@@ -261,14 +263,36 @@
           ></ProductRating>
         </div>
         <div class="col-md-3 product-detail-page__ratings__recommended">
-          <section>
+          <div class="row">
             <button>ESCRIBE UNA RESEÑA</button>
-          </section>
-          <section class="h-100 product-detail-page__ratings__percentage">
+          </div>
+          <!-- :: DESKTOP -->
+          <div
+            class="row d-none d-md-flex product-detail-page__ratings__percentage"
+          >
             <div>
               <p class="text-center">82%</p>
               <p
                 class="text-center mt-4 product-detail-page__ratings__percentage-label"
+              >
+                {{ ratingSection.PercentageLabel }}
+              </p>
+            </div>
+          </div>
+          <!-- :: MOBILE -->
+          <section
+            class="col-12 d-md-none px-0 product-detail-page__ratings__percentage"
+          >
+            <div class="col-6">
+              <ProductRating
+                :rating="productRating.scoreAvg"
+                :score-visible="true"
+              ></ProductRating>
+            </div>
+            <div class="col-6 pr-0">
+              <p class="text-center">82%</p>
+              <p
+                class="text-center product-detail-page__ratings__percentage-label"
               >
                 {{ ratingSection.PercentageLabel }}
               </p>

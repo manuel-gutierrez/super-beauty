@@ -16,9 +16,11 @@
     </div>
     <div
       v-if="scoreVisible"
-      class="row pt-3 w-100 product-rating__score justify-content-center align-items-center"
+      class="w-100 product-rating__score justify-content-center align-items-center"
     >
-      <div>{{ starsFilled }}<span>/5</span><span> Estrellas</span></div>
+      <div class="product-rating__score__label">
+        {{ starsFilled }}<span>/5</span><span> Estrellas</span>
+      </div>
     </div>
   </div>
 </template>

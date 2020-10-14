@@ -1,6 +1,6 @@
 <template>
-  <div class="row row-cols-2 comments-filter">
-    <div class="col comments-filter__checkbox">
+  <div class="col-md-12 comments-filter">
+    <div class="col-12 col-md-6 px-0 comments-filter__checkbox">
       <b-form-checkbox-group
         id="comments-filter-checkbox"
         v-model="checkboxes"
@@ -10,7 +10,7 @@
         @input="emitEvent('checkboxes', checkboxes)"
       ></b-form-checkbox-group>
     </div>
-    <div class="col comments-filter__selectors">
+    <div class="col-12 col-md-6 px-0 comments-filter__selectors">
       <section>
         <div class="comments-filter__selectors__label">Color</div>
         <div class="comments-filter__selectors__input">
@@ -22,7 +22,7 @@
         </div>
       </section>
       <section>
-        <div class="comments-filter__selectors__label">Ordenar Por</div>
+        <div class="comments-filter__selectors__label">Ordenar</div>
         <div class="comments-filter__selectors__input">
           <b-form-select
             v-model="sortSelector"

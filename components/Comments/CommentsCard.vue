@@ -1,17 +1,13 @@
 <template>
   <div class="comments-card">
-    <div class="row justify-content-start align-items-center">
-      <div class="col-md-3 pr-1 comments-card__comment_rating">
-        <ProductRating :rating="comment.score"></ProductRating>
-      </div>
-      <div class="col ml-0 pl-0">
-        <CommentsVerifiedTag
-          :verified="comment.verified"
-          label="Verificado"
-        ></CommentsVerifiedTag>
-      </div>
+    <div class="col-md-12 comments-card__comment_rating">
+      <ProductRating :rating="comment.score"></ProductRating>
+      <CommentsVerifiedTag
+        :verified="comment.verified"
+        label="Verificado"
+      ></CommentsVerifiedTag>
     </div>
-    <div class="col-md-12 pl-1 my-2 comments-card__comment_color">
+    <div class="col-md-12 pl-1 comments-card__comment_color">
       <CommentsColorTag
         label="Color"
         :color-name="comment.color.name"

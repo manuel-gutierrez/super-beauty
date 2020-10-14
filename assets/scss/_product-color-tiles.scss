@@ -4,15 +4,19 @@
     margin-right: 15px;
    }
    .carousel{
-    padding-left: 32px;
     padding-right: 32px;
     padding-top: 8px;
+    width: 100%;
+    @include media-breakpoint-down(xs) {
+      padding-left: 32px;
+    }
    }
    .color-tile {
     list-style: none;
     border-radius: 5px;
     min-width: 45px;
     min-height: 45px;
+    margin:10%;
     @include media-breakpoint-down(xs) {
      min-width: 35px;
      min-height: 35px;
