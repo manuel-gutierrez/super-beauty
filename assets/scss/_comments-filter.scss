@@ -20,7 +20,9 @@
     display:flex;
     justify-content: flex-end;
     align-items: center;
-
+    @include media-breakpoint-down(xs) {
+      justify-content: flex-start;
+    }
     section{
       display:flex;
       justify-content: flex-end;
@@ -37,10 +39,10 @@
       @include media-breakpoint-down(xs) {
         font-size: $font-paragraph;
         margin: 0px;
-
       }
     }
     .comments-filter__selectors__input {
+
       .custom-select{
         font-size: $font-paragraph;
         font-weight: bold;
@@ -54,10 +56,12 @@
         padding: 0px;
         padding-left: 15px;
         padding-right: 25px;
+
         @include media-breakpoint-down(xs) {
           font-size: $font-paragraph;
           padding-left:5px;
           letter-spacing: unset;
+          width:105px;
         }
       }
 

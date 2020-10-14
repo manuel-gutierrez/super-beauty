@@ -55,12 +55,14 @@
         }
       }
       .comments-card__comment__content___buttons{
+
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
         width: 100%;
         align-items: center;
         @include media-breakpoint-down(xs) {
+          margin-top: 1.25rem;
           flex-wrap: nowrap;
           justify-content: flex-start;
         }
