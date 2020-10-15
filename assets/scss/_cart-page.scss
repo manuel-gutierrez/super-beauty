@@ -32,11 +32,15 @@
     border-radius: 5px;
   }
   &__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     &__help {
       border: solid $light-gray 1px;
       border-radius: 5px;
-      padding: 10%;
+      padding: 5%;
     }
   }
 }

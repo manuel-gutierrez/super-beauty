@@ -3,6 +3,9 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  &__content-wrapper {
+    @extend .cart-card;
+  }
   &__caption {
     flex-wrap: wrap;
     text-transform: uppercase;
@@ -41,8 +44,52 @@
   }
   &__counter {
     @include media-breakpoint-down(xs) {
-      margin-top: 15px;
       height: 35px;
+    }
+  }
+  &__price-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    .cart-card__price {
+      display: flex;
+      justify-content: flex-end;
+      align-items: self-end;
+    }
+    .product-card-caption .product-card-caption__amount--price {
+      padding-top: 15px;
+    }
+  }
+  &__price {
+    font-size: $font-size-product-card-price-discount-ammount;
+    .product-card-caption .product-card-caption__amount {
+      display: block !important;
+      height: 20px;
+    }
+    .product-card-caption .product-card-caption__amount--price--discount,
+    .product-card-caption
+      .product-card-caption__amount--price-secondary--discount {
+      letter-spacing: unset;
+      height: 10px;
+    }
+    @include media-breakpoint-down(xs) {
+      position: relative;
+      left: -87px;
+      top: -12px;
+      height: 40px;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    top: 32px;
+    &__remove {
+      padding-right: 5px;
+    }
+    &__wishlist {
+      padding-left: 5px;
     }
   }
 }

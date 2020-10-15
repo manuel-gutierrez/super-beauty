@@ -62,13 +62,7 @@
         </div>
         <div class="col-md-4 cart-page__info">
           <!-- Banner-->
-          <div class="col-md-12 cart-page__info__banner">
-            <b-img
-              v-bind="bannerProps"
-              blank-color="#777"
-              alt="HEX shorthand color image (#777)"
-            ></b-img>
-          </div>
+          <div class="col-md-12 cart-page__info__banner">BANNER</div>
           <!-- Help Box-->
           <div class="col-md-12 cart-page__info__help">
             <h3>{{ additionalInfo.helpTitle }}</h3>
@@ -87,11 +81,6 @@
 <script>
 import { mapGetters } from 'vuex';
 export default {
-  data() {
-    return {
-      bannerProps: { blank: true, width: 484, height: 124, class: '' },
-    };
-  },
   computed: {
     ...mapGetters('pages/cartPage', {
       getSection: 'getSection',

@@ -7,10 +7,10 @@
       ></ProductLabel>
     </div>
     <div class="col-6 px-0 d-flex justify-content-end flex-grow-1">
-      <WishlistProduct
+      <ProductWishlistIcon
         :in-wishlist="inWishlist"
         @update-wishlist="$emit('update-wishlist')"
-      ></WishlistProduct>
+      ></ProductWishlistIcon>
     </div>
   </div>
 </template>

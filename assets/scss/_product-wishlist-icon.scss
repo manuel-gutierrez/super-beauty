@@ -1,0 +1,15 @@
+.product-wishlist-icon {
+  cursor: pointer;
+
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-icons;
+    height: 20px;
+    width: 20px;
+    line-height: normal;
+  }
+
+  &--selected {
+    @extend .wishlist-button__icon;
+    color: $primary;
+  }
+}
