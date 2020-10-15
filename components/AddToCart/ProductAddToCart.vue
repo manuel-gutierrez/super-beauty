@@ -2,12 +2,14 @@
   <div class="add-to-cart d-flex">
     <AddToCartCounter
       class="d-flex"
+      :current-value="itemCounter"
       @counterUpdate="updateData(...arguments)"
     ></AddToCartCounter>
-    <div class="flex-grow-1 add-to-cart__button">
+    <div v-if="button" class="flex-grow-1 add-to-cart__button">
       <button @click="updateCart()">Agregar al carrito</button>
     </div>
     <AddToCartModal
+      v-if="modal"
       :modal-id="modalId"
       :product="product"
       :checkout-data="checkoutData"
@@ -16,7 +18,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 export default {
   props: {
     product: {
@@ -31,6 +33,14 @@ export default {
       type: String,
       default: 'product-detail-modal',
     },
+    button: {
+      type: Boolean,
+      default: true,
+    },
+    modal: {
+      type: Boolean,
+      default: true,
+    },
   },
   data() {
     return {
@@ -39,10 +49,12 @@ export default {
     };
   },
   computed: {
+    ...mapGetters('cart', {
+      getItemQty: 'getItemQty',
+    }),
     productPrice() {
       return this.getPrice('FIXED_PRICING');
     },
-
     checkoutData() {
       return {
         id: this.product.id,
@@ -52,10 +64,16 @@ export default {
       };
     },
   },
+  beforeMount() {
+    this.itemCounter = this.getItemQty(this.product.id);
+  },
   methods: {
     ...mapActions('cart', ['addToCart', 'removeFromCart']),
     updateData(counter) {
       this.itemCounter = counter;
+      if (!this.button) {
+        this.updateCart();
+      }
     },
     updateCart() {
       this.itemCounter > 0
@@ -67,7 +85,9 @@ export default {
     },
     addProductToCart(checkoutData) {
       this.addToCart(checkoutData);
-      this.$bvModal.show('product-detail-modal');
+      if (this.modal) {
+        this.$bvModal.show('product-detail-modal');
+      }
     },
     getTotal(qty, price) {
       if (qty && price) {

@@ -3,11 +3,9 @@
 @import './fonts.scss';
 @import './variables.scss';
 
-
 // Bootsrap
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
-
 
 // General style overrides and custom classes
 @import './typography.scss';
@@ -27,6 +25,7 @@
 
 //##Product
 @import './product-card.scss';
+@import './product-card-image.scss';
 @import './product-card-caption.scss';
 @import './product-page-sidebar.scss';
 @import './product-size-tiles.scss';
@@ -35,10 +34,12 @@
 @import './product-tabs.scss';
 @import './product-download-image.scss';
 
+//##Cart
+@import './cart-card.scss';
+
 //##Progress Bars
 @import './progress-bar-rating';
 @import './progress-bar-checkout';
-
 
 //##Add to cart
 @import './add-to-cart.scss';
@@ -50,19 +51,17 @@
 @import './share-button.scss';
 
 //##Comments
-@import  './_comments.scss';
-@import  './_comments-filter.scss';
-@import  './_comments-feed.scss';
-@import  './_comments-card.scss';
-@import  './_comments-verified-tag.scss';
-@import  './_comments-color-tag.scss';
+@import './_comments.scss';
+@import './_comments-filter.scss';
+@import './_comments-feed.scss';
+@import './_comments-card.scss';
+@import './_comments-verified-tag.scss';
+@import './_comments-color-tag.scss';
 
 //##Profile Picture
-@import  './_profile-picture.scss';
-
+@import './_profile-picture.scss';
 
 // Pages
 @import './product-page.scss';
 @import './product-detail-page.scss';
 @import './cart-page.scss';
-

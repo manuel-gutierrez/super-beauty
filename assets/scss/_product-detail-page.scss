@@ -86,7 +86,7 @@
 
       .product-detail-page__product-name {
         h2 {
-          color: #bb29bb;
+          color: $secondary;
           margin-bottom: 0px;
           font-weight: bold;
           letter-spacing: 2.5px;
@@ -99,7 +99,7 @@
       }
 
       .product-detail-page__product-reference {
-        font-size: $font-size-h2-sm;
+        font-size: $font-paragraph-lg;
         @include media-breakpoint-down(xs) {
           font-size: $font-paragraph;
         }

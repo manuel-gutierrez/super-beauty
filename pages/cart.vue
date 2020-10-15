@@ -30,12 +30,11 @@
         </div>
         <!-- Cart Items -->
         <div class="cart-page__cart-items col-12 col-md-8">
-          <ProductCard
-            v-for="relatedProduct in recommendedProducts"
-            :key="relatedProduct.ordinal"
-            :product="relatedProduct"
-            variation="large"
-          />
+          <CartCard
+            v-for="product in productsInCart"
+            :key="product.id"
+            :product="product"
+          ></CartCard>
         </div>
         <!-- Totals Card -->
         <div class="cart-page__totals col-12 col-md-4">
@@ -103,7 +102,7 @@ export default {
       totals: 'getTotals',
     }),
     ...mapGetters('products', {
-      getProduct: 'getProductById',
+      getProducts: 'getProductsById',
       recommendedProducts: 'getRecomendedProducts',
     }),
     // Content
@@ -121,6 +120,9 @@ export default {
     },
     additionalInfo() {
       return this.getSection('section_4');
+    },
+    productsInCart() {
+      return this.getProducts(this.items);
     },
   },
 };

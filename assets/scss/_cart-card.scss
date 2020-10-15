@@ -1,0 +1,41 @@
+.cart-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  &__caption {
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    h2 {
+      color: $secondary;
+      margin-bottom: 0px;
+      font-weight: bold;
+      letter-spacing: 2.5px;
+      font-size: $font-size-h2-sm;
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 0px;
+        font-size: $font-size-h2-sm;
+      }
+    }
+    &__reference {
+      color: $gray;
+      font-size: $font-paragraph-lg;
+      @include media-breakpoint-down(xs) {
+        font-size: $font-paragraph;
+      }
+    }
+
+    &__sku {
+      margin-top: 5px;
+      color: $gray;
+      font-size: $font-paragraph-md;
+      @include media-breakpoint-down(xs) {
+        margin-top: 0px;
+      }
+    }
+    &__color {
+      line-height: 1.5px;
+      color: $gray;
+      font-size: $font-paragraph-md;
+    }
+  }
+}

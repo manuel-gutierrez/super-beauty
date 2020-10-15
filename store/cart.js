@@ -1,7 +1,26 @@
 export const state = () => ({
-  counter: 0,
+  counter: 3,
   freeShippingValue: 600000,
-  products: [],
+  products: [
+    {
+      id: '3aad1a64-2e96-40fe-9838-97af5cde903e',
+      qty: 2,
+      price: { amount: 60000, currency: 'COP' },
+      total: 60000,
+    },
+    {
+      id: '6eff8473-885a-44ae-85cd-3aa39060fed1',
+      qty: 1,
+      price: { amount: 60000, currency: 'COP' },
+      total: 60000,
+    },
+    {
+      id: '14e1ae62-9144-4493-b883-e892f5cd6c66',
+      qty: 4,
+      price: { amount: 60000, currency: 'COP' },
+      total: 60000,
+    },
+  ],
   totals: {
     subtotal: 0,
     discount: 0,
@@ -66,5 +85,9 @@ export const getters = {
   },
   getTotals(state) {
     return state.totals;
+  },
+  getItemQty: (state) => (id) => {
+    const item = state.products.find((product) => product.id === id);
+    return item.qty;
   },
 };

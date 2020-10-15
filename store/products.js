@@ -32,6 +32,15 @@ export const getters = {
   getProductById: (state) => (id) => {
     return state.products.find((product) => product.id === id);
   },
+  getProductsById: (state) => (itemsArray) => {
+    const productsInCart = [];
+    itemsArray.forEach((item) => {
+      productsInCart.push(
+        state.products.find((product) => product.id === item.id)
+      );
+    });
+    return productsInCart;
+  },
   getRecomendedProducts(state) {
     if (state.products) {
       return state.products.filter((product) => {
