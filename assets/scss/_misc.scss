@@ -1,6 +1,8 @@
-html{overflow-x: auto;}
+html {
+  overflow-x: auto;
+}
 body {
-  background-color:$white;
+  background-color: $white;
   letter-spacing: unset;
   font-size: 1rem;
   color: $black;
@@ -13,11 +15,11 @@ body {
 }
 // For the nuxt link
 a:hover {
-   text-decoration: none !important;
- }
+  text-decoration: none !important;
+}
 
-.section-spacer{
-  width:100%;
+.section-spacer {
+  width: 100%;
   margin-top: $vertical-section-spacer-lg;
   @include media-breakpoint-down(md) {
     margin-top: $vertical-section-spacer-md;
@@ -29,16 +31,20 @@ a:hover {
     margin-top: $vertical-section-spacer-xs;
   }
 }
-.section-spacer--sm{
-  width:100%;
-  margin-top: $vertical-section-spacer-lg*0.5;
+.section-spacer--sm {
+  width: 100%;
+  margin-top: $vertical-section-spacer-lg * 0.5;
   @include media-breakpoint-down(md) {
-    margin-top: $vertical-section-spacer-md*0.5;
+    margin-top: $vertical-section-spacer-md * 0.5;
   }
   @include media-breakpoint-down(sm) {
-    margin-top: $vertical-section-spacer-sm*0.5;
+    margin-top: $vertical-section-spacer-sm * 0.5;
   }
   @include media-breakpoint-down(xs) {
-    margin-top: $vertical-section-spacer-xs*0.5;
+    margin-top: $vertical-section-spacer-xs * 0.5;
   }
+}
+
+.section-header {
+  text-align: center;
 }
