@@ -16,7 +16,9 @@
     </div>
     <div class="container">
       <!-- Progress Bar -->
-      <div class="row cart-page__progress-bar"></div>
+      <div class="row cart-page__progress-bar">
+        <ProgressBarCheckout class="col-md-12"></ProgressBarCheckout>
+      </div>
       <!-- Cart  -->
       <div class="row cart-page__cart-section">
         <!-- Heading -->
