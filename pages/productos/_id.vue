@@ -4,7 +4,7 @@
     <div class="row product-detail-page__breadcrumbs">
       <div class="col-md-4 mr-auto">
         <ProductBreadcrumbs
-          class="product-detail-page__breadcrumbs"
+          class=""
           :category="product.category"
         ></ProductBreadcrumbs>
       </div>
@@ -14,21 +14,26 @@
     <!-- Section 1: Image and Pricing -->
     <div class="row product-detail-page__product-details">
       <div class="col-md-4 product-detail-page__images">
+        <!-- Main Image  -->
         <ProductImageCarousel class="mt-2 col-12" :dots="true">
           <div v-for="image in product.images" :key="image.ordinal">
             <ProductLabel
               :label-type="product.label.type"
               :label-text="product.label.text"
             ></ProductLabel>
-            <ProductCardImage
-              :url="image.url"
-              :caption="image.caption"
-            ></ProductCardImage>
+            <ProductCardImage :url="image.url" :caption="image.caption">
+              <b-img
+                v-if="isSustainable"
+                src="@/assets/images/sustainable-tag.png"
+                class="sustainable-tag"
+              ></b-img>
+            </ProductCardImage>
           </div>
         </ProductImageCarousel>
+        <!-- Image Detail -->
         <div class="product-detail-page__image-detail">
           <ProductImageCarousel
-            class="mt-2"
+            class="mt-2 product-detail-page__image-detail__carousel"
             :items-to-display="4"
             :arrows="true"
           >
@@ -40,7 +45,8 @@
                 :url="image.url"
                 :caption="image.caption"
                 class="ml-3 product-detail-page__image-detail__image"
-              ></ProductCardImage>
+              >
+              </ProductCardImage>
             </div>
           </ProductImageCarousel>
         </div>
@@ -59,20 +65,57 @@
               sku: {{ product.sku }}
             </div>
           </section>
-          <section class="product-detail-page__rating">
-            <div class="row d-flex align-items-center">
-              <span
-                class="col-4 pl-0 align-items-center product-detail-page__rating__stars"
-                ><ProductRating :rating="product.rating.score"></ProductRating
-              ></span>
-              <span class="col-2 pl-0 product-detail-page__rating__counter"
-                >14 Reseñas</span
+          <!-- PRICING SECTION ::: MOBILE  -->
+          <section>
+            <div class="d-sm-none d-block product-detail-page__pricing">
+              <div
+                v-for="price in product.pricing"
+                :key="price.pricingType"
+                class="mr-0 pr-0 product-detail-page__pricing__price"
               >
-              <span class="col-6 product-detail-page__rating__likes"
-                ><ProductLike>
-                  <span>2.7K likes</span>
-                </ProductLike>
-              </span>
+                <h3
+                  v-if="price.pricingType == 'VOLUME_PRICING'"
+                  v-b-tooltip.hover="{
+                    id: `${price.pricingType}`,
+                    variant: 'primary',
+                    placement: 'top',
+                    customClass: 'product-detail-page__pricing__price__tooltip',
+                  }"
+                  title="Compra $600.000 y recibe el envío gratis"
+                  class="product-detail-page__pricing__price__label"
+                >
+                  {{ price.pricingLabel }}
+                </h3>
+                <h3 v-else class="product-detail-page__pricing__price__label">
+                  {{ price.pricingLabel }}
+                </h3>
+
+                <money-format
+                  :value="price.priceMoney.amount"
+                  :locale="'es-co'"
+                  :currency-code="price.priceMoney.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class="product-detail-page__pricing__price__amount"
+                ></money-format>
+              </div>
+            </div>
+          </section>
+          <section class="product-detail-page__rating">
+            <div class="row align-items-center justify-content-start">
+              <div
+                class="col-6 col-md-4 pl-0 align-items-center product-detail-page__rating__stars"
+              >
+                <ProductRating :rating="product.rating.score"></ProductRating>
+              </div>
+              <div
+                class="col-3 col-md-2 pl-0 product-detail-page__rating__counter"
+              >
+                14 Reseñas
+              </div>
+              <div class="col-3 col-md-6 product-detail-page__rating__likes">
+                <ProductLike> <label> 2.7K likes</label> </ProductLike>
+              </div>
             </div>
           </section>
           <section class="product-detail-page__description">
@@ -82,7 +125,7 @@
         <!--// END Product Info -->
         <!-- Product Pricing -->
         <div
-          class="col-md-4 mr-0 pr-0 product-detail-page__pricing d-flex-block justify-content-end text-right"
+          class="d-none d-md-block justify-content-end text-right col-md-4 mr-0 pr-0 product-detail-page__pricing"
         >
           <div
             v-for="price in product.pricing"
@@ -128,31 +171,47 @@
               class="d-flex justify-content-start align-content-center"
             ></ProductSizeTiles>
           </div>
-          <div class="mt-3 product-detail-page__product-variations__colors">
-            <p>Color: {{ product.customAttributeValues.COLORS.name }}</p>
+          <div
+            class="row d-none d-md-flex mt-3 product-detail-page__product-variations__colors"
+          >
+            <div class="col-md-12 mb-2 justify-content-start">
+              Color: {{ product.customAttributeValues.COLORS.name }}
+            </div>
             <ProductColorTiles
               :color-tiles="product.customAttributeValues.COLORS.data"
+              class="col-md-12"
             ></ProductColorTiles>
           </div>
         </section>
         <!--// END Product Variations -->
         <!-- Actions -->
         <section
-          class="col-md-12 mt-4 mx-0 d-flex justify-content-between align-content-end flex-wrap product-detail-page__actions"
+          class="col-md-12 mt-4 mx-0 d-flex justify-content-start align-content-center flex-wrap product-detail-page__actions"
         >
-          <div class="w-50 product-detail-page__actions__add-to-cart">
+          <div class="mr-2 product-detail-page__actions__add-to-cart">
             <ProductAddToCart :product="product"></ProductAddToCart>
           </div>
-          <div class="ml-auto mr-2 product-detail-page__actions__wishlist">
+          <div class="mr-2 product-detail-page__actions__wishlist">
             <WishlistButton
               :in-wishlist="product.isInWishlist"
               @update-wishlist="toggleWishlistStatus()"
             ></WishlistButton>
           </div>
-          <div class="product-detail-page__actions__share">
+          <div class="mr-2 product-detail-page__actions__share">
             <ShareButton @shareProduct="shareProduct()" />
           </div>
         </section>
+        <!-- TILES ::: MOBILE  -->
+        <section
+          class="col-md-12 d-md-none pl-0 product-detail-page__product-variations__colors"
+        >
+          <div class="">
+            <ProductColorTiles
+              :color-tiles="product.customAttributeValues.COLORS.data"
+            ></ProductColorTiles>
+          </div>
+        </section>
+
         <!--// END Product Actions -->
       </div>
     </div>
@@ -170,7 +229,10 @@
       <div class="col-md-12 section-header">
         <h2>{{ relatedProducts.title }}</h2>
       </div>
-      <div class="col-md-12 product-detail-page__related-products__products">
+      <!-- ::: DESKTOP -->
+      <div
+        class="col-md-12 d-none d-md-flex product-detail-page__related-products__products"
+      >
         <ProductCardCarousel :items-to-display="3" :bullets="true">
           <ProductCard
             v-for="relatedProduct in recomendedProducts"
@@ -180,36 +242,71 @@
           />
         </ProductCardCarousel>
       </div>
+      <!-- ::: MOBILE  -->
+      <div
+        class="col-md-12 d-md-none product-detail-page__related-products__products"
+      >
+        <ProductCard
+          v-for="relatedProduct in recomendedProducts"
+          :key="relatedProduct.ordinal"
+          :product="relatedProduct"
+          variation="large"
+        />
+      </div>
     </div>
     <!--//END Section 3-->
 
     <div class="section-spacer"></div>
     <!-- Section 4: Rating and Comments-->
-    <div class="row product-detail-page__ratings">
+    <div v-if="productRating" class="row product-detail-page__ratings">
       <div class="col-md-12 section-header">
         <h2>{{ ratingSection.title }}</h2>
       </div>
-      <div class="col-md-12 justify-content-start">
-        <div class="col-md-6 product-detail-page__ratings__progress-bars">
-          <ProgressBarRatingGroup :rates="productRating.rates" />
+      <div class="col-md-12 product-detail-page__ratings__data">
+        <div
+          class="col-md-6 d-none d-md-flex product-detail-page__ratings__progress-bars"
+        >
+          <ProgressBarRatingGroup :rates="productRating.rates" class="w-100" />
         </div>
         <div
-          class="col-md-3 product-detail-page__ratings__stars justify-content-center align-self-center"
+          class="col-md-3 d-none d-md-flex product-detail-page__ratings__stars justify-content-center align-self-center"
         >
           <ProductRating
             :rating="productRating.scoreAvg"
             :score-visible="true"
           ></ProductRating>
         </div>
-        <div class="col-sm-3 product-detail-page__ratings__recommended">
-          <section>
+        <div class="col-md-3 product-detail-page__ratings__recommended">
+          <div class="row">
             <button>ESCRIBE UNA RESEÑA</button>
-          </section>
-          <section class="h-100 product-detail-page__ratings__percentage">
+          </div>
+          <!-- :: DESKTOP -->
+          <div
+            class="row d-none d-md-flex product-detail-page__ratings__percentage"
+          >
             <div>
               <p class="text-center">82%</p>
               <p
                 class="text-center mt-4 product-detail-page__ratings__percentage-label"
+              >
+                {{ ratingSection.PercentageLabel }}
+              </p>
+            </div>
+          </div>
+          <!-- :: MOBILE -->
+          <section
+            class="col-12 d-md-none px-0 product-detail-page__ratings__percentage"
+          >
+            <div class="col-6">
+              <ProductRating
+                :rating="productRating.scoreAvg"
+                :score-visible="true"
+              ></ProductRating>
+            </div>
+            <div class="col-6 pr-0">
+              <p class="text-center">82%</p>
+              <p
+                class="text-center product-detail-page__ratings__percentage-label"
               >
                 {{ ratingSection.PercentageLabel }}
               </p>
@@ -288,6 +385,8 @@
     </div>
     <!--//END Section 6 -->
     <div class="section-spacer"></div>
+    <div class="d-md-none section-spacer mb-5"></div>
+    <ScrollToTop />
   </div>
 </template>
 
@@ -336,6 +435,9 @@ export default {
     },
     photosToDownload() {
       return this.product.customAttributeValues.PRODUCT_DOWNLOAD_IMAGES.data;
+    },
+    isSustainable() {
+      return this.product.tags.includes('SUSTAINABLE');
     },
   },
   methods: {

@@ -1,0 +1,40 @@
+.cart-page {
+  &__free-shipping {
+    background: $tertiary;
+    color: $white;
+    justify-content: center;
+    align-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4.34px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: $font-paragraph-md;
+
+    p {
+      margin-bottom: 0px;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: $font-paragraph-xs;
+    }
+  }
+  &__counter {
+    font-size: $font-paragraph-xs;
+    color: $gray;
+  }
+  &__cart-items {
+    border: solid red 1px;
+  }
+  &__totals {
+    border: solid $light-gray 1px;
+    border-radius: 5px;
+  }
+  &__info {
+    width: 100%;
+    &__help {
+      border: solid $light-gray 1px;
+      border-radius: 5px;
+      padding: 10%;
+    }
+  }
+}

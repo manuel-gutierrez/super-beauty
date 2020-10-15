@@ -1,29 +1,26 @@
 <template>
   <!-- Large Prodduct Card Variation -->
-  <div
-    v-if="variation === 'large'"
-    class="row justify-content-start product-card--large"
-  >
+  <div v-if="variation === 'large'" class="product-card--large">
     <ProductCardImage
       :url="product.images[0].url"
       :caption="product.caption"
-      class="col-md-4"
+      class=""
     >
     </ProductCardImage>
-    <div class="col-md-8">
+    <div class="product-card__details--large">
       <!-- Description  -->
-      <div class="row justify-content-start">
+      <div class="">
         <ProductCardCaption
           :title="product.title"
           :reference="product.reference"
           type="info"
-          class="col-sm-12 product-card__info--large"
+          class="product-card__info--large"
           :variation="variation"
         ></ProductCardCaption>
       </div>
       <!-- Price and Add to cart -->
-      <div class="row justify-content-start align-items-end pr-4">
-        <div class="col-sm product-card__add-to-cart--large">
+      <div class="product-card__pricing--large">
+        <div class="product-card__add-to-cart--large">
           <ProductCardCaption
             v-if="productSinglePrice"
             :amount="productSinglePrice.amount"
@@ -32,7 +29,7 @@
             :variation="variation"
           ></ProductCardCaption>
         </div>
-        <div class="col-sm product-card__button">
+        <div class="product-card__add-to-cart__button--large">
           <button @click="$emit('add-to-cart', product.id)">Agregar</button>
         </div>
       </div>

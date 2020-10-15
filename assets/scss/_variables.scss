@@ -7,6 +7,7 @@ $theme-colors: ('primary': #9117b4,
 );
 $primary: #9117b4;
 $secondary: #bb29bb;
+$tertiary: #DE8AFD;
 $discount: #FF4854;
 $icon-background-color: #FFFF;
 $gray: #5F5F5F;
@@ -84,8 +85,8 @@ $font-size-banner-number-lg: 4.5625rem !default; //73px
 $font-size-banner-number-sm: 2.875rem !default; // 46px
 $font-size-hero-title-lg: 3.125rem !default; // 50px
 $font-size-hero-title-sm: 0.875rem !default; // 14px
-
-$font-size-page-title-sm: 1.875rem !default; // 30px
+$font-size-page-title-md: 1.875rem !default; // 30px
+$font-size-page-title-sm: 0.875rem !default; // 30px
 
 //==Buttons
 $font-size-banner-button: 0.875rem !default; // 14px
@@ -102,7 +103,7 @@ $font-size-product-card-description: 0.5rem !default; // 8px
 
 //==ProductSideBar
 $font-size-sidebar-heading-lg: 1.25rem !default; // 20px
-$font-size-sidebar-list-lg: 0.9375rem !default; // 20px
+$font-size-sidebar-list-lg: 0.9375rem !default; //
 
 
 //==Tiles
@@ -110,6 +111,7 @@ $font-size-tiles: 0.6875rem !default; // 11px
 
 //==Add to cart
 $font-size-add-to-cart-counter: 1.25rem !default; // 20px
+$font-size-add-to-cart-counter-sm:  0.875rem !default; // 14px
 
 //---- Font Spacing-------//
 $font-letter-spacing-10: 10px;

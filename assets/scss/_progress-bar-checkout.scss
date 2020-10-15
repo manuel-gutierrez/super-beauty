@@ -1,0 +1,75 @@
+.progress-bar-checkout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 80px;
+  .progress-bar-checkout__node{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: $gray;
+    position: relative;
+    &:first-child{
+      text-align: left;
+      .progress-bar-checkout__node__label{
+        left: -25px;
+      }
+    }
+    &:last-child{
+      text-align: right;
+      .progress-bar-checkout__node__label{
+        left: -75px;
+     }
+    }
+    &--active {
+      background: $secondary;
+    }
+    .progress-bar-checkout__node__label{
+      text-align: center;
+      color: $gray;
+      font-size: $font-paragraph-sm;
+      width: 100px;
+      position: absolute;
+      top: 15px;
+      left: -40px;
+    }
+  }
+}
+.progress-bar-checkout__bar{
+  min-height: 5px;
+  width: 96%;
+  background: $gray;
+  position: absolute;
+  top: 38px;
+  left: 20px;
+  z-index: -2;
+  @include media-breakpoint-down(xs) {
+    width: 90%;
+  }
+
+  &--active{
+    &--1{
+      @extend .progress-bar-checkout__bar;
+      background: $secondary;
+      z-index: -1;
+      width: 25%;
+    }
+    &--2{
+      @extend .progress-bar-checkout__bar;
+      background: $secondary;
+      z-index: -1;
+      width: 65%;
+    }
+    &--3{
+      @extend .progress-bar-checkout__bar;
+      background: $secondary;
+      z-index: -1;
+      width: 96%;
+      @include media-breakpoint-down(xs) {
+        width: 90%;
+      }
+    }
+  }
+
+}
