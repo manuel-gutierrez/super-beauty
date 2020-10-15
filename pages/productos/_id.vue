@@ -258,7 +258,7 @@
 
     <div class="section-spacer"></div>
     <!-- Section 4: Rating and Comments-->
-    <div class="row product-detail-page__ratings">
+    <div v-if="productRating" class="row product-detail-page__ratings">
       <div class="col-md-12 section-header">
         <h2>{{ ratingSection.title }}</h2>
       </div>

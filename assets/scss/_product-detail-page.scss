@@ -1,4 +1,9 @@
 .product-detail-page {
+  margin-top: 50px;
+  @include media-breakpoint-down(xs) {
+    margin-top: 20px;
+  }
+
   // Breadcrumbs
   .product-detail-page__breadcrumbs {
     span {
