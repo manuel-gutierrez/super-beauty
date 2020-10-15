@@ -38,12 +38,15 @@
 }
 .progress-bar-checkout__bar{
   min-height: 5px;
-  width: 90%;
+  width: 96%;
   background: $gray;
   position: absolute;
   top: 38px;
   left: 20px;
   z-index: -2;
+  @include media-breakpoint-down(xs) {
+    width: 90%;
+  }
 
   &--active{
     &--1{
@@ -62,7 +65,10 @@
       @extend .progress-bar-checkout__bar;
       background: $secondary;
       z-index: -1;
-      width: 90%;
+      width: 96%;
+      @include media-breakpoint-down(xs) {
+        width: 90%;
+      }
     }
   }
 
