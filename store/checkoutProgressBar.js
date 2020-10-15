@@ -1,10 +1,10 @@
 export const state = () => ({
   labels: {
-    step_0: 'MI CARRITO',
-    step_1: 'DATOS DE ENVÍO',
-    step_2: 'FINALIZAR PEDIDO',
+    step_1: 'MI CARRITO',
+    step_2: 'DATOS DE ENVÍO',
+    step_3: 'FINALIZAR PEDIDO',
   },
-  activeStep: 0,
+  activeStep: 1,
   numberOfSteps: 3,
 });
 export const mutations = {
