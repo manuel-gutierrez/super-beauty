@@ -22,25 +22,77 @@
       <!-- Cart  -->
       <div class="row cart-page__cart-section">
         <!-- Heading -->
-        <div class="cart-page__heading"></div>
+        <div class="col-md-12 section-header cart-page__heading">
+          <h2>{{ cartTextContent.heading }}</h2>
+        </div>
+        <div class="col-md-12 cart-page__counter">
+          <p>{{ cartTextContent.cartCounter }} ({{ items.length }})</p>
+        </div>
         <!-- Cart Items -->
-        <div class="cart-page__cart-items"></div>
+        <div class="cart-page__cart-items col-12 col-md-8">
+          <ProductCard
+            v-for="relatedProduct in recommendedProducts"
+            :key="relatedProduct.ordinal"
+            :product="relatedProduct"
+            variation="large"
+          />
+        </div>
         <!-- Totals Card -->
-        <div class="cart-page__totals"></div>
+        <div class="cart-page__totals col-12 col-md-4">
+          <div class="cart-page__totals__coupon">input...</div>
+          <div class="cart-page__totals__values">discount subtotal TOTAL</div>
+          <div class="cart-page__totals__buttons">
+            <button>checkout</button>
+            <button>continuar comprando</button>
+          </div>
+        </div>
         <!-- Recommended-->
-        <div class="cart-page__recommended"></div>
-        <!-- Banner-->
-        <div class="cart-page__banner"></div>
-        <!-- Help Box-->
-        <div class="cart-page__help"></div>
+        <div class="col-md-8 cart-page__recommended">
+          <div class="">
+            <h2>{{ recommendedSection.title }}</h2>
+          </div>
+          <div class="">
+            <ProductCardCarousel :items-to-display="4" :bullets="true">
+              <ProductCard
+                v-for="relatedProduct in recommendedProducts"
+                :key="relatedProduct.ordinal"
+                :product="relatedProduct"
+              />
+            </ProductCardCarousel>
+          </div>
+        </div>
+        <div class="col-md-4 cart-page__info">
+          <!-- Banner-->
+          <div class="col-md-12 cart-page__info__banner">
+            <b-img
+              v-bind="bannerProps"
+              blank-color="#777"
+              alt="HEX shorthand color image (#777)"
+            ></b-img>
+          </div>
+          <!-- Help Box-->
+          <div class="col-md-12 cart-page__info__help">
+            <h3>{{ additionalInfo.helpTitle }}</h3>
+            <p>{{ additionalInfo.helpText }}</p>
+            <h3>{{ additionalInfo.cardAcceptanceTitle }}</h3>
+            <MainFooterBrands />
+          </div>
+        </div>
       </div>
     </div>
+    <div class="section-spacer"></div>
+    <div class="d-md-none section-spacer mb-5"></div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 export default {
+  data() {
+    return {
+      bannerProps: { blank: true, width: 484, height: 124, class: '' },
+    };
+  },
   computed: {
     ...mapGetters('pages/cartPage', {
       getSection: 'getSection',
@@ -49,6 +101,10 @@ export default {
       freeShippingValue: 'getFreeShippingValue',
       items: 'getCartItems',
       totals: 'getTotals',
+    }),
+    ...mapGetters('products', {
+      getProduct: 'getProductById',
+      recommendedProducts: 'getRecomendedProducts',
     }),
     // Content
     freeShipping() {
