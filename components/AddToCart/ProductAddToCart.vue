@@ -65,7 +65,10 @@ export default {
     },
   },
   beforeMount() {
-    this.itemCounter = this.getItemQty(this.product.id);
+    const checkCounterInCart = this.getItemQty(this.product.id);
+    if (checkCounterInCart) {
+      this.itemCounter = checkCounterInCart;
+    }
   },
   methods: {
     ...mapActions('cart', ['addToCart', 'removeFromCart']),

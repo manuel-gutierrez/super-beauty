@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   &__caption {
     flex-wrap: wrap;
     text-transform: uppercase;
@@ -36,6 +37,12 @@
       line-height: 1.5px;
       color: $gray;
       font-size: $font-paragraph-md;
+    }
+  }
+  &__counter {
+    @include media-breakpoint-down(xs) {
+      margin-top: 15px;
+      height: 35px;
     }
   }
 }

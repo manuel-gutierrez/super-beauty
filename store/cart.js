@@ -88,6 +88,10 @@ export const getters = {
   },
   getItemQty: (state) => (id) => {
     const item = state.products.find((product) => product.id === id);
-    return item.qty;
+    if (item) {
+      return item.qty;
+    } else {
+      return false;
+    }
   },
 };
