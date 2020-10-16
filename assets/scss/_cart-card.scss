@@ -3,8 +3,20 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  border-bottom: solid $light-gray 1px;
+  margin-left: 4%;
+  margin-right: 4%;
+
   &__content-wrapper {
-    @extend .cart-card;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 0px;
+    margin-top: -25px;
+    @include media-breakpoint-down(xs) {
+      margin-top: -5px;
+    }
   }
   &__caption {
     flex-wrap: wrap;
@@ -43,6 +55,8 @@
     }
   }
   &__counter {
+    font-size: $font-paragraph;
+
     @include media-breakpoint-down(xs) {
       height: 35px;
     }
@@ -52,44 +66,70 @@
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
+    height: 145px;
+    @include media-breakpoint-down(xs) {
+      height: unset;
+    }
     .cart-card__price {
-      display: flex;
       justify-content: flex-end;
       align-items: self-end;
+      margin-top: 20px;
+      margin-right: 5px;
     }
+
     .product-card-caption .product-card-caption__amount--price {
-      padding-top: 15px;
+      padding-top: 5px;
     }
   }
   &__price {
     font-size: $font-size-product-card-price-discount-ammount;
+
+    .product-card-caption {
+      width: 100%;
+      height: 10px;
+    }
+
     .product-card-caption .product-card-caption__amount {
       display: block !important;
-      height: 20px;
     }
+
     .product-card-caption .product-card-caption__amount--price--discount,
     .product-card-caption
       .product-card-caption__amount--price-secondary--discount {
       letter-spacing: unset;
-      height: 10px;
+      line-height: 5px;
     }
+
     @include media-breakpoint-down(xs) {
       position: relative;
-      left: -87px;
-      top: -12px;
+      left: -55px;
+      top: -3px;
       height: 40px;
     }
   }
   &__actions {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     position: relative;
-    top: 32px;
+    top: 30px;
+    left: 15px;
+    text-transform: uppercase;
+    font-size: $font-paragraph-md;
+    @include media-breakpoint-down(xs) {
+      top: 0px;
+      padding-left: 0px;
+    }
+
+    span {
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+
     &__remove {
       padding-right: 5px;
     }
     &__wishlist {
-      padding-left: 5px;
+      padding-left: 2px;
     }
   }
 }

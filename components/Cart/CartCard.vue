@@ -1,12 +1,12 @@
 <template>
   <div class="cart-card">
-    <div class="col-3 col-md-3 cart-card__image">
+    <div class="col-4 col-md-3 cart-card__image">
       <ProductCardImage
         :url="product.images[0].url"
         :caption="product.images[0].caption"
       />
     </div>
-    <div class="col-9 cart-card__content-wrapper">
+    <div class="col-8 col-md-9 cart-card__content-wrapper">
       <div class="col-12 col-md-6 cart-card__caption">
         <div class="cart-card__caption__title">
           <h2>{{ product.title }}</h2>
@@ -40,11 +40,11 @@
         </div>
       </div>
       <!--// END  -->
-      <div class="col-12 col-md-3 cart-card__counter">
+      <div class="col-12 col-md-2 cart-card__counter">
         <ProductAddToCart :product="product" :modal="false" :button="false">
         </ProductAddToCart>
       </div>
-      <div class="col-12 col-md-3 cart-card__price-actions">
+      <div class="col-12 col-md-4 cart-card__price-actions">
         <div class="col-12 d-none d-md-flex cart-card__price">
           <div v-if="product.sale.active">
             <ProductCardCaption

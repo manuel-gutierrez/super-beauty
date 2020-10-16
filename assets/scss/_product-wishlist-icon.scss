@@ -9,6 +9,7 @@
   }
 
   &--selected {
+    cursor: pointer;
     @extend .wishlist-button__icon;
     color: $primary;
   }
