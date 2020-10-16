@@ -124,6 +124,19 @@ export const getters = {
   getCategory: (state) => (categoryId) => {
     return state.categories.find((category) => category.id === categoryId);
   },
+  getCategoryByName: (state) => (name) => {
+    const nameCap = name.charAt(0).toUpperCase() + name.slice(1);
+    const categoryItem = state.categories.find((category) => {
+      if (category.name === nameCap) {
+        return category;
+      }
+    });
+    if (categoryItem) {
+      return categoryItem;
+    } else {
+      return false;
+    }
+  },
   getName: (state) => (type, categoryObject) => {
     const category = state.categories.find(
       (categoryData) => categoryData.id === categoryObject.id
