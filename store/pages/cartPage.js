@@ -8,9 +8,12 @@ export const state = () => ({
       heading: 'Mi Carrito',
       cartCounter: 'ITEMS EN EL CARRITO',
       couponPlaceholder: 'Ingresa el código de tu cupón.',
+      couponButtonPlaceholder: 'Redimir',
       subtotalLabel: 'Subtotal',
       discountLabel: 'Descuento',
+      taxesLabel: 'IVA',
       shippingCostLabel: 'Costo de envío',
+      freeShippingLabel: 'Gratis',
       totalLabel: 'Total',
     },
     section_2: {

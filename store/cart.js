@@ -22,10 +22,12 @@ export const state = () => ({
     },
   ],
   totals: {
-    subtotal: 0,
-    discount: 0,
+    subtotal: 800000,
+    discount: 150000,
+    shipping: 0,
     taxes: 0,
     total: 650000,
+    currency: 'COP',
   },
 });
 export const mutations = {

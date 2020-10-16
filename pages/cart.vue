@@ -37,9 +37,93 @@
           ></CartCard>
         </div>
         <!-- Totals Card -->
-        <div class="cart-page__totals col-12 col-md-4">
-          <div class="cart-page__totals__coupon">input...</div>
-          <div class="cart-page__totals__values">discount subtotal TOTAL</div>
+        <div class="cart-page__totals col-md-4">
+          <div class="cart-page__totals__coupon">
+            <b-input-group size="md" class="my-4">
+              <b-form-input
+                :placeholder="cartTextContent.couponPlaceholder"
+              ></b-form-input>
+              <b-input-group-append>
+                <b-button size="md" text="Button" variant="secondary">{{
+                  cartTextContent.couponButtonPlaceholder
+                }}</b-button>
+              </b-input-group-append>
+            </b-input-group>
+          </div>
+          <div class="cart-page__totals__values">
+            <div class="cart-page__totals__values__summary">
+              <div class="col-md-12 cart-page__totals__values__subtotal">
+                <p>{{ cartTextContent.subtotalLabel }}</p>
+                <money-format
+                  :value="totals.subtotal"
+                  :locale="'es-co'"
+                  :currency-code="totals.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class=""
+                ></money-format>
+              </div>
+              <div
+                v-if="totals.discount > 0"
+                class="col-md-12 cart-page__totals__values__discount"
+              >
+                <p>{{ cartTextContent.discountLabel }}</p>
+                <money-format
+                  :value="totals.discount"
+                  :locale="'es-co'"
+                  :currency-code="totals.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class=""
+                ></money-format>
+              </div>
+              <div
+                v-if="totals.taxes > 0"
+                class="col-md-12 cart-page__totals__values__taxes"
+              >
+                <p>{{ cartTextContent.taxesLabel }}</p>
+                <money-format
+                  :value="totals.taxes"
+                  :locale="'es-co'"
+                  :currency-code="totals.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class=""
+                ></money-format>
+              </div>
+              <div
+                v-if="totals.total < freeShippingValue && totals.total > 0"
+                class="col-md-12 cart-page__totals__values__shipping"
+              >
+                <p>{{ cartTextContent.shippingCostLabel }}</p>
+                <money-format
+                  :value="totals.shipping"
+                  :locale="'es-co'"
+                  :currency-code="totals.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class=""
+                ></money-format>
+              </div>
+              <div v-else class="col-md-12 cart-page__totals__values__shipping">
+                <p>{{ cartTextContent.shippingCostLabel }}</p>
+                <p>{{ cartTextContent.freeShippingLabel }}</p>
+              </div>
+            </div>
+            <div>
+              <div class="col-md-12 cart-page__totals__values__total">
+                <p>{{ cartTextContent.totalLabel }}</p>
+                <money-format
+                  :value="totals.total"
+                  :locale="'es-co'"
+                  :currency-code="totals.currency"
+                  :subunits-value="false"
+                  :hide-subunits="true"
+                  class=""
+                ></money-format>
+              </div>
+            </div>
+          </div>
           <div class="cart-page__totals__buttons">
             <button>checkout</button>
             <button>continuar comprando</button>
@@ -48,7 +132,7 @@
         <!-- Recommended-->
         <div class="col-md-8 cart-page__recommended">
           <div class="">
-            <h2>{{ recommendedSection.title }}</h2>
+            <h3>{{ recommendedSection.title }}</h3>
           </div>
           <div class="">
             <ProductCardCarousel :items-to-display="4" :bullets="true">
