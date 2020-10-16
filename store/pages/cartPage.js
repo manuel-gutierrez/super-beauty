@@ -18,20 +18,19 @@ export const state = () => ({
     },
     section_3: {
       banner: {
-        type: 'color',
+        type: 'hero',
         data: {
-          url: '#',
-          caption: {
-            title: 'BANNER',
+          url: '/productos',
+          image: {
+            src: '/images/banner/banner_image_big@2x.png',
           },
-          color: '#DBDBDB',
         },
       },
     },
     section_4: {
       helpTitle: '¿Necesitas asistencia?',
       helpText:
-        'Si necesitas ayuda por favor envíanos un correo a hola@Superbeauty.com.co y nos comunicaremos contigo.',
+        'Si necesitas ayuda por favor envíanos un correo a <b>hola@Superbeauty.com.co</b> y nos comunicaremos contigo.',
       cardAcceptanceTitle: 'aceptamos',
     },
   },

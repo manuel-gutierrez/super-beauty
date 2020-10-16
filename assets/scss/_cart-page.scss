@@ -23,7 +23,6 @@
     color: $gray;
   }
   &__cart-items {
-    border: solid red 1px;
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -37,10 +36,26 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
     &__help {
       border: solid $light-gray 1px;
       border-radius: 5px;
-      padding: 5%;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      h3 {
+        font-size: $font-size-h2-sm;
+        margin-top: 0px;
+      }
+    }
+    &__banner {
+      .hero {
+        height: 124px;
+        border-radius: 5px;
+      }
     }
   }
 }

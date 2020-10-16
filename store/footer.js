@@ -114,3 +114,8 @@ export const state = () => ({
   },
 });
 export const mutations = {};
+export const getters = {
+  getBrands(state) {
+    return state.data.brands.images;
+  },
+};

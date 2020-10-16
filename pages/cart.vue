@@ -56,19 +56,24 @@
                 v-for="relatedProduct in recommendedProducts"
                 :key="relatedProduct.ordinal"
                 :product="relatedProduct"
+                class="px-3"
               />
             </ProductCardCarousel>
           </div>
         </div>
         <div class="col-md-4 cart-page__info">
           <!-- Banner-->
-          <div class="col-md-12 cart-page__info__banner">BANNER</div>
+          <div class="col-md-12 px-0 cart-page__info__banner">
+            <BannerImage :data="banner.data" :type="banner.type" />
+          </div>
           <!-- Help Box-->
           <div class="col-md-12 cart-page__info__help">
             <h3>{{ additionalInfo.helpTitle }}</h3>
-            <p>{{ additionalInfo.helpText }}</p>
+            <p v-html="additionalInfo.helpText"></p>
             <h3>{{ additionalInfo.cardAcceptanceTitle }}</h3>
-            <MainFooterBrands />
+            <div class="cart-page__info__help__brands">
+              <BrandsImageList />
+            </div>
           </div>
         </div>
       </div>
@@ -105,7 +110,7 @@ export default {
       return this.getSection('section_2');
     },
     banner() {
-      return this.getSection('section_3');
+      return this.getSection('section_3').banner;
     },
     additionalInfo() {
       return this.getSection('section_4');
