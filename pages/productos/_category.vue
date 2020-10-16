@@ -145,12 +145,15 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   fetch() {
+    this.category = this.getCategoryByName(this.$route.params.category);
+    this.categoryId = this.category.id;
     this.products = this.productsInCategory(this.categoryId);
   },
   data() {
     return {
       products: [],
-      categoryId: 1,
+      category: {},
+      categoryId: null,
       productsFilter: [],
       productsSort: [],
       arr: [],
@@ -158,7 +161,9 @@ export default {
     };
   },
   computed: {
-    ...mapGetters('categories', { categoryData: 'getCategory' }),
+    ...mapGetters('categories', {
+      getCategoryByName: 'getCategoryByName',
+    }),
     ...mapGetters('enums', { enum: 'getEnum' }),
     ...mapGetters('login', {
       isloggedIn: 'getCurrentLoginStatus',
@@ -185,9 +190,6 @@ export default {
       return this.sections('filters');
     },
 
-    category() {
-      return this.categoryData(1);
-    },
     productsPriceRange() {
       return this.priceRanges(this.products);
     },
