@@ -4,7 +4,7 @@
     <!-- ::DESKTOP -->
     <div
       v-if="totals.total > freeShippingValue"
-      class="d-none d-md-flex container-fluid cart-page__free-shipping"
+      class="d-none d-md-flex container-fluid free-shipping-banner"
     >
       <p>{{ freeShipping.bannerTitle }}</p>
     </div>
