@@ -1,0 +1,11 @@
+.product-card-image {
+  background: no-repeat left / 125px 125px;
+  min-height: 130px;
+  min-width: 130px;
+
+  @include media-breakpoint-down(sm) {
+    background: no-repeat left / 90px 90px;
+    min-height: 100px;
+    min-width: 100px;
+  }
+}

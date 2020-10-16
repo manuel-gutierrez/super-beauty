@@ -3,6 +3,7 @@
     <client-only placeholder="Cargando..">
       <nuxt-link v-if="data.url" :to="data.url">
         <div :style="getBackgroundImage(data.image.src)" :class="type">
+          <!-- Large Banner -->
           <div v-if="type == 'promo-large'" class="row">
             <div class="col-12 col-md-4 d-flex justify-content-center pt-3">
               <Logo variant="white"> </Logo>
@@ -16,6 +17,7 @@
               </BannerCaption>
             </div>
           </div>
+          <!-- Page Header -->
           <div
             v-else-if="type == 'page-header'"
             class="row justify-content-center h-100"
@@ -27,9 +29,11 @@
             >
             </BannerCaption>
           </div>
+          <!-- hero -->
           <div v-else-if="type == 'hero'" class="row">
             <div class="col-12">
-              <BannerCaption :caption-data="data.caption"> </BannerCaption>
+              <BannerCaption v-if="data.caption" :caption-data="data.caption">
+              </BannerCaption>
             </div>
           </div>
           <BannerCaption v-else :caption-data="data.caption" class="">
