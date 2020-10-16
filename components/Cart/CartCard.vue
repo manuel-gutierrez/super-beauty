@@ -65,7 +65,12 @@
           </div>
         </div>
         <div class="col-12 cart-card__actions">
-          <p class="cart-card__actions__remove">remover</p>
+          <p
+            class="cart-card__actions__remove"
+            @click="removeProductFromCart(product.id)"
+          >
+            remover
+          </p>
           <span>|</span>
           <span>
             {{ product.inWishlist }}
@@ -100,6 +105,7 @@ export default {
   },
   methods: {
     ...mapActions('products', ['updateWishlist']),
+    ...mapActions('cart', ['removeFromCart']),
     ...mapMutations('wishlist', {
       incrementWishlistCounter: 'incrementWishlistCounter',
       decrementWishlistCounter: 'decrementWishlistCounter',
@@ -133,6 +139,9 @@ export default {
           value: false,
         });
       }
+    },
+    removeProductFromCart(id) {
+      this.removeFromCart(id);
     },
   },
 };

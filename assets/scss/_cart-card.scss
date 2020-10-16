@@ -55,7 +55,9 @@
     }
   }
   &__counter {
-    font-size: $font-paragraph;
+    .add-to-cart-counter {
+      font-size: $font-paragraph;
+    }
 
     @include media-breakpoint-down(xs) {
       height: 35px;
@@ -66,14 +68,14 @@
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    height: 145px;
+    height: 90px;
     @include media-breakpoint-down(xs) {
       height: unset;
     }
     .cart-card__price {
       justify-content: flex-end;
       align-items: self-end;
-      margin-top: 20px;
+      margin-top: 0px;
       margin-right: 5px;
     }
 
@@ -111,13 +113,15 @@
     display: flex;
     justify-content: flex-end;
     position: relative;
-    top: 30px;
+    top: 35px;
     left: 15px;
     text-transform: uppercase;
     font-size: $font-paragraph-md;
     @include media-breakpoint-down(xs) {
       top: 0px;
+      left: -10px;
       padding-left: 0px;
+      justify-content: flex-start;
     }
 
     span {
@@ -127,6 +131,10 @@
 
     &__remove {
       padding-right: 5px;
+      cursor: pointer;
+      height: 16px;
+      width: 60px;
+      padding-left: 10px;
     }
     &__wishlist {
       padding-left: 2px;
