@@ -140,8 +140,8 @@ export default {
         });
       }
     },
-    removeProductFromCart(id) {
-      this.removeFromCart(id);
+    removeProductFromCart(productId) {
+      this.removeFromCart({ id: productId });
     },
   },
 };
