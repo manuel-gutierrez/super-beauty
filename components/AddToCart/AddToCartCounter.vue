@@ -25,11 +25,18 @@ export default {
       type: String,
       default: 'add-to-counter-input',
     },
+    currentValue: {
+      type: Number,
+      default: 1,
+    },
   },
   data() {
     return {
       value: 1,
     };
+  },
+  beforeMount() {
+    this.value = this.currentValue;
   },
   methods: {
     increase() {
