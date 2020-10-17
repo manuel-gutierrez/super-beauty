@@ -18,7 +18,6 @@ export const mutations = {
     state.step = 0;
   },
   setActiveStep: (state) => (newStep) => {
-    console.log('entered to function');
     state.activeStep = newStep;
     return state.activeStep;
   },

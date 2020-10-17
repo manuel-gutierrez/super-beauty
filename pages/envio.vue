@@ -10,7 +10,7 @@
     </div>
     <!-- ::MOBILE -->
     <div v-if="totals.total > freeShippingValue" class="d-md-none container">
-      <div class="shipping-page__free-shipping">
+      <div class="shipping-page__free-shipping free-shipping-banner">
         <p>{{ header.bannerTitle }}</p>
       </div>
     </div>
@@ -24,18 +24,35 @@
         <h2 class="col-md-12">{{ header.pageTitle }}</h2>
       </div>
       <!--// PAGE TITLE -->
-      <!-- FORM -->
-      <div class="row section-header shipping-page__form__title">
-        <p>{{ formSection.title }}</p>
-      </div>
 
-      <!-- //END FORM -->
-      <!-- CART SUMMARY -->
-      <!-- //END CART SUMMARY -->
-      <!-- SAVED SHIPPING ADDRESS -->
-      <!-- // SAVED SHIPPING ADDRESS -->
-      <!-- SHIPPING METHODS -->
-      <!-- // END SHIPPING METHODS -->
+      <div class="row shipping-page__content">
+        <!-- FORM SECTION -->
+        <div class="col-md-6 col-12 shipping-page__form">
+          <!-- TITLE -->
+          <p class="col-md-12 col-12 shipping-page__form__title">
+            {{ formSection.title }}
+          </p>
+          <!-- // END  TITLE -->
+          <!-- FORM -->
+          <div class="col-md-12 shipping-page__saved-address__form__inputs">
+            <ShippingForm></ShippingForm>
+          </div>
+          <!-- // END FORM -->
+          <!-- SAVED SHIPPING ADDRESS -->
+          <div class="col-md-12 shipping-page__saved-address__title"></div>
+          <div class="col-md-12 shipping-page__saved-address__list"></div>
+          <!-- // END SAVED SHIPPING ADDRESS -->
+        </div>
+        <!-- //END FORM  SECTION -->
+
+        <!-- CART SUMMARY -->
+        <div class="col-md-6 col-12 shipping-page__cart">cart...</div>
+        <!-- //END CART SUMMARY -->
+
+        <!-- SHIPPING METHODS -->
+        <div class="col-md-6 col-12 shipping-page__shipping-methods"></div>
+        <!-- // END SHIPPING METHODS -->
+      </div>
     </div>
     <div class="section-spacer"></div>
     <div class="d-md-none section-spacer mb-5"></div>

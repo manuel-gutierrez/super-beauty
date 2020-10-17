@@ -1,8 +1,12 @@
 .shipping-page {
-  &__form__title {
-    p {
-      font-weight: bold;
-      text-align: left;
+  &__content {
+    .shipping-page__form {
+      &__title {
+        padding-left: 0px;
+        font-weight: bold;
+        text-align: left;
+        text-transform: capitalize;
+      }
     }
   }
 }
