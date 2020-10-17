@@ -7,7 +7,25 @@ export const state = () => ({
     },
     section_1: {
       title: '1. Dirección de Envío',
-      shippingForm: {},
+      shippingFormPlaceholders: {
+        name: 'Nombres*',
+        lastName: 'Apellidos*',
+        phone: 'Celular*',
+        email: 'Email*',
+        documentIdTypes: [
+          { text: 'Tipo de Documento', value: null },
+          'Cédula de Ciudadanía',
+          'Pasaporte',
+          'Cédula de Extranjería',
+        ],
+        documentId: 'Número',
+        department: 'Departamento',
+        address: 'Dirección*',
+        city: 'Ciudad',
+        country: 'País',
+        postalCode: 'Código Postal*',
+      },
+      title_2: 'Domicilios Guardados',
     },
     section_2: {
       subtotalLabel: 'Subtotal',

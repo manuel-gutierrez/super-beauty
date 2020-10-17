@@ -28,20 +28,9 @@
       <div class="row shipping-page__content">
         <!-- FORM SECTION -->
         <div class="col-md-6 col-12 shipping-page__form">
-          <!-- TITLE -->
-          <p class="col-md-12 col-12 shipping-page__form__title">
-            {{ formSection.title }}
-          </p>
-          <!-- // END  TITLE -->
           <!-- FORM -->
-          <div class="col-md-12 shipping-page__saved-address__form__inputs">
-            <ShippingForm></ShippingForm>
-          </div>
+          <ShippingForm></ShippingForm>
           <!-- // END FORM -->
-          <!-- SAVED SHIPPING ADDRESS -->
-          <div class="col-md-12 shipping-page__saved-address__title"></div>
-          <div class="col-md-12 shipping-page__saved-address__list"></div>
-          <!-- // END SAVED SHIPPING ADDRESS -->
         </div>
         <!-- //END FORM  SECTION -->
 
