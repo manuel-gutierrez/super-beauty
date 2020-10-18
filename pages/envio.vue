@@ -126,9 +126,11 @@
             ></CartCard>
           </div>
           <div class="shipping-page__back-to-cart">
-            <button>
-              {{ cartItems.backToCartButtonLabel }}
-            </button>
+            <nuxt-link to="/carrito">
+              <button>
+                {{ cartItems.backToCartButtonLabel }}
+              </button>
+            </nuxt-link>
           </div>
         </div>
         <!-- //END CART SUMMARY -->
