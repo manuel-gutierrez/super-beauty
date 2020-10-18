@@ -172,7 +172,7 @@ export default {
       return this.content('section_0');
     },
     checkoutStep() {
-      return this.nextStep();
+      return this.setActiveStep(2);
     },
     formSection() {
       return this.content('section_1');
@@ -188,7 +188,7 @@ export default {
     },
   },
   methods: {
-    ...mapMutations('checkoutProgressBar', ['nextStep']),
+    ...mapMutations('checkoutProgressBar', ['setActiveStep']),
   },
 };
 </script>

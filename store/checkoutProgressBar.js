@@ -17,8 +17,8 @@ export const mutations = {
   resetStep(state) {
     state.step = 0;
   },
-  setActiveStep: (state) => (newStep) => {
-    state.activeStep = newStep;
+  setActiveStep: (state, payload) => {
+    state.activeStep = payload;
     return state.activeStep;
   },
 };
