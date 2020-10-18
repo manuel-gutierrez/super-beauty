@@ -2,7 +2,6 @@
   margin-top: $margin-base;
   margin-bottom: $margin-base;
 
-
   .btn {
     border: 2px solid $white;
     border-radius: 2px;
@@ -21,7 +20,6 @@
       letter-spacing: $font-letter-spacing-buttons;
     }
   }
-
 }
 
 .promo {
@@ -39,7 +37,6 @@
   @media (max-width: 414px) {
     min-height: 160px;
   }
-
 
   .caption {
     padding-top: 8%;
@@ -61,7 +58,7 @@
       letter-spacing: $font-letter-spacing-headings;
 
       @include media-breakpoint-down(md) {
-        font-size: $font-size-banner-title-sm*1.5;
+        font-size: $font-size-banner-title-sm * 1.5;
         margin-bottom: -20px;
       }
 
@@ -95,7 +92,6 @@
       }
     }
   }
-
 }
 
 .promo-big {
@@ -135,7 +131,6 @@
       justify-content: flex-end;
       align-self: center;
 
-
       @include media-breakpoint-down(md) {
         letter-spacing: $font-letter-spacing-headings;
         font-size: $font-size-banner-title-lg-alt;
@@ -156,9 +151,7 @@
         font-size: $font-size-banner-title-sm;
       }
     }
-
   }
-
 }
 
 .promo-large {
@@ -189,7 +182,6 @@
   }
 
   .caption {
-
     color: $white;
     text-transform: uppercase;
     font-family: $font-family-base;
@@ -209,7 +201,7 @@
     }
 
     @include media-breakpoint-down(md) {
-      font-size: $font-size-banner-title-sm-alt*1.5;
+      font-size: $font-size-banner-title-sm-alt * 1.5;
       margin-bottom: -5px;
     }
 
@@ -218,12 +210,9 @@
     }
 
     @include media-breakpoint-down(xs) {
-      font-size: $font-size-banner-title-sm-alt*1.1;
+      font-size: $font-size-banner-title-sm-alt * 1.1;
     }
   }
-
-
-
 }
 
 .hero {
@@ -280,7 +269,7 @@
       }
 
       @include media-breakpoint-down(xs) {
-        font-size: $font-size-hero-title-lg*0.7;
+        font-size: $font-size-hero-title-lg * 0.7;
         margin-top: 0px;
         margin-bottom: -5px;
       }
@@ -307,7 +296,6 @@
   @include media-breakpoint-down(sm) {
     background-position: center center;
     margin-bottom: 69px;
-
   }
 
   .caption {
@@ -319,7 +307,6 @@
     height: auto;
     padding-top: 3px;
 
-
     h2 {
       @extend .caption;
       font-size: $font-size-banner-title-lg;
@@ -328,9 +315,26 @@
 
       @include media-breakpoint-down(sm) {
         font-size: $font-size-page-title-sm;
-
       }
     }
+  }
+}
+.free-shipping-banner {
+  background: $tertiary;
+  color: $white;
+  justify-content: center;
+  align-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4.34px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: $font-paragraph-md;
 
+  p {
+    margin-bottom: 0px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: $font-paragraph-xs;
   }
 }

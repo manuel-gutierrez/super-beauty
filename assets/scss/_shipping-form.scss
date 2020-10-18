@@ -1,0 +1,82 @@
+.shipping-form {
+  width: 100%;
+  &__title {
+    padding-left: 0px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: capitalize;
+  }
+  &__title--second {
+    @extend .shipping-form__title;
+    margin-top: 15px;
+  }
+  &__input {
+    padding-right: 2%;
+    padding-left: 0;
+    padding-top: 4%;
+  }
+  &__saved__item {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    border: solid #c1c1c1 1px;
+    border-radius: 5px;
+    height: 90px;
+    width: 505px;
+    margin-bottom: 20px;
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+    @include media-breakpoint-down(xs) {
+      height: 110px;
+      width: 98%;
+      padding-top: 5%;
+    }
+    &__dots {
+      position: absolute;
+      top: 20px;
+      right: 0px;
+      font-size: $font-paragraph-lg;
+      z-index: 1;
+      cursor: pointer;
+    }
+    &__address-details {
+      margin-top: 10px;
+    }
+  }
+  &__shipping-methods {
+    width: 100%;
+
+    &__item {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      &__amount,
+      &__labels {
+        padding-right: 5px;
+      }
+      &__amount {
+        color: $danger;
+        font-size: $font-paragraph;
+        font-family: $font-family-montserrat;
+        font-weight: 600;
+      }
+      &__labels {
+        &__label-1 {
+          font-weight: bold;
+        }
+        &__label-2 {
+          font-size: $font-paragraph-md;
+        }
+      }
+    }
+  }
+  &__button {
+    width: 334px;
+    margin-top: 25px;
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+}
