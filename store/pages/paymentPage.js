@@ -11,7 +11,8 @@ export const state = () => ({
     },
     section_2: {
       title: '2. Valor del envío.',
-      subtitle: 'Verifica nuestra política de envíos aquí.',
+      subtitle: 'Verifica nuestra política de envíos',
+      policyLabel: 'aquí',
       shippingPolicyUrl: 'https://google.com',
     },
     section_3: {

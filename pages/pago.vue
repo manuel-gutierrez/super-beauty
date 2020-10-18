@@ -25,6 +25,50 @@
         <h2 class="col-md-12">{{ header.pageTitle }}</h2>
       </div>
       <!--// PAGE TITLE -->
+      <div class="payment-page__content">
+        <section class="payment-page__shipping">
+          <div class="payment-page__shipping__title">
+            <p>
+              {{ shippingAddress.title }}
+            </p>
+          </div>
+          <div class="payment-page__shipping__address">
+            <div class="shipping__address__name">
+              {{ order.address.name }} {{ order.address.lastName }}
+            </div>
+            <div class="shipping__address__address">
+              {{ order.address.address }}
+            </div>
+            <div class="shipping__address__phone">
+              {{ order.address.phone }}
+            </div>
+            <div class="shipping__address__document-id">
+              {{ order.address.documentId }}
+            </div>
+            <div class="shipping__address__city">{{ order.address.city }}</div>
+            <div class="shipping__address__post-code">
+              {{ order.address.postalCode }}
+            </div>
+          </div>
+          <div class="payment-page__shipping__method">
+            <div class="payment-page__shipping__title">
+              <p>
+                {{ shippingCost.title }}
+              </p>
+            </div>
+            <p class="payment-page__shipping__method__content">
+              {{ shippingCost.subtitle }}
+              <a :href="shippingCost.shippingPolicyUrl">{{
+                shippingCost.policyLabel
+              }}</a>
+            </p>
+            <p class="payment-page__shipping__method__content__shipping-label">
+              {{ order.shippingMethod.label_1 }}
+            </p>
+          </div>
+        </section>
+        <section></section>
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +90,9 @@ export default {
     }),
     ...mapGetters('products', {
       getProducts: 'getProductsById',
+    }),
+    ...mapGetters('order', {
+      order: 'getOrder',
     }),
     // Content
     header() {
