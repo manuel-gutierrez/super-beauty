@@ -25,7 +25,7 @@
       </div>
       <!--// PAGE TITLE -->
 
-      <div class="row shipping-page__content">
+      <div class="shipping-page__content">
         <!-- FORM SECTION -->
         <div class="col-md-6 col-12 shipping-page__form">
           <!-- FORM -->
@@ -35,7 +35,102 @@
         <!-- //END FORM  SECTION -->
 
         <!-- CART SUMMARY -->
-        <div class="col-md-6 col-12 shipping-page__cart">cart...</div>
+        <div class="col-md-6 col-sm-12 shipping-page__cart">
+          <div class="shipping-page__totals">
+            <div class="shipping-page__totals__values">
+              <div class="shipping-page__totals__values__summary">
+                <div class="col-md-12 shipping-page__totals__values__subtotal">
+                  <p>{{ cartTextContent.subtotalLabel }}</p>
+                  <money-format
+                    :value="totals.subtotal"
+                    :locale="'es-co'"
+                    :currency-code="totals.currency"
+                    :subunits-value="false"
+                    :hide-subunits="true"
+                    class=""
+                  ></money-format>
+                </div>
+                <div
+                  v-if="totals.discount > 0"
+                  class="col-md-12 shipping-page__totals__values__discount"
+                >
+                  <p>{{ cartTextContent.discountLabel }}</p>
+                  <money-format
+                    :value="totals.discount"
+                    :locale="'es-co'"
+                    :currency-code="totals.currency"
+                    :subunits-value="false"
+                    :hide-subunits="true"
+                    class=""
+                  ></money-format>
+                </div>
+                <div
+                  v-if="totals.taxes > 0"
+                  class="col-md-12 shipping-page__totals__values__taxes"
+                >
+                  <p>{{ cartTextContent.taxesLabel }}</p>
+                  <money-format
+                    :value="totals.taxes"
+                    :locale="'es-co'"
+                    :currency-code="totals.currency"
+                    :subunits-value="false"
+                    :hide-subunits="true"
+                    class=""
+                  ></money-format>
+                </div>
+                <div
+                  v-if="totals.total < freeShippingValue && totals.total > 0"
+                  class="col-md-12 shipping-page__totals__values__shipping"
+                >
+                  <p>{{ cartTextContent.shippingCostLabel }}</p>
+                  <money-format
+                    :value="totals.shipping"
+                    :locale="'es-co'"
+                    :currency-code="totals.currency"
+                    :subunits-value="false"
+                    :hide-subunits="true"
+                    class=""
+                  ></money-format>
+                </div>
+                <div
+                  v-else
+                  class="col-md-12 shipping-page__totals__values__shipping"
+                >
+                  <p>{{ cartTextContent.shippingCostLabel }}</p>
+                  <p>{{ cartTextContent.freeShippingLabel }}</p>
+                </div>
+              </div>
+              <div>
+                <div class="col-md-12 shipping-page__totals__values__total">
+                  <p>{{ cartTextContent.totalLabel }}</p>
+                  <money-format
+                    :value="totals.total"
+                    :locale="'es-co'"
+                    :currency-code="totals.currency"
+                    :subunits-value="false"
+                    :hide-subunits="true"
+                    class=""
+                  ></money-format>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shipping-page__items-counter">
+            <p>{{ cartTextContent.cartCounter }} ({{ items.length }})</p>
+          </div>
+          <div class="shipping-page__cart-items">
+            <CartCard
+              v-for="product in productsInCart"
+              :key="product.id"
+              :product="product"
+            ></CartCard>
+          </div>
+          <div class="shipping-page__back-to-cart">
+            <button>
+              {{ cartItems.backToCartButtonLabel }}
+            </button>
+          </div>
+        </div>
         <!-- //END CART SUMMARY -->
 
         <!-- SHIPPING METHODS -->
@@ -53,7 +148,10 @@ import { mapGetters, mapMutations } from 'vuex';
 export default {
   computed: {
     ...mapGetters('pages/shippingPage', {
-      getSection: 'getSection',
+      content: 'getShippingContent',
+    }),
+    ...mapGetters('pages/cartPage', {
+      getCartSection: 'getSection',
     }),
     ...mapGetters('cart', {
       freeShippingValue: 'getFreeShippingValue',
@@ -64,27 +162,27 @@ export default {
       getProducts: 'getProductsById',
       recommendedProducts: 'getRecomendedProducts',
     }),
+    ...mapGetters('pages/cartPage', {
+      getSection: 'getSection',
+    }),
     // Content
     header() {
-      return this.getSection('section_0');
+      return this.content('section_0');
     },
     checkoutStep() {
       return this.nextStep();
     },
     formSection() {
-      return this.getSection('section_1');
+      return this.content('section_1');
     },
-    recommendedSection() {
-      return this.getSection('section_2');
-    },
-    banner() {
-      return this.getSection('section_3').banner;
-    },
-    additionalInfo() {
-      return this.getSection('section_4');
+    cartItems() {
+      return this.content('section_2');
     },
     productsInCart() {
       return this.getProducts(this.items);
+    },
+    cartTextContent() {
+      return this.getCartSection('section_1');
     },
   },
   methods: {

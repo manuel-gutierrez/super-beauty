@@ -229,19 +229,19 @@ export default {
   },
   computed: {
     ...mapGetters('pages/shippingPage', {
-      section: 'getSection',
+      content: 'getShippingContent',
     }),
     ...mapGetters('shippingAddress', {
       storedAddress: 'getSavedItems',
     }),
     formSection() {
-      return this.section('section_1');
+      return this.content('section_1');
     },
     formPlaceholders() {
-      return this.section('section_1').shippingFormPlaceholders;
+      return this.content('section_1').shippingFormPlaceholders;
     },
     shippingMethods() {
-      return this.section('section_1').shippingMethods;
+      return this.content('section_1').shippingMethods;
     },
   },
   methods: {

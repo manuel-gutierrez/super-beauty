@@ -58,12 +58,6 @@ export const state = () => ({
       ],
     },
     section_2: {
-      subtotalLabel: 'Subtotal',
-      discountLabel: 'Descuento',
-      taxesLabel: 'IVA',
-      shippingCostLabel: 'Costo de envío',
-      freeShippingLabel: 'Gratis',
-      totalLabel: 'Total',
       confirmOrderButtonLabel: 'confirmar orden',
       productsInCartLabel: 'PRODUCTOS EN EL CARRITO',
       backToCartButtonLabel: 'VOLVER AL CARRITO',
@@ -76,7 +70,7 @@ export const actions = {
 };
 
 export const getters = {
-  getSection: (state) => (sectionName) => {
+  getShippingContent: (state) => (sectionName) => {
     return state.sections[sectionName];
   },
 };
