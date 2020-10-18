@@ -26,6 +26,36 @@ export const state = () => ({
         postalCode: 'Código Postal*',
       },
       title_2: 'Domicilios Guardados',
+      buttonLabel: 'Guardar y continuar',
+
+      title_3: '2. Valor del envío.',
+      subtitle: 'Verifica nuestra política de envíos aquí.',
+      shippingPolicyUrl: 'https://google.com',
+      shippingMethods: [
+        {
+          value: {
+            amount: 30000,
+            currency: 'COP',
+          },
+          label_1: 'Envío expréss',
+          label_2: 'recíbelo hoy - exclusivo Bogotá**',
+        },
+        {
+          value: {
+            amount: 20000,
+            currency: 'COP',
+          },
+          label_1: 'Envío estándar',
+          label_2: 'recíbelo hoy - exclusivo Bogotá**',
+        },
+        {
+          value: {
+            amount: 0,
+            currency: 'COP',
+          },
+          label_1: 'Envío gratis',
+        },
+      ],
     },
     section_2: {
       subtotalLabel: 'Subtotal',
@@ -37,32 +67,6 @@ export const state = () => ({
       confirmOrderButtonLabel: 'confirmar orden',
       productsInCartLabel: 'PRODUCTOS EN EL CARRITO',
       backToCartButtonLabel: 'VOLVER AL CARRITO',
-    },
-    section_3: {
-      title: 'Domicilios guardados',
-      buttonLabel: 'Guardar y continuar',
-    },
-    section_4: {
-      title: '2. Valor del envío.',
-      subtitle: 'Verifica nuestra política de envíos aquí.',
-      shippingPolicyUrl: 'https://google.com',
-      shippingMethods: [
-        {
-          value: 30000,
-          label_1: 'Envío expréss',
-          label_2: 'recíbelo hoy - exclusivo Bogotá**',
-        },
-        {
-          value: 20000,
-          label_1: 'Envío estándar',
-          label_2: 'recíbelo hoy - exclusivo Bogotá**',
-        },
-        {
-          value: 0,
-          label_1: 'Envío gratis',
-        },
-      ],
-      ButtonLabel: 'Guardar y continuar',
     },
   },
 });

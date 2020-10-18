@@ -1,5 +1,5 @@
 export const state = () => ({
-  storedAddress: [
+  savedItems: [
     {
       id: '53f96189-6f21-4189-96ce-01f996a82b14',
       address: 'Carrera 50a #122-56, Apartamento 201, Suba',
@@ -34,13 +34,22 @@ export const state = () => ({
     },
   ],
 });
-export const mutations = {};
+export const mutations = {
+  removeSavedItem(state, payload) {
+    state.savedItems = state.savedItems.filter((item) => {
+      console.log('IDDDDDD', payload);
+      return item.id !== payload.id;
+    });
+  },
+};
 export const actions = {
-  // For future use.
+  removeItem({ commit, state }, payload) {
+    commit('removeSavedItem', payload);
+  },
 };
 
 export const getters = {
-  getAddress: (state) => (sectionName) => {
-    return state.sections[sectionName];
+  getSavedItems: (state) => {
+    return state.savedItems;
   },
 };
