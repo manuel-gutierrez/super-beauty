@@ -8,6 +8,12 @@ export const state = () => ({
     SUSTAINABLE: 'sustainable',
     NEW: 'new',
   },
+  paymentMethods: {
+    CREDIT_CARD: 'credit_card',
+    DEBIT_CARD: 'debit_card',
+    EFECTY: 'efecty',
+    BALOTO: 'baloto',
+  },
 });
 export const mutations = {};
 

@@ -168,7 +168,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   computed: {
     ...mapGetters('pages/cartPage', {
@@ -202,6 +202,12 @@ export default {
     productsInCart() {
       return this.getProducts(this.items);
     },
+  },
+  beforeMount() {
+    this.setActiveStep(1);
+  },
+  methods: {
+    ...mapMutations('checkoutProgressBar', ['setActiveStep']),
   },
 };
 </script>

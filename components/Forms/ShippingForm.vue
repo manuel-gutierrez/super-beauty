@@ -244,6 +244,7 @@ export default {
       return this.content('section_1').shippingMethods;
     },
   },
+
   methods: {
     ...mapActions('shippingAddress', ['removeItem']),
     removeSavedAddress(itemId) {

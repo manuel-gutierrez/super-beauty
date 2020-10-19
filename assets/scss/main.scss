@@ -65,9 +65,11 @@
 
 //##Forms
 @import './_shipping-form.scss';
+@import './_payment-form.scss';
 
 // Pages
 @import './product-page.scss';
 @import './product-detail-page.scss';
 @import './cart-page.scss';
 @import './shipping-page.scss';
+@import './payment-page.scss';

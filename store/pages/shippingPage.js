@@ -33,6 +33,7 @@ export const state = () => ({
       shippingPolicyUrl: 'https://google.com',
       shippingMethods: [
         {
+          id: '8f079bbc-a8bc-49da-aba1-5808a139b523',
           value: {
             amount: 30000,
             currency: 'COP',
@@ -41,6 +42,7 @@ export const state = () => ({
           label_2: 'recíbelo hoy - exclusivo Bogotá**',
         },
         {
+          id: '8f079bbc-12bc-49da-aba1-5808a139b523',
           value: {
             amount: 20000,
             currency: 'COP',
@@ -49,6 +51,7 @@ export const state = () => ({
           label_2: 'recíbelo hoy - exclusivo Bogotá**',
         },
         {
+          id: '8f079bbc-12bc-49da-aba1-5808a139b5243',
           value: {
             amount: 0,
             currency: 'COP',

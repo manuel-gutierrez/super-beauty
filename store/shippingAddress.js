@@ -1,4 +1,20 @@
 export const state = () => ({
+  currentAddress: {
+    id: '53f96189-6f21-4189-96ce-01f996a82b14',
+    address: 'Carrera 50a #122-56, Apartamento 201, Suba',
+    department: 'Bogota',
+    city: 'Bogotá D.C.',
+    country: 'CO',
+    fullName: 'Andrea Avendano',
+    name: 'Andrea',
+    lastName: 'Avendano',
+    phone: '3504754110 ',
+    email: 'andrea@superbeauty.com',
+    documentIdType: 'Cédula',
+    documentId: '1032456231',
+    postalCode: '1111121',
+    default: true,
+  },
   savedItems: [
     {
       id: '53f96189-6f21-4189-96ce-01f996a82b14',
@@ -37,7 +53,6 @@ export const state = () => ({
 export const mutations = {
   removeSavedItem(state, payload) {
     state.savedItems = state.savedItems.filter((item) => {
-      console.log('IDDDDDD', payload);
       return item.id !== payload.id;
     });
   },
@@ -51,5 +66,8 @@ export const actions = {
 export const getters = {
   getSavedItems: (state) => {
     return state.savedItems;
+  },
+  getCurrentAddress: (state) => {
+    return state.currentAddress;
   },
 };
