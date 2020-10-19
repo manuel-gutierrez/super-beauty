@@ -4,10 +4,10 @@ export const state = () => ({
       bannerTitle:
         'Felicitaciones ¡Has calificado para obtener el envío gratis!',
       pageTitle: 'FINALIZAR PEDIDO',
-      editLabel: 'Editar',
     },
     section_1: {
       title: '1. Dirección de Envío',
+      editLabel: 'Editar',
     },
     section_2: {
       title: '2. Valor del envío.',
@@ -52,6 +52,17 @@ export const state = () => ({
     section_4: {
       title: '4. Revisa tu pedido y confirma tu orden.',
       content: 'Revisa por favor tu orden antes de confirmarla',
+    },
+    section_5: {
+      credits: {
+        title: 'Pagar con crédito',
+        value: {
+          amount: -10000,
+          currency: 'COP',
+        },
+      },
+      finalAmountLabel: 'TOTAL A PAGAR',
+      confirmOrderButtonLabel: 'confirmar orden',
       backToCartButtonLabel: 'Volver al carrito',
     },
   },

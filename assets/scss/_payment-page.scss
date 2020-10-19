@@ -1,24 +1,32 @@
 .payment-page {
+  padding-bottom: 65px;
   .title {
     padding-left: 0px;
     font-weight: bold;
     text-align: left;
+    font-size: $font-size-h3;
+  }
+  &__heading {
+    margin-bottom: 45px;
   }
   &__content {
     width: 100%;
     flex-wrap: wrap;
     display: flex;
   }
+
   &__shipping {
     &__title {
       @extend .title;
     }
     &__address {
+      position: relative;
       line-height: 35px;
       padding-bottom: 25px;
       border-bottom: solid $light-gray 1px;
     }
     &__method {
+      position: relative;
       margin-top: 25px;
       padding-bottom: 25px;
       border-bottom: solid $light-gray 1px;
@@ -33,10 +41,33 @@
       }
     }
   }
+  &__edit-shipping {
+    color: $secondary;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    @include media-breakpoint-down(xs) {
+      right: 25px;
+    }
+  }
+
   &__form {
     margin-top: 25px;
     &__title {
       @extend .title;
+    }
+  }
+  &__review {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    &__title {
+      @extend .title;
+    }
+    &__content {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-weight: bold;
     }
   }
   &__cart {
@@ -52,6 +83,7 @@
   &__totals {
     line-height: 40px;
     padding: 4%;
+    padding-bottom: 2%;
     @include media-breakpoint-down(xs) {
       margin-top: 15px;
       margin-right: 15px;
@@ -87,8 +119,63 @@
       &__total {
         text-transform: uppercase;
         margin-top: 15px;
+        font-weight: bold;
         .money_format {
           font-weight: bold;
+        }
+      }
+      &__credit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 92%;
+        padding: 2%;
+        margin: 4%;
+        margin-top: 2%;
+        border: solid $light-gray 1px;
+        border-radius: 5px;
+        &__value {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          align-items: center;
+          padding-right: 0px;
+          &__amount {
+            padding-right: 2%;
+          }
+          .form-inline {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+    &__final-amount {
+      padding: 4%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: $font-paragraph-lg;
+      font-weight: bold;
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-base;
+      }
+      .money_format {
+        font-weight: bold;
+      }
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 45px;
+      button {
+        width: 334px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        @include media-breakpoint-down(xs) {
+          width: 100%;
         }
       }
     }

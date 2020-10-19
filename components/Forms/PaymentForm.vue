@@ -146,7 +146,7 @@
           :options="paymentMethodOptions"
           :value="paymentMethods.BALOTO"
         >
-          <p class="payment-form__baloto__title">
+          <p class="payment-form__efecty__title">
             {{ formContent.efecty.title }}
           </p>
         </b-form-radio>
