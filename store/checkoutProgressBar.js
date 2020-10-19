@@ -17,6 +17,10 @@ export const mutations = {
   resetStep(state) {
     state.step = 0;
   },
+  setActiveStep: (state, payload) => {
+    state.activeStep = payload;
+    return state.activeStep;
+  },
 };
 export const actions = {
   // For future use.

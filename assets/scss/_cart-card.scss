@@ -55,6 +55,8 @@
     }
   }
   &__counter {
+    width: 100%;
+    z-index: 1;
     .add-to-cart-counter {
       font-size: $font-paragraph;
     }

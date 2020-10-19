@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     active(currentStep) {
-      if (this.activeStep === currentStep) {
+      if (this.activeStep >= currentStep) {
         return '--active';
       } else return '';
     },

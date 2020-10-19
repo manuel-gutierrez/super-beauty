@@ -4,7 +4,7 @@
     <!-- ::DESKTOP -->
     <div
       v-if="totals.total > freeShippingValue"
-      class="d-none d-md-flex container-fluid cart-page__free-shipping"
+      class="d-none d-md-flex container-fluid free-shipping-banner"
     >
       <p>{{ freeShipping.bannerTitle }}</p>
     </div>
@@ -168,7 +168,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   computed: {
     ...mapGetters('pages/cartPage', {
@@ -202,6 +202,12 @@ export default {
     productsInCart() {
       return this.getProducts(this.items);
     },
+  },
+  beforeMount() {
+    this.setActiveStep(1);
+  },
+  methods: {
+    ...mapMutations('checkoutProgressBar', ['setActiveStep']),
   },
 };
 </script>
