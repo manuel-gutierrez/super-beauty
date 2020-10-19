@@ -15,8 +15,8 @@
         class="d-flex justify-content-center align-items-center header-icons"
       >
         <Profile />
-        <a href="/favoritos"><WishlistCart /></a>
-        <a href="/checkout"> <Cart /></a>
+        <nuxt-link to="/favoritos"><WishlistCart /></nuxt-link>
+        <nuxt-link to="/carrito" prefetch> <Cart /></nuxt-link>
       </div>
     </div>
   </div>
