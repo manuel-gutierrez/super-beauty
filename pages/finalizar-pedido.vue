@@ -29,7 +29,7 @@
         <div class="col-md-6 col-sm-12">
           <section class="payment-page__shipping">
             <div class="payment-page__edit-shipping">
-              <nuxt-link to="/envio">
+              <nuxt-link to="/datos-de-envio">
                 {{ shippingAddress.editLabel }}
               </nuxt-link>
             </div>
@@ -60,7 +60,7 @@
             </div>
             <div class="payment-page__shipping__method">
               <div class="payment-page__edit-shipping">
-                <nuxt-link to="/envio">
+                <nuxt-link to="/datos-de-envio">
                   {{ shippingAddress.editLabel }}
                 </nuxt-link>
               </div>
