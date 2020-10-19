@@ -1,0 +1,71 @@
+.payment-form {
+  width: 100%;
+  margin-top: 15px;
+  .form-title {
+    padding-left: 0px;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 200;
+    font-size: $font-size-base;
+    width: 100%;
+  }
+  p {
+    @extend .form-title;
+  }
+  &__credit-card {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__inputs {
+      width: 100%;
+
+      &__group {
+        font-weight: bold;
+        .col-form-label {
+          padding-bottom: 0px;
+        }
+      }
+      &__group,
+      .bv-no-focus-ring {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      &__input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      &__radio__label {
+        font-size: $font-paragraph-sm;
+        text-transform: unset;
+      }
+    }
+  }
+  &__address {
+    margin-top: 15px;
+    padding-bottom: 25px;
+    border-bottom: solid $light-gray 1px;
+    &__title {
+      color: $light-gray;
+    }
+    &__item {
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &__item__label {
+      font-weight: bold !important;
+    }
+  }
+  &__debit-card,
+  &__efecty,
+  &__baloto {
+    margin-top: 15px;
+    border-bottom: solid $light-gray 1px;
+  }
+}

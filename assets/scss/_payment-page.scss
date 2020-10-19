@@ -1,4 +1,9 @@
 .payment-page {
+  .title {
+    padding-left: 0px;
+    font-weight: bold;
+    text-align: left;
+  }
   &__content {
     width: 100%;
     flex-wrap: wrap;
@@ -6,9 +11,7 @@
   }
   &__shipping {
     &__title {
-      padding-left: 0px;
-      font-weight: bold;
-      text-align: left;
+      @extend .title;
     }
     &__address {
       line-height: 35px;
@@ -29,6 +32,11 @@
         }
       }
     }
-
+  }
+  &__form {
+    margin-top: 25px;
+    &__title {
+      @extend .title;
+    }
   }
 }

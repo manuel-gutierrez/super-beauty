@@ -17,6 +17,36 @@ export const state = () => ({
     },
     section_3: {
       title: '3. Métodos de pago.',
+      form: {
+        creditCard: {
+          title: 'PAGAR CON TARJETA DE CRÉDITO',
+          placeholders: {
+            pan: 'Numero de tarjeta*',
+            name: 'Nombre del titular*',
+            expDateTitle: 'Fecha de vencimiento',
+            expDateMonth: 'Mes',
+            expDateYear: 'Año',
+            cvv: 'CVV',
+            saveCard: 'Guardar la información de esta tarjeta',
+          },
+        },
+        address: {
+          title: 'Dirección de facturación',
+          placeholders: {
+            option_1: 'Usar mi dirección de entrega',
+            option_2: 'Usar una dirección diferente',
+          },
+        },
+        debitCard: {
+          title: 'PAGAR CON TARJETA DÉBITO',
+        },
+        efecty: {
+          title: 'PAGAR CON EFECTY',
+        },
+        baloto: {
+          title: 'PAGAR VÍA BALOTO',
+        },
+      },
     },
     section_4: {
       title: '4. Revisa tu pedido y confirma tu orden.',
