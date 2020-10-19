@@ -52,6 +52,7 @@ export const state = () => ({
     section_4: {
       title: '4. Revisa tu pedido y confirma tu orden.',
       content: 'Revisa por favor tu orden antes de confirmarla',
+      backToCartButtonLabel: 'Volver al carrito',
     },
   },
 });

@@ -81,7 +81,7 @@
       <p class="payment-form__address__title">
         {{ formContent.address.title }}
       </p>
-      <b-form inline @submit="onSubmit" @reset="onReset">
+      <b-form @submit="onSubmit" @reset="onReset">
         <b-form-radio
           v-if="currentAddress"
           v-model="invoiceAddress"
@@ -216,6 +216,7 @@ export default {
       }
     );
     this.paymentMethodSelected = this.paymentMethods.CREDIT_CARD;
+    this.invoiceAddress = this.currentAddress;
   },
   methods: {
     onSubmit(evt) {
