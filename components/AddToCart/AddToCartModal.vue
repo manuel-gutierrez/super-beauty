@@ -61,16 +61,16 @@
         <div
           class="row add-to-cart__modal__product-detail__checkout-buttons__buttons"
         >
-          <button>
-            <nuxt-link to="/datos-de-envio">{{
-              modalData.checkoutButtonLabel
-            }}</nuxt-link>
-          </button>
-          <button class="button-outline">
-            <nuxt-link to="/">
+          <nuxt-link to="/datos-de-envio">
+            <button>
+              {{ modalData.checkoutButtonLabel }}
+            </button>
+          </nuxt-link>
+          <nuxt-link to="/">
+            <button class="button-outline">
               {{ modalData.continueShoppingButton }}
-            </nuxt-link>
-          </button>
+            </button>
+          </nuxt-link>
         </div>
       </div>
     </section>

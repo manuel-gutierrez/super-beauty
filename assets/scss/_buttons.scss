@@ -10,7 +10,7 @@ button {
   font-size: $font-size-button;
 
   @include media-breakpoint-up(sm) {
-    margin-top: ($spacer * .25);
+    margin-top: ($spacer * 0.25);
   }
 }
 
