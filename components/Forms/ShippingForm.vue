@@ -252,9 +252,11 @@ export default {
     },
     onSubmit(evt) {
       evt.preventDefault();
-      const data =
-        JSON.stringify(this.form) + JSON.stringify(this.savedAddressSelect);
-      alert(data);
+      // const data =
+      //   JSON.stringify(this.form) + JSON.stringify(this.savedAddressSelect);
+      // alert(data);
+
+      this.$router.push({ path: 'finalizar-pedido' });
     },
     onReset(evt) {
       evt.preventDefault();

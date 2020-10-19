@@ -317,8 +317,8 @@ export default {
     ...mapMutations('checkoutProgressBar', ['setActiveStep']),
     onSubmit(evt) {
       evt.preventDefault();
-      const data = 'SAVE ORDER IN BACKEND';
-      alert(data);
+      // const data = 'SAVE ORDER IN BACKEND';
+      // alert(data);
     },
     onReset(evt) {
       evt.preventDefault();

@@ -125,8 +125,12 @@
             </div>
           </div>
           <div class="cart-page__totals__buttons">
-            <button>checkout</button>
-            <button>continuar comprando</button>
+            <nuxt-link to="/datos-de-envio">
+              <button>checkout</button>
+            </nuxt-link>
+            <nuxt-link to="/">
+              <button>continuar comprando</button>
+            </nuxt-link>
           </div>
         </div>
         <!-- Recommended-->
@@ -203,7 +207,7 @@ export default {
       return this.getProducts(this.items);
     },
   },
-  beforeMount() {
+  mounted() {
     this.setActiveStep(1);
   },
   methods: {

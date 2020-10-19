@@ -187,7 +187,7 @@ export default {
       return this.getCartSection('section_1');
     },
   },
-  beforeMount() {
+  mounted() {
     this.setActiveStep(2);
   },
   methods: {
