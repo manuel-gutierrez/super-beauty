@@ -286,9 +286,7 @@ export default {
     header() {
       return this.content('section_0');
     },
-    checkoutStep() {
-      return this.setActiveStep(3);
-    },
+
     shippingAddress() {
       return this.content('section_1');
     },
@@ -313,6 +311,7 @@ export default {
   },
   beforeMount() {
     this.credits = this.cartSummary.credits.value.amount;
+    this.setActiveStep(3);
   },
   methods: {
     ...mapMutations('checkoutProgressBar', ['setActiveStep']),

@@ -9,7 +9,7 @@
           :value="paymentMethods.CREDIT_CARD"
         >
           <p class="payment-form__credit-card__title">
-            {{ this.formContent.creditCard.title }}
+            {{ formContent.creditCard.title }}
           </p>
         </b-form-radio>
       </b-form>

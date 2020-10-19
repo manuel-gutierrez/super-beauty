@@ -187,6 +187,9 @@ export default {
       return this.getCartSection('section_1');
     },
   },
+  beforeMount() {
+    this.setActiveStep(2);
+  },
   methods: {
     ...mapMutations('checkoutProgressBar', ['setActiveStep']),
   },
