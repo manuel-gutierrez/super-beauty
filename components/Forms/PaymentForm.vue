@@ -152,11 +152,16 @@
         </b-form-radio>
       </b-form>
     </section>
+    <b-form @submit="onSubmit" @reset="onReset">
+      <b-button type="submit" variant="primary" class="payment-form__button"
+        >{{ formContent.buttonLabel }}
+      </b-button>
+    </b-form>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {
@@ -171,6 +176,7 @@ export default {
       paymentMethodSelected: '',
       paymentMethodOptions: [],
       invoiceAddress: '',
+      show: true,
     };
   },
   computed: {
@@ -185,9 +191,6 @@ export default {
     }),
     formContent() {
       return this.content('section_3').form;
-    },
-    shippingMethods() {
-      return this.content('section_1').shippingMethods;
     },
     paymentMethods() {
       return this.enumItem('paymentMethods');
@@ -215,23 +218,18 @@ export default {
     this.paymentMethodSelected = this.paymentMethods.CREDIT_CARD;
   },
   methods: {
-    ...mapActions('shippingAddress', ['removeItem']),
-    removeSavedAddress(itemId) {
-      this.removeItem({ id: itemId });
-    },
     onSubmit(evt) {
       evt.preventDefault();
       const data =
-        JSON.stringify(this.form) + JSON.stringify(this.savedAddressSelect);
+        JSON.stringify(this.creditCardForm) +
+        JSON.stringify(this.invoiceAddress) +
+        JSON.stringify(this.paymentMethodSelected);
       alert(data);
     },
     onReset(evt) {
       evt.preventDefault();
-      // Reset our form values
-      this.form.email = '';
-      this.form.name = '';
-      this.form.food = null;
-      this.form.checked = [];
+      // Reset  values
+
       // Trick to reset/clear native browser form validation state
       this.show = false;
       this.$nextTick(() => {

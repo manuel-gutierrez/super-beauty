@@ -46,6 +46,7 @@ export const state = () => ({
         baloto: {
           title: 'PAGAR VÍA BALOTO',
         },
+        buttonLabel: 'Guardar y continuar',
       },
     },
     section_4: {
