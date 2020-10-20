@@ -167,14 +167,5 @@ header {
         text-decoration: underline !important;
       }
     }
-    &__sub-menu {
-      background: $white;
-      height: 313px;
-      position: absolute;
-      left: 10px;
-      top: 20px;
-      z-index: 1;
-      display: none;
-    }
   }
 }

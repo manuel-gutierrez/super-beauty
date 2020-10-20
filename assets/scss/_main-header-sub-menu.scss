@@ -1,0 +1,49 @@
+.header-section-desktop-nav__sub-menu {
+  background: $white;
+  min-height: 313px;
+  min-width: 250px;
+  height: fit-content;
+  width: max-content;
+  position: absolute;
+  left: -38px;
+  top: 20px;
+  z-index: 1;
+  display: none;
+  justify-content: flex-start;
+  padding-right: 20%;
+
+  &__subCategory {
+    padding-left: 2%;
+    margin: 2%;
+    &__title {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      a {
+        color: $secondary;
+        font-size: $font-size-nav-bar-subMenu-title;
+        font-family: $font-family-alt;
+        font-weight: bold;
+        &:hover {
+          color: $secondary !important;
+          text-decoration: none;
+        }
+      }
+    }
+    &__items {
+      ul {
+        padding-left: 0;
+        list-style: none;
+        a {
+          margin-top: 2%;
+          margin-bottom: 2%;
+          li {
+            font-weight: 200;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

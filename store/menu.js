@@ -3,6 +3,7 @@ export const state = () => ({
     { text: 'Nuevo', url: '/nuevo', subMenu: false },
     {
       text: 'Maquillaje',
+      categoryId: 1,
       url: '/productos/maquillaje',
       subMenu: true,
       show: false,
@@ -11,6 +12,7 @@ export const state = () => ({
     {
       text: 'Cuidado de la piel',
       url: '/productos/cuidado-de-la-piel',
+      categoryId: 2,
       subMenu: true,
       show: false,
       category: 'skin',
@@ -18,6 +20,7 @@ export const state = () => ({
     {
       text: 'Fragancias',
       url: '/productos/fragancias',
+      categoryId: 3,
       subMenu: true,
       show: false,
       category: 'fragrance',
@@ -25,6 +28,7 @@ export const state = () => ({
     {
       text: 'Herramientas',
       url: '/productos/herramientas',
+      categoryId: 5,
       subMenu: true,
       show: false,
       category: 'fragrance',
