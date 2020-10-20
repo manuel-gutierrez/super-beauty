@@ -148,13 +148,23 @@ header {
   }
   & .header-section-desktop-nav {
     text-transform: uppercase;
-    .navbar-expand .navbar-nav .nav-link {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__item {
+      position: relative;
       padding: 0;
       font-size: $font-size-navbar; // 14px
       font-weight: bold;
       letter-spacing: $font-letter-spacing-nav;
       @include media-breakpoint-up(lg) {
         font-size: $font-size-navbar-lg;
+      }
+      a:hover {
+        color: $black;
+        text-decoration: underline !important;
       }
     }
   }
