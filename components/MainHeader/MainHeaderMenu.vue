@@ -1,48 +1,45 @@
 <template>
   <div class="container header-section-desktop-nav">
-    <b-navbar class="p-0">
-      <b-navbar-nav
-        class="navbar-desktop-wrapper w-100 justify-content-between"
+    <div class="header-section-desktop-nav__wrapper">
+      <div
+        v-for="(item, idx) in menuItems"
+        :key="item.text"
+        class="header-section-desktop-nav__item"
+        @mouseover="showSubMenu(idx)"
+        @mouseleave="hideSubMenu(idx)"
       >
-        <b-nav-item href="#">Nuevo</b-nav-item>
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje"
-            >Maquillaje</nuxt-link
-          ></b-nav-item
-        >
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje"
-            >Cuidado de la piel</nuxt-link
-          ></b-nav-item
-        >
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje">Capilar</nuxt-link></b-nav-item
-        >
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje"
-            >Fragancias</nuxt-link
-          ></b-nav-item
-        >
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje"
-            >Herramientas</nuxt-link
-          ></b-nav-item
-        >
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje"
-            >Comunidad</nuxt-link
-          ></b-nav-item
-        >
-        <b-nav-item>
-          <nuxt-link to="/productos/maquillaje">Marcas</nuxt-link></b-nav-item
-        >
-      </b-navbar-nav>
-    </b-navbar>
+        <nuxt-link :to="item.url">{{ item.text }} </nuxt-link>
+        <MainHeaderSubMenu v-if="item.subMenu" ref="subMenu" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from 'vuex';
+export default {
+  computed: {
+    ...mapGetters('menu', { menuItems: 'getMenu' }),
+  },
+  methods: {
+    showSubMenu(index) {
+      if (this.$refs.subMenu[index - 1]) {
+        const itemInMenu = this.$refs.subMenu[index - 1].$el.style;
+        if (itemInMenu.display === '') {
+          itemInMenu.display = 'unset';
+        }
+      }
+    },
+    hideSubMenu(index) {
+      if (this.$refs.subMenu[index - 1]) {
+        const itemInMenu = this.$refs.subMenu[index - 1].$el.style;
+        if (itemInMenu.display === 'unset') {
+          itemInMenu.display = '';
+        }
+      }
+    },
+  },
+};
 </script>
 
 <style></style>
