@@ -1,0 +1,32 @@
+.sidebar-menu {
+  &__header {
+    border: solid purple 1px;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 7%;
+    &__logo {
+      height: 29px;
+      width: 29px;
+    }
+    &__close {
+      background-color: $secondary;
+      color: $white;
+      font-weight: normal;
+      width: 16px;
+      height: 16px;
+      font-size: $font-size-icons-xs;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__icon {
+        text-align: center;
+        font-weight: 100;
+        padding-bottom: 2px;
+        font-family: $font-family-sans-serif;
+        font-style: normal;
+      }
+    }
+  }
+}
