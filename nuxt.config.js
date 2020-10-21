@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.npm_package_name || 'Super Beauty - Tienda',
     meta: [
       {
         charset: 'utf-8',

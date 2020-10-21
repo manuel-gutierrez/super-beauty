@@ -250,7 +250,7 @@
     }
     .product-detail-page__ratings__stars {
       font-size: $font-size-icons;
-      margin-top: 3%;
+      margin-top: 8%;
 
       .product-rating {
         padding-left: 5%;
@@ -282,6 +282,7 @@
           margin-bottom: 15px;
         }
         p {
+          font-family: $font-family-alt;
           font-size: $font-size-banner-title-lg;
           color: $secondary;
           font-weight: bold;
@@ -293,8 +294,12 @@
         }
 
         .product-detail-page__ratings__percentage-label {
-          font-size: $font-paragraph-lg;
+          font-family: $font-family-montserrat;
+          font-size: $font-paragraph;
+          font-weight: 100;
+          text-transform: uppercase;
           color: $light-gray;
+
           @include media-breakpoint-down(xs) {
             font-size: $font-paragraph-sm;
             font-weight: 100;
