@@ -4,6 +4,7 @@
       class="container header-icons d-flex align-items-center justify-content-center"
     >
       <font-awesome-icon
+        v-b-toggle="'sidebar-menu'"
         :icon="['fas', 'bars']"
         class="d-sm-none mr-1 mobile-hamburger"
       />
