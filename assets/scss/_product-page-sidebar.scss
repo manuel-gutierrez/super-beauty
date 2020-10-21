@@ -15,7 +15,7 @@
   }
 
   h3 {
-    color: $primary;
+    color: $secondary;
     font-size: $font-size-sidebar-heading-lg;
   }
 
@@ -46,7 +46,6 @@
   /* width */
   &::-webkit-scrollbar {
     width: 8px;
-
   }
 
   /* Track */
@@ -62,8 +61,6 @@
     background: $white;
     border-radius: 5px;
     border: solid #e2e2e2 1px;
-
-
   }
 
   /* Handle on hover */
@@ -77,9 +74,6 @@
     width: 100%;
   }
 
-
-
-
   .custom-control-label {
     width: 80%;
 
@@ -92,15 +86,12 @@
     &::after {
       left: 100%;
     }
-
   }
 
   .custom-control-input {
     position: absolute;
     left: 70%;
   }
-
-
 }
 
 .show-side-bar {
@@ -108,8 +99,6 @@
   -webkit-animation: fade-in-left 0.9s forwards;
   animation: fade-in-left 0.9s forwards;
 }
-
-
 
 .product-page__sidebar-mobile {
   position: fixed;
@@ -123,8 +112,6 @@
   z-index: 10;
   box-shadow: 0px 0px 0 100vw rgba(29, 29, 29, 0.50196);
   background: $white;
-
-
 
   .product-page__sidebar-mobile__header {
     padding-right: 2px;
@@ -156,7 +143,6 @@
   }
 
   .product-page__sidebar__section {
-
     &:first-child {
       border-top: none;
     }
