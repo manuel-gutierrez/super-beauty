@@ -1,6 +1,8 @@
 .sidebar-menu {
+  .b-sidebar-body {
+    background: $white;
+  }
   &__header {
-    border: solid purple 1px;
     padding: 2%;
     display: flex;
     justify-content: space-between;
@@ -27,6 +29,102 @@
         font-family: $font-family-sans-serif;
         font-style: normal;
       }
+    }
+  }
+  &__accordion {
+    margin-top: 25%;
+    .card {
+      border: none;
+      .card-header {
+        background-color: white;
+      }
+    }
+
+    &__title {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 0px;
+      text-transform: uppercase;
+      font-size: $font-size-h2;
+      font-family: $font-family-alt;
+      font-weight: bold;
+      color: $black !important;
+      border-bottom: solid $light-gray 1px;
+      margin-bottom: 0px !important;
+      p {
+        color: $secondary;
+        background: $white;
+        padding: 4%;
+        font-size: $font-size-base;
+        font-family: $font-family-alt;
+        font-weight: normal;
+        letter-spacing: $font-letter-spacing-nav;
+        margin-bottom: 0px;
+      }
+      button {
+        @include button-variant(
+          $white,
+          $white,
+          $hover-background: $white,
+          $hover-border: $white,
+          $active-background: transparent,
+          $active-border: transparent
+        );
+        background: $white;
+        border: unset;
+        border-radius: unset;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        span {
+          justify-content: flex-end;
+        }
+        a {
+          color: $secondary;
+        }
+        .b-icon {
+          font-size: $font-size-icons-sm;
+        }
+        &:focus,
+        &:active {
+          box-shadow: none;
+        }
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
+          color: unset;
+          background-color: #fff;
+          border-color: #fff;
+
+          &:focus {
+            @if $enable-shadows and $btn-active-box-shadow != none {
+              @include box-shadow(
+                $btn-active-box-shadow,
+                0 0 0 $btn-focus-width
+                  rgba(mix(color-yiq($background), $border, 15%), 0.5)
+              );
+            } @else {
+              // Avoid using mixin so we can pass custom focus shadow properly
+              box-shadow: unset;
+            }
+          }
+        }
+      }
+    }
+    &__item {
+      &__body {
+        font-size: $font-paragraph-md;
+        padding-left: 4%;
+        a {
+          color: $black;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    &__arrow-up {
+      display: none !important;
     }
   }
 }
