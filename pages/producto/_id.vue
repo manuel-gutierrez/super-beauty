@@ -166,7 +166,7 @@
           <div class="product-detail-page__product-variations__size d-flex">
             Tamaño:
             <ProductSizeTiles
-              :tiles="weights"
+              :tiles="product.customAttributeValues.WEIGHTS.data"
               :selected="0"
               class="d-flex justify-content-start align-content-center"
             ></ProductSizeTiles>
@@ -194,6 +194,14 @@
           <div class="mr-2 product-detail-page__actions__wishlist">
             <WishlistButton
               :in-wishlist="product.isInWishlist"
+              class="d-none d-md-flex"
+              :only-icon="false"
+              @update-wishlist="toggleWishlistStatus()"
+            ></WishlistButton>
+            <WishlistButton
+              :in-wishlist="product.isInWishlist"
+              class="d-md-none"
+              :only-icon="true"
               @update-wishlist="toggleWishlistStatus()"
             ></WishlistButton>
           </div>
@@ -426,9 +434,6 @@ export default {
     },
     product() {
       return this.getProduct(this.$route.params.id);
-    },
-    weights() {
-      return ['1.2g', '3.4g'];
     },
     productTabs() {
       return this.getTabs();

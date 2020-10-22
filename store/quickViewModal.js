@@ -6,6 +6,7 @@ export const state = () => ({
     section_1: {
       ratingLabel: '5/ Estrellas',
       likes: '2.7K likes',
+      size: 'Tamaño',
     },
   },
 });

@@ -26,18 +26,18 @@
         <div class="quick-view-modal__reference">
           <h4>{{ product.reference }}</h4>
         </div>
-        <div class="quick-view-modal__action">
-          <div class="col-md-8 quick-view-modal__action__rating">
+        <div class="quick-view-modal__score">
+          <div class="col-md-8 quick-view-modal__score__rating">
             <ProductRating :rating="product.rating.score"></ProductRating>
-            <div class="quick-view-modal__action__rating__label">
+            <div class="quick-view-modal__action__score__label">
               <label
                 >{{ product.rating.score
-                }}{{ ratingContent.ratingLabel }}</label
+                }}{{ productInfoContent.ratingLabel }}</label
               >
             </div>
           </div>
-          <div class="col-md-4 quick-view-modal__action__like">
-            <ProductLike /><label>{{ ratingContent.likes }} </label>
+          <div class="col-md-4 quick-view-modal__score__like">
+            <ProductLike /><label>{{ productInfoContent.likes }} </label>
           </div>
         </div>
         <div class="quick-view-modal__description">
@@ -86,8 +86,26 @@
             </div>
           </div>
         </div>
-        <div class="quick-view-modal__sizes"></div>
-        <div class="quick-view-modal__add-to-cart"></div>
+        <div class="quick-view-modal__sizes">
+          <p>{{ productInfoContent.size }}</p>
+          <ProductSizeTiles
+            :tiles="product.customAttributeValues.WEIGHTS.data"
+            :selected="0"
+            class="d-flex justify-content-start align-content-center"
+          ></ProductSizeTiles>
+        </div>
+        <div class="quick-view-modal__actions">
+          <div class="quick-view-modal__actions__add-to-cart">
+            <ProductAddToCart :product="product"></ProductAddToCart>
+          </div>
+          <div class="quick-view-modal__actions__wishlist">
+            <WishlistButton
+              :in-wishlist="product.isInWishlist"
+              :only-icon="true"
+              @update-wishlist="toggleWishlistStatus()"
+            ></WishlistButton>
+          </div>
+        </div>
       </div>
     </b-modal>
   </div>
@@ -117,7 +135,7 @@ export default {
     headerContent() {
       return this.getModalContent('section_0');
     },
-    ratingContent() {
+    productInfoContent() {
       return this.getModalContent('section_1');
     },
     product() {
@@ -139,6 +157,21 @@ export default {
         return pricingItem.priceMoney;
       } else {
         return Error('Product do not have this price type: ' + type);
+      }
+    },
+    toggleWishlistStatus() {
+      if (!this.product.isInWishlist) {
+        this.incrementWishlistCounter();
+        this.updateWishlist({
+          id: this.product.id,
+          value: true,
+        });
+      } else {
+        this.decrementWishlistCounter();
+        this.updateWishlist({
+          id: this.product.id,
+          value: false,
+        });
       }
     },
   },
