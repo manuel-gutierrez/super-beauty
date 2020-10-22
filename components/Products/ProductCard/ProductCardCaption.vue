@@ -25,16 +25,14 @@
     </div>
   </div>
   <div v-else class="row product-card-caption">
-    <div class="col-12 text-center p-0">
+    <div class="col-12">
       <h2 :class="'product-card-caption__title--' + type">
         {{ title }}
       </h2>
       <p v-if="reference" :class="'product-card-caption__description--' + type">
         {{ reference }}
       </p>
-      <div
-        class="row product-card-caption__amount d-flex justify-content-center align-items-center"
-      >
+      <div class="row product-card-caption__amount">
         <money-format
           v-if="amount && !discountedPrice"
           :value="amount"
