@@ -1,0 +1,35 @@
+.quick-view-modal {
+}
+.modal-header {
+  padding-top: 10px;
+  border: unset;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  .modal-title {
+    margin: 0;
+    flex-grow: 1;
+    border-bottom: $border-bottom-line;
+    margin-right: 10px;
+    padding-left: 16px;
+    h3 {
+      font-size: $font-size-h3-sm;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .close {
+    background: $secondary;
+    color: $white;
+    font-weight: normal;
+    opacity: 1;
+    min-width: 25px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}

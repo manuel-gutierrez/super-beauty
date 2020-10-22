@@ -1,16 +1,22 @@
 <template>
   <div>
-    <b-button v-b-modal.modal-1>Launch demo modal</b-button>
+    <QuickViewModal :product-id="'3aad1a64-2e96-40fe-9838-97af5cde903e'">
+    </QuickViewModal>
 
-    <b-modal id="modal-1" title="BootstrapVue">
-      <p class="my-4">Hello from modal!</p>
-    </b-modal>
+    <b-button @click="openModal('3aad1a64-2e96-40fe-9838-97af5cde903e')"
+      >Launch demo modal</b-button
+    >
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openModal(id) {
+      this.$bvModal.show(id);
+    },
+  },
+};
 </script>
 
 <style></style>
-
