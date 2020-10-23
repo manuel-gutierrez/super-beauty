@@ -1,14 +1,20 @@
 <template>
   <div>
     <ul class="d-none d-md-flex color-tiles">
-      <ProductImageCarousel :items-to-display="12" :arrows="true">
+      <ProductImageCarousel
+        :items-to-display="itemsToShowDesktop"
+        :arrows="showArrows"
+      >
         <li v-for="(tile, index) in colorTiles" :key="tile + '-' + index">
           <div :style="background(tile)" class="color-tile" />
         </li>
       </ProductImageCarousel>
     </ul>
     <ul class="d-sm-flex d-md-none color-tiles">
-      <ProductImageCarousel :items-to-display="7" :arrows="true">
+      <ProductImageCarousel
+        :items-to-display="itemsToShowMobile"
+        :arrows="showArrows"
+      >
         <li v-for="(tile, index) in colorTiles" :key="tile + '-' + index">
           <div :style="background(tile)" class="color-tile" />
         </li>
@@ -23,6 +29,18 @@ export default {
     colorTiles: {
       type: Array,
       default: null,
+    },
+    itemsToShowMobile: {
+      type: Number,
+      default: 7,
+    },
+    itemsToShowDesktop: {
+      type: Number,
+      default: 12,
+    },
+    showArrows: {
+      type: Boolean,
+      default: true,
     },
   },
   methods: {
