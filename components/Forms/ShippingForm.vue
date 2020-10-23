@@ -152,6 +152,10 @@
         </p>
       </div>
       <div class="shipping-form__shipping-methods">
+        <p class="shipping-form__shipping-methods__policy">
+          {{ formSection.policyLabel }}
+          <a :href="formSection.policyUrl">{{ formSection.policyLink }}</a>
+        </p>
         <b-form @submit="onSubmit" @reset="onReset">
           <b-form-radio
             v-for="shipping in shippingMethods"
