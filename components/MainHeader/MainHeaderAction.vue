@@ -8,7 +8,9 @@
         :icon="['fas', 'bars']"
         class="d-sm-none mr-1 mobile-hamburger"
       />
-      <div><Search /></div>
+      <div>
+        <Search />
+      </div>
       <div class="d-flex header-icons flex-grow-1">
         <Logo />
       </div>

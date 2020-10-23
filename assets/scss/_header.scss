@@ -55,6 +55,7 @@ header {
       }
       & .search-icon {
         font-size: $font-size-icons;
+        cursor: pointer;
         @include media-breakpoint-down(sm) {
           font-size: 1.26rem;
           padding-bottom: 2px;

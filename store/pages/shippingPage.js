@@ -29,8 +29,9 @@ export const state = () => ({
       buttonLabel: 'Guardar y continuar',
 
       title_3: '2. Valor del envío.',
-      subtitle: 'Verifica nuestra política de envíos aquí.',
-      shippingPolicyUrl: 'https://google.com',
+      policyLabel: 'Verifica nuestra política de envíos',
+      policyLink: 'aquí',
+      policyUrl: 'https://google.com',
       shippingMethods: [
         {
           id: '8f079bbc-a8bc-49da-aba1-5808a139b523',
