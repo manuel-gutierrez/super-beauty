@@ -1,0 +1,23 @@
+.shipping-form-edit-dots {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: $font-paragraph-lg;
+  z-index: 1;
+  cursor: pointer;
+  &__options {
+    position: absolute;
+    top: 22px;
+    right: 8px;
+    padding-left: 10px;
+    background: $white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border: solid $gray 1px;
+    height: 50px;
+    min-width: 85px;
+    border-radius: 5%;
+  }
+}
