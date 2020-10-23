@@ -8,8 +8,14 @@
     background: $search-modal-background;
     opacity: 0.95;
     height: 71vh;
-    padding-right: 10%;
-    padding-left: 10%;
+    padding-right: 8%;
+    padding-left: 8%;
+    @include media-breakpoint-down(xs) {
+      height: auto;
+      padding-right: 2%;
+      padding-left: 2%;
+      opacity: 1;
+    }
     .form-control {
       color: $black;
       background-color: transparent;
@@ -26,6 +32,18 @@
         top: 10px;
         left: 5px;
         font-size: $font-size-icons-sm;
+      }
+    }
+    .search-modal {
+      &__results {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        @include media-breakpoint-down(xs) {
+          justify-content: space-around;
+        }
       }
     }
   }

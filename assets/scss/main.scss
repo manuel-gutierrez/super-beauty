@@ -21,12 +21,14 @@
 @import './brand-image-list.scss';
 @import './main-header-sub-menu.scss';
 
-@import './product-rating.scss';
 @import './carousel.scss';
 @import './buttons.scss';
 @import './scroll-to-top.scss';
+
+//##Modals
 @import './quick-view-modal.scss';
 @import './search-modal.scss';
+@import './search-result-card.scss';
 
 //##Product
 @import './product-card.scss';
@@ -37,6 +39,7 @@
 @import './product-color-tiles.scss';
 @import './product-label.scss';
 @import './product-tabs.scss';
+@import './product-rating.scss';
 @import './product-download-image.scss';
 @import './product-wishlist-icon.scss';
 
