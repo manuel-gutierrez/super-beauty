@@ -1,6 +1,4 @@
 .add-to-cart__modal {
-
-
   .modal-header {
     display: flex;
     align-items: baseline;
@@ -15,7 +13,6 @@
 
     .modal-title {
       width: 97%;
-
     }
 
     h2 {
@@ -28,7 +25,6 @@
       border-bottom: solid $light-gray 1px;
       padding-left: 2rem;
     }
-
 
     .close {
       min-width: unset;
@@ -43,7 +39,6 @@
       font-weight: 200;
       border-radius: unset;
     }
-
   }
 
   .add-to-cart__modal__product-image {
@@ -69,7 +64,6 @@
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.24px;
-
     }
 
     .add-to-cart__modal__product-detail__sku {
@@ -83,7 +77,6 @@
       font-weight: bold;
       letter-spacing: 0.39px;
     }
-
   }
 
   .add-to-cart__modal__free-shipping {
@@ -98,11 +91,11 @@
       letter-spacing: 2.88px;
       margin: 0;
     }
-
   }
 
   .add-to-cart__modal__recommended {
     margin-bottom: 15px;
+    width: 100%;
 
     .add-to-cart__modal__recommended__header {
       font-size: $font-size-h2-sm;
@@ -111,11 +104,8 @@
     }
   }
 
-
   .add-to-cart__modal__product-detail__checkout-buttons {
     .add-to-cart__modal__product-detail__checkout-buttons__amount {
-
-
       p {
         font-size: $font-paragraph-sm;
         letter-spacing: 0.43px;
