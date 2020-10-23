@@ -10,14 +10,24 @@
           v-for="result in results"
           :key="result"
           :product-id="result"
+          @redirect="redirectToProduct(result)"
         />
       </div>
-      <div class="search-modal__popular__search"></div>
+      <div v-if="searchTags" class="search-modal__popular-search-tags">
+        <h3>{{ searchTitle }}</h3>
+        <div class="d-none d-md-flex search-modal__popular-search-tags__items">
+          <p v-for="tag in searchTags" :key="tag">{{ tag }}</p>
+        </div>
+        <div class="d-md-none search-modal__popular-search-tags__items">
+          <p v-for="tag in searchTags.slice(0, 3)" :key="tag">{{ tag }}</p>
+        </div>
+      </div>
     </b-modal>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 export default {
   data() {
     return {
@@ -31,6 +41,21 @@ export default {
         'f0a6d055-fba7-4d29-ad42-31d911b5bd89',
       ],
     };
+  },
+  computed: {
+    ...mapGetters('search', {
+      searchTags: 'getPopularSearchTags',
+      searchTitle: 'getSearchTitle',
+    }),
+    preview() {
+      return this.previewItem(this.productId);
+    },
+  },
+  methods: {
+    redirectToProduct(id) {
+      this.$router.push({ path: `/producto/${id}` });
+      this.$bvModal.hide('search-modal');
+    },
   },
 };
 </script>

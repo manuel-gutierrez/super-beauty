@@ -14,6 +14,7 @@
       height: auto;
       padding-right: 2%;
       padding-left: 2%;
+
       opacity: 1;
     }
     .form-control {
@@ -36,6 +37,7 @@
     }
     .search-modal {
       &__results {
+        cursor: pointer;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -43,6 +45,32 @@
         width: 100%;
         @include media-breakpoint-down(xs) {
           justify-content: space-around;
+        }
+      }
+      &__popular-search-tags {
+        width: 100%;
+        position: relative;
+        top: 25%;
+        h3 {
+          font-size: $font-size-h3-sm;
+          text-align: center;
+          color: $gray;
+        }
+        &__items {
+          padding-left: 20%;
+          padding-right: 20%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            font-size: $font-paragraph;
+            color: $light-gray;
+            font-weight: bold;
+          }
+          @include media-breakpoint-down(xs) {
+            padding-left: 5%;
+            padding-right: 5%;
+          }
         }
       }
     }

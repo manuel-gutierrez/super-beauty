@@ -1,4 +1,5 @@
 export const state = () => ({
+  popularSearchTitle: 'BÚSQUEDAS MÁS POPULARES',
   popularSearchTags: [
     'labial Afterglow',
     'cloud paint',
@@ -9,6 +10,9 @@ export const state = () => ({
 
 export const getters = {
   getPopularSearchTags(state) {
-    return state.menu;
+    return state.popularSearchTags;
+  },
+  getSearchTitle(state) {
+    return state.popularSearchTitle;
   },
 };

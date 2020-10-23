@@ -1,5 +1,5 @@
 <template>
-  <div class="search-result-card">
+  <div class="search-result-card" @click="$emit('redirect')">
     <div class="search-result-card__label">
       <ProductLabel
         :label-type="preview.label.type"
