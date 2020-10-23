@@ -1,0 +1,10 @@
+@include media-breakpoint-up(full) {
+  .modal-full {
+    max-width: 98vw;
+  }
+}
+.modal-full {
+  .modal-content {
+    background: $search-modal-background;
+  }
+}
