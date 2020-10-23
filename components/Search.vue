@@ -1,11 +1,21 @@
 <template>
   <div class="search-wrapper">
-    <b-icon-search class="search-icon"></b-icon-search>
+    <SearchModal />
+    <b-icon-search
+      class="search-icon"
+      @click="openModal('search-modal')"
+    ></b-icon-search>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    openModal(id) {
+      this.$bvModal.show(id);
+    },
+  },
+};
 </script>
 
 <style></style>

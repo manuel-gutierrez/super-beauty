@@ -73,6 +73,19 @@ export const getters = {
       return product.category.id === categoryId;
     });
   },
+  getProductPreview: (state) => (id) => {
+    const productItem = state.products.find((product) => product.id === id);
+    if (productItem) {
+      return {
+        image: productItem.images[0],
+        title: productItem.title,
+        reference: productItem.reference,
+        label: productItem.label,
+      };
+    } else {
+      return false;
+    }
+  },
   filterProductsByVariant: (state) => (
     categoryId,
     subCategoryId,
