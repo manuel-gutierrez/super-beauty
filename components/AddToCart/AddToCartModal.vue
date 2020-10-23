@@ -61,7 +61,7 @@
         <div
           class="row add-to-cart__modal__product-detail__checkout-buttons__buttons"
         >
-          <nuxt-link to="/datos-de-envio">
+          <nuxt-link to="/carrito">
             <button>
               {{ modalData.checkoutButtonLabel }}
             </button>

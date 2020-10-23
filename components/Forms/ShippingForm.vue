@@ -127,12 +127,8 @@
             name="saved-address"
             :value="addressItem.id"
             ><div class="shipping-form__saved__item">
-              <div
-                class="shipping-form__saved__item__dots"
-                @click="removeSavedAddress(addressItem.id)"
-              >
-                <b-icon icon="three-dots-vertical"></b-icon>
-              </div>
+              <!-- Icons -->
+              <ShippingFormEditDots></ShippingFormEditDots>
               <div class="col-12">{{ addressItem.address }}</div>
               <div class="shipping-form__saved__item__address-details">
                 <div class="col-12">
