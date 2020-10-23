@@ -27,17 +27,19 @@
           <h4>{{ product.reference }}</h4>
         </div>
         <div class="quick-view-modal__score">
-          <div class="col-md-8 quick-view-modal__score__rating">
+          <div class="quick-view-modal__score__rating">
             <ProductRating :rating="product.rating.score"></ProductRating>
-            <div class="quick-view-modal__action__score__label">
-              <label
-                >{{ product.rating.score
-                }}{{ productInfoContent.ratingLabel }}</label
-              >
+            <div class="quick-view-modal__score__rating__label">
+              <p>
+                {{ product.rating.score }} {{ productInfoContent.ratingLabel }}
+              </p>
             </div>
           </div>
-          <div class="col-md-4 quick-view-modal__score__like">
-            <ProductLike /><label>{{ productInfoContent.likes }} </label>
+          <div class="quick-view-modal__score__like">
+            <ProductLike />
+            <p class="quick-view-modal__score__like_label">
+              {{ productInfoContent.likes }}
+            </p>
           </div>
         </div>
         <div class="quick-view-modal__description">
@@ -112,7 +114,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations, mapActions } from 'vuex';
 export default {
   props: {
     productId: {
@@ -149,6 +151,11 @@ export default {
     },
   },
   methods: {
+    ...mapActions('products', ['updateWishlist']),
+    ...mapMutations('wishlist', {
+      incrementWishlistCounter: 'incrementWishlistCounter',
+      decrementWishlistCounter: 'decrementWishlistCounter',
+    }),
     getPrice(type) {
       const pricingItem = this.product.pricing.find(
         (price) => price.pricingType === type

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="container d-flex justify-content-center align-items-center my-5">
     <QuickViewModal :product-id="'3aad1a64-2e96-40fe-9838-97af5cde903e'">
     </QuickViewModal>
 
     <b-button @click="openModal('3aad1a64-2e96-40fe-9838-97af5cde903e')"
-      >Launch demo modal</b-button
+      >Abrir Vista Rápida</b-button
     >
   </div>
 </template>
