@@ -70,9 +70,9 @@
                 </p>
               </div>
               <p class="payment-page__shipping__method__content">
-                {{ shippingCost.subtitle }}
-                <a :href="shippingCost.shippingPolicyUrl">{{
-                  shippingCost.policyLabel
+                {{ shippingCost.policyLabel }}
+                <a :href="shippingCost.policyUrl">{{
+                  shippingCost.policyLink
                 }}</a>
               </p>
               <p
