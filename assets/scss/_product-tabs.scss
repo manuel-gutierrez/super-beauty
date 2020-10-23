@@ -2,7 +2,7 @@
   margin-top: 35px;
   @include media-breakpoint-down(xs) {
     margin-top: 0px;
-    .card{
+    .card {
       border: unset;
     }
   }
@@ -13,7 +13,7 @@
     font-weight: bold;
     color: $black !important;
     @include media-breakpoint-down(xs) {
-      border-bottom: solid $light-gray 1px ;
+      border-bottom: solid $light-gray 1px;
       margin-bottom: 0px !important;
 
       button {
@@ -26,7 +26,7 @@
           $active-border: transparent
         );
         background: $white;
-        color:$black;
+        color: $black;
         border: unset;
         border-radius: unset;
         text-align: left;
@@ -43,8 +43,7 @@
   }
 
   .product-tabs__title--active {
-    color: $primary !important;
-
+    color: $secondary !important;
   }
 
   .product-tabs__content {
@@ -67,7 +66,6 @@
       border-right: $nav-tabs-border-width solid $black;
       border-left: $nav-tabs-border-width solid $black;
       border-radius: unset;
-
     }
 
     .nav-link.active,
@@ -77,6 +75,5 @@
       border-top: $nav-tabs-border-width solid transparent;
       border-bottom: $nav-tabs-border-width solid transparent;
     }
-
   }
 }

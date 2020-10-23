@@ -1,6 +1,8 @@
 .product-card-caption {
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
+  padding: 0px;
 
   .product-card-caption__title--info {
     font-size: $font-size-product-card-title;
@@ -14,7 +16,6 @@
     margin-top: -10px;
     margin-bottom: -25px;
   }
-
 
   .product-card-caption__title--price {
     font-size: $font-size-product-card-price-title;
@@ -34,6 +35,9 @@
   /* ---Amount---*/
   .product-card-caption__amount {
     margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .product-card-caption__amount--price {

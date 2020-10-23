@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-none d-md-flex wishlist-button">
+    <div v-if="!onlyIcon" class="wishlist-button">
       <button v-if="!inWishlist" @click="$emit('update-wishlist')">
         <b-icon class="wishlist-button__icon" icon="heart" /> Agregar a
         Favoritos
@@ -10,7 +10,7 @@
         Agregar a Favoritos
       </button>
     </div>
-    <div class="d-md-none wishlist-button">
+    <div v-else class="wishlist-button">
       <b-icon
         v-if="!inWishlist"
         class="wishlist-button__icon"
@@ -31,6 +31,10 @@
 export default {
   props: {
     inWishlist: {
+      type: Boolean,
+      default: false,
+    },
+    onlyIcon: {
       type: Boolean,
       default: false,
     },

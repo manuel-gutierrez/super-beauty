@@ -1,5 +1,5 @@
 .product-rating {
-  color: $primary;
+  color: $stars-active-color;
 
   padding-left: 25%;
   padding-right: 25%;
@@ -7,7 +7,6 @@
   svg.icon {
     height: $font-size-icons-sm;
     width: $font-size-icons-sm;
-
   }
 }
 
@@ -18,16 +17,20 @@
 .product-rating__score {
   font-size: $font-paragraph-lg;
   color: $light-gray;
-  padding-top:10%;
+  padding-top: 10%;
   @include media-breakpoint-down(xs) {
     font-size: $font-paragraph-sm;
     font-weight: 100;
-    padding-top:0px;
+    padding-top: 0px;
     text-align: center;
   }
-  .product-rating__score__label{
+  .product-rating__score__label {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: $font-family-montserrat;
+    font-size: $font-paragraph;
+    font-weight: 100;
+    text-transform: uppercase;
   }
 }
