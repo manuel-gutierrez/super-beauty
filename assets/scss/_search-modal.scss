@@ -6,5 +6,27 @@
 .modal-full {
   .modal-content {
     background: $search-modal-background;
+    opacity: 0.95;
+    height: 71vh;
+    padding-right: 10%;
+    padding-left: 10%;
+    .form-control {
+      color: $black;
+      background-color: transparent;
+      border: unset;
+      border-radius: unset;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .modal-title {
+      position: relative;
+      .bi-search {
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        font-size: $font-size-icons-sm;
+      }
+    }
   }
 }
