@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     border: solid #c1c1c1 1px;
     border-radius: 5px;
-    height: 90px;
+    height: 120px;
     width: 505px;
     margin-bottom: 20px;
     padding-top: 2%;
@@ -32,14 +32,6 @@
       height: 110px;
       width: 98%;
       padding-top: 5%;
-    }
-    &__dots {
-      position: absolute;
-      top: 20px;
-      right: 0px;
-      font-size: $font-paragraph-lg;
-      z-index: 1;
-      cursor: pointer;
     }
     &__address-details {
       margin-top: 10px;
