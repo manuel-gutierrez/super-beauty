@@ -87,6 +87,7 @@
   &__pricing {
     .product-card-caption {
       text-align: left;
+      justify-content: flex-start;
       &__title--price {
         color: $secondary;
         font-size: $font-paragraph;
@@ -98,7 +99,7 @@
       &__amount {
         text-align: left;
         padding-left: 4%;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
         &--price--discount {
           font-size: $font-paragraph;
         }
