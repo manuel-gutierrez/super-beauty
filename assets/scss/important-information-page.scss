@@ -22,4 +22,88 @@
       }
     }
   }
+  &__accordion {
+    .card {
+      border: none;
+      .card-header {
+        background-color: white;
+        border-bottom: unset;
+      }
+    }
+
+    &__title {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 0px;
+      color: $black !important;
+      margin-bottom: 0px !important;
+      button {
+        display: flex;
+        align-items: center;
+        @include button-variant(
+          $white,
+          $white,
+          $hover-background: $white,
+          $hover-border: $white,
+          $active-background: transparent,
+          $active-border: transparent
+        );
+        background: $white;
+        border: unset;
+        border-radius: unset;
+        text-transform: uppercase;
+        font-size: $font-size-h2;
+        font-family: $font-family-alt;
+        letter-spacing: 3px;
+        font-weight: bold;
+        span {
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          .b-icon {
+            font-size: $font-size-icons-sm !important;
+            color: $black !important;
+          }
+        }
+        &:focus,
+        &:active {
+          box-shadow: none;
+        }
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active,
+        .show > &.dropdown-toggle {
+          color: unset;
+          background-color: #fff;
+          border-color: #fff;
+
+          &:focus {
+            @if $enable-shadows and $btn-active-box-shadow != none {
+              @include box-shadow(
+                $btn-active-box-shadow,
+                0 0 0 $btn-focus-width
+                  rgba(mix(color-yiq($background), $border, 15%), 0.5)
+              );
+            } @else {
+              // Avoid using mixin so we can pass custom focus shadow properly
+              box-shadow: unset;
+            }
+          }
+        }
+      }
+    }
+    &__item {
+      &__body {
+        font-size: $font-paragraph;
+        a {
+          color: $black;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    &__arrow-up {
+      display: none !important;
+    }
+  }
 }
