@@ -40,7 +40,6 @@
 
   .caption {
     padding-top: 8%;
-
     @include media-breakpoint-down(sm) {
       padding-top: 14%;
     }

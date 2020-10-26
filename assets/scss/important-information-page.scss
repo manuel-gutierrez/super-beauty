@@ -1,0 +1,25 @@
+.important-information-page {
+  &__banner {
+    width: 100%;
+    .banner {
+      .page-header {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @include media-breakpoint-down(xs) {
+        min-height: 168px;
+      }
+
+      .caption {
+        padding-top: 0px;
+      }
+      h2 {
+        font-size: $font-size-h2-lg !important;
+        font-weight: normal !important;
+        text-transform: none !important;
+        line-height: 60px !important;
+        letter-spacing: 5px !important;
+      }
+    }
+  }
+}

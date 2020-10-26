@@ -1,6 +1,16 @@
 export const state = () => ({
   sections: {
-    banner: {},
+    banner: {
+      type: 'page-header',
+      data: {
+        caption: {
+          title: 'Información de Interes',
+        },
+        image: {
+          src: '/images/banner/banner_image_promo_large@2x.png',
+        },
+      },
+    },
     section_0: {
       title: 'Nuestras políticas',
       content:
