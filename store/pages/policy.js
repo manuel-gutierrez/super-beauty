@@ -10,8 +10,26 @@ export const state = () => ({
       title: 'preguntas frecuentes',
       faq: [
         {
-          question: '',
-          answer: '',
+          question:
+            'Después de confirmada mi orden, ¿Puedo cambiar mis datos de contacto y dirección de entrega?',
+          answer:
+            'Sabemos lo emocionante que es recibir tus órdenes a tiempo y correctamente, por lo tanto, después de confirmada la orden no se podrán hacer cambios en tu dirección de entrega e información de contacto. Sin embargo, si deseas actualizar tus datos para futuros pedidos, en cualquier momento podrás realizarlo desde tu cuenta. ',
+        },
+        {
+          question: '¿En cuánto tiempo se confirmará mi orden?',
+          answer:
+            'Tu orden será confirmada una vez el pago se ha registrado en nuestro sistema. Esto puede tardar entre 1 a 6 días hábiles, dependiendo del método de pago. Una vez registrado el pago, recibirás un e-mail de confirmación con el resumen de los productos y el importe total de la orden. Sephora.com.mx es compatible con todos los dispositivos y navegadores. Te sugerimos intentar refrescar tu navegador y borrar el caché e intentar nuevamente realizar tu orden. Si esto aún no funciona, intenta utilizar otro navegador. Tengo problemas para aplicar mi código promocional a la orden. Revisa que el código promocional aún esté vigente, que no se haya utilizado anteriormente, que aplique con otras promociones y/o sea válido en productos con descuento o en todas las marcas.',
+        },
+        {
+          question: 'Cómo puedo realizar una orden en línea?',
+          answer:
+            'Una vez realizado el pago, aparecerá una nueva página con el resumen de tu orden. En la esquina izquierda superior encontrarás tu número de orden. En caso de no recibirlo, por favor escríbenos un e-mail a atencion@sephora.com.mx o márcanos desde toda la República al 01-800-737 4072. ¿Qué hago si mi pedido llegó incompleto o uno de los productos está defectuoso? Por favor comunícate con nuestro equipo de atención al cliente en máximo 3 días hábiles a partir de la fecha que te entregaron el pedido y ten a la mano tu número de orden, detalles e imágenes del producto que comprueben la situación. En caso de recibir un producto defectuoso, recuerda no botar el producto ya que para proceder con el cambio o reembolso deberás entregar a la sucursal de Estafeta más cercana a ti el/los producto(s) involucrado(s). De igual manera, puedes completar este formulario y adjuntar imágenes que evidencien tu caso. En cuanto nuestro equipo de atención al cliente reciba tu solicitud de cambio se pondrán en contacto contigo y revisarán el caso. ',
+        },
+        {
+          question:
+            '¿Por qué el estado de mi pedido muestra "pago pendiente"? ¿Debería volver a crear un nuevo pedido?',
+          answer:
+            'La mayoría de los pagos son procesados inmediatamente, sin embargo, en ocasiones y dependiendo del método de pago, este puede tomar entre 1-6 días hábiles para registrarse en nuestro sistema. Una vez registramos tu pago, recibirás un confirmación vía e-mail con un resumen de tu pedido. Si pasa más de una semana y aún no recibes esta confirmación, por favor contáctanos a atencion@sephora.com.mx o al teléfono 01-800-737 4072',
         },
       ],
     },
