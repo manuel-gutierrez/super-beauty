@@ -7,7 +7,13 @@
         </p>
       </div>
       <div class="shipping-form__inputs">
-        <b-form v-if="show" inline @submit="onSubmit" @reset="onReset">
+        <b-form
+          v-if="show"
+          inline
+          @submit="onSubmit"
+          @reset="onReset"
+          @change="resetSavedAddress()"
+        >
           <div class="col-md-6 shipping-form__input">
             <b-form-input
               id="name"
@@ -128,12 +134,17 @@
             :value="addressItem.id"
             ><div class="shipping-form__saved__item">
               <!-- Icons -->
-              <ShippingFormEditDots></ShippingFormEditDots>
+              <ShippingFormEditDots
+                @delete-item="removeSavedAddress(addressItem.id)"
+              />
               <div class="col-12">{{ addressItem.address }}</div>
               <div class="shipping-form__saved__item__address-details">
                 <div class="col-12">
-                  {{ addressItem.name }} {{ addressItem.lastName }} -
-                  {{ addressItem.phone }}
+                  <div>{{ addressItem.city }}</div>
+                  <div>
+                    {{ addressItem.name }} {{ addressItem.lastName }} -
+                    {{ addressItem.phone }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -249,6 +260,9 @@ export default {
     ...mapActions('shippingAddress', ['removeItem']),
     removeSavedAddress(itemId) {
       this.removeItem({ id: itemId });
+    },
+    resetSavedAddress() {
+      this.savedAddressSelect = [];
     },
     onSubmit(evt) {
       evt.preventDefault();

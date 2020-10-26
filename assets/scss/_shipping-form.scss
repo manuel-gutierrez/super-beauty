@@ -19,6 +19,7 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
+    align-content: center;
     flex-wrap: wrap;
     border: solid #c1c1c1 1px;
     border-radius: 5px;
@@ -35,6 +36,7 @@
     }
     &__address-details {
       margin-top: 10px;
+      color: $light-gray;
     }
   }
   &__shipping-methods {

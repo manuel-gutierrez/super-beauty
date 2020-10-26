@@ -9,15 +9,12 @@
     position: absolute;
     top: 22px;
     right: 8px;
-    padding-left: 10px;
-    background: $white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    border: solid $gray 1px;
-    height: 50px;
+    min-height: 30px;
     min-width: 85px;
     border-radius: 5%;
+    background: #fff;
+    border: solid #5f5f5f 1px;
+    display: grid;
+    place-items: center;
   }
 }

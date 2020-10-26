@@ -10,7 +10,7 @@
           <h4>{{ title }}</h4>
           <ul>
             <li v-for="{ text, url } in items" :key="text" class="py-1">
-              <a :href="url">{{ text }}</a>
+              <nuxt-link :to="url">{{ text }}</nuxt-link>
             </li>
           </ul>
         </div>
