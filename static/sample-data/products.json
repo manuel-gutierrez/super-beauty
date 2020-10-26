@@ -514,7 +514,7 @@
       }
     },
     "category": {
-      "id": 1,
+      "id": 2,
       "subCategoryId": 1,
       "subCategoryVariationId": 1
     },
@@ -802,7 +802,7 @@
       }
     },
     "category": {
-      "id": 1,
+      "id": 3,
       "subCategoryId": 1,
       "subCategoryVariationId": 1
     },
@@ -1090,7 +1090,7 @@
       }
     },
     "category": {
-      "id": 1,
+      "id": 4,
       "subCategoryId": 1,
       "subCategoryVariationId": 1
     },
@@ -1378,7 +1378,7 @@
       }
     },
     "category": {
-      "id": 1,
+      "id": 5,
       "subCategoryId": 1,
       "subCategoryVariationId": 1
     },
@@ -1666,7 +1666,7 @@
       }
     },
     "category": {
-      "id": 1,
+      "id": 2,
       "subCategoryId": 1,
       "subCategoryVariationId": 1
     },

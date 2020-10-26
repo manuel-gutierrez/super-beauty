@@ -55,6 +55,13 @@ export const getters = {
       });
     }
   },
+  getProductsInWishList(state) {
+    if (state.products) {
+      return state.products.filter((product) => {
+        return product.isInWishlist === true;
+      });
+    }
+  },
   getTopSaleProducts(state) {
     if (state.products) {
       return state.products.filter((product) => {
