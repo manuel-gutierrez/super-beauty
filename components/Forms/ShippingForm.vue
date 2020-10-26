@@ -134,8 +134,11 @@
               <div class="col-12">{{ addressItem.address }}</div>
               <div class="shipping-form__saved__item__address-details">
                 <div class="col-12">
-                  {{ addressItem.name }} {{ addressItem.lastName }} -
-                  {{ addressItem.phone }}
+                  <div>{{ addressItem.city }}</div>
+                  <div>
+                    {{ addressItem.name }} {{ addressItem.lastName }} -
+                    {{ addressItem.phone }}
+                  </div>
                 </div>
               </div>
             </div>
