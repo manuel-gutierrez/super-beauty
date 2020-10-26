@@ -8,6 +8,7 @@
         class=""
       />
     </div>
+    <!-- Start Content -->
     <div class="important-information-page__accordion" role="tab-list">
       <b-card no-body class="mb-1">
         <div class="important-information-page__accordion__policy">
@@ -86,6 +87,10 @@
         </div>
       </b-card>
     </div>
+    <!-- // End Content -->
+    <!-- Scroll to top -->
+    <ScrollToTop />
+    <!-- // End Scroll to top -->
   </div>
 </template>
 
