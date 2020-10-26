@@ -176,7 +176,6 @@ export default {
       filters: 'getFilters',
     }),
     ...mapGetters('products', {
-      productsInWishList: 'getProductsInWishList',
       productsInVariant: 'filterProductsByVariant',
       productsWithBrand: 'filterProductsByBrand',
       priceRanges: 'findLowestAndHighestPrices',
