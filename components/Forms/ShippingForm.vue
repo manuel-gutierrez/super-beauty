@@ -7,7 +7,13 @@
         </p>
       </div>
       <div class="shipping-form__inputs">
-        <b-form v-if="show" inline @submit="onSubmit" @reset="onReset">
+        <b-form
+          v-if="show"
+          inline
+          @submit="onSubmit"
+          @reset="onReset"
+          @change="resetSavedAddress()"
+        >
           <div class="col-md-6 shipping-form__input">
             <b-form-input
               id="name"
@@ -254,6 +260,9 @@ export default {
     ...mapActions('shippingAddress', ['removeItem']),
     removeSavedAddress(itemId) {
       this.removeItem({ id: itemId });
+    },
+    resetSavedAddress() {
+      this.savedAddressSelect = [];
     },
     onSubmit(evt) {
       evt.preventDefault();
