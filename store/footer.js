@@ -96,8 +96,8 @@ export const state = () => ({
       {
         title: 'Links de Interés',
         items: [
-          { text: 'Nuestras Políticas', url: 'nuestras-politicas' },
-          { text: 'Preguntas Frecuentes', url: 'preguntas-frecuentes' },
+          { text: 'Nuestras Políticas', url: './informacion-importante' },
+          { text: 'Preguntas Frecuentes', url: './informacion-importante' },
         ],
         type: 'links',
       },
