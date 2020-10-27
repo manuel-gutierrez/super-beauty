@@ -39,7 +39,11 @@ export const getters = {
         state.products.find((product) => product.id === item.id)
       );
     });
-    return productsInCart;
+    if (productsInCart.length > 0) {
+      return productsInCart;
+    } else {
+      return [];
+    }
   },
   getRecomendedProducts(state) {
     if (state.products) {

@@ -90,7 +90,7 @@ export default {
       default: null,
     },
     link: {
-      Boolean,
+      type: Boolean,
       default: true,
     },
   },

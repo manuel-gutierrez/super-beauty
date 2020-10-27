@@ -25,12 +25,12 @@ export const mutations = {
     }
   },
   addProductToWishlistCart(state, payload) {
-    state.products.push(payload);
+    state.products.push({ id: payload });
   },
 
   removeProductFromWishListCart(state, payload) {
     state.products = state.products.filter((product) => {
-      return product !== payload;
+      return product.id !== payload;
     });
   },
 };
@@ -41,5 +41,8 @@ export const actions = {
 export const getters = {
   getWishListCounter(state) {
     return state.counter;
+  },
+  getProductsInCart(state) {
+    return state.products;
   },
 };

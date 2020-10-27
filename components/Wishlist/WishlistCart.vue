@@ -37,7 +37,7 @@ export default {
       const productsIdArray = [];
       if (products.length > 0) {
         products.forEach((element) => {
-          productsIdArray.push(element.id);
+          productsIdArray.push({ id: element.id });
         });
         return productsIdArray;
       } else {

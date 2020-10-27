@@ -128,7 +128,8 @@
         >
           <ProductSection
             v-if="
-              filterProductsByCategory(products, mainCategory.id).length != 0
+              filterProductsByCategory(products, mainCategory.id).length != 0 &&
+              products.length > 0
             "
             :products="filterProductsByCategory(products, mainCategory.id)"
             :subcategory="mainCategory"
@@ -148,7 +149,8 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   fetch() {
-    this.products = this.productsInWishList;
+    // console.log(this.productsById(this.wishlistProducts));
+    this.products = this.productsById(this.wishlistProducts);
   },
   data() {
     return {
@@ -162,25 +164,29 @@ export default {
     };
   },
   computed: {
+    ...mapGetters('login', {
+      isloggedIn: 'getCurrentLoginStatus',
+      sessionToken: 'getSessionToken',
+    }),
+
     ...mapGetters('categories', {
       getCategoryByName: 'getCategoryByName',
       categories: 'getCategories',
     }),
     ...mapGetters('enums', { enum: 'getEnum' }),
-    ...mapGetters('login', {
-      isloggedIn: 'getCurrentLoginStatus',
-      sessionToken: 'getSessionToken',
-    }),
-    ...mapGetters('pages/makeup', {
-      sections: 'getSection',
-      filters: 'getFilters',
+
+    ...mapGetters('pages/wishlistPage', {
+      sections: 'getWishlistSection',
+      filters: 'getWishlistFilters',
     }),
     ...mapGetters('products', {
       productsInVariant: 'filterProductsByVariant',
       productsWithBrand: 'filterProductsByBrand',
       priceRanges: 'findLowestAndHighestPrices',
       productsInCategory: 'getProductsByCategory',
+      productsById: 'getProductsById',
     }),
+    ...mapGetters('wishlist', { wishlistProducts: 'getProductsInCart' }),
 
     banners() {
       return this.sections('banners');
@@ -209,7 +215,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations('pages/makeup', ['setSortingValue']),
+    ...mapMutations('pages/wishlistPage', ['setSortingValue']),
     doSort(value) {
       this.setSortingValue(value);
     },
