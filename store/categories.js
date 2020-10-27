@@ -250,7 +250,7 @@ export const state = () => ({
     },
     {
       id: 5,
-      name: 'Fragancias',
+      name: 'Herramientas',
       SubCategories: [
         {
           id: 1,

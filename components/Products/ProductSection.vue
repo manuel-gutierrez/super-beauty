@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Section 1 -->
-    <div class="row">
+    <div v-if="subcategory" class="row">
       <h2 class="d-flex justify-content-center w-100 my-3 home-section__header">
         {{ subcategory.name }}
       </h2>

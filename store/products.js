@@ -39,7 +39,11 @@ export const getters = {
         state.products.find((product) => product.id === item.id)
       );
     });
-    return productsInCart;
+    if (productsInCart.length > 0) {
+      return productsInCart;
+    } else {
+      return [];
+    }
   },
   getRecomendedProducts(state) {
     if (state.products) {
@@ -52,6 +56,13 @@ export const getters = {
     if (state.products) {
       return state.products.filter((product) => {
         return product.sale.active === true;
+      });
+    }
+  },
+  getProductsInWishList(state) {
+    if (state.products) {
+      return state.products.filter((product) => {
+        return product.isInWishlist === true;
       });
     }
   },
