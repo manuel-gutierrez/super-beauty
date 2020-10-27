@@ -30,7 +30,7 @@ export const mutations = {
 
   removeProductFromWishListCart(state, payload) {
     state.products = state.products.filter((product) => {
-      return product !== payload.id;
+      return product !== payload;
     });
   },
 };

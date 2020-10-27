@@ -123,11 +123,13 @@ export default {
     },
   },
   methods: {
-    ...mapActions('products', ['updateWishlist']),
     ...mapMutations('wishlist', {
       incrementWishlistCounter: 'incrementWishlistCounter',
       decrementWishlistCounter: 'decrementWishlistCounter',
+      addProductToWishlistCart: 'addProductToWishlistCart',
+      removeProductFromWishListCart: 'removeProductFromWishListCart',
     }),
+    ...mapActions('products', ['updateWishlist']),
     toggleWishlistStatus() {
       if (!this.product.isInWishlist) {
         this.incrementWishlistCounter();
@@ -135,12 +137,14 @@ export default {
           id: this.product.id,
           value: true,
         });
+        this.addProductToWishlistCart(this.product.id);
       } else {
         this.decrementWishlistCounter();
         this.updateWishlist({
           id: this.product.id,
           value: false,
         });
+        this.removeProductFromWishListCart(this.product.id);
       }
     },
     getPrice(type) {
