@@ -149,7 +149,6 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   fetch() {
-    // console.log(this.productsById(this.wishlistProducts));
     this.products = this.productsById(this.wishlistProducts);
   },
   data() {
