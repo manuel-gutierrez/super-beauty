@@ -149,7 +149,7 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default {
   fetch() {
-    this.products = this.productsById(this.wishlistProducts);
+    this.products = this.productsInSale;
   },
   data() {
     return {
@@ -175,18 +175,16 @@ export default {
     ...mapGetters('enums', { enum: 'getEnum' }),
 
     ...mapGetters('pages/salesPage', {
-      sections: 'getWishlistSection',
-      filters: 'getWishlistFilters',
+      sections: 'getSalesSection',
+      filters: 'getSalesFilters',
     }),
     ...mapGetters('products', {
       productsInVariant: 'filterProductsByVariant',
       productsWithBrand: 'filterProductsByBrand',
       priceRanges: 'findLowestAndHighestPrices',
       productsInCategory: 'getProductsByCategory',
-      productsById: 'getProductsById',
+      productsInSale: 'getProductsInSale',
     }),
-    ...mapGetters('wishlist', { wishlistProducts: 'getProductsInCart' }),
-
     banners() {
       return this.sections('banners');
     },
