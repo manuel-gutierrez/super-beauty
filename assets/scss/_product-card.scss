@@ -67,15 +67,13 @@
         font-size: $font-paragraph-md;
       }
     }
-    .product-card__pricing--large {
+    .product-card__add-to-cart--large {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      margin-right: 10px;
 
-      .product-card__add-to-cart--large {
-        margin-right: 10px;
-      }
       .product-card__add-to-cart__button--large {
         button {
           min-width: unset;

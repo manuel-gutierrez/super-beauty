@@ -9,7 +9,7 @@
     </ProductCardImage>
     <div class="product-card__details--large">
       <!-- Description  -->
-      <div class="">
+      <div class="product-card__description--large">
         <ProductCardCaption
           :title="product.title"
           :reference="product.reference"
@@ -19,15 +19,25 @@
         ></ProductCardCaption>
       </div>
       <!-- Price and Add to cart -->
-      <div class="product-card__pricing--large">
-        <div class="product-card__add-to-cart--large">
-          <ProductCardCaption
-            v-if="productSinglePrice"
-            :amount="productSinglePrice.amount"
-            :currency="productSinglePrice.currency"
-            type="price"
-            :variation="variation"
-          ></ProductCardCaption>
+      <div class="product-card__add-to-cart--large">
+        <div class="product-card__add-to-cart__pricing--large">
+          <div v-if="product.sale.active">
+            <ProductCardCaption
+              :amount="productPrice.priceMoney.amount"
+              :currency="productPrice.priceMoney.currency"
+              :discounted-price="productPrice.salePriceMoney.amount"
+              type="price"
+              :variation="variation"
+            />
+          </div>
+          <div v-else>
+            <ProductCardCaption
+              :amount="productPrice.priceMoney.amount"
+              :currency="productPrice.priceMoney.currency"
+              type="price"
+              :variation="variation"
+            />
+          </div>
         </div>
         <div class="product-card__add-to-cart__button--large">
           <button @click="$emit('add-to-cart', product.id)">Agregar</button>
@@ -35,6 +45,7 @@
       </div>
     </div>
   </div>
+
   <!-- Normal Product Card -->
   <div v-else class="product-card">
     <ProductCardHeader
@@ -118,16 +129,18 @@ export default {
     },
   },
   computed: {
-    productSinglePrice() {
-      return this.getPrice('VOLUME_PRICING');
+    productPrice() {
+      return this.getPrice('FIXED_PRICING');
     },
   },
   methods: {
-    ...mapActions('products', ['updateWishlist']),
     ...mapMutations('wishlist', {
       incrementWishlistCounter: 'incrementWishlistCounter',
       decrementWishlistCounter: 'decrementWishlistCounter',
+      addProductToWishlistCart: 'addProductToWishlistCart',
+      removeProductFromWishListCart: 'removeProductFromWishListCart',
     }),
+    ...mapActions('products', ['updateWishlist']),
     toggleWishlistStatus() {
       if (!this.product.isInWishlist) {
         this.incrementWishlistCounter();
@@ -135,12 +148,14 @@ export default {
           id: this.product.id,
           value: true,
         });
+        this.addProductToWishlistCart(this.product.id);
       } else {
         this.decrementWishlistCounter();
         this.updateWishlist({
           id: this.product.id,
           value: false,
         });
+        this.removeProductFromWishListCart(this.product.id);
       }
     },
     getPrice(type) {
@@ -148,7 +163,7 @@ export default {
         (price) => price.pricingType === type
       );
       if (pricingItem) {
-        return pricingItem.priceMoney;
+        return pricingItem;
       } else {
         return Error('Product do not have this price type: ' + type);
       }

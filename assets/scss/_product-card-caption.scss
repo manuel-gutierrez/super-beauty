@@ -86,4 +86,13 @@
     margin-top: 15px;
     margin-bottom: 15px;
   }
+  .product-card-caption__amount--price--discount {
+    text-decoration: line-through;
+    font-size: $font-paragraph;
+    letter-spacing: -1px;
+  }
+  .product-card-caption__amount-discounted--price {
+    color: $discount;
+    font-size: $font-paragraph;
+  }
 }

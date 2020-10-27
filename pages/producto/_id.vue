@@ -449,6 +449,8 @@ export default {
     ...mapMutations('wishlist', {
       incrementWishlistCounter: 'incrementWishlistCounter',
       decrementWishlistCounter: 'decrementWishlistCounter',
+      addProductToWishlistCart: 'addProductToWishlistCart',
+      removeProductFromWishListCart: 'removeProductFromWishListCart',
     }),
     ...mapActions('products', ['updateWishlist']),
     toggleWishlistStatus() {
@@ -458,12 +460,14 @@ export default {
           id: this.product.id,
           value: true,
         });
+        this.addProductToWishlistCart(this.product.id);
       } else {
         this.decrementWishlistCounter();
         this.updateWishlist({
           id: this.product.id,
           value: false,
         });
+        this.removeProductFromWishListCart(this.product.id);
       }
     },
     shareProduct() {

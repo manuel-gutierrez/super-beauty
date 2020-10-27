@@ -13,15 +13,38 @@
       {{ reference }}
     </p>
     <div v-if="type == 'price'">
-      <money-format
-        :value="amount"
-        :class="'product-card-caption__amount--' + type + '--' + variation"
-        :locale="'es-co'"
-        :currency-code="'COP'"
-        :subunits-value="false"
-        :hide-subunits="true"
-      >
-      </money-format>
+      <div class="product-card-caption__amount">
+        <money-format
+          v-if="amount && !discountedPrice"
+          :value="amount"
+          :class="'product-card-caption__amount--' + type"
+          :locale="'es-co'"
+          :currency-code="'COP'"
+          :subunits-value="false"
+          :hide-subunits="true"
+        >
+        </money-format>
+        <money-format
+          v-else-if="amount && discountedPrice"
+          :value="amount"
+          :class="'product-card-caption__amount--' + type + '--discount'"
+          :locale="'es-co'"
+          :currency-code="'COP'"
+          :subunits-value="false"
+          :hide-subunits="true"
+        >
+        </money-format>
+        <money-format
+          v-if="discountedPrice"
+          :value="discountedPrice"
+          :class="'product-card-caption__amount-discounted--' + type"
+          :locale="'es-co'"
+          :currency-code="'COP'"
+          :subunits-value="false"
+          :hide-subunits="true"
+        >
+        </money-format>
+      </div>
     </div>
   </div>
   <div v-else class="row product-card-caption">
