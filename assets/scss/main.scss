@@ -68,6 +68,9 @@
 @import './_comments-verified-tag.scss';
 @import './_comments-color-tag.scss';
 
+//## Community
+@import './_community-content-filter.scss';
+
 //##Profile Picture
 @import './_profile-picture.scss';
 
@@ -85,3 +88,4 @@
 @import './payment-page.scss';
 @import './important-information-page.scss';
 @import './community-page.scss';
+@import './community-content-page';

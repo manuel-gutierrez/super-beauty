@@ -1,8 +1,5 @@
 .community-content-page {
-  &__intro,
-  &__digital-content,
-  &__conversations,
-  &__sections {
+  &__filters {
     @extend .flex;
   }
   &__banner {

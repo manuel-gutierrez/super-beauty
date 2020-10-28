@@ -13,6 +13,19 @@ export const state = () => ({
     section_0: {
       title: 'Contenido digital',
       content: {
+        filterLabel_1: 'Filtros',
+        filterOptions_1: [
+          { value: null, text: 'Selecciona' },
+          { text: 'Antiguos', value: 'sort-id-1', disabled: false },
+          { text: 'Calificación', value: 'sort-id-2', disabled: false },
+        ],
+        filterLabel_2: 'Ordenar por',
+        filterOptions_2: [
+          { value: null, text: 'Selecciona' },
+          { text: 'Antiguos', value: 'sort-id-1', disabled: false },
+          { text: 'Calificación', value: 'sort-id-2', disabled: false },
+        ],
+        imageCounterTitle: 'Galería',
         images: [
           {
             url: '/images/pages/community/content-download/content_1@2x.png',
