@@ -8,19 +8,24 @@
       />
     </div>
     <div class="community-content-page__header">
-      <div class="community-content-page__header__search-bar"></div>
-      <div class="community-content-page__title"></div>
+      <div class="community-content-page__header__title">
+        <h2>{{ pageTitle }}</h2>
+      </div>
+      <div class="community-content-page__header__search">
+        <CommunityContentSearch @do-search="search(...arguments)" />
+      </div>
     </div>
-
-    <CommunityContentFilter
-      :counter="{
-        label: pageContent.imageCounterTitle,
-        value: images.length,
-      }"
-      :first-filter="filter_1"
-      :second-filter="filter_2"
-      @do-filter="filterContent(...arguments)"
-    />
+    <div class="community-content-page__filter">
+      <CommunityContentFilter
+        :counter="{
+          label: pageContent.imageCounterTitle,
+          value: images.length,
+        }"
+        :first-filter="filter_1"
+        :second-filter="filter_2"
+        @do-filter="filterContent(...arguments)"
+      />
+    </div>
     <div class="section-spacer"></div>
     <ScrollToTop />
   </div>
@@ -40,6 +45,9 @@ export default {
     pageContent() {
       return this.getCommunityContentPage('section_0').content;
     },
+    pageTitle() {
+      return this.getCommunityContentPage('section_0').title;
+    },
     filter_1() {
       return {
         label: this.pageContent.filterLabel_1,
@@ -55,6 +63,9 @@ export default {
   },
   methods: {
     filterContent(filterData) {
+      console.log(filterData);
+    },
+    search(filterData) {
       console.log(filterData);
     },
   },
