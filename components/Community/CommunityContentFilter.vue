@@ -12,6 +12,7 @@
         <div class="community-content-filter__selectors__input">
           <b-form-select
             v-model="filterSelector_1"
+            size="sm"
             :options="firstFilter.options"
             @input="$emit('do-filter', filterSelector_1)"
           ></b-form-select>
@@ -24,6 +25,7 @@
         <div class="community-content-filter__selectors__input">
           <b-form-select
             v-model="filterSelector_2"
+            size="sm"
             :options="secondFilter.options"
             @input="$emit('do-filter', filterSelector_2)"
           ></b-form-select>
