@@ -39,7 +39,7 @@ export default {
     downloadImage(fileUrl, fileName) {
       console.log(fileUrl);
       this.$axios({
-        url: process.env.VUE_APP_URL + fileUrl,
+        url: fileUrl,
         method: 'GET',
         responseType: 'blob',
       })
