@@ -26,6 +26,18 @@
         @do-filter="filterContent(...arguments)"
       />
     </div>
+    <div class="community-content-page__images">
+      <div class="community-content-page__images__content">
+        <div v-for="(photo, index) in images" :key="index">
+          <ProductDownloadImage :url="photo.url" :caption="photo.caption" />
+        </div>
+      </div>
+      <div class="community-content-page__images__button">
+        <button @click="showMoreImages()">
+          {{ pageContent.showMoreButton }}
+        </button>
+      </div>
+    </div>
     <div class="section-spacer"></div>
     <ScrollToTop />
   </div>
@@ -63,10 +75,13 @@ export default {
   },
   methods: {
     filterContent(filterData) {
-      console.log(filterData);
+      return false;
     },
     search(filterData) {
-      console.log(filterData);
+      return false;
+    },
+    showMoreImages() {
+      return false;
     },
   },
 };

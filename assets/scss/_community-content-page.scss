@@ -1,6 +1,8 @@
 .community-content-page {
   &__filters,
-  &__header {
+  &__header,
+  &__images__content,
+  &__images__button {
     @extend .flex;
   }
   &__banner {
@@ -39,6 +41,32 @@
         text-align: center;
         padding-left: 0%;
       }
+    }
+  }
+  &__images {
+    &__content {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      .product-download-image {
+        margin-right: 5px;
+        margin-top: 32px;
+      }
+      @include media-breakpoint-down(xs) {
+        justify-content: center;
+        .product-download-image {
+          background: no-repeat center center / 148px auto;
+          width: 190px;
+          margin-right: 0px;
+          &__download-box {
+            right: 10%;
+          }
+        }
+      }
+    }
+    &__button {
+      margin-top: 4%;
+      margin-bottom: 4%;
     }
   }
 }

@@ -63,7 +63,20 @@ export const state = () => ({
             url: '/images/pages/community/content-download/content_9@2x.png',
             caption: 'promo-image-9',
           },
+          {
+            url: '/images/pages/community/content-download/content_4@2x.png',
+            caption: 'promo-image-10',
+          },
+          {
+            url: '/images/pages/community/content-download/content_5@2x.png',
+            caption: 'promo-image-11',
+          },
+          {
+            url: '/images/pages/community/content-download/content_6@2x.png',
+            caption: 'promo-image-12',
+          },
         ],
+        showMoreButton: 'Mostrar Más',
       },
     },
   },
