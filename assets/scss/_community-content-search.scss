@@ -1,0 +1,25 @@
+.community-content-search {
+  @extend .flex;
+  justify-content: flex-start;
+  width: 100%;
+
+  form {
+    flex-grow: 1;
+  }
+  .input-group-prepend {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: $search-background-color;
+    border-color: $search-background-color;
+    width: 32px;
+    color: $gray;
+    display: grid;
+    place-items: center;
+    padding-left: 8px;
+  }
+  .form-control {
+    background: $search-background-color;
+    border-color: $search-background-color;
+    border-radius: 20px;
+  }
+}
