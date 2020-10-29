@@ -37,8 +37,9 @@ export default {
       };
     },
     downloadImage(fileUrl, fileName) {
+      console.log(fileUrl);
       this.$axios({
-        url: fileUrl,
+        url: process.env.VUE_APP_URL + fileUrl,
         method: 'GET',
         responseType: 'blob',
       })
@@ -47,6 +48,7 @@ export default {
           const link = document.createElement('a');
           link.href = url;
           link.setAttribute('download', `${fileName}.png`);
+
           document.body.appendChild(link);
           link.click();
         })
