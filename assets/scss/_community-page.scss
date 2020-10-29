@@ -1,0 +1,59 @@
+.community-page {
+  &__intro,
+  &__digital-content,
+  &__conversations,
+  &__sections {
+    @extend .flex;
+  }
+  &__banner {
+    width: 100%;
+    @include media-breakpoint-down(sm) {
+      .hero {
+        height: 166px;
+      }
+    }
+  }
+  &__intro {
+    text-align: center;
+    flex-direction: column;
+    h2 {
+      font-family: $font-family-banners;
+      text-transform: capitalize;
+      color: $secondary;
+      letter-spacing: 0px;
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-h2-md;
+      }
+    }
+    p {
+      padding-left: 20%;
+      padding-right: 20%;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      @include media-breakpoint-down(xs) {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+    }
+  }
+  &__sections {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  &__digital-content,
+  &__conversations {
+    flex-direction: column;
+    text-align: center;
+    img {
+      width: 279px;
+    }
+    p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    margin-bottom: 20%;
+  }
+}
