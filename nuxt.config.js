@@ -98,7 +98,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: process.env.VUE_APP_URL,
+  },
   /*
    ** Content module configuration
    ** See https://content.nuxtjs.org/configuration
