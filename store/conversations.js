@@ -7,7 +7,7 @@ export const state = () => ({
       dateUpdated: '2020-06-18T17:55:56.646Z"',
       userId: 'b4350cf9-2afa-4fc9-b04f-de34b5cc3192',
       content:
-        '    <p>\n      Este verano, Team BIC está ~ mejorando ~ nuestras rutinas de cuidado del\n      cabello para darles a nuestras trenzas un buen TLC antiguo\n    </p>\n    <img\n      src="/images/pages/community/community-conversation-content-image@2x.png"\n      alt="Cuida tus mechones"\n      width="363px"\n      height="247px"\n    />',
+        '    <p>\n   <b>   Este verano, Team BIC está ~ mejorando ~ nuestras rutinas de cuidado del\n      cabello para darles a nuestras trenzas un buen TLC antiguo\n   </b> </p>\n    <img\n      src="/images/pages/community/community-conversation-content-image@2x.png"\n      alt="Cuida tus mechones"\n      width="297px"\n      height="203px"\n    />',
       comments: [],
     },
     {
@@ -16,11 +16,27 @@ export const state = () => ({
       dateCreated: '2019-06-30T17:55:56.646Z"',
       dateUpdated: '2020-06-18T17:55:56.646Z"',
       userId: 'b4350cf9-2afa-4fc9-b04f-de34b5cc3192',
+      mainImage:
+        '/images/pages/community/community-conversation-content-image@2x.png',
       content:
-        '    <p>\n      Este verano, Team BIC está ~ mejorando ~ nuestras rutinas de cuidado del\n      cabello para darles a nuestras trenzas un buen TLC antiguo\n    </p>\n    <img\n      src="/images/pages/community/community-conversation-content-image@2x.png"\n      alt="Cuida tus mechones"\n      width="363px"\n      height="247px"\n    />',
+        '    <p>\n      <b>Este verano, Team BIC está ~ mejorando ~ nuestras rutinas de cuidado del\n      cabello para darles a nuestras trenzas un buen TLC antiguo\n  </b>  </p>\n    <img\n      src="/images/pages/community/community-conversation-content-image@2x.png"\n      alt="Cuida tus mechones"\n      width="297px"\n      height="203px"\n    />',
       comments: [],
     },
   ],
+  labels: {
+    published: 'Publicado',
+    updated: 'Actualizado hace:',
+    times: {
+      hours: 'horas',
+      minutes: 'minutos',
+      seconds: 'segundos',
+    },
+    like: 'Me gusta',
+    share: 'compartir',
+    respond: 'responder',
+    commentPlaceholder: 'Escribe aquí..',
+    sendButton: 'Enviar',
+  },
 });
 export const mutations = {};
 
@@ -29,4 +45,5 @@ export const getters = {
     state.conversations.find((conversation) => conversation.id === id);
   },
   getConversations: (state) => state.conversations,
+  getLabels: (state) => state.labels,
 };

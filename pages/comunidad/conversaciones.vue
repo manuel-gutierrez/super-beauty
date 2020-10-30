@@ -27,7 +27,17 @@
       />
     </div>
     <div class="community-conversations-page__conversations">
-      {{ conversations }}
+      <CommunityConversationCard
+        v-for="conversation in conversations"
+        :key="conversation.id"
+        :conversation="conversation"
+        class="col-12 col-md-8"
+      />
+      <div
+        class="col-12 col-md-4 community-conversations-page__conversations__tags"
+      >
+        Trending Tags
+      </div>
     </div>
 
     <div class="section-spacer"></div>

@@ -1,0 +1,101 @@
+.community-conversation-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border: solid #f4f4f4 3px;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 5%;
+  &__profile,
+  &__actions,
+  &__comment,
+  &__comment__input {
+    @extend .flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  &__title {
+    h3 {
+      font-size: $font-size-h3-md;
+      letter-spacing: 2px;
+    }
+  }
+  &__date {
+    p {
+      color: $light-gray;
+    }
+  }
+  &__profile {
+    p {
+      margin: 0;
+      padding-left: 4%;
+    }
+  }
+  &__actions {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    width: clamp(40%, 50%, 100%);
+    @include media-breakpoint-down(xs) {
+      width: clamp(80%, 100%, 100%);
+    }
+
+    &__like,
+    &__share,
+    &__comment {
+      @extend .flex;
+      width: 100%;
+      justify-content: flex-start;
+      padding: 0px;
+      p {
+        margin: 0;
+        padding-left: 5%;
+        text-transform: uppercase;
+        font-size: $font-paragraph-sm;
+        font-weight: bold;
+      }
+      .icon {
+        cursor: pointer;
+      }
+    }
+  }
+  &__comment {
+    align-items: flex-start;
+    width: clamp(40%, 50%, 100%);
+    @include media-breakpoint-down(xs) {
+      width: clamp(80%, 100%, 100%);
+    }
+    &__icon {
+      width: 13%;
+      padding-right: 2%;
+      .icon {
+        width: $font-size-icons-lg;
+        height: $font-size-icons-lg;
+        font-weight: bold;
+      }
+    }
+
+    &__input {
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+      flex-grow: 1;
+
+      .form-control {
+        border-radius: 12px;
+        border: solid 1px $gray;
+        margin-bottom: 2%;
+        overflow-y: auto !important;
+      }
+      button {
+        text-transform: capitalize;
+        font-size: $font-size-button-sm;
+        min-width: 54px;
+        border-radius: 7px;
+        background: $background-gradient-primary;
+      }
+    }
+  }
+}
