@@ -6,7 +6,7 @@ export const state = () => ({
         url: '#',
         image: {
           src: '/images/pages/community/conversations-page-banner@2x.png',
-          caption: 'Coversations banner image',
+          caption: 'Conversations banner image',
         },
       },
     },

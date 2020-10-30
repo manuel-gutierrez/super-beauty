@@ -19,12 +19,15 @@
       <CommunityContentFilter
         :counter="{
           label: pageContent.imageCounterTitle,
-          value: images.length,
+          value: conversations.length,
         }"
         :first-filter="filter_1"
         :second-filter="filter_2"
         @do-filter="filterContent(...arguments)"
       />
+    </div>
+    <div class="community-conversations-page__conversations">
+      {{ conversations }}
     </div>
 
     <div class="section-spacer"></div>
@@ -39,14 +42,15 @@ export default {
     ...mapGetters('pages/communityConversations', [
       'getCommunityConversationsPage',
     ]),
+    ...mapGetters('conversations', { conversations: 'getConversations' }),
     banner() {
-      return this.getCommunityContentPage('banner');
+      return this.getCommunityConversationsPage('banner');
     },
     pageContent() {
-      return this.getCommunityContentPage('section_0').content;
+      return this.getCommunityConversationsPage('section_0').content;
     },
     pageTitle() {
-      return this.getCommunityContentPage('section_0').title;
+      return this.getCommunityConversationsPage('section_0').title;
     },
     filter_1() {
       return {
