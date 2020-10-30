@@ -160,6 +160,7 @@ export default {
       productsSort: [],
       arr: [],
       sidebarController: '',
+      test: {},
     };
   },
   computed: {
@@ -280,39 +281,42 @@ export default {
       } else {
         this.productsFilter.push({ type: filterType, data: filterData });
       }
+
       this.products = this.filterProducts(
-        this.productsInCategory(this.categoryId),
+        this.productsById(this.wishlistProducts),
         this.productsFilter
       );
     },
     filterProducts(products, filters) {
-      return filters.reduce((result, filter) => {
-        // For data types : Arrays;
-        if (Array.isArray(filter.data) && filter.data.length > 0) {
-          result = this.processFilter(result, filter.type, filter.data);
-        }
-        // For data types : Objects;
-        if (
-          Object.entries(filter.data).length !== 0 &&
-          filter.data.constructor === Object
-        ) {
-          result = this.processFilter(result, filter.type, filter.data);
-        }
-        // For Data type Int
-        if (filter.data) {
-          result = this.processFilter(result, filter.type, filter.data);
-        }
-        return result;
-      }, products);
+      try {
+        return filters.reduce((result, filter) => {
+          // For data types : Arrays;
+          if (Array.isArray(filter.data) && filter.data.length > 0) {
+            result = this.processFilter(result, filter.type, filter.data);
+          }
+          // For data types : Objects;
+          if (
+            Object.entries(filter.data).length !== 0 &&
+            filter.data.constructor === Object
+          ) {
+            result = this.processFilter(result, filter.type, filter.data);
+          }
+          // For Data type Int
+          if (filter.data) {
+            result = this.processFilter(result, filter.type, filter.data);
+          }
+          if (result) {
+            return result;
+          } else {
+            return products;
+          }
+        }, products);
+      } catch (err) {
+        console.log(err);
+      }
     },
     processFilter(products, filterType, filterData) {
       switch (filterType) {
-        case this.filterNames.VARIANT:
-          return this.filterByVariant(
-            this.categoryId,
-            filterData.variationId,
-            filterData.subCategoryId
-          );
         case this.filterNames.BRAND:
           return this.filterByBrand(this.categoryId, filterData, products);
         case this.filterNames.PRICE:
