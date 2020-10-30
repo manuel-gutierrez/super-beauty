@@ -24,7 +24,7 @@ export const state = () => ({
       },
       button: {
         label: 'Mostrar Más',
-        url: '/contenido-digital',
+        url: './comunidad/contenido-digital',
       },
     },
     section_2: {
@@ -37,7 +37,7 @@ export const state = () => ({
       },
       button: {
         label: 'Mostrar Más',
-        url: '/conversaciones',
+        url: './comunidad/conversaciones',
       },
     },
   },
