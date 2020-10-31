@@ -1,0 +1,88 @@
+<template>
+  <div class="community-conversation-card">
+    <div class="community-conversation-card__title">
+      <h3>{{ conversation.title }}</h3>
+    </div>
+    <div class="community-conversation-card__date">
+      <p>
+        {{ labels.published }} 07-16-2020 08:30 | {{ labels.updated }} 3
+        {{ labels.times.hours }}
+      </p>
+    </div>
+    <div class="community-conversation-card__profile">
+      <ProfilePicture />
+      <p>MarsORedi</p>
+    </div>
+    <div class="community-conversation-card__content">
+      <div v-html="conversation.content"></div>
+    </div>
+    <div class="community-conversation-card__actions">
+      <div class="col-sm-4 community-conversation-card__actions__like">
+        <svg-icon
+          style="color: transparent"
+          icon="like-icon"
+          @click="like(conversation.id)"
+        ></svg-icon>
+        <p>{{ labels.like }}</p>
+      </div>
+      <div class="col-sm-4 community-conversation-card__actions__share">
+        <svg-icon icon="share-icon" @click="share(conversation.id)"></svg-icon>
+        <p>{{ labels.share }}</p>
+      </div>
+      <div class="col-sm-4 community-conversation-card__actions__comment">
+        <svg-icon icon="comment-icon"></svg-icon>
+        <p>{{ labels.respond }}</p>
+      </div>
+    </div>
+    <div class="community-conversation-card__comment">
+      <div class="community-conversation-card__comment__icon">
+        <svg-icon icon="comment-icon"></svg-icon>
+      </div>
+      <div class="community-conversation-card__comment__input">
+        <b-form-textarea
+          id="textarea"
+          v-model="text"
+          :placeholder="labels.commentPlaceholder"
+          rows="3"
+          max-rows="6"
+        ></b-form-textarea>
+        <button @click="saveComment(conversation.id, text)">
+          {{ labels.sendButton }}
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapGetters } from 'vuex';
+export default {
+  props: {
+    conversation: {
+      type: Object,
+      default: null,
+    },
+  },
+  data() {
+    return {
+      text: '',
+    };
+  },
+  computed: {
+    ...mapGetters('conversations', { labels: 'getLabels' }),
+  },
+  methods: {
+    share(id) {
+      return false;
+    },
+    like(id) {
+      return false;
+    },
+    saveComment(id, comment) {
+      return false;
+    },
+  },
+};
+</script>
+
+<style></style>

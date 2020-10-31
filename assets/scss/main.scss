@@ -68,9 +68,11 @@
 @import './_comments-verified-tag.scss';
 @import './_comments-color-tag.scss';
 
-//## Community
+//##Community
 @import './_community-content-filter.scss';
 @import './_community-content-search.scss';
+@import './_community-conversation-card.scss';
+@import './_community-conversation-tag.scss';
 
 //##Profile Picture
 @import './_profile-picture.scss';
@@ -78,10 +80,11 @@
 //##Forms
 @import './_shipping-form.scss';
 @import './_shipping-form-edit-dots.scss';
+@import './_community-conversation-form.scss';
 
 @import './_payment-form.scss';
 
-// Pages
+//Pages
 @import './product-page.scss';
 @import './product-detail-page.scss';
 @import './cart-page.scss';
@@ -90,3 +93,4 @@
 @import './important-information-page.scss';
 @import './community-page.scss';
 @import './community-content-page';
+@import './community-conversations-page';
