@@ -2,7 +2,9 @@
   &__filters,
   &__header,
   &__images__content,
-  &__images__button {
+  &__images__button,
+  &__conversations,
+  &__conversations__tags__pills {
     @extend .flex;
   }
   &__banner {
@@ -67,6 +69,28 @@
     &__button {
       margin-top: 8%;
       margin-bottom: 4%;
+    }
+  }
+  &__conversations {
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    &__cards {
+      padding: 0;
+    }
+    &__tags {
+      padding-left: 2%;
+      padding-top: 2%;
+      &__pills {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+      &__title {
+        font-size: $font-size-h3-md;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
     }
   }
 }

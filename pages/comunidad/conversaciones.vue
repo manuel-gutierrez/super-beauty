@@ -18,7 +18,7 @@
     <div class="community-conversations-page__filter">
       <CommunityContentFilter
         :counter="{
-          label: pageContent.imageCounterTitle,
+          label: pageContent.filterTitle,
           value: conversations.length,
         }"
         :first-filter="filter_1"
@@ -27,16 +27,28 @@
       />
     </div>
     <div class="community-conversations-page__conversations">
-      <CommunityConversationCard
-        v-for="conversation in conversations"
-        :key="conversation.id"
-        :conversation="conversation"
-        class="col-12 col-md-8"
-      />
       <div
-        class="col-12 col-md-4 community-conversations-page__conversations__tags"
+        class="community-conversations-page__conversations__cards col-12 col-md-8"
       >
-        Trending Tags
+        <CommunityConversationCard
+          v-for="conversation in conversations"
+          :key="conversation.id"
+          :conversation="conversation"
+        />
+      </div>
+      <div
+        class="community-conversations-page__conversations__tags col-12 col-md-4"
+      >
+        <div class="community-conversations-page__conversations__tags__title">
+          <p>Trending Tags</p>
+        </div>
+        <div class="community-conversations-page__conversations__tags__pills">
+          <CommunityConversationTag
+            v-for="tag in tags"
+            :key="tag"
+            :label="tag"
+          />
+        </div>
       </div>
     </div>
 
@@ -52,7 +64,10 @@ export default {
     ...mapGetters('pages/communityConversations', [
       'getCommunityConversationsPage',
     ]),
-    ...mapGetters('conversations', { conversations: 'getConversations' }),
+    ...mapGetters('conversations', {
+      conversations: 'getConversations',
+      tags: 'getTags',
+    }),
     banner() {
       return this.getCommunityConversationsPage('banner');
     },

@@ -13,6 +13,7 @@ export const state = () => ({
     section_0: {
       title: 'Conversaciones',
       content: {
+        filterTitle: 'Conversaciones',
         filterLabel_1: 'Filtros',
         filterOptions_1: [
           { value: null, text: 'Selecciona' },

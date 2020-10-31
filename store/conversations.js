@@ -37,6 +37,14 @@ export const state = () => ({
     commentPlaceholder: 'Escribe aquí..',
     sendButton: 'Enviar',
   },
+  tags: [
+    'Cuidado pelo',
+    'Rostro',
+    'Acné',
+    'Maquillaje',
+    'Cabello largo',
+    'Ojos',
+  ],
 });
 export const mutations = {};
 
@@ -46,4 +54,5 @@ export const getters = {
   },
   getConversations: (state) => state.conversations,
   getLabels: (state) => state.labels,
+  getTags: (state) => state.tags,
 };
