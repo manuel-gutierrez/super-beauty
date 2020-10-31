@@ -1,0 +1,42 @@
+.community-conversation-form {
+  padding-bottom: 25px;
+  &__profile,
+  &__actions {
+    @extend .flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  &__profile {
+    p {
+      margin: 0;
+      padding-left: 1%;
+    }
+  }
+  &__inputs {
+    .form-control {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-color: $gray;
+      border-radius: 15px;
+      overflow-y: auto !important;
+      input {
+        height: 63px;
+      }
+    }
+  }
+  &__actions {
+    justify-content: flex-end;
+    align-items: flex-end;
+    &__upload-icon {
+      margin-right: 10px;
+      cursor: pointer;
+      .icon {
+        width: 35px;
+        height: 25px;
+      }
+    }
+    button {
+      min-width: 70px;
+    }
+  }
+}

@@ -23,8 +23,9 @@
     padding-bottom: 5%;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: center;
     &__title {
-      order: 2;
+      order: 1;
       text-align: left;
       margin-bottom: 10px;
       flex-grow: 1;
@@ -32,16 +33,32 @@
     }
     &__search {
       width: 30%;
+      order: 0;
+    }
+    &__start-conversation {
+      cursor: pointer;
+      color: $secondary;
+      order: 2;
+      h3 {
+        font-size: $font-size-h3-md;
+      }
     }
     @include media-breakpoint-down(xs) {
       &__title,
-      &__search {
+      &__search,
+      &__start-conversation {
         width: 100%;
       }
       &__title {
         order: 0;
         text-align: center;
         padding-left: 0%;
+      }
+      &__start-conversation {
+        h3 {
+          text-align: center;
+          font-size: $font-size-h3-sm;
+        }
       }
     }
   }

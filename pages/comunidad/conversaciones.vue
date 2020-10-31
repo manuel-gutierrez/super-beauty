@@ -14,6 +14,18 @@
       <div class="community-conversations-page__header__search">
         <CommunityContentSearch @do-search="search(...arguments)" />
       </div>
+      <div
+        class="community-conversations-page__header__start-conversation"
+        @click="toggleConversationForm()"
+      >
+        <h3>{{ pageContent.startConversationTitle }}</h3>
+      </div>
+    </div>
+    <div class="community-conversations-page__form">
+      <CommunityConversationForm
+        :show="conversationForm.show"
+        :placeholders="pageContent.conversationFormPlaceholders"
+      />
     </div>
     <div class="community-conversations-page__filter">
       <CommunityContentFilter
@@ -60,6 +72,13 @@
 <script>
 import { mapGetters } from 'vuex';
 export default {
+  data() {
+    return {
+      conversationForm: {
+        show: false,
+      },
+    };
+  },
   computed: {
     ...mapGetters('pages/communityConversations', [
       'getCommunityConversationsPage',
@@ -99,6 +118,9 @@ export default {
     },
     showMoreImages() {
       return false;
+    },
+    toggleConversationForm() {
+      this.conversationForm.show = !this.conversationForm.show;
     },
   },
 };
