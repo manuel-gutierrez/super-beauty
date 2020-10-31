@@ -25,16 +25,18 @@
     }
   }
   &__selectors {
-    width: 40%;
+    width: 37%;
     @include media-breakpoint-down(xs) {
       width: 100%;
       flex-direction: column;
     }
     &__group {
       width: 50%;
+      justify-content: flex-end;
       @include media-breakpoint-down(xs) {
         width: 100%;
         margin-bottom: 4px;
+        justify-content: flex-start;
       }
     }
     &__label {
@@ -44,7 +46,7 @@
       box-sizing: border-box;
     }
     &__input {
-      width: 60%;
+      width: max-content;
       box-sizing: border-box;
       .custom-select {
         border: none;
