@@ -61,28 +61,27 @@
 @import './share-button.scss';
 
 //##Comments
-@import './_comments.scss';
-@import './_comments-filter.scss';
-@import './_comments-feed.scss';
-@import './_comments-card.scss';
-@import './_comments-verified-tag.scss';
-@import './_comments-color-tag.scss';
+@import './comments.scss';
+@import './comments-filter.scss';
+@import './comments-feed.scss';
+@import './comments-card.scss';
+@import './comments-verified-tag.scss';
+@import './comments-color-tag.scss';
 
 //##Community
-@import './_community-content-filter.scss';
-@import './_community-content-search.scss';
-@import './_community-conversation-card.scss';
-@import './_community-conversation-tag.scss';
+@import './community-content-filter.scss';
+@import './community-content-search.scss';
+@import './community-conversation-card.scss';
+@import './community-conversation-tag.scss';
 
 //##Profile Picture
-@import './_profile-picture.scss';
+@import './profile-picture.scss';
 
 //##Forms
-@import './_shipping-form.scss';
-@import './_shipping-form-edit-dots.scss';
-@import './_community-conversation-form.scss';
-
-@import './_payment-form.scss';
+@import './shipping-form.scss';
+@import './shipping-form-edit-dots.scss';
+@import './community-conversation-form.scss';
+@import './payment-form.scss';
 
 //Pages
 @import './product-page.scss';
@@ -94,3 +93,4 @@
 @import './community-page.scss';
 @import './community-content-page';
 @import './community-conversations-page';
+@import './community-conversation-page';
