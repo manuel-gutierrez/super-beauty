@@ -9,11 +9,16 @@
         {{ labels.times.hours }}
       </p>
     </div>
-    <div class="community-conversation-card__profile">
-      <ProfilePicture />
-      <p>MarsORedi</p>
+    <div v-if="!excerpt" class="community-conversation-card__main-image">
+      <b-img-lazy :src="conversation.mainImage"></b-img-lazy>
     </div>
-    <div class="community-conversation-card__content">
+    <div class="community-conversation-card__profile">
+      <ProfilePicture profile-slug="MarsORedi" />
+    </div>
+    <div v-if="excerpt" class="community-conversation-card__content">
+      <div v-html="conversation.excerpt"></div>
+    </div>
+    <div v-else class="community-conversation-card__content">
       <div v-html="conversation.content"></div>
     </div>
     <div class="community-conversation-card__actions">
@@ -61,6 +66,10 @@ export default {
     conversation: {
       type: Object,
       default: null,
+    },
+    excerpt: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {

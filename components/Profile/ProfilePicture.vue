@@ -1,5 +1,5 @@
 <template>
-  <div class="profile-picture d-flex align-items-start">
+  <div class="profile-picture">
     <b-img
       v-bind="imgProps"
       src="/images/profile/profile_picture_ratings@2x.png"

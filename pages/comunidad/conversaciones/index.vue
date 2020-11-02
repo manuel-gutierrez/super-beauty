@@ -25,6 +25,7 @@
       <CommunityConversationForm
         :show="conversationForm.show"
         :placeholders="pageContent.conversationFormPlaceholders"
+        :excerpt="true"
       />
     </div>
     <div class="community-conversations-page__filter">

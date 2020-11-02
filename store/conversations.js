@@ -137,7 +137,7 @@ export const mutations = {};
 
 export const getters = {
   getConversation: (state) => (id) => {
-    state.conversations.find((conversation) => conversation.id === id);
+    return state.conversations.find((conversation) => conversation.id === id);
   },
   getConversations: (state) => state.conversations,
   getLabels: (state) => state.labels,

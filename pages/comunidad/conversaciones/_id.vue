@@ -31,7 +31,7 @@
       <CommunityContentFilter
         :counter="{
           label: pageContent.filterTitle,
-          value: conversations.length,
+          value: 2,
         }"
         :first-filter="filter_1"
         :second-filter="filter_2"
@@ -40,11 +40,11 @@
     </div>
     <div class="community-conversation-page__conversations">
       <div
+        v-if="conversation"
         class="community-conversation-page__conversations__cards col-12 col-md-8"
       >
         <CommunityConversationCard
-          v-for="conversation in conversations"
-          :key="conversation.id"
+          :key="conversation"
           :conversation="conversation"
         />
       </div>
@@ -84,11 +84,14 @@ export default {
       'getCommunityConversationsPage',
     ]),
     ...mapGetters('conversations', {
-      conversations: 'getConversations',
+      getConversation: 'getConversation',
       tags: 'getTags',
     }),
     banner() {
       return this.getCommunityConversationsPage('banner');
+    },
+    conversation() {
+      return this.getConversation(this.$route.params.id);
     },
     pageContent() {
       return this.getCommunityConversationsPage('section_0').content;
