@@ -123,6 +123,7 @@ export const state = () => ({
     respond: 'responder',
     commentPlaceholder: 'Escribe aquí..',
     sendButton: 'Enviar',
+    tags: 'Tags',
   },
   tags: [
     'Cuidado pelo',
