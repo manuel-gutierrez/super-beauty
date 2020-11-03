@@ -1,7 +1,9 @@
 <template>
   <div class="community-conversation-card">
     <div class="community-conversation-card__title">
-      <h3>{{ conversation.title }}</h3>
+      <nuxt-link :to="`/comunidad/conversaciones/${conversation.id}`"
+        ><h3>{{ conversation.title }}</h3>
+      </nuxt-link>
     </div>
     <div class="community-conversation-card__date">
       <p>

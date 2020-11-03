@@ -20,6 +20,9 @@
     justify-content: flex-start;
   }
   &__title {
+    a {
+      color: $black;
+    }
     h3 {
       font-size: $font-size-h3-md;
       letter-spacing: 2px;
