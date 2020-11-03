@@ -41,25 +41,114 @@
     <div class="community-conversation-page__conversations">
       <div
         v-if="conversation"
-        class="community-conversation-page__conversations__cards col-12 col-md-8"
+        class="community-conversation-page__conversations__card col-12 col-md-8"
       >
-        <CommunityConversationCard
-          :key="conversation"
-          :conversation="conversation"
-        />
+        <CommunityConversationCard :conversation="conversation" />
+        <div
+          v-if="conversation.comments.length > 0"
+          class="community-conversation-page__conversations__card__comments"
+        >
+          <CommunityConversationCommentCard
+            v-for="comment in conversation.comments"
+            :key="comment.id"
+            :comment="comment"
+          />
+        </div>
       </div>
       <div
-        class="community-conversation-page__conversations__tags col-12 col-md-4"
+        class="community-conversation-page__conversations__side-bar col-12 col-md-4"
       >
-        <div class="community-conversation-page__conversations__tags__title">
-          <p>Trending Tags</p>
+        <div class="community-conversation-page__conversations__side-bar__info">
+          <h4
+            class="community-conversation-page__conversations__side-bar__info__title"
+          >
+            {{ sidebarContent.infoTitle }}
+          </h4>
+          <div
+            class="community-conversation-page__conversations__side-bar__data"
+          >
+            <div
+              class="community-conversation-page__conversations__side-bar__data__shared"
+            >
+              <p>
+                <svg-icon icon="share-icon" />
+                <strong>{{ conversation.shared }}</strong>
+                {{ sidebarContent.infoLabels.shared }}
+              </p>
+            </div>
+            <div
+              class="community-conversation-page__conversations__side-bar__data__views"
+            >
+              <p>
+                <svg-icon icon="views-icon" />
+                <strong>{{ conversation.views }}</strong>
+                {{ sidebarContent.infoLabels.views }}
+              </p>
+            </div>
+            <div
+              class="community-conversation-page__conversations__side-bar__data__likes"
+            >
+              <p>
+                <svg-icon icon="like-icon" />
+                <strong>{{ conversation.likes }}</strong>
+                {{ sidebarContent.infoLabels.likes }}
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="community-conversation-page__conversations__tags__pills">
-          <CommunityConversationTag
-            v-for="tag in tags"
-            :key="tag"
-            :label="tag"
-          />
+        <div
+          class="community-conversation-page__conversations__side-bar__images"
+        >
+          <h4
+            class="community-conversation-page__conversations__side-bar__images__title"
+          >
+            <svg-icon icon="image-camera-icon" />
+            {{ conversation.images.length }}
+            {{ sidebarContent.infoLabels.images }}
+          </h4>
+          <div
+            class="community-conversation-page__conversations__side-bar__images__items"
+          >
+            <b-img
+              v-for="(image, index) in conversation.images"
+              :key="index"
+              :src="image.url"
+            ></b-img>
+          </div>
+        </div>
+        <div
+          class="community-conversation-page__conversations__side-bar__related-posts"
+        >
+          <h4
+            class="community-conversation-page__conversations__side-bar__related-posts__title"
+          >
+            {{ sidebarContent.relatedConversationsTitle }}
+          </h4>
+          <div
+            class="community-conversation-page__conversations__side-bar__related-posts__items"
+          >
+            <CommunityRelatedConversationCard
+              v-for="(post, index) in relatedConversations"
+              :key="index"
+              :conversation="post"
+            />
+          </div>
+        </div>
+        <div class="community-conversation-page__conversations__side-bar__tags">
+          <div
+            class="community-conversation-page__conversations__side-bar__tags__title"
+          >
+            <h4>{{ sidebarContent.tagsTitle }}</h4>
+          </div>
+          <div
+            class="community-conversation-page__conversations__side-bar__tags__pills"
+          >
+            <CommunityConversationTag
+              v-for="tag in tags"
+              :key="tag"
+              :label="tag"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -86,6 +175,7 @@ export default {
     ...mapGetters('conversations', {
       getConversation: 'getConversation',
       tags: 'getTags',
+      getRelatedConversations: 'getRelatedConversations',
     }),
     banner() {
       return this.getCommunityConversationsPage('banner');
@@ -93,11 +183,14 @@ export default {
     conversation() {
       return this.getConversation(this.$route.params.id);
     },
-    pageContent() {
-      return this.getCommunityConversationsPage('section_0').content;
+    relatedConversations() {
+      return this.getRelatedConversations(this.conversation.relatedPosts);
     },
     pageTitle() {
       return this.getCommunityConversationsPage('section_0').title;
+    },
+    pageContent() {
+      return this.getCommunityConversationsPage('section_0').content;
     },
     filter_1() {
       return {
@@ -110,6 +203,9 @@ export default {
         label: this.pageContent.filterLabel_2,
         options: this.pageContent.filterOptions_2,
       };
+    },
+    sidebarContent() {
+      return this.getCommunityConversationsPage('section_1');
     },
   },
   methods: {

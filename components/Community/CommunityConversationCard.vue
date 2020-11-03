@@ -24,8 +24,7 @@
     <div class="community-conversation-card__actions">
       <div class="col-sm-4 community-conversation-card__actions__like">
         <svg-icon
-          style="color: transparent"
-          icon="like-icon"
+          icon="like-icon-black"
           @click="like(conversation.id)"
         ></svg-icon>
         <p>{{ labels.like }}</p>

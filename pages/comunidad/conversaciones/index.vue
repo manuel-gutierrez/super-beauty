@@ -53,7 +53,7 @@
         class="community-conversations-page__conversations__tags col-12 col-md-4"
       >
         <div class="community-conversations-page__conversations__tags__title">
-          <p>Trending Tags</p>
+          <h4>{{ sidebarContent.tagsTitle }}</h4>
         </div>
         <div class="community-conversations-page__conversations__tags__pills">
           <CommunityConversationTag
@@ -108,6 +108,9 @@ export default {
         label: this.pageContent.filterLabel_2,
         options: this.pageContent.filterOptions_2,
       };
+    },
+    sidebarContent() {
+      return this.getCommunityConversationsPage('section_1');
     },
   },
   methods: {

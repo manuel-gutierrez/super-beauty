@@ -1,7 +1,7 @@
 export const state = () => ({
   conversations: [
     {
-      id: 'b4350cf9-2afa-4fc9-b04f-de34b5cc3192',
+      id: 'b4350cf9-2afa-4fc9-b04f-de34b5cc3193',
       title: '¡Comprométete a tratar tus mechones con amor!',
       dateCreated: '2019-06-30T17:55:56.646Z"',
       dateUpdated: '2020-06-18T17:55:56.646Z"',
@@ -54,6 +54,7 @@ export const state = () => ({
         'Cabello largo',
         'Ojos',
       ],
+      relatedPosts: ['b4350cf9-2afa-4fc9-b04f-de34b5cc3192'],
     },
     {
       id: 'b4350cf9-2afa-4fc9-b04f-de34b5cc3192',
@@ -74,6 +75,26 @@ export const state = () => ({
         },
         {
           ordinal: 1,
+          url: '/images/pages/community/post-image-2.png',
+          caption: 'Model ',
+        },
+        {
+          ordinal: 2,
+          url: '/images/pages/community/post-image-1.png',
+          caption: 'Orgasm Eyeshadow Palette',
+        },
+        {
+          ordinal: 3,
+          url: '/images/pages/community/post-image-2.png',
+          caption: 'Model ',
+        },
+        {
+          ordinal: 4,
+          url: '/images/pages/community/post-image-1.png',
+          caption: 'Orgasm Eyeshadow Palette',
+        },
+        {
+          ordinal: 5,
           url: '/images/pages/community/post-image-2.png',
           caption: 'Model ',
         },
@@ -108,6 +129,7 @@ export const state = () => ({
         'Cabello largo',
         'Ojos',
       ],
+      relatedPosts: ['b4350cf9-2afa-4fc9-b04f-de34b5cc3193'],
     },
   ],
   labels: {
@@ -139,6 +161,13 @@ export const mutations = {};
 export const getters = {
   getConversation: (state) => (id) => {
     return state.conversations.find((conversation) => conversation.id === id);
+  },
+  getRelatedConversations: (state) => (postIds) => {
+    if (postIds) {
+      return state.conversations.filter((conversation) =>
+        postIds.includes(conversation.id)
+      );
+    }
   },
   getConversations: (state) => state.conversations,
   getLabels: (state) => state.labels,
