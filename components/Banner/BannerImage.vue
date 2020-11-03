@@ -34,6 +34,7 @@
             <div class="col-12">
               <BannerCaption v-if="data.caption" :caption-data="data.caption">
               </BannerCaption>
+              <slot name="hero-caption"></slot>
             </div>
           </div>
           <BannerCaption v-else :caption-data="data.caption" class="">
