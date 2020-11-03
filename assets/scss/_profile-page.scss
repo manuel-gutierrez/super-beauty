@@ -3,7 +3,11 @@
   &__banner {
     color: $white;
     .hero {
-      height: 333px;
+      padding-top: 10px;
+      height: 350px;
+      @include media-breakpoint-down(xs) {
+        height: 220px;
+      }
     }
     .rounded-circle {
       border: solid 3px $white;
@@ -13,6 +17,9 @@
     @extend .flex;
     width: 100%;
     height: 333px;
+    @include media-breakpoint-down(xs) {
+      height: 204px;
+    }
     flex-direction: column;
     p {
       margin-top: 10px;

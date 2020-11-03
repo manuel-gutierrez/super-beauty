@@ -13,6 +13,15 @@
               v-bind="profileImage"
               rounded="circle"
               alt="Profile image"
+              class="d-none d-md-flex"
+            ></b-img>
+            <b-img
+              v-bind="profileImage"
+              rounded="circle"
+              alt="Profile image"
+              class="d-md-none"
+              width="103"
+              height="103"
             ></b-img>
           </div>
           <div class="profile-page__banner__content__slug">
