@@ -66,11 +66,10 @@
           </BannerCaption>
         </div>
         <!-- hero -->
-        <div v-else-if="type == 'hero'" class="row">
-          <div class="col-12">
-            <BannerCaption v-if="data.caption" :caption-data="data.caption">
-            </BannerCaption>
-          </div>
+        <div v-else-if="type == 'hero'">
+          <BannerCaption v-if="data.caption" :caption-data="data.caption">
+          </BannerCaption>
+          <slot name="hero-caption"></slot>
         </div>
         <BannerCaption v-else :caption-data="data.caption" class="">
         </BannerCaption>

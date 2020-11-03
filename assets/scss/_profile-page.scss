@@ -1,12 +1,28 @@
 .profile-page {
   width: 100%;
+  &__banner {
+    color: $white;
+    .hero {
+      height: 333px;
+    }
+    .rounded-circle {
+      border: solid 3px $white;
+    }
+  }
   &__banner__content {
     @extend .flex;
     width: 100%;
-  }
-  &__banner {
-    &__content {
-      color: $white;
+    height: 333px;
+    flex-direction: column;
+    p {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: $font-paragraph-lg;
+      letter-spacing: 0.4px;
+      text-align: center;
+    }
+    &__slug {
+      font-weight: bold;
     }
   }
 }
