@@ -312,7 +312,7 @@ export default {
           }
         }, products);
       } catch (err) {
-        console.log(err);
+        return err;
       }
     },
     processFilter(products, filterType, filterData) {

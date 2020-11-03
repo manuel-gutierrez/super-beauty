@@ -1,0 +1,33 @@
+.community-related-conversation-card {
+  @extend .flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  border-bottom: solid $light-gray 1px;
+
+  &__title {
+    a {
+      color: $black;
+    }
+    h3 {
+      font-size: $font-size-h3-md;
+      letter-spacing: 2px;
+    }
+  }
+  &__date {
+    p {
+      color: $light-gray;
+      font-weight: bold;
+    }
+  }
+
+  &__profile {
+    .profile-picture {
+      align-items: center;
+    }
+    span {
+      margin: 0;
+      padding-left: 4%;
+    }
+  }
+}
