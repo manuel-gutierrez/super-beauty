@@ -36,6 +36,17 @@ export const state = () => ({
         },
       },
     },
+    section_1: {
+      tagsTitle: 'Trending Tags',
+      infoTitle: 'Estatus de la conversación',
+      infoLabels: {
+        shared: 'veces compartido',
+        views: 'Vistas',
+        likes: 'Me gusta',
+        images: 'Fotos',
+      },
+      relatedConversationsTitle: 'Conversaciones relacionados',
+    },
   },
 });
 export const getters = {

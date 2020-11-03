@@ -37,7 +37,6 @@ export default {
       };
     },
     downloadImage(fileUrl, fileName) {
-      console.log(fileUrl);
       this.$axios({
         url: fileUrl,
         method: 'GET',

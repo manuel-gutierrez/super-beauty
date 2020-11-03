@@ -9,18 +9,22 @@
         {{ labels.times.hours }}
       </p>
     </div>
-    <div class="community-conversation-card__profile">
-      <ProfilePicture />
-      <p>MarsORedi</p>
+    <div v-if="!excerpt" class="community-conversation-card__main-image">
+      <b-img-lazy :src="conversation.mainImage"></b-img-lazy>
     </div>
-    <div class="community-conversation-card__content">
+    <div class="community-conversation-card__profile">
+      <ProfilePicture profile-slug="MarsORedi" />
+    </div>
+    <div v-if="excerpt" class="community-conversation-card__content">
+      <div v-html="conversation.excerpt"></div>
+    </div>
+    <div v-else class="community-conversation-card__content">
       <div v-html="conversation.content"></div>
     </div>
     <div class="community-conversation-card__actions">
       <div class="col-sm-4 community-conversation-card__actions__like">
         <svg-icon
-          style="color: transparent"
-          icon="like-icon"
+          icon="like-icon-black"
           @click="like(conversation.id)"
         ></svg-icon>
         <p>{{ labels.like }}</p>
@@ -51,6 +55,14 @@
         </button>
       </div>
     </div>
+    <div class="community-conversation-card__tags">
+      <p class="community-conversation-card__tags__title">{{ labels.tags }}</p>
+      <CommunityConversationTag
+        v-for="tag in conversation.tags"
+        :key="tag"
+        :label="tag"
+      />
+    </div>
   </div>
 </template>
 
@@ -61,6 +73,10 @@ export default {
     conversation: {
       type: Object,
       default: null,
+    },
+    excerpt: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
