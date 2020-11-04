@@ -1,25 +1,18 @@
 <template>
-  <div></div>
+  <div class="profile-info-accordion" role="tab-list">
+    <ProfileInfoAccordionItem id="item-1" title="Hola">
+      <template v-slot:item-body>
+        <p>item 1</p>
+        <p>item 2</p>
+        <p>item 3</p>
+        <p>item 4</p>
+      </template>
+    </ProfileInfoAccordionItem>
+  </div>
 </template>
 
 <script>
-export default {
-  methods: {
-    flipArrow(ref) {
-      if (this.$refs[ref]) {
-        const arrowUp = this.$refs[ref].style;
-        const button = this.$refs[`${ref}-button`].style;
-        if (arrowUp.transform === 'rotateX(180deg)') {
-          arrowUp.transform = '';
-          button.color = '#BB29BB';
-        } else {
-          arrowUp.transform = 'rotateX(180deg)';
-          button.color = '#212529';
-        }
-      }
-    },
-  },
-};
+export default {};
 </script>
 
 <style></style>

@@ -6,30 +6,22 @@
       role="tab"
       class="profile-info-accordion-item__header"
     >
-      <a v-b-toggle:collapse-1 href="#" @click.prevent>
+      <a v-b-toggle="id" href="#" @click.prevent>
         <div class="profile-info-accordion-item__header__title">
-          <h4>1. Some Title</h4>
+          <h4>{{ title }}</h4>
         </div>
         <span class="profile-info-accordion-item__header__icon">
-          <b-icon
-            id="tab-chevron-up"
-            class="icon--open"
-            icon="chevron-up"
-          ></b-icon>
-          <b-icon
-            id="tab-chevron-down"
-            class="icon--closed"
-            icon="chevron-down"
-          ></b-icon>
+          <b-icon class="icon--open" icon="chevron-up"></b-icon>
+          <b-icon class="icon--closed" icon="chevron-down"></b-icon>
         </span>
       </a>
     </b-card-header>
     <!-- Card Body Collapse -->
-    <b-collapse id="collapse-1" role="tab-panel">
+    <b-collapse :id="id" role="tab-panel">
       <!-- Card Body  -->
       <b-card-body>
         <b-card-text>
-          <p>data data</p>
+          <slot name="item-body"></slot>
         </b-card-text>
       </b-card-body>
     </b-collapse>
@@ -37,7 +29,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    title: {
+      type: String,
+      default: '',
+    },
+    id: {
+      type: String,
+      default: 'collapse',
+    },
+  },
+};
 </script>
 
 <style></style>

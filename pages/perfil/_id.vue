@@ -42,7 +42,7 @@
         <h2>{{ profileSection.title }}</h2>
       </div>
       <div class="profile-page__info__data">
-        <ProfileInfoAccordionItem />
+        <ProfileInfoAccordion />
       </div>
     </div>
   </div>
