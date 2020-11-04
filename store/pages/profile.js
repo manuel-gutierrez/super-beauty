@@ -22,6 +22,20 @@ export const state = () => ({
         url: '',
       },
     },
+    section_2: {
+      title: 'PERFIL',
+      editProfileLabel: 'editar perfil',
+      profileTabsLabels: {
+        firstTab: '1. Información de contácto',
+        secondTab: '2. Información sobre tu negocio.',
+        thirdTab:
+          '3. Mas información sobre tu negocio para mejorar la experiencia.',
+      },
+      button: {
+        label: 'Ver Más',
+        url: '',
+      },
+    },
   },
 });
 export const getters = {

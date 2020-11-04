@@ -9,6 +9,7 @@ export const state = () => ({
     city: 'Bogota DC',
     state: 'Cundinamarca',
     mail: 'contacto@superbeautynegocios.com.co',
+    description: 'Tipo de Maquillaje',
     locations: [
       {
         type: 'physical',

@@ -37,19 +37,12 @@
     <div class="profile-page__description">
       <p>{{ description }}</p>
     </div>
-    <div class="profile-page__conversations">
-      <h2>{{ conversationsSection.title }}</h2>
-      <div class="profile-page__conversations__cards">
-        <CommunityConversationCard
-          v-for="conversation in conversations"
-          :key="conversation.id"
-          :conversation="conversation"
-          :excerpt="true"
-          class="profile-page__conversations__cards__card"
-        />
-        <button class="profile-page__conversations__cards__button">
-          {{ conversationsSection.button.label }}
-        </button>
+    <div class="profile-page__info">
+      <div class="profile-page__info__title">
+        <h2>{{ profileSection.title }}</h2>
+      </div>
+      <div class="profile-page__info__data">
+        <ProfileInfoAccordionItem />
       </div>
     </div>
   </div>
@@ -71,17 +64,16 @@ export default {
   computed: {
     ...mapGetters('pages/profile', ['getProfilePageContent']),
     ...mapGetters('user', { user: 'getUserData' }),
-    ...mapGetters('conversations', {
-      conversations: 'getConversations',
-    }),
+    ...mapGetters('merchant', { merchant: 'getMerchantData' }),
+
     banner() {
       return this.getProfilePageContent('banner');
     },
     description() {
       return this.getProfilePageContent('section_0').content;
     },
-    conversationsSection() {
-      return this.getProfilePageContent('section_1');
+    profileSection() {
+      return this.getProfilePageContent('section_2');
     },
   },
 };
