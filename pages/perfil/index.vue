@@ -34,6 +34,24 @@
         </div>
       </template>
     </BannerImage>
+    <div class="profile-page__description">
+      <p>{{ description }}</p>
+    </div>
+    <div class="profile-page__conversations">
+      <h2>{{ conversationsSection.title }}</h2>
+      <div class="profile-page__conversations__cards">
+        <CommunityConversationCard
+          v-for="conversation in conversations"
+          :key="conversation.id"
+          :conversation="conversation"
+          :excerpt="true"
+          class="profile-page__conversations__cards__card"
+        />
+        <button class="profile-page__conversations__cards__button">
+          {{ conversationsSection.button.label }}
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,6 +71,9 @@ export default {
   computed: {
     ...mapGetters('pages/profile', ['getProfilePageContent']),
     ...mapGetters('user', { user: 'getUserData' }),
+    ...mapGetters('conversations', {
+      conversations: 'getConversations',
+    }),
     banner() {
       return this.getProfilePageContent('banner');
     },

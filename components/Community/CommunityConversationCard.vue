@@ -57,7 +57,7 @@
         </button>
       </div>
     </div>
-    <div class="community-conversation-card__tags">
+    <div v-if="!excerpt" class="community-conversation-card__tags">
       <p class="community-conversation-card__tags__title">{{ labels.tags }}</p>
       <CommunityConversationTag
         v-for="tag in conversation.tags"

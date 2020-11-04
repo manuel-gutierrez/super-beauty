@@ -1,5 +1,6 @@
 .profile-page {
   width: 100%;
+  padding-bottom: 25px;
   &__banner {
     color: $white;
     .hero {
@@ -12,24 +13,55 @@
     .rounded-circle {
       border: solid 3px $white;
     }
+    &__content {
+      @extend .flex;
+      width: 100%;
+      height: 333px;
+      @include media-breakpoint-down(xs) {
+        height: 204px;
+      }
+      flex-direction: column;
+      p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: $font-paragraph-lg;
+        letter-spacing: 0.4px;
+        text-align: center;
+      }
+      &__slug {
+        font-weight: bold;
+      }
+    }
   }
-  &__banner__content {
-    @extend .flex;
-    width: 100%;
-    height: 333px;
+
+  &__description {
+    text-align: center;
+    padding: 4% 25% 4% 25%;
     @include media-breakpoint-down(xs) {
-      height: 204px;
+      padding: 4%;
     }
-    flex-direction: column;
-    p {
-      margin-top: 10px;
-      margin-bottom: 5px;
-      font-size: $font-paragraph-lg;
-      letter-spacing: 0.4px;
-      text-align: center;
-    }
-    &__slug {
-      font-weight: bold;
+  }
+  &__conversations {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 25px;
+    &__cards {
+      @extend .flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+      &__card {
+        width: 47%;
+        @include media-breakpoint-down(xs) {
+          width: 100%;
+        }
+      }
+      &__button {
+        height: 33px;
+        @include media-breakpoint-down(xs) {
+          margin-top: 10%;
+        }
+      }
     }
   }
 }
