@@ -2,8 +2,12 @@ export const state = () => ({
   data: {
     id: 'a527798b-d34e-45b0-a0ee-86316afd269a',
     slug: 'Maria_Beauty',
-    merchantName: 'Superbeauty Negocios',
-    merchantSlug: 'Maria_makeupBeauty',
+    name: 'María Alejandra Gonzales',
+    phone: {
+      code: '57',
+      number: '310869963',
+    },
+    title: 'Maquilladora profesional',
   },
 });
 export const mutations = {

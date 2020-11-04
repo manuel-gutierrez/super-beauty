@@ -28,8 +28,8 @@
             <p>{{ user.slug }}</p>
           </div>
           <div class="profile-page__banner__content__merchant">
-            <p>{{ merchant.name }}</p>
-            <p>{{ merchant.slug }}</p>
+            <p>{{ user.merchantName }}</p>
+            <p>{{ user.merchantSlug }}</p>
           </div>
         </div>
       </template>
@@ -71,7 +71,6 @@ export default {
   computed: {
     ...mapGetters('pages/profile', ['getProfilePageContent']),
     ...mapGetters('user', { user: 'getUserData' }),
-    ...mapGetters('merchant', { merchant: 'getMerchantData' }),
     ...mapGetters('conversations', {
       conversations: 'getConversations',
     }),
