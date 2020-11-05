@@ -64,7 +64,12 @@
       </div>
 
       <div class="profile-edit-page__info__data">
-        <ProfileInfoAccordion />
+        <ProfileInfoAccordionForm />
+        <b-form>
+          <b-button type="submit" variant="primary" class="payment-form__button"
+            >Enviar
+          </b-button>
+        </b-form>
       </div>
     </div>
     <div class="profile-edit-page__conversations">

@@ -8,6 +8,7 @@ export const state = () => ({
       number: '310869963',
     },
     title: 'Maquilladora profesional',
+    businessName: 'Super Beauty Negocios',
   },
 });
 export const mutations = {
