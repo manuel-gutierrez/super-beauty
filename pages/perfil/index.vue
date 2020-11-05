@@ -47,9 +47,11 @@
           :excerpt="true"
           class="profile-page__conversations__cards__card"
         />
-        <button class="profile-page__conversations__cards__button">
-          {{ conversationsSection.button.label }}
-        </button>
+        <nuxt-link :to="`/perfil/${user.id}`">
+          <button class="profile-page__conversations__cards__button">
+            {{ conversationsSection.button.label }}
+          </button>
+        </nuxt-link>
       </div>
     </div>
   </div>

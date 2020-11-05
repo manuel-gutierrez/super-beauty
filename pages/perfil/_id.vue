@@ -42,7 +42,7 @@
         <h2>{{ profileSection.title }}</h2>
       </div>
       <div class="profile-page__info__edit">
-        <nuxt-link to="./editar">{{
+        <nuxt-link :to="`/perfil/editar/${user.id}`">{{
           profileSection.editProfileLabel
         }}</nuxt-link>
       </div>
@@ -60,9 +60,6 @@
           :excerpt="true"
           class="profile-page__conversations__cards__card"
         />
-        <button class="profile-page__conversations__cards__button">
-          {{ conversationsSection.button.label }}
-        </button>
       </div>
     </div>
   </div>
