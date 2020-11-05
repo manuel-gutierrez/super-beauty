@@ -52,6 +52,8 @@ export default {
           link.click();
         })
         .catch((err) => {
+          // Disable until it has an error logging tool.
+          /* eslint-disable-next-line */
           console.error('Error Downloading Image', err);
         });
     },
