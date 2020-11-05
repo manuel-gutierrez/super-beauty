@@ -28,8 +28,8 @@
             <p>{{ user.slug }}</p>
           </div>
           <div class="profile-page__banner__content__merchant">
-            <p>{{ user.merchantName }}</p>
-            <p>{{ user.merchantSlug }}</p>
+            <p>{{ merchant.name }}</p>
+            <p>{{ merchant.slug }}</p>
           </div>
         </div>
       </template>
@@ -41,8 +41,28 @@
       <div class="profile-page__info__title">
         <h2>{{ profileSection.title }}</h2>
       </div>
+      <div class="profile-page__info__edit">
+        <nuxt-link to="./editar">{{
+          profileSection.editProfileLabel
+        }}</nuxt-link>
+      </div>
       <div class="profile-page__info__data">
         <ProfileInfoAccordion />
+      </div>
+    </div>
+    <div class="profile-page__conversations">
+      <h2>{{ conversationsSection.title }}</h2>
+      <div class="profile-page__conversations__cards">
+        <CommunityConversationCard
+          v-for="conversation in conversations"
+          :key="conversation.id"
+          :conversation="conversation"
+          :excerpt="true"
+          class="profile-page__conversations__cards__card"
+        />
+        <button class="profile-page__conversations__cards__button">
+          {{ conversationsSection.button.label }}
+        </button>
       </div>
     </div>
   </div>
@@ -65,7 +85,9 @@ export default {
     ...mapGetters('pages/profile', ['getProfilePageContent']),
     ...mapGetters('user', { user: 'getUserData' }),
     ...mapGetters('merchant', { merchant: 'getMerchantData' }),
-
+    ...mapGetters('conversations', {
+      conversations: 'getConversations',
+    }),
     banner() {
       return this.getProfilePageContent('banner');
     },
@@ -74,6 +96,9 @@ export default {
     },
     profileSection() {
       return this.getProfilePageContent('section_2');
+    },
+    conversationsSection() {
+      return this.getProfilePageContent('section_1');
     },
   },
 };

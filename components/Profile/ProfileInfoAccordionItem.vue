@@ -19,10 +19,8 @@
     <!-- Card Body Collapse -->
     <b-collapse :id="id" role="tab-panel">
       <!-- Card Body  -->
-      <b-card-body>
-        <b-card-text>
-          <slot name="item-body"></slot>
-        </b-card-text>
+      <b-card-body class="profile-info-accordion-item__body">
+        <slot name="item-body"></slot>
       </b-card-body>
     </b-collapse>
   </b-card>

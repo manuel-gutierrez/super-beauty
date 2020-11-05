@@ -3,22 +3,28 @@ export const state = () => ({
     id: '252a5f4f-5542-4085-bc23-19b888e058b0',
     name: 'Superbeauty Negocios',
     slug: 'Maria_makeupBeauty',
-    type: 'Persona Natural',
+    type: 'Persona Jurídica',
     merchantId: '123445679-1',
     merchantIdType: 'NIT',
     city: 'Bogota DC',
     state: 'Cundinamarca',
     mail: 'contacto@superbeautynegocios.com.co',
-    description: 'Tipo de Maquillaje',
+    description: 'Tienda de Maquillaje',
+    phone: {
+      code: '57',
+      number: '310869963',
+    },
     locations: [
       {
-        type: 'physical',
+        id: 'eec13fb6-2562-4a23-ac00-e9b925e6909b',
+        type: 'PHYSICAL',
         number: 2,
         employees: '1-3',
         phone: '',
       },
       {
-        type: 'virtual',
+        id: 'aec13fb6-2562-4a23-ac00-e9b925e6909c',
+        type: 'VIRTUAL',
         number: 1,
         employees: '',
         phone: {

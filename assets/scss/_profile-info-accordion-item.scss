@@ -25,6 +25,13 @@
         text-transform: unset;
         letter-spacing: 0.4px;
       }
+      @include media-breakpoint-down(xs) {
+        flex-grow: 1;
+      }
     }
+  }
+  &__body {
+    padding-left: 25px;
+    border-left: solid 1px $secondary;
   }
 }
