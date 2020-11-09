@@ -1,6 +1,5 @@
 <template>
   <b-form
-    inline
     class="profile-info-accordion-form"
     @submit="onSubmit"
     @reset="onReset"
