@@ -17,7 +17,7 @@
       <div
         class="d-flex justify-content-center align-items-center header-icons"
       >
-        <Profile />
+        <nuxt-link to="/perfil"><Profile /></nuxt-link>
         <nuxt-link to="/favoritos"><WishlistCart /></nuxt-link>
         <nuxt-link to="/carrito" prefetch> <Cart /></nuxt-link>
       </div>

@@ -14,6 +14,10 @@ export const state = () => ({
     EFECTY: 'efecty',
     BALOTO: 'baloto',
   },
+  locations: {
+    PHYSICAL: 'Tienda física',
+    VIRTUAL: 'Tienda Virtual',
+  },
 });
 export const mutations = {};
 

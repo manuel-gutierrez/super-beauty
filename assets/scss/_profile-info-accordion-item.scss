@@ -1,0 +1,37 @@
+.profile-info-accordion-item {
+  border: none;
+  // Change Arrow on display
+  .collapsed > span > .icon--open,
+  .not-collapsed > span > .icon--closed {
+    display: none;
+  }
+  &__header,
+  .card-header,
+  a {
+    background-color: $white;
+    color: $black;
+    border: none;
+    @extend .flex;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  &__header {
+    &__title {
+      margin-right: 25px;
+      h4 {
+        font-size: $font-size-h4-md;
+        font-family: $font-family-base;
+        font-weight: bold;
+        text-transform: unset;
+        letter-spacing: 0.4px;
+      }
+      @include media-breakpoint-down(xs) {
+        flex-grow: 1;
+      }
+    }
+  }
+  &__body {
+    padding-left: 25px;
+    border-left: solid 1px $secondary;
+  }
+}

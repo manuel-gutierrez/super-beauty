@@ -47,6 +47,7 @@
           v-for="conversation in conversations"
           :key="conversation.id"
           :conversation="conversation"
+          :excerpt="true"
         />
       </div>
       <div
