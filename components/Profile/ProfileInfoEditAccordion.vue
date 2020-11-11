@@ -2,7 +2,7 @@
   <div class="profile-info-edit-accordion" role="tab-list">
     <ProfileInfoAccordionItem id="user-form" :title="labels.firstTab.title">
       <template v-slot:item-body>
-        <ProfileForm section="user" />
+        <ProfileForm ref="userDetails" section="user-details" />
       </template>
     </ProfileInfoAccordionItem>
     <ProfileInfoAccordionItem
@@ -10,7 +10,7 @@
       :title="labels.secondTab.title"
     >
       <template v-slot:item-body>
-        <ProfileForm section="business-basic-info" />
+        <ProfileForm ref="business-basic-info" section="business-basic-info" />
       </template>
     </ProfileInfoAccordionItem>
     <ProfileInfoAccordionItem
@@ -18,7 +18,11 @@
       :title="labels.thirdTab.title"
     >
       <template v-slot:item-body>
-        <ProfileForm section="business-additional-info" />
+        <p>{{ labels.thirdTab.description }}</p>
+        <ProfileForm
+          ref="business-additional-info"
+          section="business-additional-info"
+        />
       </template>
     </ProfileInfoAccordionItem>
   </div>

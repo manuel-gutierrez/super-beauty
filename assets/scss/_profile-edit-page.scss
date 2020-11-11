@@ -40,8 +40,6 @@
         &__label {
           cursor: pointer;
           position: absolute;
-          top: 48%;
-          left: 49%;
           text-align: center;
           color: $black;
           opacity: 0.7;
@@ -55,13 +53,21 @@
             width: 26px;
             height: 21px;
           }
-          @include media-breakpoint-down(xs) {
+          @media (max-width: 411px) {
             top: 60px;
             left: 160px;
+          }
+          @include media-breakpoint-up(xs) {
+            top: 60px;
+            left: 225px;
             .icon {
               width: 22px;
               height: 17px;
             }
+          }
+          @include media-breakpoint-up(lg) {
+            top: 48%;
+            left: 49%;
           }
         }
       }
@@ -102,6 +108,16 @@
     @extend .flex;
     flex-wrap: wrap;
     position: relative;
+    width: 100%;
+    &__edit-login {
+      width: 100%;
+      justify-content: flex-start;
+      text-decoration: underline;
+      padding-left: 2%;
+      @include media-breakpoint-down(xs) {
+        padding-left: 6%;
+      }
+    }
     &__title {
       text-align: center;
       width: 100%;
@@ -123,5 +139,8 @@
         z-index: 1;
       }
     }
+  }
+  &__submit-button {
+    @extend .flex;
   }
 }

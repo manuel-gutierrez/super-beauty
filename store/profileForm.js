@@ -7,20 +7,25 @@ export const state = () => ({
     phoneNumber: 'Teléfono de contacto (WhatsApp)*',
     email: 'Email*',
     title: 'Cargo*',
+    slug: '',
+    description: '',
+    profile: 'Cuéntanos sobre tí',
   },
   business: {
     businessName: 'Nombre comercial de tu negocio*',
-    description: 'Cuéntanos tu historia de emprendimiento/ negocio.',
-    city: 'Ciudad',
-    state: 'Cundinamarca',
+    businessSlug: 'Usuarios de registro superbeauty negocios',
+    businessDescription: 'Cuéntanos tu historia de emprendimiento/ negocio.',
+    city: 'Ciudad (ubicación principal de tu negocio)*',
+    state: 'Departamento (ubicación principal de tu negocio)*',
     category: 'Tipo de tienda',
     categoryPlaceholder: 'Tienda de Maquillaje / Tienda de Belleza…',
     categoryDescription:
       'Selecciona Tienda de Belleza si vendes múltiples categorías de Belleza (ej: Maquillaje, Cuidado Capilar, Fragancias)',
     locationTitle: '¿Por dónde comercializas?*',
     legal: {
-      type: 'Razón social*',
-      idType: 'NIT*',
+      type: 'Tipo de persona*',
+      category: 'Razón social*',
+      id: 'NIT*',
       idDocument: 'Adjunta tu RUT*',
       idDocumentButton: 'Seleccionar archivo',
     },
@@ -49,6 +54,7 @@ export const state = () => ({
       },
     },
   },
+  button: 'Guardar',
 });
 export const mutations = {
   // For future use.
@@ -62,4 +68,5 @@ export const getters = {
     const labels = { ...state.user, ...state.business };
     return labels;
   },
+  getSubmitButtonLabel: (state) => state.button,
 };

@@ -1,6 +1,20 @@
 .profile-form {
+  .custom-file-input:lang(en) ~ .custom-file-label::after {
+    content: 'Explorar';
+  }
   &__input {
-    margin-top: 20px;
     margin-bottom: 20px;
+  }
+  &__checkbox {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &__virtual-location-group {
+    border: solid $light-gray 1px;
+    border-radius: 10px;
+    padding: 4%;
+    @include media-breakpoint-down(xs) {
+      padding: 10%;
+    }
   }
 }

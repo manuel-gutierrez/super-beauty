@@ -56,20 +56,56 @@
       </template>
     </BannerImage>
     <div class="profile-edit-page__description">
-      <p>{{ description }}</p>
+      <ProfileForm ref="userProfile" section="user-profile" />
     </div>
     <div class="profile-edit-page__info">
       <div class="profile-edit-page__info__title">
         <h2>{{ profileSection.title }}</h2>
       </div>
-
+      <div class="profile-edit-page__info__edit-login">
+        <nuxt-link to="#"
+          ><h4>{{ profileSection.changeUser }}</h4></nuxt-link
+        >
+        <nuxt-link to="#"
+          ><h4>{{ profileSection.changePassword }}</h4></nuxt-link
+        >
+      </div>
       <div class="profile-edit-page__info__data">
-        <ProfileInfoEditAccordion />
-        <b-form>
-          <b-button type="submit" variant="primary" class="payment-form__button"
-            >Enviar
+        <div class="profile-info-edit-accordion" role="tab-list">
+          <ProfileInfoAccordionItem
+            id="user-form"
+            :title="labels.firstTab.title"
+          >
+            <template v-slot:item-body>
+              <ProfileForm ref="userDetails" section="user-details" />
+            </template>
+          </ProfileInfoAccordionItem>
+          <ProfileInfoAccordionItem
+            id="business-form-1"
+            :title="labels.secondTab.title"
+          >
+            <template v-slot:item-body>
+              <ProfileForm ref="legalInfo" section="business-basic-info" />
+            </template>
+          </ProfileInfoAccordionItem>
+          <ProfileInfoAccordionItem
+            id="businessAdditionalInfo"
+            :title="labels.thirdTab.title"
+          >
+            <template v-slot:item-body>
+              <p>{{ labels.thirdTab.description }}</p>
+              <ProfileForm
+                ref="additionalInfo"
+                section="business-additional-info"
+              />
+            </template>
+          </ProfileInfoAccordionItem>
+        </div>
+        <div class="profile-edit-page__submit-button">
+          <b-button type="submit" variant="primary" @click.prevent="submit"
+            >{{ submitLabel }}
           </b-button>
-        </b-form>
+        </div>
       </div>
     </div>
     <div class="profile-edit-page__conversations">
@@ -111,6 +147,8 @@ export default {
     ...mapGetters('pages/profile', ['getProfilePageContent']),
     ...mapGetters('user', { user: 'getUserData' }),
     ...mapGetters('merchant', { merchant: 'getMerchantData' }),
+    ...mapGetters('enums', { getEnums: 'getEnum' }),
+    ...mapGetters('profileForm', { submitLabel: 'getSubmitButtonLabel' }),
     ...mapGetters('conversations', {
       conversations: 'getConversations',
     }),
@@ -126,9 +164,35 @@ export default {
     conversationsSection() {
       return this.getProfilePageContent('section_1');
     },
+    labels() {
+      return this.getProfilePageContent('section_2').profileTabsLabels;
+    },
+    physicalLocation() {
+      return this.merchant.locations[0];
+    },
+    virtualLocation() {
+      return this.merchant.locations[1];
+    },
+    locationEnums() {
+      return this.getEnums('locations');
+    },
   },
   methods: {
     uploadImage() {
+      // to be defined.
+      return false;
+    },
+    submit() {
+      //*  Uncomment the following block to get the data *//
+      // const userData = {
+      //   ...this.$refs.userDetails.newUser,
+      //   ...this.$refs.userProfile.newProfile,
+      // };
+      // const businessData = {
+      //   ...this.$refs.userProfile.businessBasicInfo,
+      //   ...this.$refs.legalInfo.businessLegalInfo,
+      //   ...this.$refs.additionalInfo.businessAdditionalInfo,
+      // };
       return false;
     },
   },
