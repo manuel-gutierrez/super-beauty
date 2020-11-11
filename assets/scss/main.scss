@@ -20,10 +20,11 @@
 @import './svg-icon.scss';
 @import './brand-image-list.scss';
 @import './main-header-sub-menu.scss';
-
 @import './carousel.scss';
 @import './buttons.scss';
 @import './scroll-to-top.scss';
+@import './profile-info-accordion-item.scss';
+@import './profile-info-edit-accordion.scss';
 
 //##Modals
 @import './modal.scss';
@@ -84,6 +85,7 @@
 @import './shipping-form-edit-dots.scss';
 @import './community-conversation-form.scss';
 @import './payment-form.scss';
+@import './profile-form.scss';
 
 //Pages
 @import './product-page.scss';
@@ -96,3 +98,5 @@
 @import './community-content-page';
 @import './community-conversations-page';
 @import './community-conversation-page';
+@import './profile-page';
+@import './profile-edit-page.scss';
