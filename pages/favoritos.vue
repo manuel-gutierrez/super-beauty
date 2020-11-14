@@ -354,6 +354,16 @@ export default {
       }
     },
   },
+  head: {
+    title: 'Favoritos',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Tus productos favoritos',
+      },
+    ],
+  },
 };
 </script>
 

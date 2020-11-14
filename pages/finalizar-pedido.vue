@@ -330,6 +330,16 @@ export default {
       });
     },
   },
+  head: {
+    title: 'Finalizar Pedido',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Finaliza tu pedido',
+      },
+    ],
+  },
 };
 </script>
 

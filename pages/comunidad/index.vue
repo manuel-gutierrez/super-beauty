@@ -58,6 +58,16 @@ export default {
       return this.getCommunityContent('section_2');
     },
   },
+  head: {
+    title: 'Comunidad - Inicio',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Comunidad SuperBeauty',
+      },
+    ],
+  },
 };
 </script>
 

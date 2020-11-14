@@ -128,6 +128,16 @@ export default {
       this.conversationForm.show = !this.conversationForm.show;
     },
   },
+  head: {
+    title: 'Conversaciones - Inicio',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Conversaciones Inicio',
+      },
+    ],
+  },
 };
 </script>
 

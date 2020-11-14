@@ -98,6 +98,16 @@ export default {
       return this.getProfilePageContent('section_1');
     },
   },
+  head: {
+    title: 'Perfil - Detalle',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Página detalle del perfil de usuario',
+      },
+    ],
+  },
 };
 </script>
 

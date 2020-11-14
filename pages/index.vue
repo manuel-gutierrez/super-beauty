@@ -161,6 +161,16 @@ export default {
       this.toggleLoginStatus();
     },
   },
+  head: {
+    title: 'Inicio',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Página de Inicio',
+      },
+    ],
+  },
 };
 </script>
 
