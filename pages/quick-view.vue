@@ -16,6 +16,16 @@ export default {
       this.$bvModal.show(id);
     },
   },
+  head: {
+    title: 'Vista Rápida',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Vista Rápida del producto',
+      },
+    ],
+  },
 };
 </script>
 

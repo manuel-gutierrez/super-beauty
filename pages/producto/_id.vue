@@ -514,6 +514,16 @@ export default {
       });
     },
   },
+  head: {
+    title: 'Detalles de Producto',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Detalles del producto',
+      },
+    ],
+  },
 };
 </script>
 

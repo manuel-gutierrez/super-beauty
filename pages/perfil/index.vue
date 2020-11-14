@@ -87,6 +87,16 @@ export default {
       return this.getProfilePageContent('section_1');
     },
   },
+  head: {
+    title: 'Perfil - Inicio',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Página de Inicio de perfil de usuario',
+      },
+    ],
+  },
 };
 </script>
 

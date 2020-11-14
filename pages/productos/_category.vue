@@ -336,6 +336,16 @@ export default {
       }
     },
   },
+  head: {
+    title: 'Productos',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: `Producto Super Beauty`,
+      },
+    ],
+  },
 };
 </script>
 

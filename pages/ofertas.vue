@@ -348,6 +348,16 @@ export default {
       }
     },
   },
+  head: {
+    title: 'Ofertas',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Descuentos y Ofertas',
+      },
+    ],
+  },
 };
 </script>
 

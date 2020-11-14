@@ -1,7 +1,7 @@
 {
-  "name": "super-beauty",
+  "name": "super-beauty-negocios",
   "version": "1.0.0",
-  "Description": "Super Beauty",
+  "Description": "Tienda online de Super Beauty Negocios",
   "private": true,
   "scripts": {
     "dev": "nuxt",

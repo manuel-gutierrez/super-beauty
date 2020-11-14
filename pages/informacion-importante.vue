@@ -126,6 +126,16 @@ export default {
       }
     },
   },
+  head: {
+    title: 'Información Importante',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Página de Información Importante',
+      },
+    ],
+  },
 };
 </script>
 

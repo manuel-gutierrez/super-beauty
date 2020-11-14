@@ -11,8 +11,8 @@
       <div>
         <Search />
       </div>
-      <div class="d-flex header-icons flex-grow-1">
-        <Logo />
+      <div class="d-flex justify-content-center header-icons flex-grow-1">
+        <nuxt-link to="/"> <Logo /> </nuxt-link>
       </div>
       <div
         class="d-flex justify-content-center align-items-center header-icons"
