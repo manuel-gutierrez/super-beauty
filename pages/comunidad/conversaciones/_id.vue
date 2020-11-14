@@ -222,6 +222,16 @@ export default {
       this.conversationForm.show = !this.conversationForm.show;
     },
   },
+  head: {
+    title: 'Conversaciones - Detalle',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Detalle de una conversación',
+      },
+    ],
+  },
 };
 </script>
 

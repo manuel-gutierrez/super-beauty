@@ -84,6 +84,16 @@ export default {
       return false;
     },
   },
+  head: {
+    title: 'Contenido SuperBeauty',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Página de contenido de los productos de superbeauty',
+      },
+    ],
+  },
 };
 </script>
 

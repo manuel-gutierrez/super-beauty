@@ -193,6 +193,16 @@ export default {
   methods: {
     ...mapMutations('checkoutProgressBar', ['setActiveStep']),
   },
+  head: {
+    title: 'Datos de envío',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Ingresa los datos de envío',
+      },
+    ],
+  },
 };
 </script>
 

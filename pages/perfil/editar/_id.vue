@@ -196,6 +196,16 @@ export default {
       return false;
     },
   },
+  head: {
+    title: 'Perfil - Editar',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Editar perfil de usuario',
+      },
+    ],
+  },
 };
 </script>
 

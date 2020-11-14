@@ -213,6 +213,16 @@ export default {
   methods: {
     ...mapMutations('checkoutProgressBar', ['setActiveStep']),
   },
+  head: {
+    title: 'Carrito de Compras',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Carrito de compras con los productos que seleccionaste.',
+      },
+    ],
+  },
 };
 </script>
 
