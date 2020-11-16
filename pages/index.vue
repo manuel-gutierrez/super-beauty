@@ -3,16 +3,10 @@
     <!-- Carousel -->
     <BannerCarrousel class="row">
       <BannerImage
-        :data="banners.carousel.data"
-        :type="banners.carousel.type"
-      />
-      <BannerImage
-        :data="banners.carousel.data"
-        :type="banners.carousel.type"
-      />
-      <BannerImage
-        :data="banners.carousel.data"
-        :type="banners.carousel.type"
+        v-for="(banner, i) in banners.carousel"
+        :key="i"
+        :data="banner.data"
+        :type="banner.type"
       />
     </BannerCarrousel>
     <!-- End Carousel -->
@@ -47,14 +41,16 @@
       <div class="section-spacer"></div>
       <div class="row">
         <BannerImage
-          :data="banners.promo_1.data"
-          :type="banners.promo_1.type"
+          v-if="banners.promo.length >= 1"
+          :data="banners.promo[0].data"
+          :type="banners.promo[0].type"
           class="col-12 col-sm-12 col-md-6"
         />
 
         <BannerImage
-          :data="banners.promo_2.data"
-          :type="banners.promo_2.type"
+          v-if="banners.promo.length >= 2"
+          :data="banners.promo[1].data"
+          :type="banners.promo[1].type"
           class="col-12 col-sm-12 col-md-6"
         />
       </div>
@@ -115,15 +111,17 @@
       <div class="section-spacer"></div>
       <div class="row">
         <BannerImage
-          :data="banners.promo_3.data"
-          :type="banners.promo_3.type"
+          v-if="banners.promo.length >= 3"
+          :data="banners.promo[2].data"
+          :type="banners.promo[2].type"
           class="col-12"
         />
       </div>
       <div class="row my-4">
         <BannerImage
-          :data="banners.promo_4.data"
-          :type="banners.promo_4.type"
+          v-if="banners.promo.length >= 4"
+          :data="banners.promo[3].data"
+          :type="banners.promo[3].type"
           class="col-12"
         />
       </div>
@@ -137,16 +135,47 @@
 </template>
 
 <script>
+import axios from 'axios';
 import { mapMutations, mapGetters } from 'vuex';
 export default {
+  async fetch({ store, params }) {
+    const parseBanners = (banners, types) => {
+      return banners.map((banner, i) => {
+        return {
+          type: types[i % types.length],
+          data: banner,
+        };
+      });
+    };
+
+    const hero = await axios.get(
+      'http://localhost:3000/api/banners?position=Slider+home'
+    );
+
+    const promo = await axios.get(
+      'http://localhost:3000/api/banners?position=Home'
+    );
+
+    const banners = {
+      carousel: parseBanners(hero.data.banners, ['hero']),
+      promo: parseBanners(promo.data.banners, [
+        'promo',
+        'promo',
+        'promo-large',
+        'promo-big',
+      ]),
+    };
+
+    await store.commit('pages/home/setBanners', banners);
+  },
   computed: {
     ...mapGetters('login', {
       isloggedIn: 'getCurrentLoginStatus',
       sessionToken: 'getSessionToken',
     }),
     ...mapGetters('pages/home', {
-      banners: 'getBanners',
       headers: 'getHeaders',
+      banners: 'getBanners',
     }),
     ...mapGetters('products', {
       products: 'getProducts',

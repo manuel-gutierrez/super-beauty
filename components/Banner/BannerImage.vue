@@ -89,16 +89,16 @@ export default {
       type: String,
       default: null,
     },
-    link: {
-      type: Boolean,
-      default: true,
+  },
+  computed: {
+    link() {
+      return this.data.url !== null;
     },
   },
-  computed: {},
   methods: {
     getBackgroundImage(image) {
       return {
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url("${image}")`,
       };
     },
   },
